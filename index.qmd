@@ -1,6 +1,8 @@
 ---
-title: "Programování a vývoj aplikací (OA a SOŠL, Opava, p.o.)"
+title: "Programování a vývoj aplikací"
 ---
+
+
 
 Tento web vznikl jako podpora výuky předmětu `Programování a vývoj aplikací`
 
