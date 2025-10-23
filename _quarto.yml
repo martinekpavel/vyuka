@@ -2,20 +2,21 @@ project:
   type: website
 
 website:
-  title: "vyuka"
+  title: "PVA"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: Úvod
       - about.qmd
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      - morph
     css: styles.css
     toc: true
 
+lang: cs
 
+# quarto publish gh-pages
 

@@ -1,5 +1,8 @@
 ---
-title: "About"
+title: "O webu"
 ---
 
-About this site
+Tento web vznikl jako podpora výuky předmětu `Programování a vývoj aplikací`
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
