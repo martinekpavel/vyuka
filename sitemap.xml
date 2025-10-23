@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://martinekpavel.github.io/vyuka/about.html</loc>
-    <lastmod>2025-10-23T09:32:05.818Z</lastmod>
+    <loc>https://martinekpavel.github.io/vyuka/index.html</loc>
+    <lastmod>2025-10-23T19:10:01.031Z</lastmod>
   </url>
   <url>
-    <loc>https://martinekpavel.github.io/vyuka/index.html</loc>
-    <lastmod>2025-10-23T19:04:04.583Z</lastmod>
+    <loc>https://martinekpavel.github.io/vyuka/about.html</loc>
+    <lastmod>2025-10-23T19:05:06.677Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/html.html</loc>
+    <lastmod>2025-10-23T19:24:03.689Z</lastmod>
   </url>
 </urlset>

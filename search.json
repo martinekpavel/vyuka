@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programování a vývoj aplikací",
+    "section": "",
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "O webu",
@@ -7,10 +14,24 @@
     "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programování a vývoj aplikací (OA a SOŠL, Opava, p.o.)",
+    "objectID": "html.html",
+    "href": "html.html",
+    "title": "Základy HTML a CSS",
     "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "něco"
+  },
+  {
+    "objectID": "html.html#html-šablona",
+    "href": "html.html#html-šablona",
+    "title": "Základy HTML a CSS",
+    "section": "",
+    "text": "něco"
+  },
+  {
+    "objectID": "html.html#navigace",
+    "href": "html.html#navigace",
+    "title": "Základy HTML a CSS",
+    "section": "Navigace",
+    "text": "Navigace\nněco"
   }
 ]
