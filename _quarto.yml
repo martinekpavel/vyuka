@@ -3,18 +3,28 @@ project:
 
 website:
   title: "PVA"
+  page-footer: 
+    right: "This page is built with [Quarto](https://quarto.org/), with theme from [vetiver](https://github.com/rstudio/vetiver.rstudio.com)"
+  
+  site-url: https://martinekpavel.github.io/vyuka/
+  repo-url: https://github.com/martinekpavel/vyuka
+  repo-actions: [edit, source, issue]  
+  
   navbar:
-    left:
-      - href: index.qmd
-        text: Úvod
+    right:
+      #  - href: index.qmd
+      #    text: Úvod
+      - href: html.qmd
+        text: HTML
       - about.qmd
 
 format:
   html:
-    theme:
-      - morph
+    theme: [sandstone, custom.scss]
     css: styles.css
     toc: true
+    # toc-title: Contents
+    toc-location: left
 
 lang: cs
 
