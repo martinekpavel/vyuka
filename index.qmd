@@ -2,6 +2,7 @@
 title: "Programování a vývoj aplikací"
 ---
 
+TODO: Doplnit
 
 
 Tento web vznikl jako podpora výuky předmětu `Programování a vývoj aplikací`
