@@ -1,17 +1,31 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programování a vývoj aplikací",
+    "objectID": "web_html/index.html",
+    "href": "web_html/index.html",
+    "title": "Základy HTML a CSS",
     "section": "",
-    "text": "TODO: Doplnit\nTento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "něco"
+  },
+  {
+    "objectID": "web_html/index.html#html-šablona",
+    "href": "web_html/index.html#html-šablona",
+    "title": "Základy HTML a CSS",
+    "section": "",
+    "text": "něco"
+  },
+  {
+    "objectID": "web_html/index.html#navigace",
+    "href": "web_html/index.html#navigace",
+    "title": "Základy HTML a CSS",
+    "section": "Navigace",
+    "text": "Navigace\nněco"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "O webu",
     "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\nMarkdown Basics"
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/"
   },
   {
     "objectID": "202526-1d.html",
@@ -39,34 +53,20 @@
     "href": "202526-3d.html",
     "title": "3.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\nPožadavky\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, úvod do výuky\n-\n\n\n11. 9. 2025\nÚvod do HTML\n\n\n\n18. 9. 2025\nÚvod do CSS\n\n\n\n25. 9. 2025\nCSS 2\n\n\n\n2. 10. 2025\nTvorba menu\n\n\n\n9. 10. 2025\nResponzivnost webu\n\n\n\n16. 10. 2025\nPortfolio\n\n\n\n23. 10. 2025\nGoogle Search\n\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí\n\n\n\n\n\n\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\n\n\n\n\n\nzarovnání elementu na střed\ngithub pages\nDatum: 25. 9. 2025\n\n\n\n\n\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\n\n\n\n\n\n\n\n\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\n\n\n\n\n\n\n\n\nheader, main, footer\nresponzivnost menu\nvalidace\n\n\n\n\n\n\n\n\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\n\n\n\n\n\n\n\n\nprojekt Google Search\n\n\n\n\n\n\n\n\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n\n13. 11. 2025\n\n\n\n\n20. 11. 2025\n\n\n\n\n27. 11. 2025\n\n\n\n\n27. 11. 2025\n\n\n\n\n4. 12. 2025\n\n\n\n\n11. 12. 2025\n\n\n\n\n18. 12. 2025\n\n\n\n\n8. 1. 2026\n\n\n\n\n22. 1. 2026\n\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n\n29. 1. 2026\n\n\n\n\n12. 2. 2026\n\n\n\n\n19. 2. 2026\n\n\n\n\n26. 2. 2026\n\n\n\n\n5. 3. 2026\n\n\n\n\n12. 3. 2026\n\n\n\n\n19. 3. 2026\n\n\n\n\n26. 3. 2026\n\n\n\n\n2. 4. 2026\n\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n\n16. 4. 2026\n\n\n\n\n23. 4. 2026\n\n\n\n\n30. 4. 2026\n\n\n\n\n7. 5. 2026\n\n\n\n\n14. 5. 2026\n\n\n\n\n21. 5. 2026\n\n\n\n\n28. 5. 2026\n\n\n\n\n4. 6. 2026\n\n\n\n\n11. 6. 2026\n\n\n\n\n18. 6. 2026\n\n\n\n\n25. 6. 2026\n\n\n\n\n\n\n\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\n\n\n\n\n\nzarovnání elementu na střed\ngithub pages\nDatum: 25. 9. 2025\n\n\n\n\n\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\n\n\n\n\n\n\n\n\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\n\n\n\n\n\n\n\n\nheader, main, footer\nresponzivnost menu\nvalidace\n\n\n\n\n\n\n\n\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\n\n\n\n\n\n\n\n\nprojekt Google Search\n\n\n\n\n\n\n\n\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search"
   },
   {
     "objectID": "202526-3d.html#výuka",
     "href": "202526-3d.html#výuka",
     "title": "3.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\nPožadavky\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, úvod do výuky\n-\n\n\n11. 9. 2025\nÚvod do HTML\n\n\n\n18. 9. 2025\nÚvod do CSS\n\n\n\n25. 9. 2025\nCSS 2\n\n\n\n2. 10. 2025\nTvorba menu\n\n\n\n9. 10. 2025\nResponzivnost webu\n\n\n\n16. 10. 2025\nPortfolio\n\n\n\n23. 10. 2025\nGoogle Search\n\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí\n\n\n\n\n\n\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\n\n\n\n\n\nzarovnání elementu na střed\ngithub pages\nDatum: 25. 9. 2025\n\n\n\n\n\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\n\n\n\n\n\n\n\n\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\n\n\n\n\n\n\n\n\nheader, main, footer\nresponzivnost menu\nvalidace\n\n\n\n\n\n\n\n\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\n\n\n\n\n\n\n\n\nprojekt Google Search\n\n\n\n\n\n\n\n\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n\n13. 11. 2025\n\n\n\n\n20. 11. 2025\n\n\n\n\n27. 11. 2025\n\n\n\n\n27. 11. 2025\n\n\n\n\n4. 12. 2025\n\n\n\n\n11. 12. 2025\n\n\n\n\n18. 12. 2025\n\n\n\n\n8. 1. 2026\n\n\n\n\n22. 1. 2026\n\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n\n29. 1. 2026\n\n\n\n\n12. 2. 2026\n\n\n\n\n19. 2. 2026\n\n\n\n\n26. 2. 2026\n\n\n\n\n5. 3. 2026\n\n\n\n\n12. 3. 2026\n\n\n\n\n19. 3. 2026\n\n\n\n\n26. 3. 2026\n\n\n\n\n2. 4. 2026\n\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n\n16. 4. 2026\n\n\n\n\n23. 4. 2026\n\n\n\n\n30. 4. 2026\n\n\n\n\n7. 5. 2026\n\n\n\n\n14. 5. 2026\n\n\n\n\n21. 5. 2026\n\n\n\n\n28. 5. 2026\n\n\n\n\n4. 6. 2026\n\n\n\n\n11. 6. 2026\n\n\n\n\n18. 6. 2026\n\n\n\n\n25. 6. 2026\n\n\n\n\n\n\n\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\n\n\n\n\n\nzarovnání elementu na střed\ngithub pages\nDatum: 25. 9. 2025\n\n\n\n\n\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\n\n\n\n\n\n\n\n\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\n\n\n\n\n\n\n\n\nheader, main, footer\nresponzivnost menu\nvalidace\n\n\n\n\n\n\n\n\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\n\n\n\n\n\n\n\n\nprojekt Google Search\n\n\n\n\n\n\n\n\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search"
   },
   {
-    "objectID": "html.html",
-    "href": "html.html",
-    "title": "Základy HTML a CSS",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programování a vývoj aplikací",
     "section": "",
-    "text": "něco"
-  },
-  {
-    "objectID": "html.html#html-šablona",
-    "href": "html.html#html-šablona",
-    "title": "Základy HTML a CSS",
-    "section": "",
-    "text": "něco"
-  },
-  {
-    "objectID": "html.html#navigace",
-    "href": "html.html#navigace",
-    "title": "Základy HTML a CSS",
-    "section": "Navigace",
-    "text": "Navigace\nněco"
+    "text": "TODO: Doplnit\nTento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]
