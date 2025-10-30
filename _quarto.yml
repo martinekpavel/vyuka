@@ -4,16 +4,20 @@ project:
 website:
   title: "PVA"
   page-footer: 
-    right: "This page is built with [Quarto](https://quarto.org/), with theme from [vetiver](https://github.com/rstudio/vetiver.rstudio.com)"
+    right: "This page is built with [Quarto](https://quarto.org/) ❤️, with theme from [vetiver](https://github.com/rstudio/vetiver.rstudio.com)"
   
   site-url: https://martinekpavel.github.io/vyuka/
   repo-url: https://github.com/martinekpavel/vyuka
   repo-actions: [edit, source, issue]  
   
   navbar:
-    right:
+    left:
       #  - href: index.qmd
       #    text: Úvod
+      - href: 202526-1d.qmd
+        text: 1.D 2025/26
+      - href: 202526-3d.qmd
+        text: 3.D 2025/26
       - href: html.qmd
         text: HTML
       - about.qmd

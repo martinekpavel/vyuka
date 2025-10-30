@@ -1,0 +1,21 @@
+---
+title: "1.D šk. rok 2025/2026"
+description: |
+  Podpora pro studenty
+---
+
+## Html šablona
+
+něco
+
+## Navigace
+
+něco
+
+# projekt
+
+
+
+Tento web vznikl jako podpora výuky předmětu `Programování a vývoj aplikací`
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

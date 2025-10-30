@@ -1,0 +1,22 @@
+---
+title: "3.D šk. rok 2025/2026"
+description: |
+  Podpora pro studenty
+---
+
+## Výuka
+
+` 4. 9. 2025` - poučení o bezpečnosti, úvod do výuky, hodnocení
+
+`11. 9. 2025` - úvod do html
+- 4 9 2025 - úvod do css
+- 25. 9. 2025 - css pokračování
+- 2. 10. 2025 - úvod do css - samostatná práce
+
+4/9/2025 - poučení o bezpečnosti, úvod do výuky, hodnocení
+11-9-2025 - úvod do html
+4 9 2025 - úvod do css
+
+#### 4. 9. 2025 - poučení o bezpečnosti, úvod do výuky, hodnocení
+#### 11-9-2025 - úvod do html
+#### 4 9 2025 - úvod do css
