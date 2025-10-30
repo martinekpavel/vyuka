@@ -1,21 +1,463 @@
 ---
 title: "Základy HTML a CSS"
 description: |
-  Podpora pro studenty
+  Podpora výuky předmětu Programování a vývoj aplikací.
 ---
 
 ## Html šablona
 
-něco
 
-## Navigace
+## Publikace webu
 
-něco
-
-# projekt
+Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: <https://docs.github.com/en/pages/quickstart>
 
 
+Vytvoříme nový repozitář, který se bude jmenovat ["váš účet".github.io]{.mark}
 
-Tento web vznikl jako podpora výuky předmětu `Programování a vývoj aplikací`
+- repozitář bude **public**
+- zapneme **Add README**
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+![](img/gp1.png)
+
+::: {.callout-warning}
+Pozor "váš účet" musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).
+:::
+
+Přejdeme do **Settings** a najdeme záložku **Pages**
+
+Vybereme **Branch** -> bude tam Main a dáme **Save**
+
+![bg right contain](img/gp2.png)
+
+Minutku počkáme a objeví se naše webová adresa
+
+::: {.callout-note}
+Pokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.
+:::
+
+::: {.callout-important}
+- [] Přidáme adresu (*Propojit*) jako řešení zadání do Teams
+:::
+
+Naklonujeme repozitář na svůj disk pomocí VSC.
+
+A vybereme umístění našeho projektu (např. `C:\github`, nebo `Stažené\github-repos` apod.)
+
+![](img/gp3.png)
+
+
+Vložíme soubor s názvem `index.html` (přejmenujeme svůj soubor)
+
+![](img/gp4.png)
+
+Uděláme Commit sem
+
+![](img/gp5.png)
+
+NEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)
+
+![](img/gp6.png)
+
+`Sync Changes` a možná bude třeba řešit *autentizaci*.
+
+![](img/gp7.png)
+
+
+## Kaskádové styly
+
+Davidova učebnice: <https://docs.google.com/document/d/1J6NPwn97r0TGJra6QRh3oyNromnFBJCfvnddp1hmHuE/> kapitoly 15  &ndash; 36
+
+### Kam ty naše styly můžeme zapisovat?
+
+**inline** aplikované přímo na nějaký prvek webu
+```html
+<h1 style="color: red">Můj web</h1>
+```
+**interně** přímo v hlavičce webu
+```html
+<head><title>Můj web</title><style>h1 { color: green; }</style></head>
+```
+**externě** v samostatném souboru 
+```html
+<head><title>Můj web</title><link rel="stylesheet" href="style.css"></head>
+```
+
+### Jak cílíme na prvky v našem webu?
+
+Pomocí selektorů <https://www.w3schools.com/cssref/css_selectors.php>
+
+Try selectors <https://www.w3schools.com/cssref/trysel.php>
+
+CSS Diner (hra) <https://flukeout.github.io/>
+
+Další hry: <https://nikitahl.com/learn-css-by-playing-games>
+
+
+### Příklady a syntaxe
+
+html kód | css kód
+------| -----
+`<h1>` | `h1 { color: red; }`
+`<div id="idecko"></div>` | `#idecko { color: red; }`
+`<div class="trida"></div>` | `.trida { color: red; }`
+
+Poznámka: 
+`id` v kódu stránky máme pouze jednou
+`class` může být vícekrát
+
+### Blokové a inline elementy
+
+Seznam: <https://www.w3schools.com/htmL/html_blocks.asp>
+
+Anonymní blokový element: `<div></div>`
+Anonymní inline element: `<span></span>`
+
+Většinou k nim přidáváme `id` nebo `class`.
+
+### Co můžeme nastavovat ?
+
+- barvu písma `color:`
+- barvu pozadí `background-color`
+- ohraničení `border`
+- odsazení z vnějšku `margin`
+- odsazení uvnitř `padding`
+- zaoblení rohů `border-radius`
+- styl písma `font-family`
+- stínování <https://getcssscan.com/css-box-shadow-examples>
+
+### DevTools (F12)
+
+![](img/css1.png)
+
+### Jak zarovnat web na střed
+
+1. vytvořte element, kterým vše *obalíte* `<div class="containter"> ... </div>`
+2. nastavte mu požadovanou šířku (css) `.container {max-width: 1024px;}`
+3. nastavte margin vlevo a vpravo na *auto* `.container {margin: auto;}`
+
+### Zkuste
+
+`html.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Nadpis</h1>
+        <p>Malá ukázka</p>
+    </div>
+</body>
+
+</html>
+```
+
+`style.css`
+
+```css
+body {
+    background-color: lightgray;
+}
+
+.container {
+    background-color: white;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35)
+                     0px 5px 15px;
+    margin: 100px auto;
+    padding: 5px 30px;
+}
+```
+
+### Úkol 
+
+Upravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).
+
+Vyhledejte na internetu informace o kontrastu písma webových stránek. Jak kontrolovat, jak správně nastavit.
+
+Úpravy budou minimálně zahrnovat:
+
+- [ ] změna pozadí na `body`
+- [ ] zaoblení rohů obrázku
+- [ ] změna odsazení
+- [ ] zarovnání webu na střed (viz výše)
+- [ ] změna barvy písma v souladu s pravidly o kontrastu
+- [ ] něco co mne překvapí 😊
+
+## Menu
+
+### Font Awesome
+
+google: cdn font awesome
+
+<https://cdnjs.com/libraries/font-awesome> -> click to copy
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" ... />
+```
+
+![](img/fa.png)
+
+
+<https://fontawesome.com/search?ip=classic&ic=free&o=r> -> click to copy
+
+```html
+<i class="fa-solid fa-camera"></i>
+```
+
+### Menu (html)
+
+```html
+<nav id="navbar">
+    <div class="logo">
+        Moje <span class="text-primary">firma</span>
+    </div>
+    <ul>
+        <li><a href="#home">Úvod</a></li>
+        <li><a href="#about">O nás</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+</nav>
+```
+---
+
+### Menu (css)
+
+```css
+#navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#navbar ul li a {
+    padding: 10px;
+    margin: 0 4px;
+}
+
+#navbar ul li a:hover {
+    background-color: #93cb52;
+    border-radius: 5px;
+}
+```
+
+### Úkol
+
+Upravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).
+
+Úpravy budou minimálně zahrnovat:
+
+- [ ] vše z minulých zadání
+- [ ] menu v záhlaví stránky
+- [ ] další html stránka (odkaz v menu)
+
+## Responzivnost
+
+Upravit menu webu pro rozlišení na mobilních telefonech
+
+### Responzivní web
+
+- nastavení `viewport` <https://www.w3schools.com/css/css_rwd_viewport.asp>
+- použití proměnlivých `width` oproti pevným
+- media queries - různé styly pro různá rozlišení
+- `rem` místo `px`
+- metoda `mobile first`
+
+
+```css
+.big {
+    font-size: 3rem;
+    font-weight: bold;
+}
+```
+
+```html
+<div id="widescreen" class="big">widescreen</div>
+<div id="normal" class="big">normal</div>
+<div id="tablet" class="big">tablet</div>
+<div id="smartphone" class="big">smartphone</div>
+<div id="landscape" class="big">landscape</div>
+```
+
+```css
+body {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.big { /* doplníme */
+    display: none;
+    text-transform: capitalize;
+}
+```
+
+```css
+@media(max-width:500px) {
+    body {
+        background-color: red;
+    }
+
+    #smartphone {
+        display: block;
+    }
+}
+```
+
+```css
+@media(min-width: 501px) and (max-width:768px) {
+    body {
+        background-color: green;
+    }
+
+    #tablet {
+        display: block;
+    }
+}
+```
+
+```css
+@media(min-width: 769px) and (max-width:1200px) {
+    body {
+        background-color: cyan;
+    }
+
+    #normal {
+        display: block;
+    }
+}
+```
+
+
+```css
+@media(min-width: 1201px) {
+    body {
+        background-color: black;
+    }
+
+    #widescreen {
+        display: block;
+    }
+}
+```
+
+
+```css
+@media(max-height: 500px) {
+    body {
+        background-color: orange;
+    }
+
+    #landscape {
+        display: block;
+    }
+}
+```
+
+### Relativní jednotky em vs rem
+
+<https://www.w3schools.com/cssref/css_units.php>
+
+### Úkol
+
+Upravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).
+
+Doplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.
+
+Použijte ve svém projektu sekce `<header>`, `<main>` a `<footer>`.
+
+<https://www.w3schools.com/html/html5_semantic_elements.asp> 
+
+Použijte v zápatí svého webu [ikony](https://www.w3.org/QA/Tools/Icons) pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.
+
+
+
+
+
+#### Požadavky 
+
+- [ ] nadpisy
+- [ ] odkazy
+- [ ] obrázky
+- [ ] seznam položek
+- [ ] validní web
+
+#### Požadavky 
+
+- [ ] zarovnání elementu na střed
+- [ ] github pages
+
+
+- Datum: 25. 9. 2025
+
+#### Požadavky 
+
+- [ ] změna pozadí body
+- [ ] zaoblení rohů obrázků
+- [ ] změna odsazení
+- [ ] zarovnání webu na střed
+- [ ] změna barvy písma + kontrast
+
+### Menu
+
+#### Požadavky 
+
+- [ ] menu v záhlaví stránky
+- [ ] nová html stránka (s odkazem v menu)
+
+### 9. 10. 2025 Responzivnost webu
+
+#### Požadavky 9. 10. 2025
+
+- [ ] header, main, footer
+- [ ] responzivnost menu
+- [ ] validace
+
+### Portfolio
+
+#### Požadavky 16. 10. 2025
+
+- [ ] přesun stávajícího webu do extra složky
+- [ ] vytvoření portfolio page pod účet.github.io 
+- [ ] odkaz na původní web jako projekt
+
+### Google Search
+
+#### Požadavky 23. 10. 2025
+
+- [ ] projekt Google Search
+
+### Rekap čtvrtletí
+
+#### Požadavky 30. 10. 2025
+
+- [ ] portfolio page
+- [ ] odkaz na první web
+  + [ ] podmínky a validace prvního webu
+- [ ] odkaz na google Search
+  + [ ] podmínky a validace google search
+
