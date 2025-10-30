@@ -18,7 +18,7 @@ website:
         text: 1.D 2025/26
       - href: 202526-3d.qmd
         text: 3.D 2025/26
-      - href: html.qmd
+      - href: web_html/index.qmd
         text: HTML
       - about.qmd
 
