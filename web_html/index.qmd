@@ -395,69 +395,33 @@ Použijte ve svém projektu sekce `<header>`, `<main>` a `<footer>`.
 Použijte v zápatí svého webu [ikony](https://www.w3.org/QA/Tools/Icons) pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.
 
 
+## Rekap 1. čtvrtletí
 
-
-
-#### Požadavky 
+### Požadavky web
 
 - [ ] nadpisy
 - [ ] odkazy
 - [ ] obrázky
 - [ ] seznam položek
 - [ ] validní web
-
-#### Požadavky 
-
-- [ ] zarovnání elementu na střed
+- [ ] zarovnání webu na střed
 - [ ] github pages
-
-
-- Datum: 25. 9. 2025
-
-#### Požadavky 
-
 - [ ] změna pozadí body
 - [ ] zaoblení rohů obrázků
 - [ ] změna odsazení
 - [ ] zarovnání webu na střed
 - [ ] změna barvy písma + kontrast
-
-### Menu
-
-#### Požadavky 
-
 - [ ] menu v záhlaví stránky
 - [ ] nová html stránka (s odkazem v menu)
-
-### 9. 10. 2025 Responzivnost webu
-
-#### Požadavky 9. 10. 2025
-
 - [ ] header, main, footer
 - [ ] responzivnost menu
 - [ ] validace
-
-### Portfolio
-
-#### Požadavky 16. 10. 2025
-
 - [ ] přesun stávajícího webu do extra složky
 - [ ] vytvoření portfolio page pod účet.github.io 
 - [ ] odkaz na původní web jako projekt
-
-### Google Search
-
-#### Požadavky 23. 10. 2025
-
 - [ ] projekt Google Search
-
-### Rekap čtvrtletí
-
-#### Požadavky 30. 10. 2025
-
 - [ ] portfolio page
 - [ ] odkaz na první web
   + [ ] podmínky a validace prvního webu
 - [ ] odkaz na google Search
   + [ ] podmínky a validace google search
-
