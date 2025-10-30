@@ -6,14 +6,21 @@ description: |
 
 ## Výuka
 
-### Úvod 
-- Téma: Poučení o bezpečnosti, úvod do výuky, hodnocení
-- Datum: 4. 9. 2025
+### 1. čtvrtletí
 
-### HTML
+Datum | Téma (odkaz na materiály) | Požadavky
+:----:|------|----------
+`4. 9. 2025` |Poučení o bezpečnosti, úvod do výuky | -
+`11. 9. 2025`|Úvod do HTML |  
+`18. 9. 2025`|Úvod do CSS |
+`25. 9. 2025`|CSS 2|
+`2. 10. 2025`|Tvorba menu|
+`9. 10. 2025`|Responzivnost webu|
+`16. 10. 2025`|Portfolio|
+`23. 10. 2025`|Google Search|
+`30. 10. 2025`|Rekapitulace 1.čtvrtletí|
 
-- Téma: Úvod do html
-- Datum: 11. 9. 2025
+
 
 #### Požadavky 
 
@@ -22,11 +29,6 @@ description: |
 - [ ] obrázky
 - [ ] seznam položek
 - [ ] validní web
-
-### CSS
-
-- Téma: Úvod do kaskádových stylů
-- Datum: 18. 9. 2025 
 
 #### Požadavky 
 
@@ -45,9 +47,6 @@ description: |
 - [ ] změna barvy písma + kontrast
 
 ### Menu
-
-- Menu
-- Datum: 2. 10. 2025 
 
 #### Požadavky 
 
