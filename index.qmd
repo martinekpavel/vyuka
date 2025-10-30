@@ -2,9 +2,12 @@
 title: "Programování a vývoj aplikací"
 ---
 
-TODO: Doplnit
-
-
 Tento web vznikl jako podpora výuky předmětu `Programování a vývoj aplikací`
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Najdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin. 
+
+Průběžně doplňuji materiály a požadavky pro klasifikaci.
+
+Pokud naleznete chybu, dejte mi vědět. 
+
+👨‍🦲 [Pavel Martínek](mailto:martinek.pavel@oa-opava.cz)
