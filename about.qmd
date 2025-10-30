@@ -6,6 +6,6 @@ Tento web vznikl jako podpora výuky předmětu `Programování a vývoj aplikac
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-- https://quarto.org/docs/authoring/markdown-basics.html
-- https://marvin-schmitt.com/blog/website-tutorial-quarto/
+- <https://quarto.org/docs/authoring/markdown-basics.html>
+- <https://marvin-schmitt.com/blog/website-tutorial-quarto/>
 
