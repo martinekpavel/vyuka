@@ -2,9 +2,11 @@
 title: "O webu"
 ---
 
-Tento web vznikl jako podpora výuky předmětu `Programování a vývoj aplikací`
+Tento web vznikl jako podpora výuky předmětu **Programování a vývoj aplikací**
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Pokud chcete vytvářet podobné weby, tak mrkněte sem <https://quarto.org/docs/websites>.
+
+## Užitečné odkazy
 
 - <https://quarto.org/docs/authoring/markdown-basics.html>
 - <https://marvin-schmitt.com/blog/website-tutorial-quarto/>
