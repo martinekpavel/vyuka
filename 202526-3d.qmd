@@ -6,17 +6,83 @@ description: |
 
 ## Výuka
 
-` 4. 9. 2025` - poučení o bezpečnosti, úvod do výuky, hodnocení
+### Úvod 
+- Téma: Poučení o bezpečnosti, úvod do výuky, hodnocení
+- Datum: 4. 9. 2025
 
-`11. 9. 2025` - úvod do html
-- 4 9 2025 - úvod do css
-- 25. 9. 2025 - css pokračování
-- 2. 10. 2025 - úvod do css - samostatná práce
+### HTML
 
-4/9/2025 - poučení o bezpečnosti, úvod do výuky, hodnocení
-11-9-2025 - úvod do html
-4 9 2025 - úvod do css
+- Téma: Úvod do html
+- Datum: 11. 9. 2025
 
-#### 4. 9. 2025 - poučení o bezpečnosti, úvod do výuky, hodnocení
-#### 11-9-2025 - úvod do html
-#### 4 9 2025 - úvod do css
+#### Požadavky 
+
+- [ ] nadpisy
+- [ ] odkazy
+- [ ] obrázky
+- [ ] seznam položek
+- [ ] validní web
+
+### CSS
+
+- Téma: Úvod do kaskádových stylů
+- Datum: 18. 9. 2025 
+
+#### Požadavky 
+
+- [ ] zarovnání elementu na střed
+- [ ] github pages
+
+
+- Datum: 25. 9. 2025
+
+#### Požadavky 
+
+- [ ] změna pozadí body
+- [ ] zaoblení rohů obrázků
+- [ ] změna odsazení
+- [ ] zarovnání webu na střed
+- [ ] změna barvy písma + kontrast
+
+### Menu
+
+- Menu
+- Datum: 2. 10. 2025 
+
+#### Požadavky 
+
+- [ ] menu v záhlaví stránky
+- [ ] nová html stránka (s odkazem v menu)
+
+### 9. 10. 2025 Responzivnost webu
+
+#### Požadavky 9. 10. 2025
+
+- [ ] header, main, footer
+- [ ] responzivnost menu
+- [ ] validace
+
+### Portfolio
+
+#### Požadavky 16. 10. 2025
+
+- [ ] přesun stávajícího webu do extra složky
+- [ ] vytvoření portfolio page pod účet.github.io 
+- [ ] odkaz na původní web jako projekt
+
+### Google Search
+
+#### Požadavky 23. 10. 2025
+
+- [ ] projekt Google Search
+
+### Rekap čtvrtletí
+
+#### Požadavky 30. 10. 2025
+
+- [ ] portfolio page
+- [ ] odkaz na první web
+  + [ ] podmínky a validace prvního webu
+- [ ] odkaz na google Search
+  + [ ] podmínky a validace google search
+
