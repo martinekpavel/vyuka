@@ -15,12 +15,36 @@ website:
       #  - href: index.qmd
       #    text: Úvod
       - href: 202526-1d.qmd
-        text: 1.D 2025/26
+        text: "1.D 2025/26"
       - href: 202526-3d.qmd
-        text: 3.D 2025/26
+        text: "3.D 2025/26"
       - href: web_html/index.qmd
-        text: HTML
+        text: "HTML"
+      - text: "How-To"
+        href: web_html/howto.qmd
       - about.qmd
+
+  sidebar:
+    - title: "HTML"
+      style: "docked"
+      # background: light
+      contents:
+        - web_html/index.qmd
+        - web_html/02git.qmd
+        - web_html/03html.qmd
+        - web_html/04publish.qmd
+        - web_html/05css.qmd
+        - web_html/06menu.qmd
+        - web_html/07mediaq.qmd
+        - web_html/08portfolio.qmd
+        - web_html/09search.qmd
+        - web_html/10rekap.qmd
+
+
+    - title: "How-To"
+      contents:
+        - web_html/howto.qmd
+        # navigation items
 
 format:
   html:
@@ -28,7 +52,7 @@ format:
     css: styles.css
     toc: true
     # toc-title: Contents
-    toc-location: left
+    toc-location: right
 
 lang: cs
 

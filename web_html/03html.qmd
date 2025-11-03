@@ -1,0 +1,21 @@
+---
+title: "Základy HTML"
+---
+
+<https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html>
+
+
+
+::: {.callout-caution icon=false}
+
+## Úkol
+
+Vytvořte validní webovou stránku na libovolné téma, která obsahuje následující položky:
+
+- [ ] nadpisy
+- [ ] odkazy
+- [ ] obrázky
+- [ ] seznam položek
+- [ ] validní web
+
+:::

@@ -8,7 +8,7 @@ title: "1.D šk. rok 2025/2026"
 
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
-  `9. 9. 2025`|Poučení o bezpečnosti, ogr. šk. roku (1,2)
+  `9. 9. 2025`|[Poučení o bezpečnosti, ogr. šk. roku](web_html/) (1,2)
  `16. 9. 2025`|Úvod do HTML (3,4,5/3,4)
  `23. 9. 2025`|Úvod do CSS (6,7/5,6)
  `30. 9. 2025`|Tvorba menu (8,9/7,8)

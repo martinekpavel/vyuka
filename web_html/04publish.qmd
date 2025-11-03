@@ -1,0 +1,65 @@
+---
+title: "Publikace webu"
+---
+
+## Github Pages
+
+Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: <https://docs.github.com/en/pages/quickstart>
+
+### Tvorba repozitáře
+
+Vytvoříme nový repozitář, který se bude jmenovat ["váš účet".github.io]{.mark}
+
+- repozitář bude **public**
+- zapneme **Add README**
+
+::: {.callout-warning}
+Pozor "váš účet" musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).
+:::
+
+![](img/gp1.png)
+
+### Nastavení Pages
+
+Přejdeme do **Settings** a najdeme záložku **Pages**
+
+Vybereme **Branch** -> bude tam Main a dáme **Save**
+
+![bg right contain](img/gp2.png)
+
+Minutku počkáme a objeví se naše webová adresa
+
+::: {.callout-note}
+Pokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.
+:::
+
+::: {.callout-important}
+- [ ] Přidáme adresu (*Propojit*) jako řešení zadání do Teams
+:::
+
+### Github Clone
+
+Naklonujeme repozitář na svůj disk pomocí VSC.
+
+A vybereme umístění našeho projektu (např. `C:\github`, nebo `Stažené\github-repos` apod.)
+
+![](img/gp3.png)
+
+### Vlastní úpravy
+
+Vložíme soubor s názvem `index.html` (přejmenujeme svůj soubor)
+
+![](img/gp4.png)
+
+Uděláme Commit sem
+
+![](img/gp5.png)
+
+NEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)
+
+![](img/gp6.png)
+
+`Sync Changes` a možná bude třeba řešit *autentizaci*.
+
+![](img/gp7.png)
+

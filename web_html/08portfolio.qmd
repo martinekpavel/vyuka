@@ -1,0 +1,62 @@
+---
+title: "Portfolio"
+---
+
+Cíl hodiny: Vytvořit portfolio page
+
+
+## Portfolio
+
+- svůj stávající projekt přesuňte do nové složky -> např. `html`
+- do Teams sdílejte odkaz na svůj (nyní) starý projekt:
+
+`váš_účet_na_githubu.github.io/html`
+
+- Upravte odkazy na validaci!
+- Vytvořte portfolio např. podle:
+
+<https://personal-portfolio.freecodecamp.rocks/>
+
+- použijte jen to, co dokážete vysvětlit
+- všechny zdroje ocitujte
+- doplňte ikony na validaci html a css
+
+
+## Další zdroje
+
+- https://picsum.photos/
+- https://unsplash.com/
+- https://www.color-hex.com/color-palettes/popular.php
+
+
+
+## Rekap 1. čtvrtletí
+
+### Požadavky web
+
+- [ ] nadpisy
+- [ ] odkazy
+- [ ] obrázky
+- [ ] seznam položek
+- [ ] validní web
+- [ ] zarovnání webu na střed
+- [ ] github pages
+- [ ] změna pozadí body
+- [ ] zaoblení rohů obrázků
+- [ ] změna odsazení
+- [ ] zarovnání webu na střed
+- [ ] změna barvy písma + kontrast
+- [ ] menu v záhlaví stránky
+- [ ] nová html stránka (s odkazem v menu)
+- [ ] header, main, footer
+- [ ] responzivnost menu
+- [ ] validace
+- [ ] přesun stávajícího webu do extra složky
+- [ ] vytvoření portfolio page pod účet.github.io 
+- [ ] odkaz na původní web jako projekt
+- [ ] projekt Google Search
+- [ ] portfolio page
+- [ ] odkaz na první web
+  + [ ] podmínky a validace prvního webu
+- [ ] odkaz na google Search
+  + [ ] podmínky a validace google search

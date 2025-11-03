@@ -1,0 +1,122 @@
+---
+title: "Responzivnost"
+---
+
+Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech
+
+### Responzivní web
+
+- nastavení `viewport` <https://www.w3schools.com/css/css_rwd_viewport.asp>
+- použití proměnlivých `width` oproti pevným
+- media queries - různé styly pro různá rozlišení
+- `rem` místo `px`
+- metoda `mobile first`
+
+
+```css
+.big {
+    font-size: 3rem;
+    font-weight: bold;
+}
+```
+
+```html
+<div id="widescreen" class="big">widescreen</div>
+<div id="normal" class="big">normal</div>
+<div id="tablet" class="big">tablet</div>
+<div id="smartphone" class="big">smartphone</div>
+<div id="landscape" class="big">landscape</div>
+```
+
+```css
+body {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.big { /* doplníme */
+    display: none;
+    text-transform: capitalize;
+}
+```
+
+```css
+@media(max-width:500px) {
+    body {
+        background-color: red;
+    }
+
+    #smartphone {
+        display: block;
+    }
+}
+```
+
+```css
+@media(min-width: 501px) and (max-width:768px) {
+    body {
+        background-color: green;
+    }
+
+    #tablet {
+        display: block;
+    }
+}
+```
+
+```css
+@media(min-width: 769px) and (max-width:1200px) {
+    body {
+        background-color: cyan;
+    }
+
+    #normal {
+        display: block;
+    }
+}
+```
+
+
+```css
+@media(min-width: 1201px) {
+    body {
+        background-color: black;
+    }
+
+    #widescreen {
+        display: block;
+    }
+}
+```
+
+
+```css
+@media(max-height: 500px) {
+    body {
+        background-color: orange;
+    }
+
+    #landscape {
+        display: block;
+    }
+}
+```
+
+### Relativní jednotky em vs rem
+
+<https://www.w3schools.com/cssref/css_units.php>
+
+### Úkol
+
+Upravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).
+
+Doplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.
+
+Použijte ve svém projektu sekce `<header>`, `<main>` a `<footer>`.
+
+<https://www.w3schools.com/html/html5_semantic_elements.asp> 
+
+Použijte v zápatí svého webu [ikony](https://www.w3.org/QA/Tools/Icons) pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.
+

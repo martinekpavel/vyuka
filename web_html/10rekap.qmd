@@ -1,0 +1,34 @@
+---
+title: "Rekapitulace 1. čtvrtetí"
+---
+
+## Rekap 1. čtvrtletí
+
+### Požadavky web
+
+- [ ] nadpisy
+- [ ] odkazy
+- [ ] obrázky
+- [ ] seznam položek
+- [ ] validní web
+- [ ] zarovnání webu na střed
+- [ ] github pages
+- [ ] změna pozadí body
+- [ ] zaoblení rohů obrázků
+- [ ] změna odsazení
+- [ ] zarovnání webu na střed
+- [ ] změna barvy písma + kontrast
+- [ ] menu v záhlaví stránky
+- [ ] nová html stránka (s odkazem v menu)
+- [ ] header, main, footer
+- [ ] responzivnost menu
+- [ ] validace
+- [ ] přesun stávajícího webu do extra složky
+- [ ] vytvoření portfolio page pod účet.github.io 
+- [ ] odkaz na původní web jako projekt
+- [ ] projekt Google Search
+- [ ] portfolio page
+- [ ] odkaz na první web
+  + [ ] podmínky a validace prvního webu
+- [ ] odkaz na google Search
+  + [ ] podmínky a validace google search

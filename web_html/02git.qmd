@@ -1,0 +1,9 @@
+---
+title: "Git"
+---
+
+## Odkazy k samostudiu
+
+- [Pro Git, Scott Chacon 2009](https://knihy.nic.cz/cs/detail/2/)
+    + [odkaz pro stažení](https://knihy.nic.cz/media/filer_public/fe/53/fe53d803-6295-4dc2-81aa-49165178bcf0/progit.pdf)
+- [CS50 - Git](https://cs50.harvard.edu/web/weeks/1/)
