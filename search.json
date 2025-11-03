@@ -1,47 +1,5 @@
 [
   {
-    "objectID": "web_html/index.html#publikace-webu",
-    "href": "web_html/index.html#publikace-webu",
-    "title": "Základy HTML a CSS",
-    "section": "Publikace webu",
-    "text": "Publikace webu\nNásledující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\n[] Přidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci."
-  },
-  {
-    "objectID": "web_html/index.html#kaskádové-styly",
-    "href": "web_html/index.html#kaskádové-styly",
-    "title": "Základy HTML a CSS",
-    "section": "Kaskádové styly",
-    "text": "Kaskádové styly\nDavidova učebnice: https://docs.google.com/document/d/1J6NPwn97r0TGJra6QRh3oyNromnFBJCfvnddp1hmHuE/ kapitoly 15 – 36\n\nKam ty naše styly můžeme zapisovat?\ninline aplikované přímo na nějaký prvek webu\n&lt;h1 style=\"color: red\"&gt;Můj web&lt;/h1&gt;\ninterně přímo v hlavičce webu\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;style&gt;h1 { color: green; }&lt;/style&gt;&lt;/head&gt;\nexterně v samostatném souboru\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;&lt;/head&gt;\n\n\nJak cílíme na prvky v našem webu?\nPomocí selektorů https://www.w3schools.com/cssref/css_selectors.php\nTry selectors https://www.w3schools.com/cssref/trysel.php\nCSS Diner (hra) https://flukeout.github.io/\nDalší hry: https://nikitahl.com/learn-css-by-playing-games\n\n\nPříklady a syntaxe\n\n\n\nhtml kód\ncss kód\n\n\n\n\n&lt;h1&gt;\nh1 { color: red; }\n\n\n&lt;div id=\"idecko\"&gt;&lt;/div&gt;\n#idecko { color: red; }\n\n\n&lt;div class=\"trida\"&gt;&lt;/div&gt;\n.trida { color: red; }\n\n\n\nPoznámka: id v kódu stránky máme pouze jednou class může být vícekrát\n\n\nBlokové a inline elementy\nSeznam: https://www.w3schools.com/htmL/html_blocks.asp\nAnonymní blokový element: &lt;div&gt;&lt;/div&gt; Anonymní inline element: &lt;span&gt;&lt;/span&gt;\nVětšinou k nim přidáváme id nebo class.\n\n\nCo můžeme nastavovat ?\n\nbarvu písma color:\nbarvu pozadí background-color\nohraničení border\nodsazení z vnějšku margin\nodsazení uvnitř padding\nzaoblení rohů border-radius\nstyl písma font-family\nstínování https://getcssscan.com/css-box-shadow-examples\n\n\n\nDevTools (F12)\n\n\n\nJak zarovnat web na střed\n\nvytvořte element, kterým vše obalíte &lt;div class=\"containter\"&gt; ... &lt;/div&gt;\nnastavte mu požadovanou šířku (css) .container {max-width: 1024px;}\nnastavte margin vlevo a vpravo na auto .container {margin: auto;}\n\n\n\nZkuste\nhtml.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n\n&lt;head&gt;\n    &lt;title&gt;Document&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n&lt;/head&gt;\n\n&lt;body&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;h1&gt;Nadpis&lt;/h1&gt;\n        &lt;p&gt;Malá ukázka&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/body&gt;\n\n&lt;/html&gt;\nstyle.css\nbody {\n    background-color: lightgray;\n}\n\n.container {\n    background-color: white;\n    max-width: 600px;\n    border-radius: 15px;\n    box-shadow: rgba(0, 0, 0, 0.35)\n                     0px 5px 15px;\n    margin: 100px auto;\n    padding: 5px 30px;\n}\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nVyhledejte na internetu informace o kontrastu písma webových stránek. Jak kontrolovat, jak správně nastavit.\nÚpravy budou minimálně zahrnovat:\n\nzměna pozadí na body\nzaoblení rohů obrázku\nzměna odsazení\nzarovnání webu na střed (viz výše)\nzměna barvy písma v souladu s pravidly o kontrastu\nněco co mne překvapí 😊"
-  },
-  {
-    "objectID": "web_html/index.html#menu",
-    "href": "web_html/index.html#menu",
-    "title": "Základy HTML a CSS",
-    "section": "Menu",
-    "text": "Menu\n\nFont Awesome\ngoogle: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;\n\n\nMenu (html)\n&lt;nav id=\"navbar\"&gt;\n    &lt;div class=\"logo\"&gt;\n        Moje &lt;span class=\"text-primary\"&gt;firma&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#home\"&gt;Úvod&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#about\"&gt;O nás&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#kontakt\"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;\n\n\n\nMenu (css)\n#navbar {\n    background-color: #333;\n    color: white;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 16px;\n    font-size: 24px;\n    font-weight: bold;\n}\n\n#navbar a {\n    color: white;\n    text-decoration: none;\n}\n\n#navbar ul {\n    display: flex;\n    list-style: none;\n    align-items: center;\n}\n\n#navbar ul li a {\n    padding: 10px;\n    margin: 0 4px;\n}\n\n#navbar ul li a:hover {\n    background-color: #93cb52;\n    border-radius: 5px;\n}\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nÚpravy budou minimálně zahrnovat:\n\nvše z minulých zadání\nmenu v záhlaví stránky\ndalší html stránka (odkaz v menu)"
-  },
-  {
-    "objectID": "web_html/index.html#responzivnost",
-    "href": "web_html/index.html#responzivnost",
-    "title": "Základy HTML a CSS",
-    "section": "Responzivnost",
-    "text": "Responzivnost\nUpravit menu webu pro rozlišení na mobilních telefonech\n\nResponzivní web\n\nnastavení viewport https://www.w3schools.com/css/css_rwd_viewport.asp\npoužití proměnlivých width oproti pevným\nmedia queries - různé styly pro různá rozlišení\nrem místo px\nmetoda mobile first\n\n.big {\n    font-size: 3rem;\n    font-weight: bold;\n}\n&lt;div id=\"widescreen\" class=\"big\"&gt;widescreen&lt;/div&gt;\n&lt;div id=\"normal\" class=\"big\"&gt;normal&lt;/div&gt;\n&lt;div id=\"tablet\" class=\"big\"&gt;tablet&lt;/div&gt;\n&lt;div id=\"smartphone\" class=\"big\"&gt;smartphone&lt;/div&gt;\n&lt;div id=\"landscape\" class=\"big\"&gt;landscape&lt;/div&gt;\nbody {\n    background-color: grey;\n    color: white;\n    text-align: center;\n    padding-top: 100px;\n}\n\n.big { /* doplníme */\n    display: none;\n    text-transform: capitalize;\n}\n@media(max-width:500px) {\n    body {\n        background-color: red;\n    }\n\n    #smartphone {\n        display: block;\n    }\n}\n@media(min-width: 501px) and (max-width:768px) {\n    body {\n        background-color: green;\n    }\n\n    #tablet {\n        display: block;\n    }\n}\n@media(min-width: 769px) and (max-width:1200px) {\n    body {\n        background-color: cyan;\n    }\n\n    #normal {\n        display: block;\n    }\n}\n@media(min-width: 1201px) {\n    body {\n        background-color: black;\n    }\n\n    #widescreen {\n        display: block;\n    }\n}\n@media(max-height: 500px) {\n    body {\n        background-color: orange;\n    }\n\n    #landscape {\n        display: block;\n    }\n}\n\n\nRelativní jednotky em vs rem\nhttps://www.w3schools.com/cssref/css_units.php\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nDoplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.\nPoužijte ve svém projektu sekce &lt;header&gt;, &lt;main&gt; a &lt;footer&gt;.\nhttps://www.w3schools.com/html/html5_semantic_elements.asp\nPoužijte v zápatí svého webu ikony pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.\n\nPožadavky\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\n\n\n\nPožadavky\n\nzarovnání elementu na střed\ngithub pages\nDatum: 25. 9. 2025\n\n\n\nPožadavky\n\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\n\n\n\n\nMenu\n\nPožadavky\n\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\n\n\n\n\n9. 10. 2025 Responzivnost webu\n\nPožadavky 9. 10. 2025\n\nheader, main, footer\nresponzivnost menu\nvalidace\n\n\n\n\nPortfolio\n\nPožadavky 16. 10. 2025\n\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\n\n\n\n\nGoogle Search\n\nPožadavky 23. 10. 2025\n\nprojekt Google Search\n\n\n\n\nRekap čtvrtletí\n\nPožadavky 30. 10. 2025\n\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "O webu",
-    "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "about.html#užitečné-odkazy",
-    "href": "about.html#užitečné-odkazy",
-    "title": "O webu",
-    "section": "Užitečné odkazy",
-    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/"
-  },
-  {
     "objectID": "202526-1d.html",
     "href": "202526-1d.html",
     "title": "1.D šk. rok 2025/2026",
@@ -54,6 +12,262 @@
     "title": "1.D šk. rok 2025/2026",
     "section": "",
     "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí ()\n\n\n11. 11. 2025\nHodnocení 1.čtvrtletí ()\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\n\n\n\n20. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n4. 12. 2025\n\n\n\n11. 12. 2025\n\n\n\n18. 12. 2025\n\n\n\n8. 1. 2026\n\n\n\n22. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\n\n\n\n12. 2. 2026\n\n\n\n19. 2. 2026\n\n\n\n26. 2. 2026\n\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programování a vývoj aplikací",
+    "section": "",
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud naleznete chybu, dejte mi vědět.\n👨‍🦲 Pavel Martínek"
+  },
+  {
+    "objectID": "web_html/02git.html",
+    "href": "web_html/02git.html",
+    "title": "Git",
+    "section": "",
+    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
+    "crumbs": [
+      "HTML",
+      "Git"
+    ]
+  },
+  {
+    "objectID": "web_html/02git.html#odkazy-k-samostudiu",
+    "href": "web_html/02git.html#odkazy-k-samostudiu",
+    "title": "Git",
+    "section": "",
+    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
+    "crumbs": [
+      "HTML",
+      "Git"
+    ]
+  },
+  {
+    "objectID": "web_html/05css.html",
+    "href": "web_html/05css.html",
+    "title": "Základy CSS",
+    "section": "",
+    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html#css",
+    "crumbs": [
+      "HTML",
+      "Základy CSS"
+    ]
+  },
+  {
+    "objectID": "web_html/05css.html#kaskádové-styly",
+    "href": "web_html/05css.html#kaskádové-styly",
+    "title": "Základy CSS",
+    "section": "Kaskádové styly",
+    "text": "Kaskádové styly\nDavidova učebnice: https://docs.google.com/document/d/1J6NPwn97r0TGJra6QRh3oyNromnFBJCfvnddp1hmHuE/ kapitoly 15 – 36\n\nKam ty naše styly můžeme zapisovat?\ninline aplikované přímo na nějaký prvek webu\n&lt;h1 style=\"color: red\"&gt;Můj web&lt;/h1&gt;\ninterně přímo v hlavičce webu\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;style&gt;h1 { color: green; }&lt;/style&gt;&lt;/head&gt;\nexterně v samostatném souboru\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;&lt;/head&gt;\n\n\nJak cílíme na prvky v našem webu?\nPomocí selektorů https://www.w3schools.com/cssref/css_selectors.php\nTry selectors https://www.w3schools.com/cssref/trysel.php\nCSS Diner (hra) https://flukeout.github.io/\nDalší hry: https://nikitahl.com/learn-css-by-playing-games\n\n\nPříklady a syntaxe\n\n\n\nhtml kód\ncss kód\n\n\n\n\n&lt;h1&gt;\nh1 { color: red; }\n\n\n&lt;div id=\"idecko\"&gt;&lt;/div&gt;\n#idecko { color: red; }\n\n\n&lt;div class=\"trida\"&gt;&lt;/div&gt;\n.trida { color: red; }\n\n\n\nPoznámka: id v kódu stránky máme pouze jednou class může být vícekrát\n\n\nBlokové a inline elementy\nSeznam: https://www.w3schools.com/htmL/html_blocks.asp\nAnonymní blokový element: &lt;div&gt;&lt;/div&gt; Anonymní inline element: &lt;span&gt;&lt;/span&gt;\nVětšinou k nim přidáváme id nebo class.\n\n\nCo můžeme nastavovat ?\n\nbarvu písma color:\nbarvu pozadí background-color\nohraničení border\nodsazení z vnějšku margin\nodsazení uvnitř padding\nzaoblení rohů border-radius\nstyl písma font-family\nstínování https://getcssscan.com/css-box-shadow-examples\ntisíc dalších věcí\n\n\n\nDevTools (F12)\n\n\n\nJak zarovnat web na střed\n\nvytvořte element, kterým vše obalíte &lt;div class=\"containter\"&gt; ... &lt;/div&gt;\nnastavte mu požadovanou šířku (css) .container {max-width: 1024px;}\nnastavte margin vlevo a vpravo na auto .container {margin: auto;}\n\n\n\nZkuste\nhtml.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n\n&lt;head&gt;\n    &lt;title&gt;Document&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n&lt;/head&gt;\n\n&lt;body&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;h1&gt;Nadpis&lt;/h1&gt;\n        &lt;p&gt;Malá ukázka&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/body&gt;\n\n&lt;/html&gt;\nstyle.css\nbody {\n    background-color: lightgray;\n}\n\n.container {\n    background-color: white;\n    max-width: 600px;\n    border-radius: 15px;\n    box-shadow: rgba(0, 0, 0, 0.35)\n                     0px 5px 15px;\n    margin: 100px auto;\n    padding: 5px 30px;\n}",
+    "crumbs": [
+      "HTML",
+      "Základy CSS"
+    ]
+  },
+  {
+    "objectID": "web_html/05css.html#úkol",
+    "href": "web_html/05css.html#úkol",
+    "title": "Základy CSS",
+    "section": "Úkol",
+    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nVyhledejte na internetu informace o kontrastu písma webových stránek. Jak kontrolovat, jak správně nastavit.\nÚpravy budou minimálně zahrnovat:\n\nzměna pozadí na body\nzaoblení rohů obrázku\nzměna odsazení\nzarovnání webu na střed (viz výše)\nzměna barvy písma v souladu s pravidly o kontrastu\nněco co mne překvapí 😊",
+    "crumbs": [
+      "HTML",
+      "Základy CSS"
+    ]
+  },
+  {
+    "objectID": "web_html/07mediaq copy.html",
+    "href": "web_html/07mediaq copy.html",
+    "title": "Responzivnost",
+    "section": "",
+    "text": "Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech\n\nResponzivní web\n\nnastavení viewport https://www.w3schools.com/css/css_rwd_viewport.asp\npoužití proměnlivých width oproti pevným\nmedia queries - různé styly pro různá rozlišení\nrem místo px\nmetoda mobile first\n\n.big {\n    font-size: 3rem;\n    font-weight: bold;\n}\n&lt;div id=\"widescreen\" class=\"big\"&gt;widescreen&lt;/div&gt;\n&lt;div id=\"normal\" class=\"big\"&gt;normal&lt;/div&gt;\n&lt;div id=\"tablet\" class=\"big\"&gt;tablet&lt;/div&gt;\n&lt;div id=\"smartphone\" class=\"big\"&gt;smartphone&lt;/div&gt;\n&lt;div id=\"landscape\" class=\"big\"&gt;landscape&lt;/div&gt;\nbody {\n    background-color: grey;\n    color: white;\n    text-align: center;\n    padding-top: 100px;\n}\n\n.big { /* doplníme */\n    display: none;\n    text-transform: capitalize;\n}\n@media(max-width:500px) {\n    body {\n        background-color: red;\n    }\n\n    #smartphone {\n        display: block;\n    }\n}\n@media(min-width: 501px) and (max-width:768px) {\n    body {\n        background-color: green;\n    }\n\n    #tablet {\n        display: block;\n    }\n}\n@media(min-width: 769px) and (max-width:1200px) {\n    body {\n        background-color: cyan;\n    }\n\n    #normal {\n        display: block;\n    }\n}\n@media(min-width: 1201px) {\n    body {\n        background-color: black;\n    }\n\n    #widescreen {\n        display: block;\n    }\n}\n@media(max-height: 500px) {\n    body {\n        background-color: orange;\n    }\n\n    #landscape {\n        display: block;\n    }\n}\n\n\nRelativní jednotky em vs rem\nhttps://www.w3schools.com/cssref/css_units.php\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nDoplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.\nPoužijte ve svém projektu sekce &lt;header&gt;, &lt;main&gt; a &lt;footer&gt;.\nhttps://www.w3schools.com/html/html5_semantic_elements.asp\nPoužijte v zápatí svého webu ikony pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace."
+  },
+  {
+    "objectID": "web_html/04publish.html",
+    "href": "web_html/04publish.html",
+    "title": "Publikace webu",
+    "section": "",
+    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "crumbs": [
+      "HTML",
+      "Publikace webu"
+    ]
+  },
+  {
+    "objectID": "web_html/04publish.html#github-pages",
+    "href": "web_html/04publish.html#github-pages",
+    "title": "Publikace webu",
+    "section": "",
+    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "crumbs": [
+      "HTML",
+      "Publikace webu"
+    ]
+  },
+  {
+    "objectID": "web_html/10rekap.html",
+    "href": "web_html/10rekap.html",
+    "title": "Rekapitulace 1. čtvrtetí",
+    "section": "",
+    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Rekapitulace 1. čtvrtetí"
+    ]
+  },
+  {
+    "objectID": "web_html/10rekap.html#rekap-1.-čtvrtletí",
+    "href": "web_html/10rekap.html#rekap-1.-čtvrtletí",
+    "title": "Rekapitulace 1. čtvrtetí",
+    "section": "",
+    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Rekapitulace 1. čtvrtetí"
+    ]
+  },
+  {
+    "objectID": "web_html/03html.html",
+    "href": "web_html/03html.html",
+    "title": "Základy HTML",
+    "section": "",
+    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\n\n\n\n\n\nUpozorněníÚkol\n\n\n\nVytvořte validní webovou stránku na libovolné téma, která obsahuje následující položky:\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html#tvorba-účtu-na-githubu",
+    "href": "web_html/index.html#tvorba-účtu-na-githubu",
+    "title": "Úvodní hodina",
+    "section": "Tvorba účtu na Githubu",
+    "text": "Tvorba účtu na Githubu",
+    "crumbs": [
+      "HTML",
+      "Úvodní hodina"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html#instalace-visual-studio-code",
+    "href": "web_html/index.html#instalace-visual-studio-code",
+    "title": "Úvodní hodina",
+    "section": "Instalace Visual Studio Code",
+    "text": "Instalace Visual Studio Code",
+    "crumbs": [
+      "HTML",
+      "Úvodní hodina"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html#instalace-git",
+    "href": "web_html/index.html#instalace-git",
+    "title": "Úvodní hodina",
+    "section": "Instalace Git",
+    "text": "Instalace Git",
+    "crumbs": [
+      "HTML",
+      "Úvodní hodina"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html",
+    "href": "web_html/08portfolio.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Cíl hodiny: Vytvořit portfolio page",
+    "crumbs": [
+      "HTML",
+      "Responzivnost"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html#portfolio",
+    "href": "web_html/08portfolio.html#portfolio",
+    "title": "Portfolio",
+    "section": "Portfolio",
+    "text": "Portfolio\n\nsvůj stávající projekt přesuňte do nové složky -&gt; např. html\ndo Teams sdílejte odkaz na svůj (nyní) starý projekt:\n\nváš_účet_na_githubu.github.io/html\n\nUpravte odkazy na validaci!\nVytvořte portfolio např. podle:\n\nhttps://personal-portfolio.freecodecamp.rocks/\n\npoužijte jen to, co dokážete vysvětlit\nvšechny zdroje ocitujte\ndoplňte ikony na validaci html a css",
+    "crumbs": [
+      "HTML",
+      "Responzivnost"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html#další-zdroje",
+    "href": "web_html/08portfolio.html#další-zdroje",
+    "title": "Portfolio",
+    "section": "Další zdroje",
+    "text": "Další zdroje\n\nhttps://picsum.photos/\nhttps://unsplash.com/\nhttps://www.color-hex.com/color-palettes/popular.php",
+    "crumbs": [
+      "HTML",
+      "Responzivnost"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
+    "href": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
+    "title": "Portfolio",
+    "section": "Rekap 1. čtvrtletí",
+    "text": "Rekap 1. čtvrtletí\n\nPožadavky web\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Responzivnost"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html",
+    "href": "web_html/06menu.html",
+    "title": "Menu webu",
+    "section": "",
+    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#font-awesome",
+    "href": "web_html/06menu.html#font-awesome",
+    "title": "Menu webu",
+    "section": "",
+    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#menu-html",
+    "href": "web_html/06menu.html#menu-html",
+    "title": "Menu webu",
+    "section": "Menu (html)",
+    "text": "Menu (html)\n&lt;nav id=\"navbar\"&gt;\n    &lt;div class=\"logo\"&gt;\n        Moje &lt;span class=\"text-primary\"&gt;firma&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#home\"&gt;Úvod&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#about\"&gt;O nás&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#kontakt\"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#menu-css",
+    "href": "web_html/06menu.html#menu-css",
+    "title": "Menu webu",
+    "section": "Menu (css)",
+    "text": "Menu (css)\n#navbar {\n    background-color: #333;\n    color: white;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 16px;\n    font-size: 24px;\n    font-weight: bold;\n}\n\n#navbar a {\n    color: white;\n    text-decoration: none;\n}\n\n#navbar ul {\n    display: flex;\n    list-style: none;\n    align-items: center;\n}\n\n#navbar ul li a {\n    padding: 10px;\n    margin: 0 4px;\n}\n\n#navbar ul li a:hover {\n    background-color: #93cb52;\n    border-radius: 5px;\n}",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#úkol",
+    "href": "web_html/06menu.html#úkol",
+    "title": "Menu webu",
+    "section": "Úkol",
+    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nÚpravy budou minimálně zahrnovat:\n\nvše z minulých zadání\nmenu v záhlaví stránky\ndalší html stránka (odkaz v menu)",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
   },
   {
     "objectID": "202526-3d.html",
@@ -70,10 +284,17 @@
     "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\n\n\n\n20. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n4. 12. 2025\n\n\n\n11. 12. 2025\n\n\n\n18. 12. 2025\n\n\n\n8. 1. 2026\n\n\n\n22. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\n\n\n\n12. 2. 2026\n\n\n\n19. 2. 2026\n\n\n\n26. 2. 2026\n\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programování a vývoj aplikací",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "O webu",
     "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud naleznete chybu, dejte mi vědět.\n👨‍🦲 Pavel Martínek"
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html#užitečné-odkazy",
+    "href": "about.html#užitečné-odkazy",
+    "title": "O webu",
+    "section": "Užitečné odkazy",
+    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/"
   }
 ]

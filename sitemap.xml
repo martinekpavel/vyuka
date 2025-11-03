@@ -1,23 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://martinekpavel.github.io/vyuka/web_html/index.html</loc>
-    <lastmod>2025-10-30T17:41:54.824Z</lastmod>
-  </url>
-  <url>
-    <loc>https://martinekpavel.github.io/vyuka/about.html</loc>
-    <lastmod>2025-10-30T16:53:42.532Z</lastmod>
-  </url>
-  <url>
     <loc>https://martinekpavel.github.io/vyuka/202526-1d.html</loc>
-    <lastmod>2025-10-30T16:31:58.692Z</lastmod>
-  </url>
-  <url>
-    <loc>https://martinekpavel.github.io/vyuka/202526-3d.html</loc>
-    <lastmod>2025-10-30T16:55:20.504Z</lastmod>
+    <lastmod>2025-11-03T19:58:39.649Z</lastmod>
   </url>
   <url>
     <loc>https://martinekpavel.github.io/vyuka/index.html</loc>
-    <lastmod>2025-10-30T16:38:30.628Z</lastmod>
+    <lastmod>2025-11-03T18:55:21.712Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/02git.html</loc>
+    <lastmod>2025-11-03T19:55:34.378Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/05css.html</loc>
+    <lastmod>2025-11-03T20:27:17.304Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/07mediaq copy.html</loc>
+    <lastmod>2025-11-03T20:34:09.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/04publish.html</loc>
+    <lastmod>2025-11-03T20:22:50.159Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/10rekap.html</loc>
+    <lastmod>2025-11-03T20:41:05.060Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/03html.html</loc>
+    <lastmod>2025-11-03T20:14:55.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/09search.html</loc>
+    <lastmod>2025-11-03T20:40:42.717Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/index.html</loc>
+    <lastmod>2025-11-03T19:47:25.333Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/08portfolio.html</loc>
+    <lastmod>2025-11-03T20:37:20.113Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/web_html/06menu.html</loc>
+    <lastmod>2025-11-03T20:31:11.107Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/202526-3d.html</loc>
+    <lastmod>2025-11-03T18:55:21.711Z</lastmod>
+  </url>
+  <url>
+    <loc>https://martinekpavel.github.io/vyuka/about.html</loc>
+    <lastmod>2025-11-03T18:55:21.712Z</lastmod>
   </url>
 </urlset>

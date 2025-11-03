@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Úvodní hodina – PVA</title>
+<title>Responzivnost – PVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -105,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">HTML</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../web_html/howto.qmd"> 
+    <a class="nav-link" href="../web_html/howto.html"> 
 <span class="menu-text">How-To</span></a>
   </li>  
   <li class="nav-item">
@@ -123,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_html/index.html">Úvodní hodina</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_html/07mediaq.html">Responzivnost</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -141,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_html/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../web_html/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Úvodní hodina</span></a>
   </div>
 </li>
@@ -176,26 +211,20 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
         <li class="sidebar-item">
- <span class="menu-text">web_html/07mediaq.qmd</span>
-  </li>
-        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_html/08portfolio.html" class="sidebar-item-text sidebar-link">
+  <a href="../web_html/07mediaq.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Responzivnost</span></a>
   </div>
 </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../web_html/09search.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Google Search</span></a>
-  </div>
-</li>
+ <span class="menu-text">web_html/08.qmd</span>
+  </li>
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../web_html/10rekap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rekapitulace 1. čtvrtetí</span></a>
-  </div>
-</li>
+ <span class="menu-text">web_html/09.qmd</span>
+  </li>
+        <li class="sidebar-item">
+ <span class="menu-text">web_html/10.qmd</span>
+  </li>
     </ul>
     </div>
 </nav>
@@ -206,19 +235,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Na této stránce</h2>
    
   <ul>
-  <li><a href="#poučení-o-bezpečnosti" id="toc-poučení-o-bezpečnosti" class="nav-link active" data-scroll-target="#poučení-o-bezpečnosti">Poučení o bezpečnosti</a></li>
-  <li><a href="#tvorba-účtu-na-githubu" id="toc-tvorba-účtu-na-githubu" class="nav-link" data-scroll-target="#tvorba-účtu-na-githubu">Tvorba účtu na Githubu</a></li>
-  <li><a href="#instalace-visual-studio-code" id="toc-instalace-visual-studio-code" class="nav-link" data-scroll-target="#instalace-visual-studio-code">Instalace Visual Studio Code</a></li>
-  <li><a href="#instalace-git" id="toc-instalace-git" class="nav-link" data-scroll-target="#instalace-git">Instalace Git</a></li>
+  <li><a href="#responzivní-web" id="toc-responzivní-web" class="nav-link active" data-scroll-target="#responzivní-web">Responzivní web</a></li>
+  <li><a href="#relativní-jednotky-em-vs-rem" id="toc-relativní-jednotky-em-vs-rem" class="nav-link" data-scroll-target="#relativní-jednotky-em-vs-rem">Relativní jednotky em vs rem</a></li>
+  <li><a href="#úkol" id="toc-úkol" class="nav-link" data-scroll-target="#úkol">Úkol</a></li>
+  <li><a href="#rekap-1.-čtvrtletí" id="toc-rekap-1.-čtvrtletí" class="nav-link" data-scroll-target="#rekap-1.-čtvrtletí">Rekap 1. čtvrtletí</a>
+  <ul class="collapse">
+  <li><a href="#požadavky-web" id="toc-požadavky-web" class="nav-link" data-scroll-target="#požadavky-web">Požadavky web</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_html/index.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_html/index.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_html/07mediaq.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_html/07mediaq.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Úvodní hodina</h1>
+<h1 class="title">Responzivnost</h1>
 </div>
 
 
@@ -235,19 +267,133 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="poučení-o-bezpečnosti" class="level2">
-<h2 class="anchored" data-anchor-id="poučení-o-bezpečnosti">Poučení o bezpečnosti</h2>
+<p>Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech</p>
+<section id="responzivní-web" class="level3">
+<h3 class="anchored" data-anchor-id="responzivní-web">Responzivní web</h3>
+<ul>
+<li>nastavení <code>viewport</code> <a href="https://www.w3schools.com/css/css_rwd_viewport.asp" class="uri">https://www.w3schools.com/css/css_rwd_viewport.asp</a></li>
+<li>použití proměnlivých <code>width</code> oproti pevným</li>
+<li>media queries - různé styly pro různá rozlišení</li>
+<li><code>rem</code> místo <code>px</code></li>
+<li>metoda <code>mobile first</code></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.big</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">3</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">bold</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"widescreen"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"big"</span><span class="dt">&gt;</span>widescreen<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"normal"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"big"</span><span class="dt">&gt;</span>normal<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"tablet"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"big"</span><span class="dt">&gt;</span>tablet<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"smartphone"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"big"</span><span class="dt">&gt;</span>smartphone<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"landscape"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"big"</span><span class="dt">&gt;</span>landscape<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">grey</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">padding-top</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">.big</span> { <span class="co">/* doplníme */</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">text-transform</span><span class="ch">:</span> <span class="dv">capitalize</span><span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span><span class="fu">(</span><span class="kw">max-width</span><span class="ch">:</span><span class="dv">500</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    body {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="pp">#smartphone</span> {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span><span class="fu">(</span><span class="kw">min-width</span><span class="ch">:</span> <span class="dv">501</span><span class="dt">px</span><span class="fu">)</span> <span class="kw">and</span> <span class="fu">(</span><span class="kw">max-width</span><span class="ch">:</span><span class="dv">768</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    body {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">green</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="pp">#tablet</span> {</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span><span class="fu">(</span><span class="kw">min-width</span><span class="ch">:</span> <span class="dv">769</span><span class="dt">px</span><span class="fu">)</span> <span class="kw">and</span> <span class="fu">(</span><span class="kw">max-width</span><span class="ch">:</span><span class="dv">1200</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    body {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">cyan</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="pp">#normal</span> {</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span><span class="fu">(</span><span class="kw">min-width</span><span class="ch">:</span> <span class="dv">1201</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    body {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="pp">#widescreen</span> {</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span><span class="fu">(</span><span class="kw">max-height</span><span class="ch">:</span> <span class="dv">500</span><span class="dt">px</span><span class="fu">)</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    body {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">orange</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="pp">#landscape</span> {</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">display</span><span class="ch">:</span> <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="tvorba-účtu-na-githubu" class="level2">
-<h2 class="anchored" data-anchor-id="tvorba-účtu-na-githubu">Tvorba účtu na Githubu</h2>
+<section id="relativní-jednotky-em-vs-rem" class="level3">
+<h3 class="anchored" data-anchor-id="relativní-jednotky-em-vs-rem">Relativní jednotky em vs rem</h3>
+<p><a href="https://www.w3schools.com/cssref/css_units.php" class="uri">https://www.w3schools.com/cssref/css_units.php</a></p>
 </section>
-<section id="instalace-visual-studio-code" class="level2">
-<h2 class="anchored" data-anchor-id="instalace-visual-studio-code">Instalace Visual Studio Code</h2>
+<section id="úkol" class="level3">
+<h3 class="anchored" data-anchor-id="úkol">Úkol</h3>
+<p>Upravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).</p>
+<p>Doplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.</p>
+<p>Použijte ve svém projektu sekce <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> a <code>&lt;footer&gt;</code>.</p>
+<p><a href="https://www.w3schools.com/html/html5_semantic_elements.asp" class="uri">https://www.w3schools.com/html/html5_semantic_elements.asp</a></p>
+<p>Použijte v zápatí svého webu <a href="https://www.w3.org/QA/Tools/Icons">ikony</a> pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.</p>
 </section>
-<section id="instalace-git" class="level2">
-<h2 class="anchored" data-anchor-id="instalace-git">Instalace Git</h2>
+<section id="rekap-1.-čtvrtletí" class="level2">
+<h2 class="anchored" data-anchor-id="rekap-1.-čtvrtletí">Rekap 1. čtvrtletí</h2>
+<section id="požadavky-web" class="level3">
+<h3 class="anchored" data-anchor-id="požadavky-web">Požadavky web</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">nadpisy</label></li>
+<li><label><input type="checkbox">odkazy</label></li>
+<li><label><input type="checkbox">obrázky</label></li>
+<li><label><input type="checkbox">seznam položek</label></li>
+<li><label><input type="checkbox">validní web</label></li>
+<li><label><input type="checkbox">zarovnání webu na střed</label></li>
+<li><label><input type="checkbox">github pages</label></li>
+<li><label><input type="checkbox">změna pozadí body</label></li>
+<li><label><input type="checkbox">zaoblení rohů obrázků</label></li>
+<li><label><input type="checkbox">změna odsazení</label></li>
+<li><label><input type="checkbox">zarovnání webu na střed</label></li>
+<li><label><input type="checkbox">změna barvy písma + kontrast</label></li>
+<li><label><input type="checkbox">menu v záhlaví stránky</label></li>
+<li><label><input type="checkbox">nová html stránka (s odkazem v menu)</label></li>
+<li><label><input type="checkbox">header, main, footer</label></li>
+<li><label><input type="checkbox">responzivnost menu</label></li>
+<li><label><input type="checkbox">validace</label></li>
+<li><label><input type="checkbox">přesun stávajícího webu do extra složky</label></li>
+<li><label><input type="checkbox">vytvoření portfolio page pod účet.github.io</label></li>
+<li><label><input type="checkbox">odkaz na původní web jako projekt</label></li>
+<li><label><input type="checkbox">projekt Google Search</label></li>
+<li><label><input type="checkbox">portfolio page</label></li>
+<li><label><input type="checkbox">odkaz na první web</label>
+<ul class="task-list">
+<li><label><input type="checkbox">podmínky a validace prvního webu</label></li>
+</ul></li>
+<li><label><input type="checkbox">odkaz na google Search</label>
+<ul class="task-list">
+<li><label><input type="checkbox">podmínky a validace google search</label></li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -659,7 +805,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_html/index.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_html/index.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_html/07mediaq.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_html/07mediaq.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a> ❤️, with theme from <a href="https://github.com/rstudio/vetiver.rstudio.com">vetiver</a></p>
 </div>
