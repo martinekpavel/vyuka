@@ -20,8 +20,8 @@ website:
         text: "3.D 2025/26"
       - href: web_html/index.qmd
         text: "HTML"
-      - text: "How-To"
-        href: web_html/howto.qmd
+      # - text: "How-To"
+        # href: web_html/howto.qmd
       - about.qmd
 
   sidebar:
@@ -30,6 +30,7 @@ website:
       # background: light
       contents:
         - web_html/index.qmd
+        - web_html/01uvod.qmd
         - web_html/02git.qmd
         - web_html/03html.qmd
         - web_html/04publish.qmd
@@ -41,14 +42,15 @@ website:
         - web_html/10rekap.qmd
 
 
-    - title: "How-To"
-      contents:
-        - web_html/howto.qmd
+    # - title: "How-To"
+      # contents:
+        # - web_html/howto.qmd
         # navigation items
 
 format:
   html:
-    theme: [sandstone, custom.scss]
+    theme: yeti
+    # theme: [sandstone, custom.scss]
     css: styles.css
     toc: true
     # toc-title: Contents

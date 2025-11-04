@@ -1,0 +1,12 @@
+---
+title: "Úvodní hodina"
+---
+
+## Poučení o bezpečnosti
+
+## Tvorba účtu na Githubu
+
+## Instalace Visual Studio Code
+
+## Instalace Git
+

@@ -1,12 +1,13 @@
 ---
-title: "Úvodní hodina"
+title: "Základy HTML"
 ---
 
-## Poučení o bezpečnosti
+Následující kapitoly vás provedou základy HTML kódování.
 
-## Tvorba účtu na Githubu
 
-## Instalace Visual Studio Code
+## Zajímavé odkazy
 
-## Instalace Git
+- <https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html>
+- <https://bit.ly/HtmlCssUcebnice>
+- <https://cs50.harvard.edu/web/>
 
