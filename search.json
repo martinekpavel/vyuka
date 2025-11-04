@@ -76,32 +76,58 @@
     ]
   },
   {
-    "objectID": "web_html/07mediaq copy.html",
-    "href": "web_html/07mediaq copy.html",
-    "title": "Responzivnost",
-    "section": "",
-    "text": "Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech\n\nResponzivní web\n\nnastavení viewport https://www.w3schools.com/css/css_rwd_viewport.asp\npoužití proměnlivých width oproti pevným\nmedia queries - různé styly pro různá rozlišení\nrem místo px\nmetoda mobile first\n\n.big {\n    font-size: 3rem;\n    font-weight: bold;\n}\n&lt;div id=\"widescreen\" class=\"big\"&gt;widescreen&lt;/div&gt;\n&lt;div id=\"normal\" class=\"big\"&gt;normal&lt;/div&gt;\n&lt;div id=\"tablet\" class=\"big\"&gt;tablet&lt;/div&gt;\n&lt;div id=\"smartphone\" class=\"big\"&gt;smartphone&lt;/div&gt;\n&lt;div id=\"landscape\" class=\"big\"&gt;landscape&lt;/div&gt;\nbody {\n    background-color: grey;\n    color: white;\n    text-align: center;\n    padding-top: 100px;\n}\n\n.big { /* doplníme */\n    display: none;\n    text-transform: capitalize;\n}\n@media(max-width:500px) {\n    body {\n        background-color: red;\n    }\n\n    #smartphone {\n        display: block;\n    }\n}\n@media(min-width: 501px) and (max-width:768px) {\n    body {\n        background-color: green;\n    }\n\n    #tablet {\n        display: block;\n    }\n}\n@media(min-width: 769px) and (max-width:1200px) {\n    body {\n        background-color: cyan;\n    }\n\n    #normal {\n        display: block;\n    }\n}\n@media(min-width: 1201px) {\n    body {\n        background-color: black;\n    }\n\n    #widescreen {\n        display: block;\n    }\n}\n@media(max-height: 500px) {\n    body {\n        background-color: orange;\n    }\n\n    #landscape {\n        display: block;\n    }\n}\n\n\nRelativní jednotky em vs rem\nhttps://www.w3schools.com/cssref/css_units.php\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nDoplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.\nPoužijte ve svém projektu sekce &lt;header&gt;, &lt;main&gt; a &lt;footer&gt;.\nhttps://www.w3schools.com/html/html5_semantic_elements.asp\nPoužijte v zápatí svého webu ikony pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace."
-  },
-  {
-    "objectID": "web_html/04publish.html",
-    "href": "web_html/04publish.html",
-    "title": "Publikace webu",
-    "section": "",
-    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "objectID": "web_html/01uvod.html#tvorba-účtu-na-githubu",
+    "href": "web_html/01uvod.html#tvorba-účtu-na-githubu",
+    "title": "Úvodní hodina",
+    "section": "Tvorba účtu na Githubu",
+    "text": "Tvorba účtu na Githubu",
     "crumbs": [
       "HTML",
-      "Publikace webu"
+      "Úvodní hodina"
     ]
   },
   {
-    "objectID": "web_html/04publish.html#github-pages",
-    "href": "web_html/04publish.html#github-pages",
-    "title": "Publikace webu",
-    "section": "",
-    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "objectID": "web_html/01uvod.html#instalace-visual-studio-code",
+    "href": "web_html/01uvod.html#instalace-visual-studio-code",
+    "title": "Úvodní hodina",
+    "section": "Instalace Visual Studio Code",
+    "text": "Instalace Visual Studio Code",
     "crumbs": [
       "HTML",
-      "Publikace webu"
+      "Úvodní hodina"
+    ]
+  },
+  {
+    "objectID": "web_html/01uvod.html#instalace-git",
+    "href": "web_html/01uvod.html#instalace-git",
+    "title": "Úvodní hodina",
+    "section": "Instalace Git",
+    "text": "Instalace Git",
+    "crumbs": [
+      "HTML",
+      "Úvodní hodina"
+    ]
+  },
+  {
+    "objectID": "web_html/07mediaq.html",
+    "href": "web_html/07mediaq.html",
+    "title": "Responzivnost",
+    "section": "",
+    "text": "Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech\n\nResponzivní web\n\nnastavení viewport https://www.w3schools.com/css/css_rwd_viewport.asp\npoužití proměnlivých width oproti pevným\nmedia queries - různé styly pro různá rozlišení\nrem místo px\nmetoda mobile first\n\n.big {\n    font-size: 3rem;\n    font-weight: bold;\n}\n&lt;div id=\"widescreen\" class=\"big\"&gt;widescreen&lt;/div&gt;\n&lt;div id=\"normal\" class=\"big\"&gt;normal&lt;/div&gt;\n&lt;div id=\"tablet\" class=\"big\"&gt;tablet&lt;/div&gt;\n&lt;div id=\"smartphone\" class=\"big\"&gt;smartphone&lt;/div&gt;\n&lt;div id=\"landscape\" class=\"big\"&gt;landscape&lt;/div&gt;\nbody {\n    background-color: grey;\n    color: white;\n    text-align: center;\n    padding-top: 100px;\n}\n\n.big { /* doplníme */\n    display: none;\n    text-transform: capitalize;\n}\n@media(max-width:500px) {\n    body {\n        background-color: red;\n    }\n\n    #smartphone {\n        display: block;\n    }\n}\n@media(min-width: 501px) and (max-width:768px) {\n    body {\n        background-color: green;\n    }\n\n    #tablet {\n        display: block;\n    }\n}\n@media(min-width: 769px) and (max-width:1200px) {\n    body {\n        background-color: cyan;\n    }\n\n    #normal {\n        display: block;\n    }\n}\n@media(min-width: 1201px) {\n    body {\n        background-color: black;\n    }\n\n    #widescreen {\n        display: block;\n    }\n}\n@media(max-height: 500px) {\n    body {\n        background-color: orange;\n    }\n\n    #landscape {\n        display: block;\n    }\n}\n\n\nRelativní jednotky em vs rem\nhttps://www.w3schools.com/cssref/css_units.php\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nDoplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.\nPoužijte ve svém projektu sekce &lt;header&gt;, &lt;main&gt; a &lt;footer&gt;.\nhttps://www.w3schools.com/html/html5_semantic_elements.asp\nPoužijte v zápatí svého webu ikony pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.",
+    "crumbs": [
+      "HTML",
+      "Responzivnost"
+    ]
+  },
+  {
+    "objectID": "web_html/03html.html",
+    "href": "web_html/03html.html",
+    "title": "Základy HTML",
+    "section": "",
+    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\n\n\n\n\n\nUpozorněníÚkol\n\n\n\nVytvořte validní webovou stránku na libovolné téma, která obsahuje následující položky:\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
     ]
   },
   {
@@ -127,47 +153,47 @@
     ]
   },
   {
-    "objectID": "web_html/03html.html",
-    "href": "web_html/03html.html",
+    "objectID": "web_html/04publish.html",
+    "href": "web_html/04publish.html",
+    "title": "Publikace webu",
+    "section": "",
+    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "crumbs": [
+      "HTML",
+      "Publikace webu"
+    ]
+  },
+  {
+    "objectID": "web_html/04publish.html#github-pages",
+    "href": "web_html/04publish.html#github-pages",
+    "title": "Publikace webu",
+    "section": "",
+    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "crumbs": [
+      "HTML",
+      "Publikace webu"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html",
+    "href": "web_html/index.html",
     "title": "Základy HTML",
     "section": "",
-    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\n\n\n\n\n\nUpozorněníÚkol\n\n\n\nVytvořte validní webovou stránku na libovolné téma, která obsahuje následující položky:\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web",
+    "text": "Následující kapitoly vás provedou základy HTML kódování.",
     "crumbs": [
       "HTML",
       "Základy HTML"
     ]
   },
   {
-    "objectID": "web_html/index.html#tvorba-účtu-na-githubu",
-    "href": "web_html/index.html#tvorba-účtu-na-githubu",
-    "title": "Úvodní hodina",
-    "section": "Tvorba účtu na Githubu",
-    "text": "Tvorba účtu na Githubu",
+    "objectID": "web_html/index.html#zajímavé-odkazy",
+    "href": "web_html/index.html#zajímavé-odkazy",
+    "title": "Základy HTML",
+    "section": "Zajímavé odkazy",
+    "text": "Zajímavé odkazy\n\nhttps://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\nhttps://bit.ly/HtmlCssUcebnice\nhttps://cs50.harvard.edu/web/",
     "crumbs": [
       "HTML",
-      "Úvodní hodina"
-    ]
-  },
-  {
-    "objectID": "web_html/index.html#instalace-visual-studio-code",
-    "href": "web_html/index.html#instalace-visual-studio-code",
-    "title": "Úvodní hodina",
-    "section": "Instalace Visual Studio Code",
-    "text": "Instalace Visual Studio Code",
-    "crumbs": [
-      "HTML",
-      "Úvodní hodina"
-    ]
-  },
-  {
-    "objectID": "web_html/index.html#instalace-git",
-    "href": "web_html/index.html#instalace-git",
-    "title": "Úvodní hodina",
-    "section": "Instalace Git",
-    "text": "Instalace Git",
-    "crumbs": [
-      "HTML",
-      "Úvodní hodina"
+      "Základy HTML"
     ]
   },
   {
@@ -178,7 +204,7 @@
     "text": "Cíl hodiny: Vytvořit portfolio page",
     "crumbs": [
       "HTML",
-      "Responzivnost"
+      "Portfolio"
     ]
   },
   {
@@ -189,7 +215,7 @@
     "text": "Portfolio\n\nsvůj stávající projekt přesuňte do nové složky -&gt; např. html\ndo Teams sdílejte odkaz na svůj (nyní) starý projekt:\n\nváš_účet_na_githubu.github.io/html\n\nUpravte odkazy na validaci!\nVytvořte portfolio např. podle:\n\nhttps://personal-portfolio.freecodecamp.rocks/\n\npoužijte jen to, co dokážete vysvětlit\nvšechny zdroje ocitujte\ndoplňte ikony na validaci html a css",
     "crumbs": [
       "HTML",
-      "Responzivnost"
+      "Portfolio"
     ]
   },
   {
@@ -200,7 +226,7 @@
     "text": "Další zdroje\n\nhttps://picsum.photos/\nhttps://unsplash.com/\nhttps://www.color-hex.com/color-palettes/popular.php",
     "crumbs": [
       "HTML",
-      "Responzivnost"
+      "Portfolio"
     ]
   },
   {
@@ -211,7 +237,7 @@
     "text": "Rekap 1. čtvrtletí\n\nPožadavky web\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
     "crumbs": [
       "HTML",
-      "Responzivnost"
+      "Portfolio"
     ]
   },
   {

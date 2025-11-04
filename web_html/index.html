@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Úvodní hodina – PVA</title>
+<title>Základy HTML – PVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-331694529894e4f9a7be12cba9857be6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e56759e0c3e9c5b79410647fdd4ebbc6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,10 +105,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">HTML</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../web_html/howto.qmd"> 
-<span class="menu-text">How-To</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
 <span class="menu-text">O webu</span></a>
   </li>  
@@ -123,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_html/index.html">Úvodní hodina</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_html/index.html">Základy HTML</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -142,6 +138,12 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../web_html/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Základy HTML</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../web_html/01uvod.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Úvodní hodina</span></a>
   </div>
 </li>
@@ -176,12 +178,15 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
         <li class="sidebar-item">
- <span class="menu-text">web_html/07mediaq.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../web_html/07mediaq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Responzivnost</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../web_html/08portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Responzivnost</span></a>
+ <span class="menu-text">Portfolio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -206,10 +211,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Na této stránce</h2>
    
   <ul>
-  <li><a href="#poučení-o-bezpečnosti" id="toc-poučení-o-bezpečnosti" class="nav-link active" data-scroll-target="#poučení-o-bezpečnosti">Poučení o bezpečnosti</a></li>
-  <li><a href="#tvorba-účtu-na-githubu" id="toc-tvorba-účtu-na-githubu" class="nav-link" data-scroll-target="#tvorba-účtu-na-githubu">Tvorba účtu na Githubu</a></li>
-  <li><a href="#instalace-visual-studio-code" id="toc-instalace-visual-studio-code" class="nav-link" data-scroll-target="#instalace-visual-studio-code">Instalace Visual Studio Code</a></li>
-  <li><a href="#instalace-git" id="toc-instalace-git" class="nav-link" data-scroll-target="#instalace-git">Instalace Git</a></li>
+  <li><a href="#zajímavé-odkazy" id="toc-zajímavé-odkazy" class="nav-link active" data-scroll-target="#zajímavé-odkazy">Zajímavé odkazy</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_html/index.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_html/index.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
     </div>
@@ -218,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Úvodní hodina</h1>
+<h1 class="title">Základy HTML</h1>
 </div>
 
 
@@ -235,17 +237,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="poučení-o-bezpečnosti" class="level2">
-<h2 class="anchored" data-anchor-id="poučení-o-bezpečnosti">Poučení o bezpečnosti</h2>
-</section>
-<section id="tvorba-účtu-na-githubu" class="level2">
-<h2 class="anchored" data-anchor-id="tvorba-účtu-na-githubu">Tvorba účtu na Githubu</h2>
-</section>
-<section id="instalace-visual-studio-code" class="level2">
-<h2 class="anchored" data-anchor-id="instalace-visual-studio-code">Instalace Visual Studio Code</h2>
-</section>
-<section id="instalace-git" class="level2">
-<h2 class="anchored" data-anchor-id="instalace-git">Instalace Git</h2>
+<p>Následující kapitoly vás provedou základy HTML kódování.</p>
+<section id="zajímavé-odkazy" class="level2">
+<h2 class="anchored" data-anchor-id="zajímavé-odkazy">Zajímavé odkazy</h2>
+<ul>
+<li><a href="https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html" class="uri">https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html</a></li>
+<li><a href="https://bit.ly/HtmlCssUcebnice" class="uri">https://bit.ly/HtmlCssUcebnice</a></li>
+<li><a href="https://cs50.harvard.edu/web/" class="uri">https://cs50.harvard.edu/web/</a></li>
+</ul>
 
 
 </section>
