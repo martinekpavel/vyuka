@@ -8,13 +8,14 @@ title: "1.D šk. rok 2025/2026"
 
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
-  `9. 9. 2025`|[Poučení o bezpečnosti, ogr. šk. roku](web_html/) (1,2)
- `16. 9. 2025`|Úvod do HTML (3,4,5/3,4)
- `23. 9. 2025`|Úvod do CSS (6,7/5,6)
- `30. 9. 2025`|Tvorba menu (8,9/7,8)
-`14. 10. 2025`|Responzivnost webu (10,11/9,10)
-`21. 10. 2025`|Portfolio (12,13/11,12)
- `4. 11. 2025`|Rekapitulace 1.čtvrtletí ()
+  `9. 9. 2025`|[Poučení o bezpečnosti, ogr. šk. roku](web_html/01uvod.qmd) (1,2)
+ `16. 9. 2025`|[Úvod do HTML](web_html/03html.qmd) (3,4,5/3,4)
+ `23. 9. 2025`|[Publikování webu](web_html/04publish.qmd) (6,7/5,6)
+ `23. 9. 2025`|[Úvod do CSS](web_html/05css.qmd) (6,7/5,6)
+ `30. 9. 2025`|[Tvorba menu](web_html/06menu.qmd) (8,9/7,8)
+`14. 10. 2025`|[Responzivnost webu](web_html/07mediaq.qmd) (10,11/9,10)
+`21. 10. 2025`|[Portfolio](web_html/08portfolio.qmd) (12,13/11,12)
+ `4. 11. 2025`|[Rekapitulace 1.čtvrtletí](web_html/10rekap.qmd) (14,15/13,14)
 `11. 11. 2025`|Hodnocení 1.čtvrtletí ()
 
 ### 2. čtvrtletí
