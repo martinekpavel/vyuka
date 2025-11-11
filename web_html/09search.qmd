@@ -1,3 +1,8 @@
 ---
-title: "Google Search"
+title: "Projekt Google Search"
 ---
+
+1. Vytvořte nový repozitář `googlesearch`
+2. Otevřete ve VS Code jako nový projekt
+3. Vytvořte web dle zadání: <https://cs50.harvard.edu/web/projects/0/search/>
+4. Commit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)
