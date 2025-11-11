@@ -219,6 +219,17 @@
     ]
   },
   {
+    "objectID": "web_html/09search.html",
+    "href": "web_html/09search.html",
+    "title": "Projekt Google Search",
+    "section": "",
+    "text": "Vytvořte nový repozitář googlesearch\nOtevřete ve VS Code jako nový projekt\nVytvořte web dle zadání: https://cs50.harvard.edu/web/projects/0/search/\nCommit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)",
+    "crumbs": [
+      "HTML",
+      "Projekt Google Search"
+    ]
+  },
+  {
     "objectID": "web_html/07mediaq.html",
     "href": "web_html/07mediaq.html",
     "title": "Responzivnost",
