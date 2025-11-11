@@ -1,0 +1,156 @@
+---
+title: "Tvorba webu na téma"
+---
+
+## Příprava struktury složek a souborů
+
+V hlavní složce projektu si vytvoříme soubor `index.html` a vytvoříme složky `img` a `css`.
+
+Ve složce `css` vytvoříme soubor `style.css`.
+
+HTML šablonu za nás zvládne emmet: `!`. Jen změníme `lang` a `title`.
+
+V hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.
+
+```html 
+<meta name="description" content="Vítejte na webovce knihovny na Kvapice">
+<meta name="keywords" content="knihovna,obchodka,opava">
+<link rel="stylesheet" href="css/style.css">
+```
+
+Budeme chtít také používat ikonky Font Awesome, proto *nalinkujeme* do hlavičky potřebný soubor.
+
+<https://cdnjs.com/libraries/font-awesome>
+
+## Menu webu
+
+Začneme upravovat *body* našeho webu.
+
+```html 
+    <nav id="navbar">
+      <h1 id="logo">
+        <i class="fas fa-book-open text-primary"></i>
+        Knihovna
+        <span class="text-primary">na Kvapilce</span>
+      </h1>
+
+      <ul>
+        <li><a href="#home">Úvod</a></li>
+        <li><a href="#what">Co děláme</a></li>
+        <li><a href="#who">O nás</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+```
+a protože chce po kliknutí na odkaz *Úvod* se dostat na úvodní stránku, tak doplníme k prvku *body* `id="home"`.
+
+V tento okamžik můžeme upravovat soubor kaskádových stylů.
+
+Chceme-li jiné písmo, můžeme využít google fonts a importovat si jej do souboru kaskádových stylů.
+
+Provedeme tzn. CSS reset a nastavíme písmo pro body.
+
+```html 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+```
+
+Na vysvětlení menu jsme měli samostatnou hodinu, použijeme 2x flexbox pro pozicování prvků. A menu ukotvíme jako horní řádek obrazovky.
+
+```css
+/* Navbar */
+#navbar {
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 1;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+#navbar ul li a {
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+
+#navbar ul li a:hover {
+  background-color: #93cb52;
+  border-radius: 5px;
+}
+
+#navbar #logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+```
+
+## Showcase
+
+Nyní mrkneme na *otvírák* vašeho webu. Věnujte pozornost následujícím prvkům a jejich id a class.
+
+```html 
+<!-- Header: Showcase -->
+    <header id="showcase">
+      <div class="showcase-content">
+        <div class="l-heading">Milujeme knihy a knihy milují nás</div>
+        <p class="lead">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+          repellendus.
+        </p>
+        <a href="#what" class="btn">Dozvědět se víc</a>
+      </div>
+```
+
+a opět úprava kaskádových stylů.
+
+```css
+/* Showcase */
+
+#showcase {
+  background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+/* Photo by <a href="https://unsplash.com/@itfeelslikefilm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">🇸🇮 Janko Ferlič</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  /* Overlay */
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+```

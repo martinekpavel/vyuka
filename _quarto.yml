@@ -4,7 +4,7 @@ project:
 website:
   title: "PVA"
   page-footer: 
-    right: "This page is built with [Quarto](https://quarto.org/) ❤️, with theme from [vetiver](https://github.com/rstudio/vetiver.rstudio.com)"
+    right: "This page is built with [Quarto](https://quarto.org/) ❤️"
   
   site-url: https://martinekpavel.github.io/vyuka/
   repo-url: https://github.com/martinekpavel/vyuka
@@ -40,6 +40,8 @@ website:
         - web_html/08portfolio.qmd
         - web_html/09search.qmd
         - web_html/10rekap.qmd
+        - web_html/11projekt.qmd
+        - web_html/12search.qmd
 
 
     # - title: "How-To"

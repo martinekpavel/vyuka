@@ -16,7 +16,7 @@ title: "1.D šk. rok 2025/2026"
 `14. 10. 2025`|[Responzivnost webu](web_html/07mediaq.qmd) (10,11/9,10)
 `21. 10. 2025`|[Portfolio](web_html/08portfolio.qmd) (12,13/11,12)
  `4. 11. 2025`|[Rekapitulace 1.čtvrtletí](web_html/10rekap.qmd) (14,15/13,14)
-`11. 11. 2025`|Hodnocení 1.čtvrtletí ()
+`11. 11. 2025`|[Google Projekt](web_html/12search.qmd) (16,17/15,16)
 
 ### 2. čtvrtletí
 
