@@ -42,6 +42,7 @@ website:
         - web_html/10rekap.qmd
         - web_html/11projekt.qmd
         - web_html/12search.qmd
+        - web_html/13webai.qmd
 
 
     # - title: "How-To"
