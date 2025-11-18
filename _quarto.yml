@@ -52,7 +52,9 @@ website:
 
 format:
   html:
-    theme: yeti
+    theme: 
+      light: yeti
+      dark: superhero
     # theme: [sandstone, custom.scss]
     css: styles.css
     toc: true

@@ -45,4 +45,4 @@ title: "Úvodní hodina"
 ## Instalace Git
 
 * <https://git-scm.com/>
-* instalovat s VSC
+* instalovace nejlépe přes VSC

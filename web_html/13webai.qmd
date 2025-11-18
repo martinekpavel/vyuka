@@ -9,9 +9,18 @@ title: "Tvorba webu pomocí AI"
 5. Dokumentujte a zveřejněte postup (prompty, nástroj) například v readme.md
 6. Na týmsech je dotazník ohledně AI (máte-li čas, vyplňte)
 7. V rámci toho projektu popište i technologie, které AI použila
+8. Na úvodní stránku uveďte informaci, že se jedná o web vytvořený AI a školní projekt
+
+:::{.callout-important}
+Do MS Teams sdílejte odkaz na repozitář a odkaz na stránky
+:::
 
 ## Nástroje
 
 * Microsoft Copilot <https://office.com>
 * ChatGPT
 * <https://DeepSite.io>
+
+:::{.callout-note}
+Nezapomeňte kód validovat a zahrnout do portfolia.
+:::
