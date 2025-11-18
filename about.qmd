@@ -10,4 +10,4 @@ Pokud chcete vytvářet podobné weby, tak mrkněte sem <https://quarto.org/docs
 
 - <https://quarto.org/docs/authoring/markdown-basics.html>
 - <https://marvin-schmitt.com/blog/website-tutorial-quarto/>
-
+- <https://quarto.org/docs/authoring/callouts.html>
