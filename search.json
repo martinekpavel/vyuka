@@ -179,7 +179,7 @@
     "href": "web_html/13webai.html",
     "title": "Tvorba webu pomocí AI",
     "section": "",
-    "text": "Vyberté si téma\nZaložte nový repozitář na Githubu\nOtevřete jej jako nový projekt ve Visual Studio\nPomocí AI nástroje vytvořte web (český), který má minimálně 3 stránky\nDokumentujte a zveřejněte postup (prompty, nástroj) například v readme.md\nNa týmsech je dotazník ohledně AI (máte-li čas, vyplňte)\nV rámci toho projektu popište i technologie, které AI použila\nNa úvodní stránku uveďte informaci, že se jedná o web vytvořený AI a školní projekt",
+    "text": "Vyberté si téma\nZaložte nový repozitář na Githubu\nOtevřete jej jako nový projekt ve Visual Studio\nPomocí AI nástroje vytvořte web (český), který má minimálně 3 stránky\nDokumentujte a zveřejněte postup (prompty, nástroj) například v readme.md\nNa týmsech je dotazník ohledně AI (máte-li čas, vyplňte)\nV rámci toho projektu popište i technologie, které AI použila\nNa úvodní stránku webu uveďte informaci, že se jedná o web vytvořený AI a školní projekt",
     "crumbs": [
       "HTML",
       "Tvorba webu pomocí AI"
