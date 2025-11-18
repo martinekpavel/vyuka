@@ -2,11 +2,47 @@
 title: "Úvodní hodina"
 ---
 
-## Poučení o bezpečnosti
+## Pravidla pro hodnocení
+
+* průběžné hodnocení (zadání) po každé hodině
+* pokud žák chybí, je v jeho zájmu získat informace o probrané látce a doučit se ji, případně kontaktovat vyučujícího s dostatečným předstihem pro individuální konzultaci. Může se stát, že žák v případě zameškané hodiny nebude schopen v další hodině pracovat.
+* několik větších projektů na dané téma, hodnocení má větší váhu
+* není tolerováno kopírování kódů, hraní her
+* komunikujte!
+
+## Poučení o bezpečnosti a ochraně zdraví
+
+* **slušnost a ohled na druhé**, žáci se mají chovat tak, aby neohrozili zdraví své, ani druhých
+* netolerovat projevy nevhodného chování (ubližování, šikana), pokud si žák myslí, že on, nebo některý jiný žák je obětí šikany měl by o tom informovat jakéhokoliv pracovníka školy
+* nevyklánět se z oken, nevystupovat na židle, stoly, parapety, neběhat, neskákat a předcházet úrazům
+* nepožívat žádné psychotropní látky (alkohol, cigarety, omamné látky ...)
+* nenosit do školy nebezpečné a cenné předměty
+* oznámit pedagogickému dozoru nedostatky a závady, které by mohly ohrozit zdraví
+* dodržovat pokyny pedagogického nebo jiného pracovníka školy
+
+### Školní řád
+
+- <https://www.oa-opava.cz/index.php/skola/dulezite-terminy>
+- <https://www.oa-opava.cz/images/soubory/ke_stazeni/skolni-rad-25-26.pdf>
+
+## Soubory a složky
+
+* bez diakritiky
+* bez prázdných míst
+* bez teček a čárek v názvech (pouze tečka pro určení typu souboru)
+* pouze malými písmeny
+* můžete používat: `_` a `-`
 
 ## Tvorba účtu na Githubu
 
+* <https://github.com/>
+* použijte co nejkratší uživatelské jméno
+
 ## Instalace Visual Studio Code
+
+* <https://code.visualstudio.com>
 
 ## Instalace Git
 
+* <https://git-scm.com/>
+* instalovat s VSC
