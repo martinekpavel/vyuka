@@ -263,11 +263,55 @@
     ]
   },
   {
+    "objectID": "web_html/01uvod.html",
+    "href": "web_html/01uvod.html",
+    "title": "Úvodní hodina",
+    "section": "",
+    "text": "průběžné hodnocení (zadání) po každé hodině\npokud žák chybí, je v jeho zájmu získat informace o probrané látce a doučit se ji, případně kontaktovat vyučujícího s dostatečným předstihem pro individuální konzultaci. Může se stát, že žák v případě zameškané hodiny nebude schopen v další hodině pracovat.\nněkolik větších projektů na dané téma, hodnocení má větší váhu\nnení tolerováno kopírování kódů, hraní her\nkomunikujte!",
+    "crumbs": [
+      "HTML",
+      "Úvodní hodina"
+    ]
+  },
+  {
+    "objectID": "web_html/01uvod.html#pravidla-pro-hodnocení",
+    "href": "web_html/01uvod.html#pravidla-pro-hodnocení",
+    "title": "Úvodní hodina",
+    "section": "",
+    "text": "průběžné hodnocení (zadání) po každé hodině\npokud žák chybí, je v jeho zájmu získat informace o probrané látce a doučit se ji, případně kontaktovat vyučujícího s dostatečným předstihem pro individuální konzultaci. Může se stát, že žák v případě zameškané hodiny nebude schopen v další hodině pracovat.\nněkolik větších projektů na dané téma, hodnocení má větší váhu\nnení tolerováno kopírování kódů, hraní her\nkomunikujte!",
+    "crumbs": [
+      "HTML",
+      "Úvodní hodina"
+    ]
+  },
+  {
+    "objectID": "web_html/01uvod.html#poučení-o-bezpečnosti-a-ochraně-zdraví",
+    "href": "web_html/01uvod.html#poučení-o-bezpečnosti-a-ochraně-zdraví",
+    "title": "Úvodní hodina",
+    "section": "Poučení o bezpečnosti a ochraně zdraví",
+    "text": "Poučení o bezpečnosti a ochraně zdraví\n\nslušnost a ohled na druhé, žáci se mají chovat tak, aby neohrozili zdraví své, ani druhých\nnetolerovat projevy nevhodného chování (ubližování, šikana), pokud si žák myslí, že on, nebo některý jiný žák je obětí šikany měl by o tom informovat jakéhokoliv pracovníka školy\nnevyklánět se z oken, nevystupovat na židle, stoly, parapety, neběhat, neskákat a předcházet úrazům\nnepožívat žádné psychotropní látky (alkohol, cigarety, omamné látky …)\nnenosit do školy nebezpečné a cenné předměty\noznámit pedagogickému dozoru nedostatky a závady, které by mohly ohrozit zdraví\ndodržovat pokyny pedagogického nebo jiného pracovníka školy\n\n\nŠkolní řád\n\nhttps://www.oa-opava.cz/index.php/skola/dulezite-terminy\nhttps://www.oa-opava.cz/images/soubory/ke_stazeni/skolni-rad-25-26.pdf",
+    "crumbs": [
+      "HTML",
+      "Úvodní hodina"
+    ]
+  },
+  {
+    "objectID": "web_html/01uvod.html#soubory-a-složky",
+    "href": "web_html/01uvod.html#soubory-a-složky",
+    "title": "Úvodní hodina",
+    "section": "Soubory a složky",
+    "text": "Soubory a složky\n\nbez diakritiky\nbez prázdných míst\nbez teček a čárek v názvech (pouze tečka pro určení typu souboru)\npouze malými písmeny\nmůžete používat: _ a -",
+    "crumbs": [
+      "HTML",
+      "Úvodní hodina"
+    ]
+  },
+  {
     "objectID": "web_html/01uvod.html#tvorba-účtu-na-githubu",
     "href": "web_html/01uvod.html#tvorba-účtu-na-githubu",
     "title": "Úvodní hodina",
     "section": "Tvorba účtu na Githubu",
-    "text": "Tvorba účtu na Githubu",
+    "text": "Tvorba účtu na Githubu\n\nhttps://github.com/\npoužijte co nejkratší uživatelské jméno",
     "crumbs": [
       "HTML",
       "Úvodní hodina"
@@ -278,7 +322,7 @@
     "href": "web_html/01uvod.html#instalace-visual-studio-code",
     "title": "Úvodní hodina",
     "section": "Instalace Visual Studio Code",
-    "text": "Instalace Visual Studio Code",
+    "text": "Instalace Visual Studio Code\n\nhttps://code.visualstudio.com",
     "crumbs": [
       "HTML",
       "Úvodní hodina"
@@ -289,7 +333,7 @@
     "href": "web_html/01uvod.html#instalace-git",
     "title": "Úvodní hodina",
     "section": "Instalace Git",
-    "text": "Instalace Git",
+    "text": "Instalace Git\n\nhttps://git-scm.com/\ninstalovat s VSC",
     "crumbs": [
       "HTML",
       "Úvodní hodina"
