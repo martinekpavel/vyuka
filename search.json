@@ -1,24 +1,53 @@
 [
   {
-    "objectID": "202526-1d.html",
-    "href": "202526-1d.html",
-    "title": "1.D šk. rok 2025/2026",
+    "objectID": "web_python/index.html",
+    "href": "web_python/index.html",
+    "title": "Základy Python",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\n\n\n\n2. 12. 2025\n\n\n\n9. 12. 2025\n\n\n\n16. 12. 2025\n\n\n\n6. 1. 2026\n\n\n\n13. 1. 2026\n\n\n\n20. 1. 2026\n\n\n\n27. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\n\n\n\n17. 2. 2026\n\n\n\n24. 2. 2026\n\n\n\n3. 3. 2026\n\n\n\n10. 3. 2026\n\n\n\n17. 3. 2026\n\n\n\n24. 3. 2026\n\n\n\n31. 3. 2026\n\n\n\n7. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\n\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\n\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "text": "Následující kapitoly vás provedou základy programování v Pythonu.",
+    "crumbs": [
+      "Python",
+      "Základy Python"
+    ]
   },
   {
-    "objectID": "202526-1d.html#výuka",
-    "href": "202526-1d.html#výuka",
-    "title": "1.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\n\n\n\n2. 12. 2025\n\n\n\n9. 12. 2025\n\n\n\n16. 12. 2025\n\n\n\n6. 1. 2026\n\n\n\n13. 1. 2026\n\n\n\n20. 1. 2026\n\n\n\n27. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\n\n\n\n17. 2. 2026\n\n\n\n24. 2. 2026\n\n\n\n3. 3. 2026\n\n\n\n10. 3. 2026\n\n\n\n17. 3. 2026\n\n\n\n24. 3. 2026\n\n\n\n31. 3. 2026\n\n\n\n7. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\n\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\n\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "objectID": "web_python/index.html#zajímavé-odkazy",
+    "href": "web_python/index.html#zajímavé-odkazy",
+    "title": "Základy Python",
+    "section": "Zajímavé odkazy",
+    "text": "Zajímavé odkazy\n\nhttps://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\nrepo: https://github.com/acchou/html-css-cheat-sheet/\n\nhttps://bit.ly/HtmlCssUcebnice\nhttps://cs50.harvard.edu/web/",
+    "crumbs": [
+      "Python",
+      "Základy Python"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programování a vývoj aplikací",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "O webu",
     "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud naleznete chybu, dejte mi vědět.\n👨‍🦲 Pavel Martínek"
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html#užitečné-odkazy",
+    "href": "about.html#užitečné-odkazy",
+    "title": "O webu",
+    "section": "Užitečné odkazy",
+    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html"
+  },
+  {
+    "objectID": "202526-3d.html",
+    "href": "202526-3d.html",
+    "title": "3.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n4. 12. 2025\n\n\n\n11. 12. 2025\n\n\n\n18. 12. 2025\n\n\n\n8. 1. 2026\n\n\n\n22. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\n\n\n\n12. 2. 2026\n\n\n\n19. 2. 2026\n\n\n\n26. 2. 2026\n\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+  },
+  {
+    "objectID": "202526-3d.html#výuka",
+    "href": "202526-3d.html#výuka",
+    "title": "3.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n4. 12. 2025\n\n\n\n11. 12. 2025\n\n\n\n18. 12. 2025\n\n\n\n8. 1. 2026\n\n\n\n22. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\n\n\n\n12. 2. 2026\n\n\n\n19. 2. 2026\n\n\n\n26. 2. 2026\n\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
   },
   {
     "objectID": "web_html/02git.html",
@@ -428,31 +457,68 @@
     ]
   },
   {
-    "objectID": "202526-3d.html",
-    "href": "202526-3d.html",
-    "title": "3.D šk. rok 2025/2026",
+    "objectID": "web_algo/index.html",
+    "href": "web_algo/index.html",
+    "title": "Základy Algoritmizace",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n4. 12. 2025\n\n\n\n11. 12. 2025\n\n\n\n18. 12. 2025\n\n\n\n8. 1. 2026\n\n\n\n22. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\n\n\n\n12. 2. 2026\n\n\n\n19. 2. 2026\n\n\n\n26. 2. 2026\n\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+    "text": "Následující kapitoly vás provedou základy HTML kódování.",
+    "crumbs": [
+      "Algoritmy",
+      "Základy Algoritmizace"
+    ]
   },
   {
-    "objectID": "202526-3d.html#výuka",
-    "href": "202526-3d.html#výuka",
-    "title": "3.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n27. 11. 2025\n\n\n\n4. 12. 2025\n\n\n\n11. 12. 2025\n\n\n\n18. 12. 2025\n\n\n\n8. 1. 2026\n\n\n\n22. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\n\n\n\n12. 2. 2026\n\n\n\n19. 2. 2026\n\n\n\n26. 2. 2026\n\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+    "objectID": "web_algo/index.html#zajímavé-odkazy",
+    "href": "web_algo/index.html#zajímavé-odkazy",
+    "title": "Základy Algoritmizace",
+    "section": "Zajímavé odkazy",
+    "text": "Zajímavé odkazy\n\nhttps://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\nrepo: https://github.com/acchou/html-css-cheat-sheet/\n\nhttps://bit.ly/HtmlCssUcebnice\nhttps://cs50.harvard.edu/web/",
+    "crumbs": [
+      "Algoritmy",
+      "Základy Algoritmizace"
+    ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "O webu",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programování a vývoj aplikací",
     "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites."
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud naleznete chybu, dejte mi vědět.\n👨‍🦲 Pavel Martínek"
   },
   {
-    "objectID": "about.html#užitečné-odkazy",
-    "href": "about.html#užitečné-odkazy",
-    "title": "O webu",
-    "section": "Užitečné odkazy",
-    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/"
+    "objectID": "202526-1d.html",
+    "href": "202526-1d.html",
+    "title": "1.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\n\n\n\n2. 12. 2025\n\n\n\n9. 12. 2025\n\n\n\n16. 12. 2025\n\n\n\n6. 1. 2026\n\n\n\n13. 1. 2026\n\n\n\n20. 1. 2026\n\n\n\n27. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\n\n\n\n17. 2. 2026\n\n\n\n24. 2. 2026\n\n\n\n3. 3. 2026\n\n\n\n10. 3. 2026\n\n\n\n17. 3. 2026\n\n\n\n24. 3. 2026\n\n\n\n31. 3. 2026\n\n\n\n7. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\n\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\n\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+  },
+  {
+    "objectID": "202526-1d.html#výuka",
+    "href": "202526-1d.html#výuka",
+    "title": "1.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\n\n\n\n2. 12. 2025\n\n\n\n9. 12. 2025\n\n\n\n16. 12. 2025\n\n\n\n6. 1. 2026\n\n\n\n13. 1. 2026\n\n\n\n20. 1. 2026\n\n\n\n27. 1. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\n\n\n\n17. 2. 2026\n\n\n\n24. 2. 2026\n\n\n\n3. 3. 2026\n\n\n\n10. 3. 2026\n\n\n\n17. 3. 2026\n\n\n\n24. 3. 2026\n\n\n\n31. 3. 2026\n\n\n\n7. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\n\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\n\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+  },
+  {
+    "objectID": "web_js/index.html",
+    "href": "web_js/index.html",
+    "title": "Úvod JavaScript",
+    "section": "",
+    "text": "Mrkněte, co vlastně Javascript umí.\n## Materiál pro lekce\n* https://cs50.harvard.edu/web/weeks/5\nPokračovat -&gt;",
+    "crumbs": [
+      "JavaScript",
+      "Úvod JavaScript"
+    ]
+  },
+  {
+    "objectID": "web_js/index.html#motivace",
+    "href": "web_js/index.html#motivace",
+    "title": "Úvod JavaScript",
+    "section": "",
+    "text": "Mrkněte, co vlastně Javascript umí.\n## Materiál pro lekce\n* https://cs50.harvard.edu/web/weeks/5\nPokračovat -&gt;",
+    "crumbs": [
+      "JavaScript",
+      "Úvod JavaScript"
+    ]
   }
 ]
