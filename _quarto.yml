@@ -20,8 +20,12 @@ website:
         text: "3.D 2025/26"
       - href: web_html/index.qmd
         text: "HTML"
-      # - text: "How-To"
-        # href: web_html/howto.qmd
+      - text: "Algoritmy"
+        href: web_algo/index.qmd
+      - text: "Python"
+        href: web_python/index.qmd
+      - text: "JavaScript"
+        href: web_js/index.qmd
       - about.qmd
 
   sidebar:
@@ -42,13 +46,21 @@ website:
         - web_html/10rekap.qmd
         - web_html/11projekt.qmd
         - web_html/12search.qmd
-        - web_html/13webai.qmd
-
-
-    # - title: "How-To"
-      # contents:
-        # - web_html/howto.qmd
-        # navigation items
+        - web_html/13webai.qmd    
+    - title: "JavaScript"
+      style: "docked"
+      contents:
+            - web_js/index.qmd
+            - web_js/01lekcejs.qmd
+    - title: "Algoritmy"
+      style: "docked"
+      contents:
+            - web_algo/index.qmd
+    - title: "Python"
+      style: "docked"
+          # background: light
+      contents:
+            - web_python/index.qmd
 
 format:
   html:

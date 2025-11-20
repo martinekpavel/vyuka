@@ -1,0 +1,15 @@
+---
+title: "Úvod JavaScript"
+---
+
+## Motivace
+
+Mrkněte, co vlastně Javascript umí.
+
+## Materiál pro lekce
+ 
+* <https://cs50.harvard.edu/web/weeks/5>
+
+[Pokračovat ->](web_js/01lekcejs.qmd)
+
+

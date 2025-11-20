@@ -1,0 +1,14 @@
+---
+title: "Základy Algoritmizace"
+---
+
+Následující kapitoly vás provedou základy HTML kódování.
+
+
+## Zajímavé odkazy
+
+- <https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html>
+  + repo: <https://github.com/acchou/html-css-cheat-sheet/>
+- <https://bit.ly/HtmlCssUcebnice>
+- <https://cs50.harvard.edu/web/>
+
