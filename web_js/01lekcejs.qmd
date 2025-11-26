@@ -1,5 +1,66 @@
 ---
-title: "JS lekce 01"
+title: "Lekce 01"
 ---
 
 ## Umístění skriptu
+
+JavaScriptový kód nebo link na soubor se obvykle vyskytuje v `<head></head>` nebo těsně před uzavíracím tagem `</body>`.
+
+V praxi se setkáte se vším možným, nicméně budete odevzdávat kód, kde budete linkovat js soubor v `<head>`.
+
+## Ukázky kódu
+
+Soubor `hello0.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello!</title>
+        <script>
+            alert('Hello, world!');
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+    </body>
+</html>
+```
+
+Zkusíme přidat do kódu tlačítko a nastavit událost kliknutí,
+po kliknutí se spustí funkce.
+
+```html
+<button onclick="hello()">Click Here</button>
+```
+a napíšeme danou funkci na správné místo
+
+```js
+function hello() {
+                document.querySelector('h1').innerHTML = 'Goodbye!';
+            }
+```
+
+Soubor `counter0.html` 
+
+```html 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Count</title>
+        <script>
+            let counter = 0;
+            function count() {
+                counter++;
+                alert(counter);
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="count()">Count</button>
+    </body>
+</html>
+```
+Bude doplněno dle videa.
+
+

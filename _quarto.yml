@@ -9,6 +9,7 @@ website:
   site-url: https://martinekpavel.github.io/vyuka/
   repo-url: https://github.com/martinekpavel/vyuka
   repo-actions: [edit, source, issue]  
+  page-navigation: true
   
   navbar:
     left:
@@ -50,17 +51,17 @@ website:
     - title: "JavaScript"
       style: "docked"
       contents:
-            - web_js/index.qmd
-            - web_js/01lekcejs.qmd
+        - web_js/index.qmd
+        - web_js/01lekcejs.qmd
     - title: "Algoritmy"
       style: "docked"
       contents:
-            - web_algo/index.qmd
+        - web_algo/index.qmd
     - title: "Python"
       style: "docked"
           # background: light
       contents:
-            - web_python/index.qmd
+        - web_python/index.qmd
 
 format:
   html:

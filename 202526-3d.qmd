@@ -24,10 +24,10 @@ title: "3.D šk. rok 2025/2026"
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
 `13. 11. 2025`| [Tvorba webu pomocí AI](web_html/13webai.qmd) (21,22)
-`20. 11. 2025`|
+`20. 11. 2025`| [Úvod do JavaScriptu](web_js/01lekcejs.qmd) (23,24)
+`27. 11. 2025`| [JavaScript 2](web_js/02lekcejs.qmd) (25,26)
 `27. 11. 2025`|
-`27. 11. 2025`|
- `4. 12. 2025`|
+`4. 12. 2025`|
 `11. 12. 2025`|
 `18. 12. 2025`|
   `8. 1. 2026`|

@@ -1,0 +1,92 @@
+---
+title: "Lekce 02"
+---
+
+Vytvoříme šablonu html souboru.
+
+Do `<head>` umístíme `<script></script>`.
+
+Mezi značky napíšeme kód:
+
+```js
+let counter = 0;
+function count() {
+    counter++;
+    document.querySelector('h1').innerHTML = counter;
+    }
+```
+
+Do html kódu patří tlačítko a k němu přiřazená výše uvedená funkce.
+
+Jakmile vyzkoušíte, zkusme udělat malou úpravu.
+Vytvoříme a nalinkujeme soubor se styly, kam přidáme styl pro class .red, která nastaví barvu písma na červenou.
+
+Upravíme funkci.
+
+```js 
+function count() {
+    counter++;
+
+    if (counter % 10 === 0) {
+        document.querySelector("h1").classList.add('red');}
+    else {
+        document.querySelector("h1").classList.remove('red');
+        }
+    document.querySelector('h1').innerHTML = counter;
+    }
+```
+
+Zkusme oddělit JavaScript od html kódu:
+
+```js 
+document.querySelector('button').onclick = count;`
+```
+
+Jenže!
+
+Pozor věnujte pozornost předávání názvu funkce bez závorek.
+
+Kód bude fungovat, pokud odchytneme událost načtení DOM.
+
+Správný script, který můžeme (a uděláme to tak) umístit do odděleného souboru.
+
+```js 
+let counter = 0;
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('button').onclick = count;
+    });
+
+function count() {
+    counter++;
+
+    if (counter % 10 === 0) {
+        document.querySelector("h1").classList.add('red');}
+    else {
+        document.querySelector("h1").classList.remove('red');
+        }
+    document.querySelector('h1').innerHTML = counter;
+}
+
+```
+
+Pro načtení souboru s JavaScriptem použijeme: `<script src="counter.js"></script>`
+
+A nyní formulářík.
+
+`hello3.html`
+
+Za mne lepší úprava:
+
+```js 
+event.preventDefault();
+document.querySelector('h1').innerHTML = `Hello ${name}`;
+```
+
+### Úkol
+
+- [ ] Napište program, který nám převede stupně Celsia na stupně Farenheita
+- [ ] Použijte správné techniky výše uvedené
+
+
+
