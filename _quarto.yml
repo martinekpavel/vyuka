@@ -53,6 +53,7 @@ website:
       contents:
         - web_js/index.qmd
         - web_js/01lekcejs.qmd
+        - web_js/02lekcejs.qmd
     - title: "Algoritmy"
       style: "docked"
       contents:
