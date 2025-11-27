@@ -16,10 +16,10 @@ function count() {
     }
 ```
 
-Do html kódu patří tlačítko a k němu přiřazená výše uvedená funkce.
+Do html kódu patří tlačítko a k němu přiřazená výše uvedená funkce. Nad něj patří element `<h1></h1>`.
 
 Jakmile vyzkoušíte, zkusme udělat malou úpravu.
-Vytvoříme a nalinkujeme soubor se styly, kam přidáme styl pro class .red, která nastaví barvu písma na červenou.
+Vytvoříme a nalinkujeme soubor se styly, kam přidáme styl pro class `.red`, která nastaví barvu písma na červenou.
 
 Upravíme funkci.
 
@@ -39,7 +39,7 @@ function count() {
 Zkusme oddělit JavaScript od html kódu:
 
 ```js 
-document.querySelector('button').onclick = count;`
+document.querySelector('button').onclick = count;
 ```
 
 Jenže!
@@ -76,9 +76,36 @@ A nyní formulářík.
 
 `hello3.html`
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hello!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = function() {
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello, ${name}!`);
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <form>
+            <input autofocus="" id="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
+    
+
+</body></html>
+```
+
 Za mne lepší úprava:
 
 ```js 
+const name = document.querySelector('#name').value;
+// alert(`Hello, ${name}!`);
 event.preventDefault();
 document.querySelector('h1').innerHTML = `Hello ${name}`;
 ```
@@ -87,6 +114,7 @@ document.querySelector('h1').innerHTML = `Hello ${name}`;
 
 - [ ] Napište program, který nám převede stupně Celsia na stupně Farenheita
 - [ ] Použijte správné techniky výše uvedené
+- [ ] Sdílejte odkaz na web, který zahrnete do svého portfolia
 
 
 
