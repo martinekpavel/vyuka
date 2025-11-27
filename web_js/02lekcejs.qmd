@@ -114,7 +114,7 @@ document.querySelector('h1').innerHTML = `Hello ${name}`;
 
 - [ ] Napište program, který nám převede stupně Celsia na stupně Farenheita
 - [ ] Použijte správné techniky výše uvedené
-- [ ] Sdílejte odkaz na web, který zahrnete do svého portfolia
+- [ ] Sdílejte odkaz na web, který zahrnete do svého portfolia
 
 
 
