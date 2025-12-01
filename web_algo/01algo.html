@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Základy Algoritmizace – PVA</title>
+<title>algo – PVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../web_algo/02diag.html" rel="next">
+<link href="../web_algo/index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -73,10 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Hledat"
   }
 }</script>
-<meta name="mermaid-theme" content="forest">
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -303,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_algo/index.html">Základy Algoritmizace</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_algo/01algo.html">01algo.html</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -321,14 +318,20 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_algo/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../web_algo/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Základy Algoritmizace</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../web_algo/01algo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">01algo.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../web_algo/02diag.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vývojové diagramy</span></a>
+ <span class="menu-text">02diag.html</span></a>
   </div>
 </li>
     </ul>
@@ -336,111 +339,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Na této stránce</h2>
-   
-  <ul>
-  <li><a href="#vlastnosti-algoritmů" id="toc-vlastnosti-algoritmů" class="nav-link active" data-scroll-target="#vlastnosti-algoritmů">Vlastnosti algoritmů</a></li>
-  <li><a href="#způsob-zápisů-algoritmů" id="toc-způsob-zápisů-algoritmů" class="nav-link" data-scroll-target="#způsob-zápisů-algoritmů">Způsob zápisů algoritmů</a></li>
-  <li><a href="#vývojové-diagramy" id="toc-vývojové-diagramy" class="nav-link" data-scroll-target="#vývojové-diagramy">Vývojové diagramy</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_algo/index.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_algo/index.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Základy Algoritmizace</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
 
 
-<p>Co je to algoritmus?</p>
-<p><strong>Přesný návod nebo postup pro vyřešení konkrétní úlohy.</strong></p>
-<p><a href="https://youtu.be/HsO2reAF0IA?si=UkV1gbOpgSbvjYuw">Algoritmy - NEzkreslená věda - Youtube</a></p>
-<p>Na <strong>algoritmus</strong> se můžeme dívat jako na sled příkazů, které od někoho přijímáme (když algoritmus vykonáváme) nebo jej vymýšlíme a sdělujeme (tomu, kdo jej vykoná). Algoritmus má vždy vést k&nbsp;řešení nějakého problému a <strong>musí se sestávat z&nbsp;příkazů, kterým ten, kdo je vykonává, dobře rozumí</strong>, nemůže si je vyložit různým způsobem a může tak algoritmus bezmyšlenkovitě vykonat. Algoritmy umožňují automatické vykonávání pokynů, vedoucí k&nbsp;řešení problémů.</p>
-<p>Algoritmické úlohy a vzdělávací cíle. Online. Informatika s bobříkem. 2024. Dostupné z: <a href="https://wakelet.com/wake/3GJF18eCVEDcx8kyYTaPg" class="uri">https://wakelet.com/wake/3GJF18eCVEDcx8kyYTaPg</a>. [cit. 2025-12-01].</p>
-<section id="vlastnosti-algoritmů" class="level3">
-<h3 class="anchored" data-anchor-id="vlastnosti-algoritmů">Vlastnosti algoritmů</h3>
-<ul>
-<li>musí mít začátek a konec - po konečném počtu kroků musí dojít od počátku do konce</li>
-<li>musí být věcně správný - pokud chci obvod kruhu, musím mít správný vzoreček</li>
-<li>musí být jednoznačný - v každém jeho kroku musí být jasné, jaký bude jeho následující krok</li>
-<li>musí být obecný - schopný řešit co nějvětší množství podobných problémů</li>
-<li>musí být opakovatelný - za stejných podmínek vracet stejné výsledky</li>
-<li>musí být srozumitelný - osobě, pro kterou je určen</li>
-</ul>
-</section>
-<section id="způsob-zápisů-algoritmů" class="level3">
-<h3 class="anchored" data-anchor-id="způsob-zápisů-algoritmů">Způsob zápisů algoritmů</h3>
-<ul>
-<li>slovní vyjádření
-<ul>
-<li>i pro lajky, nejméně přesné, kuchařky, návody</li>
-</ul></li>
-<li>matematický zápis
-<ul>
-<li>jednoznačný, pro určité úkoly, mohou chybět podmínky, vzorečky pro výpočty</li>
-</ul></li>
-<li>rozhodovací tabulky
-<ul>
-<li>jednoznačnost, přehlednost, nehodí se pro každý typ úloh, rozvrh</li>
-</ul></li>
-<li>vývojové diagramy
-<ul>
-<li>symbolický jazyk pro názorné zobrazení algoritmu, používá se při vývoji softwaru</li>
-</ul></li>
-<li>počítačové programy
-<ul>
-<li>pro programátory a počítače, mohou být nepřehledné</li>
-</ul></li>
-</ul>
-</section>
-<section id="vývojové-diagramy" class="level3">
-<h3 class="anchored" data-anchor-id="vývojové-diagramy">Vývojové diagramy</h3>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-    A(["Začátek"]) --&gt; E[/"Vstupy a výstupy"/]
-    E --&gt; B{"Rozhodovací blok"}
-    B -- Pravda --&gt; H["Cyklus"]
-    B -- Nepravda --&gt; D["Podprogram 2"]
-    D --&gt; G
-    H --&gt; F["Příkazy"]
-    F --&gt; I["Konec cyklu"]
-    I .-&gt; H
-    I --&gt; G(["Konec"])
-
-    D@{ shape: subproc}
-    H@{ shape: hex}
-    I@{ shape: hex}
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -858,10 +768,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../web_algo/index.html" class="pagination-link" aria-label="Základy Algoritmizace">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Základy Algoritmizace</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../web_algo/02diag.html" class="pagination-link" aria-label="Vývojové diagramy">
-        <span class="nav-page-text">Vývojové diagramy</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../web_algo/02diag.html" class="pagination-link" aria-label="02diag.html">
+        <span class="nav-page-text">02diag.html</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -873,7 +786,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_algo/index.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_algo/index.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_algo/01algo.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_algo/01algo.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a> ❤️</p>
 </div>
