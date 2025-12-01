@@ -58,6 +58,7 @@ website:
       style: "docked"
       contents:
         - web_algo/index.qmd
+        - web_algo/02diag.qmd
     - title: "Python"
       style: "docked"
           # background: light
@@ -66,6 +67,8 @@ website:
 
 format:
   html:
+    mermaid:
+      theme: forest
     theme: 
       light: yeti
       dark: superhero

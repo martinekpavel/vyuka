@@ -4,5 +4,54 @@ title: "Základy Algoritmizace"
 
 Co je to algoritmus?
 
+**Přesný návod nebo postup pro vyřešení konkrétní úlohy.** 
 
+[Algoritmy - NEzkreslená věda - Youtube](https://youtu.be/HsO2reAF0IA?si=UkV1gbOpgSbvjYuw)
+
+
+
+Na **algoritmus** se můžeme dívat jako na sled příkazů, které od někoho přijímáme (když algoritmus vykonáváme) nebo jej vymýšlíme a sdělujeme (tomu, kdo jej vykoná). Algoritmus má vždy vést k řešení nějakého problému a **musí se sestávat z příkazů, kterým ten, kdo je vykonává, dobře rozumí**, nemůže si je vyložit různým způsobem a může tak algoritmus bezmyšlenkovitě vykonat. Algoritmy umožňují automatické vykonávání pokynů, vedoucí k řešení problémů. 
+
+Algoritmické úlohy a vzdělávací cíle. Online. Informatika s bobříkem. 2024. Dostupné z: <https://wakelet.com/wake/3GJF18eCVEDcx8kyYTaPg>. [cit. 2025-12-01].
+
+### Vlastnosti algoritmů
+
+- musí mít začátek a konec - po konečném počtu kroků musí dojít od počátku do konce 
+- musí být věcně správný - pokud chci obvod kruhu, musím mít správný vzoreček
+- musí být jednoznačný - v každém jeho kroku musí být jasné, jaký bude jeho následující krok 
+- musí být obecný - schopný řešit co nějvětší množství podobných problémů 
+- musí být opakovatelný - za stejných podmínek vracet stejné výsledky
+- musí být srozumitelný - osobě, pro kterou je určen
+
+### Způsob zápisů algoritmů
+
+- slovní vyjádření
+    - i pro lajky, nejméně přesné, kuchařky, návody
+- matematický zápis
+    - jednoznačný, pro určité úkoly, mohou chybět podmínky, vzorečky pro výpočty
+- rozhodovací tabulky
+    - jednoznačnost, přehlednost, nehodí se pro každý typ úloh, rozvrh
+- vývojové diagramy
+    - symbolický jazyk pro názorné zobrazení algoritmu, používá se při vývoji softwaru
+- počítačové programy
+    - pro programátory a počítače, mohou být nepřehledné
+
+### Vývojové diagramy
+
+```{mermaid}
+flowchart TB
+    A(["Začátek"]) --> E[/"Vstupy a výstupy"/]
+    E --> B{"Rozhodovací blok"}
+    B -- Pravda --> H["Cyklus"]
+    B -- Nepravda --> D["Podprogram 2"]
+    D --> G
+    H --> F["Příkazy"]
+    F --> I["Konec cyklu"]
+    I .-> H
+    I --> G(["Konec"])
+
+    D@{ shape: subproc}
+    H@{ shape: hex}
+    I@{ shape: hex}
+```
 

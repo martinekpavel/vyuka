@@ -23,8 +23,8 @@ title: "1.D šk. rok 2025/2026"
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
 `18. 11. 2025`| [Tvorba webu pomocí AI](web_html/13webai.qmd) (18,19/17,18)
-`25. 11. 2025`|
-` 2. 12. 2025`|
+`25. 11. 2025`| [Algoritmy - úvod](web_algo/) (20,21/19,20)
+` 2. 12. 2025`| [Vývojové diagramy](web_algo/02diag.qmd) (22,23/21,22)
 ` 9. 12. 2025`|
 `16. 12. 2025`|
   `6. 1. 2026`|

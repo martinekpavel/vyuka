@@ -1,0 +1,105 @@
+---
+title: "Vývojové diagramy"
+---
+
+`2. skupina` 2. 12. 2025 číslo hodiny `21,22`
+
+Opakování z minulé hodiny (kahoot).
+
+Student navrhne algoritmus pro řešení zadané úlohy.
+Graficky jej znázorní pomocí vývojového diagramu.
+Najde a opraví chybu.
+
+Požadovaný software: <http://www.flowgorithm.org/>
+
+## Úloha 1 - kontrola zadaného PIN
+
+Použité proměnné
+
+- P - představuje správné PIN 
+- X - počet chybných pokusů
+- A - pin zadané uživatelem
+
+```{mermaid}
+flowchart TB
+    A(["Začátek"]) --> B["P = 4530"]
+    B --> C["X = 0"]
+    C --> D{"X == 3"}
+    D -- Pravda --> E[/"Karta zablokována"/]
+    D -- Nepravda --> F[/"Čti A"/]
+    F --> G{"A == P"}
+    G -- Pravda --> I["Provedení výběru"]
+    G -- Nepravda --> H["X = X + 1"]
+    H --> D
+    I --> Z
+    E --> Z(["Konec"])
+```
+
+**Otázky**
+
+1. Proč je prvek Čti A, zařazen až za rozhodovací prvek X == 3?
+2. Pokud je karta zablokována, existuje nějaká šance se vrátit zpět a dát další PIN?
+3. Pokud by mělo být povoleno 5 chybných pokusů, jakou konkrétní změnu je nutné provést?
+4. Jak konkrétně upravit diagram, aby před třetím pokusem o zadání PIN vypsal varování "Pozor, toto je poslední pokus"?
+
+
+## Cyklus
+
+```{mermaid}
+flowchart TB
+    A["`Cyklus
+    I = 1, N`"]
+    Z(["Začátek"]) --> A 
+    A --> B["Prvky uvnitř cyklu"]
+    B --> C["Konec cyklu"]
+    C .-> A
+    C --> K(["Konec"])
+
+    A@{ shape: hex}
+    C@{ shape: hex}
+```
+
+## Kolik čísel je záporných?
+
+Použité proměnné:
+- P počet čísel, ze kterých budou hodnoty zjištovány
+- Z počet záporných čísel
+- A číslo, které posuzujeme
+
+```{mermaid}
+flowchart TB
+    D["`Cyklus
+    I = 1, P`"]
+    A(["Začátek"]) --> B["Z = 0"]
+    B --> C[/"Čti P"/]
+    C --> D
+    D --> E[/"Čti A"/]
+    E --> F{"A < 0"}
+    F -- Pravda --> G["Z = Z + 1"]
+    F -- Nepravda --> H["Konec cyklu"]
+    G --> H
+    H .-> D
+    H --> J[/"Vypiš Z"/]
+    J --> K(["Konec"]) 
+
+    D@{ shape: hex}
+    H@{ shape: hex}
+```
+
+**Otázky**
+
+1. Co by se stalo, pokud by prvek Vypiš: Z byl umístěn nikoliv za koncem cyklu, nýbrž před jeho koncem?
+2. Jakou úpravu by bylo nutné udeělat, aby algoritmus vypsal, kolik čísel z neznámého počtu se rovná nule?
+3. Jakou úpravu by bylo nutné udělat, aby algoritmus vypsal, kolik čísel z neznámého počtu je v intervalu 50-100?
+
+## Pracovní list - nalezení chyb v algoritmech
+
+Nakopírováno
+
+## Tvorba algoritmu
+
+1. Vytvořte vývojový diagram s algoritmem, který porovná dvě zadaná čísla. Tato čísla vypíše v tomto pořadí: nejprve větší a poté menší číslo.
+2. Vytvořte vývojový diagram s algoritmem, který vypíše největší číslo ze tří zadaných čísel.
+3. Kontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.
+
+NAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4.
