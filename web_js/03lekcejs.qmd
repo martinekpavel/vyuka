@@ -1,0 +1,105 @@
+---
+title: "Lekce 03"
+---
+
+Ze zdrojových souborů načteme `colors0.html`.
+
+```html 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Change font color to red
+                document.querySelector('#red').onclick = function() {
+                    document.querySelector('#hello').style.color = 'red';
+                };
+
+                // Change font color to blue
+                document.querySelector('#blue').onclick = function() {
+                    document.querySelector('#hello').style.color = 'blue';
+                };
+
+                // Change font color to green
+                document.querySelector('#green').onclick = function() {
+                    document.querySelector('#hello').style.color = 'green';
+                };
+            });
+        </script>
+        <title>Colors</title>
+    </head>
+    <body>
+        <h1 id="hello">Hello!</h1>
+        <button id="red">Red</button>
+        <button id="blue">Blue</button>
+        <button id="green">Green</button>
+    </body>
+</html>
+```
+
+Pokud chceme kód vyplepšit, použijeme třídu class="color-change". A speciální data atribut!
+
+```html
+<button class="color-change" data-color="red">Red</button>
+<button class="color-change" data-color="blue">Blue</button>
+<button class="color-change" data-color="green">Green</button>
+```
+
+A upravíme skript:
+
+```js
+document.querySelectorAll('.color-change').forEach(function(button) {
+    button.onclick = function() {
+        document.querySelector('#hello').style.color = button.dataset.color;
+        };
+    });
+```
+Otestujeme v konzoli. Video 55:00.
+
+## Šipková notace
+
+```js
+document.querySelectorAll('.color-change').forEach(button => {
+    button.onclick = () => {
+        document.querySelector('#hello').style.color = button.dataset.color;
+        };
+    });
+```
+
+## Form - Select 
+
+Ze zdrojových souborů načteme `colors3.html`.
+
+```html 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // Change the color of the heading when dropdown changes
+                document.querySelector('#color-change').onchange = function() {
+                    document.querySelector('#hello').style.color = this.value;
+                };
+
+            });
+        </script>
+        <title>Colors</title>
+    </head>
+    <body>
+        <h1 id="hello">Hello!</h1>
+        <select id="color-change">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+    </body>
+</html>
+```
+
+## Aplikace Tasks
+
+Videolekce 1:06:30
+
