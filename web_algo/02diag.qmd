@@ -1,8 +1,6 @@
 ---
-title: "Vývojové diagramy"
+title: "Diagramy 1"
 ---
-
-`2. skupina` 2. 12. 2025 číslo hodiny `21,22`
 
 Opakování z minulé hodiny (kahoot).
 

@@ -99,7 +99,4 @@ Ze zdrojových souborů načteme `colors3.html`.
 </html>
 ```
 
-## Aplikace Tasks
-
-Videolekce 1:06:30
 

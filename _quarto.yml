@@ -55,11 +55,13 @@ website:
         - web_js/01lekcejs.qmd
         - web_js/02lekcejs.qmd
         - web_js/03lekcejs.qmd
+        - web_js/04lekcejs.qmd
     - title: "Algoritmy"
       style: "docked"
       contents:
         - web_algo/index.qmd
         - web_algo/02diag.qmd
+        - web_algo/03diag.qmd
     - title: "Python"
       style: "docked"
           # background: light

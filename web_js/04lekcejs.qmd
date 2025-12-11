@@ -1,0 +1,20 @@
+---
+title: "Lekce 04"
+---
+
+### Tasks
+
+Videolekce 1:06:30
+
+Ze zdrojových souborů načteme 
+
+- `tasks0.html`
+- `tasks1.html`
+- `tasks2.html`
+- `interval.html`
+- `storage.html`
+
+## Úkol 
+
+Naprogramujte aplikaci pro zadávání úkolů, která si bude pamatovat seznam úkolu po znovunačtení stránky v prohlížeči.
+Odevzdejte kód, který dokážete vysvětlit.
