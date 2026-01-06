@@ -1,0 +1,9 @@
+---
+title: "Diagramy"
+---
+
+viz zadání v Teams
+
+4. Kontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.
+
+NAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4.
