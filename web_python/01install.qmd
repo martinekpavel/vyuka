@@ -1,0 +1,35 @@
+---
+title: "Instalace"
+---
+
+1. Do Googlu napíšeme "python"
+
+![](python1.jpg)
+
+2. Najdeme standalone installer a stáhneme
+
+![](python2.jpg)
+
+![](python3.jpg)
+
+3. Spustíme instalátor, zaškrtneme PATH a vybereme Customize installation
+
+![](python4.jpg)
+
+4. Zvolíme instalaci pro všechny uživatele a je dobré vědět, kde ten python máme nainstalovaný.
+
+![](python5.jpg)
+
+5. Jednu obrazovku instalace jsem vynechal, nic se neměnilo. Je možné, že budete mít otázku ohledně PATH limitu, **VYBERTE** tuto možnost.
+
+![](python6.jpg)
+
+6. Pracovní listy pracují s IDE IDLE.
+
+![](python7.jpg)
+
+7. Pro úvodní list doporučuji cmd.exe (powershell nebo terminál) a pak přejdeme na Visual Studio Code.
+
+![](python8.jpg)
+
+Pokračujte prvním pracovním listem ze zadání v Teams.

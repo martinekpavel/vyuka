@@ -4,5 +4,9 @@ title: "Základy Python"
 
 Následující kapitoly vás provedou základy programování v Pythonu.
 
+V první lekce budeme Python instalovat a posléze si projdeme 20 připravených (na Teams) pracovních listů.
 
+Pokud by došlo k tomu, že si pracovní listy projdete doma všechny dříve, mohu doporučit materiál: 
+
+- <https://naucse.python.cz/course/pyladies/>
 

@@ -67,6 +67,7 @@ website:
           # background: light
       contents:
         - web_python/index.qmd
+        - web_python/01install.qmd
 
 format:
   html:

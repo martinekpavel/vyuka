@@ -28,7 +28,7 @@ title: "1.D šk. rok 2025/2026"
 ` 9. 12. 2025`| [Želví grafika](web_algo/03diag.qmd) (23,24/22,23)
 `16. 12. 2025`| [iBobr](web_algo/04ibobr.qmd) (25,27/24,25)
   `6. 1. 2026`| [Vývojové diagramy](web_algo/05diag.qmd) (27,28/26,27)
- `13. 1. 2026`|
+ `13. 1. 2026`| [Python instalace + pracovní list](web_python/01install.qmd) (29,30/28,29)
  `20. 1. 2026`|
  `27. 1. 2026`|
 
