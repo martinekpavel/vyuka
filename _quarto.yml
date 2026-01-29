@@ -56,6 +56,7 @@ website:
         - web_js/02lekcejs.qmd
         - web_js/03lekcejs.qmd
         - web_js/04lekcejs.qmd
+        - web_js/api.qmd
     - title: "Algoritmy"
       style: "docked"
       contents:

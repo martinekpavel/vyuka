@@ -28,15 +28,16 @@ title: "3.D šk. rok 2025/2026"
 `27. 11. 2025`| [JavaScript 2](web_js/02lekcejs.qmd) (25,26)
  `4. 12. 2025`| [JavaScript 3](web_js/03lekcejs.qmd) (26,27/27,28)
 `11. 12. 2025`| [JavaScript 4](web_js/04lekcejs.qmd) (28,29/29,30)
-`18. 12. 2025`| 
-  `8. 1. 2026`|
- `22. 1. 2026`|
+`18. 12. 2025`| [JS Hra života](web_js/gol.qmd) (30,31/31,32)
+  `8. 1. 2026`| [JS kámen nůžky papír](web_js/knp.qmd) (32,33/33,34)
+ `15. 1. 2026`| [JS chat app](web_js/chat.qmd) (34,35/35,36) 
+ `22. 1. 2026`| [JS test](web_js/gol.qmd) (36,37/37,38)
 
 ### 3. čtvrtetí
 
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
-`29. 1. 2026` | [JavaScript API](web_js/api.qmd) (/)
+`29. 1. 2026` | [JavaScript API](web_js/api.qmd) (38/39,40)
 `12. 2. 2026` |
 `19. 2. 2026` |
 `26. 2. 2026` |

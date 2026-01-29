@@ -16,6 +16,14 @@ Videolekce 1:29:38
 
 ### APIs
 
+Asi nejlepší zdroj:
+
+- <https://github.com/marcelscruz/public-apis>
+
+Česká a slovenská
+
+- <https://github.com/honzajavorek/cs-apis>
+
 #### Movie 
 
 - <https://developer.themovidb.org/docs/getting-started>

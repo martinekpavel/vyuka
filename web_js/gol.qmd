@@ -1,0 +1,5 @@
+---
+title: "Game of Life"
+---
+
+Informace a podklady jsou v MS Teams
