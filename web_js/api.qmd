@@ -1,0 +1,103 @@
+---
+title: "APIs"
+---
+
+
+Videolekce 1:29:38
+
+- <https://cs50.harvard.edu/web/weeks/5/>
+
+- <https://www.youtube.com/watch?v=x5trGVMKTdY&t=5380s>
+
+
+
+
+
+
+### APIs
+
+#### Movie 
+
+- <https://developer.themovidb.org/docs/getting-started>
+- <https://rapidapi.com/collection/rotten-tomatoes-api>
+
+#### Meals
+
+- <https://themealdb.com/api.php>
+- <https://spoonacular.com/food-api>
+
+#### Youtube
+
+- <https://developers.google.com/youtube/v3>
+
+#### Weather
+
+- <https://openweathermap.org>
+- <https://wunderground.com>
+
+#### News
+
+- <https://developer.nytimes.com/apis>
+
+#### Book
+
+- <https://developers.google.com/books>
+- <https://openlibrary.org/developers/api>
+
+#### Giphy SDK api
+
+- <https://developers.giphy.com/branch/master/docs/sdk/>
+
+#### rest countries
+
+- <https://restcountries.com>
+
+#### Gallery
+
+- <https://unsplash.com/developers>
+- <https://flick.com/services/api>
+- <https://developers.gettyimages.com>
+- <https://pexels.com/api>
+
+#### Sports
+
+- <https://api-sports.io>
+- <https://developers.nfl.com/get-started/overview>
+- <https://developer.sportradar.com/docs/read/Home>
+
+#### Quotes
+
+- <https://zenquotes.io>
+
+#### Joke
+
+- <https://sv443.net/jokeapi/v2>
+- <https://dadjokes.io>
+
+#### National park
+
+- <https://nps.gov/subjects/developer/api-documentation.htm>
+
+#### Dog
+
+- <https://thedogapi.com>
+- <https://dog.ceo/dog-api>
+
+#### Cat
+
+- <https://thecatapi.com>
+
+### 50 projects 50 days
+
+Inspirujte se.
+
+- <https://github.com/bradtraversy/50projects50days>
+
+
+
+
+
+
+## Úkol 
+1. Zjistěte, jak funguje MIT licence.
+2. Vyberte si free API a vytvořte stránku do svého portfolia, která libovolné API využívá.
