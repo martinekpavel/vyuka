@@ -1,0 +1,41 @@
+---
+title: "Pracovní list č. 5"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL05kresleni.pdf" target="_blank">PracL05 - kreslení.pdf</a>.
+
+Pracovní soubor `pl05.py`
+
+```python
+# Pracovní list 5
+
+## 01 smena2.py
+
+# suma
+# kurz
+
+# Za  eur dostaneš  korun při kurzu  korun za euro. 
+
+## 02
+
+# km = 8
+# c = 30
+# s = km * c + 50
+# print('Za jízdu o délce', km, 'km s naším taxi zaplatíš', s, 'korun')
+
+## 03 platno.py
+
+import tkinter
+
+canvas = tkinter.Canvas()
+canvas.pack()
+canvas.mainloop()
+
+
+
+
+
+
+
+
+```

@@ -36,9 +36,9 @@ title: "1.D šk. rok 2025/2026"
 
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
-`10. 2. 2026` |
-`17. 2. 2026` |
-`24. 2. 2026` |
+`10. 2. 2026` | hodiny odpadly
+`17. 2. 2026` | [Pracovní list 4](web_python/pl04.qmd)
+`24. 2. 2026` | [Pracovní list 5](web_python/pl05.qmd)
  `3. 3. 2026` |
 `10. 3. 2026` |
 `17. 3. 2026` |

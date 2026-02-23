@@ -1,0 +1,19 @@
+---
+title: "Pracovní list č. 4"
+---
+
+###
+
+Pracujte podle pracovního listu <a href="./pl/PracL04vypisy.pdf" target="_blank">PracL04vypisy.pdf</a>.
+
+Pracovní soubor 'pl04.py'
+
+'''python
+
+
+
+
+
+
+
+'''
