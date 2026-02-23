@@ -1,0 +1,33 @@
+---
+title: "Pracovní list č. 6"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL06barvy.pdf" target="_blank">PracL06 - barvy.pdf</a>.
+
+Pracovní soubor `pl06.py`
+
+```python
+# Pracovní list 6
+
+## 01 
+
+
+## 02
+
+
+## 03 
+
+import tkinter
+
+canvas = tkinter.Canvas()
+canvas.pack()
+canvas.mainloop()
+
+
+
+
+
+
+
+
+```
