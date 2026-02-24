@@ -7,27 +7,60 @@ Pracujte podle pracovního listu <a href="./pl/PracL06barvy.pdf" target="_blank"
 Pracovní soubor `pl06.py`
 
 ```python
-# Pracovní list 6
+# Pracovní list č. 6 Barvy
 
-## 01 
-
-
-## 02
-
-
-## 03 
-
-import tkinter
-
-canvas = tkinter.Canvas()
-canvas.pack()
-canvas.mainloop()
+## 01 nejvetsi_obdelnik.py
 
 
 
 
+## 02 vybarveny.py
+
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# canvas.create_rectangle(30, 30, 130, 130, fill='red')
+# canvas.mainloop()
+
+## 03 vybarveny.py
 
 
+
+## 04 nizozemi.py
+
+
+
+## 05 irsko.py
+
+
+
+## 06 vlajka.py
+
+
+
+## 07 ramecek.py
+
+
+
+## 08 pres_sebe.py
+
+
+
+## 09 norsko.py
+
+
+
+## 10 5_misto_3.py
+
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# canvas.create_rectangle(90, 90, 150, 150, fill='yellow')
+# canvas.create_rectangle(150, 90, 210, 150, fill='red')
+# canvas.create_rectangle(90, 150, 150, 210, fill='green')
+# canvas.create_rectangle(30, 90, 90, 150, fill='red')
+# canvas.create_rectangle(90, 30, 150, 90, fill='green')
+# canvas.mainloop()
 
 
 ```
