@@ -25,16 +25,69 @@ Pracovní soubor `pl05.py`
 
 ## 03 platno.py
 
-import tkinter
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# canvas.mainloop()
 
-canvas = tkinter.Canvas()
-canvas.pack()
-canvas.mainloop()
+## 04 platno.py
+
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# canvas.create_rectangle(50, 70, 220, 150)
+# canvas.mainloop()
+
+## 05 platno.py
+
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+
+# canvas.create_rectangle(0, 0, 220, 150) 
+# canvas.create_rectangle(0, 0, 50, 50)
+# canvas.create_rectangle(0, 0, 250, 50) 
+# canvas.create_rectangle(20, 10, 250, 50)
+# canvas.create_rectangle(20, 10, 50, 250)
+# canvas.mainloop()
+
+## 06 platno.py
+
+# import tkinter  
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# canvas.create_rectangle(....)
+# canvas.mainloop()
+
+## 07
+
+# ??
+
+## 08 obdelnik.py
+
+## 09 bez použítí počítače
+
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# canvas.create_rectangle(50, 70, 220, 150)
+# canvas.create_rectangle(60, 80, 130, 140)
+# canvas.create_rectangle(160, 90, 230, 160)
+# canvas.mainloop()
+
+## 10 vedle_sebe.py
 
 
 
+## 11 soustredne.py
 
 
+
+## 12 pyramida.py
+
+
+
+## 13 ornament.py
 
 
 
