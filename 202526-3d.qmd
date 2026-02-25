@@ -38,9 +38,9 @@ title: "3.D šk. rok 2025/2026"
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
 `29. 1. 2026` | [JavaScript API](web_js/api.qmd) (38/39,40)
-`12. 2. 2026` |
-`19. 2. 2026` |
-`26. 2. 2026` |
+`12. 2. 2026` | hodina odpadla a supl (39/)
+`19. 2. 2026` | [Django - hello](web_django/01hello.qmd) (40,41/41,42)
+`26. 2. 2026` | [Django - apps](web_django/02apps.qmd) (42,43/43,44)
  `5. 3. 2026` |
 `12. 3. 2026` |
 `19. 3. 2026` |

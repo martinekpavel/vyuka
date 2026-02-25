@@ -25,6 +25,8 @@ website:
         href: web_algo/index.qmd
       - text: "Python"
         href: web_python/index.qmd
+      - text: "Django"
+        href: web_django/
       - text: "JavaScript"
         href: web_js/index.qmd
       - about.qmd
@@ -72,6 +74,13 @@ website:
         - web_python/pl04.qmd
         - web_python/pl05.qmd
         - web_python/pl06.qmd
+    - title: "Django"
+      style: "docked"
+          # background: light
+      contents:
+        - web_django/index.qmd
+        - web_django/01hello.qmd
+        - web_django/02apps.qmd
 
 format:
   html:

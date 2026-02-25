@@ -1,0 +1,103 @@
+---
+title: "Hello App"
+---
+
+prereq: [instalace python](../web_python/01install.qmd)
+
+
+### Instalace Djanga
+
+```cmd
+pip install django
+```
+
+a jste připraveni vytvořit svůj projekt (webovou aplikaci).
+
+::: {.callout-warning}
+Zda je všechno OK lze vyzkoušet ihned příkazem `django-admin`. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné `PATH`.
+:::
+
+### Nový projekt
+
+```cmd
+django-admin startproject PROJECT_NAME
+```
+
+Příkaz nám vytvoří novou složku s novým projektem a jeho soubory.
+
+::: {.callout-warning}
+Pokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku! 
+```cmd
+django-admin startproject PROJECT_NAME .
+```
+:::
+
+### Nová aplikace
+
+```cmd
+python manage.py startapp hello
+```
+
+V souboru `PROJECT_NAME\settings.py`
+
+```python
+INSTALLED_APPS = [
+    'hello', # doplníme název aplikace a nezapomeneme na čárku!
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+**Doplníte** soubor pro aplikaci `hello\views.py` (logika aplikace, soubor funkcí, které renderují výstupy)
+
+```python
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Hello, world")  
+```
+
+Vytvoříte soubor s cestami pro aplikaci `hello\urls.py`
+
+```python
+from django.urls import path 
+
+from . import views
+
+urlpatterns = [
+    path("", views.index, name="index")
+]
+```
+
+V souboru `PROJECT_NAME\urls.py` doplníme cesty.
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('hello/', include('hello.urls')),
+]
+```
+
+### Spuštění dev web serveru
+
+```cmd
+python manage.py runserver
+```
+
+a nejspíše máte server na adrese:
+
+```cmd
+http://localhost:8000
+```
+
+::: {.callout-warning}
+Nelekejte se varovných hlášení, protože nemáte cestu pro `/` adresu, musíte za lomítko zadat ještě název aplikace `hello` a pak by vše mělo fungovat. 
+:::
+

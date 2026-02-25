@@ -27,7 +27,7 @@ title: "Instalace"
 
 5. Ještě před ukončením instalace, klikneme na Disable path length limit.
 
-![](python_ins_3.jpg)
+![](python_ins_5.jpg)
 
 6. Pracovní listy pracují s IDE IDLE (naleznete v nabídce Start).
 
