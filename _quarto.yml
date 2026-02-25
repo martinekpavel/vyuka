@@ -71,6 +71,7 @@ website:
       contents:
         - web_python/index.qmd
         - web_python/01install.qmd
+        - web_python/pl03.qmd
         - web_python/pl04.qmd
         - web_python/pl05.qmd
         - web_python/pl06.qmd

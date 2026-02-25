@@ -1,0 +1,17 @@
+---
+title: "Pracovní list č. 3"
+---
+
+Pracujte podle pracovního listu (zadaný v Teams)
+
+Pracovní soubor `pl03.py`
+
+```python
+
+
+
+
+
+
+
+```
