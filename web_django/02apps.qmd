@@ -1,4 +1,39 @@
 ---
-title: "Hello"
+title: "Hello 2"
 ---
+
+**Doplníme** soubor pro aplikaci `hello\views.py`.
+
+```python
+def brian(request):
+    return HttpResponse("Hello, Brian!")  
+```
+
+**Doplníme** seznam `urlpatterns` v souboru s cestami pro aplikaci `hello\urls.py`
+
+```python
+    path("brian", views.brian, name="brian")
+```
+
+a můžeme to otestovat, případně přidat další jména.
+
+### Cesta s řetězcem
+
+**Doplníme** soubor pro aplikaci `hello\views.py`.
+
+```python
+def great(request,name):
+    return HttpResponse(f"Hello, {name.capitalize()}!")  
+```
+
+**Doplníme** seznam `urlpatterns` v souboru s cestami pro aplikaci `hello\urls.py`
+
+```python
+    path("<str:name>", views.great, name="great")
+```
+
+a můžeme to otestovat.
+
+### Šablony
+
 
