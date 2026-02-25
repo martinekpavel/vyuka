@@ -16,19 +16,24 @@ title: "Instalace"
 
 ![](python4.jpg)
 
+
 4. Zvolíme instalaci pro všechny uživatele a je dobré vědět, kde ten python máme nainstalovaný.
 
 ![](python5.jpg)
 
-5. Jednu obrazovku instalace jsem vynechal, nic se neměnilo. Je možné, že budete mít otázku ohledně PATH limitu, **VYBERTE** tuto možnost.
+4. Tady nic měnit nemusíme.
 
-![](python6.jpg)
+![](python_ins_3.jpg)
 
-6. Pracovní listy pracují s IDE IDLE.
+5. Ještě před ukončením instalace, klikneme na Disable path length limit.
+
+![](python_ins_3.jpg)
+
+6. Pracovní listy pracují s IDE IDLE (naleznete v nabídce Start).
 
 ![](python7.jpg)
 
-7. Pro úvodní list doporučuji cmd.exe (powershell nebo terminál) a pak přejdeme na Visual Studio Code.
+7. Pro úvodní list doporučuji cmd.exe (powershell nebo terminál) kam napíšeme python a Enter. Následně pak přejdeme na Visual Studio Code.
 
 ![](python8.jpg)
 
