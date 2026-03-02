@@ -1,5 +1,5 @@
 ---
-title: "Hello <str:name>"
+title: "Hello str"
 ---
 
 **Doplníme** soubor pro aplikaci `hello\views.py`.
