@@ -1,0 +1,56 @@
+---
+title: "NewYear"
+---
+
+Nyní vytvoříme novou aplikaci v rámci daného projektu.
+
+```cmd
+python manage.py startapp newyear
+```
+
+Udělám změny v souborech:
+
+1. `PROJECT_NAME\settings.py`
+2. `PROJECT_NAME\urls.py`
+3. `newyear\views.py`
+4. `newyear\urls.py # tento soubor musíme vytvořit`
+
+Vytvoříme složku `templates` v aplikaci.
+Ve složce templates vytvořím složku s názvem aplikace `newyear`
+
+Vytvořím soubory `layout.html` a `index.html`. Viz předchozí lekce.
+
+Spustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.
+
+```cmd
+python manage.py runserver
+```
+
+## Kód
+
+Kód souboru `newyear\views.py`:
+
+```python
+import datetime
+
+from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+    now = datetime.datetime.now()
+    return render(request, "newyear/index.html", {
+        "newyear": now.month == 1 and now.day == 1
+    })
+```
+
+Kód souboru `newyear\urls.py`:
+
+```python
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path("", views.index, name="index")
+]
+```
