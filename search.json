@@ -126,13 +126,43 @@
     ]
   },
   {
-    "objectID": "web_django/01hello.html",
-    "href": "web_django/01hello.html",
-    "title": "Hello App",
+    "objectID": "web_django/index.html",
+    "href": "web_django/index.html",
+    "title": "Úvod do Djanga",
     "section": "",
-    "text": "prereq: instalace python\n\nInstalace Djanga\npip install django\na jste připraveni vytvořit svůj projekt (webovou aplikaci).\n\n\n\n\n\n\nVarování\n\n\n\nZda je všechno OK lze vyzkoušet ihned příkazem django-admin. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné PATH.\n\n\n\n\nNový projekt\ndjango-admin startproject PROJECT_NAME\nPříkaz nám vytvoří novou složku s novým projektem a jeho soubory.\n\n\n\n\n\n\nVarování\n\n\n\nPokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku!\ndjango-admin startproject PROJECT_NAME .\n\n\n\n\nNová aplikace\npython manage.py startapp hello\nV souboru PROJECT_NAME\\settings.py\nINSTALLED_APPS = [\n    'hello', # doplníme název aplikace a nezapomeneme na čárku!\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nDoplníte soubor pro aplikaci hello\\views.py (logika aplikace, soubor funkcí, které renderují výstupy)\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world\")  \nVytvoříte soubor s cestami pro aplikaci hello\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nV souboru PROJECT_NAME\\urls.py doplníme cesty.\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('hello/', include('hello.urls')),\n]\n\n\nSpuštění dev web serveru\npython manage.py runserver\na nejspíše máte server na adrese:\nhttp://localhost:8000\n\n\n\n\n\n\nVarování\n\n\n\nNelekejte se varovných hlášení, protože nemáte cestu pro / adresu, musíte za lomítko zadat ještě název aplikace hello a pak by vše mělo fungovat.",
+    "text": "Podklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/3/.\n\nYouTube lekce:\n\nhttps://youtu.be/w8q0C-C1js4?si=VeyTaNxZ3ajo1HWg\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/3/src3.zip",
     "crumbs": [
-      "Hello App"
+      "Úvod do Djanga"
+    ]
+  },
+  {
+    "objectID": "web_django/03template.html",
+    "href": "web_django/03template.html",
+    "title": "Šablony",
+    "section": "",
+    "text": "Vytvořím složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace např. hello\nNíže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.\nVytvořím soubory layout.html a index.html\nObsah souboru layout.html\nObsah souboru index.html",
+    "crumbs": [
+      "Šablony"
+    ]
+  },
+  {
+    "objectID": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
+    "href": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
+    "title": "Šablony",
+    "section": "Použití if else v šabloně (využijete u aplikace newyear)",
+    "text": "Použití if else v šabloně (využijete u aplikace newyear)\n  {% if newyear %}\n            &lt;h1&gt;YES&lt;/h1&gt;\n  {% else %}\n            &lt;h1&gt;NO&lt;/h1&gt;\n  {% endif %}",
+    "crumbs": [
+      "Šablony"
+    ]
+  },
+  {
+    "objectID": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
+    "href": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
+    "title": "Šablony",
+    "section": "Použití cyklu v šabloně (využijete později!)",
+    "text": "Použití cyklu v šabloně (využijete později!)\n    &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"{% url 'flight' flight.id %}\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;",
+    "crumbs": [
+      "Šablony"
     ]
   },
   {
@@ -682,23 +712,43 @@
     "href": "202526-3d.html",
     "title": "3.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps (42,43/43,44)\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
   },
   {
     "objectID": "202526-3d.html#výuka",
     "href": "202526-3d.html#výuka",
     "title": "3.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps (42,43/43,44)\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\n\n\n\n12. 3. 2026\n\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
   },
   {
-    "objectID": "web_django/index.html",
-    "href": "web_django/index.html",
-    "title": "Úvod do Djanga",
+    "objectID": "web_django/01hello.html",
+    "href": "web_django/01hello.html",
+    "title": "Hello App",
     "section": "",
-    "text": "Podklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/3/.\n\nYouTube lekce:\n\nhttps://youtu.be/w8q0C-C1js4?si=VeyTaNxZ3ajo1HWg\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/3/src3.zip",
+    "text": "prereq: instalace python\n\nInstalace Djanga\npip install django\na jste připraveni vytvořit svůj projekt (webovou aplikaci).\n\n\n\n\n\n\nVarování\n\n\n\nZda je všechno OK lze vyzkoušet ihned příkazem django-admin. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné PATH.\n\n\n\n\nNový projekt\ndjango-admin startproject PROJECT_NAME\nPříkaz nám vytvoří novou složku s novým projektem a jeho soubory.\n\n\n\n\n\n\nVarování\n\n\n\nPokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku!\ndjango-admin startproject PROJECT_NAME .\n\n\n\n\nNová aplikace\npython manage.py startapp hello\nV souboru PROJECT_NAME\\settings.py\nINSTALLED_APPS = [\n    'hello', # doplníme název aplikace a nezapomeneme na čárku!\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nDoplníte soubor pro aplikaci hello\\views.py (logika aplikace, soubor funkcí, které renderují výstupy)\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world\")  \nVytvoříte soubor s cestami pro aplikaci hello\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nV souboru PROJECT_NAME\\urls.py doplníme cesty.\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('hello/', include('hello.urls')),\n]\n\n\nSpuštění dev web serveru\npython manage.py runserver\na nejspíše máte server na adrese:\nhttp://localhost:8000\n\n\n\n\n\n\nVarování\n\n\n\nNelekejte se varovných hlášení, protože nemáte cestu pro / adresu, musíte za lomítko zadat ještě název aplikace hello a pak by vše mělo fungovat.",
     "crumbs": [
-      "Úvod do Djanga"
+      "Hello App"
+    ]
+  },
+  {
+    "objectID": "web_django/04newyear.html",
+    "href": "web_django/04newyear.html",
+    "title": "NewYear",
+    "section": "",
+    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace newyear\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
+    "crumbs": [
+      "NewYear"
+    ]
+  },
+  {
+    "objectID": "web_django/04newyear.html#kód",
+    "href": "web_django/04newyear.html#kód",
+    "title": "NewYear",
+    "section": "Kód",
+    "text": "Kód\nKód souboru newyear\\views.py:\nimport datetime\n\nfrom django.shortcuts import render\n\n# Create your views here.\ndef index(request):\n    now = datetime.datetime.now()\n    return render(request, \"newyear/index.html\", {\n        \"newyear\": now.month == 1 and now.day == 1\n    })\nKód souboru newyear\\urls.py:\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
+    "crumbs": [
+      "NewYear"
     ]
   },
   {

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Úvod do Djanga – PVA</title>
+<title>Šablony – PVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../web_django/01hello.html" rel="next">
+<link href="../web_django/04newyear.html" rel="next">
+<link href="../web_django/02apps.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -303,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/index.html">Úvod do Djanga</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/03template.html">Šablony</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -321,7 +357,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_django/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../web_django/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Úvod do Djanga</span></a>
   </div>
 </li>
@@ -339,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_django/03template.html" class="sidebar-item-text sidebar-link">
+  <a href="../web_django/03template.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Šablony</span></a>
   </div>
 </li>
@@ -354,8 +390,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Na této stránce</h2>
+   
+  <ul>
+  <li><a href="#použití-if-else-v-šabloně-využijete-u-aplikace-newyear" id="toc-použití-if-else-v-šabloně-využijete-u-aplikace-newyear" class="nav-link active" data-scroll-target="#použití-if-else-v-šabloně-využijete-u-aplikace-newyear">Použití if else v šabloně (využijete u aplikace newyear)</a></li>
+  <li><a href="#použití-cyklu-v-šabloně-využijete-později" id="toc-použití-cyklu-v-šabloně-využijete-později" class="nav-link" data-scroll-target="#použití-cyklu-v-šabloně-využijete-později">Použití cyklu v šabloně (využijete později!)</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/03template.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/03template.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -363,7 +406,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Úvod do Djanga</h1>
+<h1 class="title">Šablony</h1>
 </div>
 
 
@@ -380,20 +423,49 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Podklady pro výuku (videa, kódy, transkript, prezentace):</p>
-<ul>
-<li><a href="https://cs50.harvard.edu/web/weeks/3/" class="uri">https://cs50.harvard.edu/web/weeks/3/</a>.</li>
-</ul>
-<p>YouTube lekce:</p>
-<ul>
-<li><a href="https://youtu.be/w8q0C-C1js4?si=VeyTaNxZ3ajo1HWg" class="uri">https://youtu.be/w8q0C-C1js4?si=VeyTaNxZ3ajo1HWg</a></li>
-</ul>
-<p>Zdrojové soubory:</p>
-<ul>
-<li><a href="https://cdn.cs50.net/web/2020/spring/lectures/3/src3.zip" class="uri">https://cdn.cs50.net/web/2020/spring/lectures/3/src3.zip</a></li>
-</ul>
+<p>Vytvořím složku <code>templates</code> v aplikaci. Ve složce templates vytvořím složku s názvem aplikace např. <code>hello</code></p>
+<p>Níže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.</p>
+<p>Vytvořím soubory <code>layout.html</code> a <code>index.html</code></p>
+<p>Obsah souboru <code>layout.html</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">"viewport"</span><span class="ot"> content</span><span class="op">=</span><span class="st">"width=device-width, initial-scale=1.0"</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Hello | Title<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    {% block body %}</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    {% endblock %}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Obsah souboru <code>index.html</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{% extends "hello/layout.html" %}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>{% block body %}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>   <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Hello {{ name }} <span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>{% endblock %}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="použití-if-else-v-šabloně-využijete-u-aplikace-newyear" class="level2">
+<h2 class="anchored" data-anchor-id="použití-if-else-v-šabloně-využijete-u-aplikace-newyear">Použití if else v šabloně (využijete u aplikace newyear)</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>  {% if newyear %}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>YES<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  {% else %}</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>NO<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  {% endif %}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="použití-cyklu-v-šabloně-využijete-později" class="level2">
+<h2 class="anchored" data-anchor-id="použití-cyklu-v-šabloně-využijete-později">Použití cyklu v šabloně (využijete později!)</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        {% for flight in flights %}</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{% url 'flight' flight.id %}"</span><span class="dt">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        {% endfor %}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -811,10 +883,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../web_django/02apps.html" class="pagination-link" aria-label="Hello 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hello 2</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../web_django/01hello.html" class="pagination-link" aria-label="Hello App">
-        <span class="nav-page-text">Hello App</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../web_django/04newyear.html" class="pagination-link" aria-label="NewYear">
+        <span class="nav-page-text">NewYear</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -826,7 +901,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/index.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/index.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/03template.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/03template.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a> ❤️</p>
 </div>
