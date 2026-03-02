@@ -1,0 +1,11 @@
+---
+title: "Pracovní list č. 8"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL08podprogramy.pdf" target="_blank">PracL08 - podprogramy</a>.
+
+Pracovní soubor `pl08.py`
+
+```python
+# Pracovní list č. 8
+```

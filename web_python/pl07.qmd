@@ -1,0 +1,11 @@
+---
+title: "Pracovní list č. 7"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL07kresleni_s_promennymi.pdf" target="_blank">PracL07 - kresleni s proměnnými</a>.
+
+Pracovní soubor `pl07.py`
+
+```python
+# Pracovní list č. 7
+```
