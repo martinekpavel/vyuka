@@ -2,10 +2,54 @@
 title: "Pracovní list č. 7"
 ---
 
-Pracujte podle pracovního listu <a href="./pl/PracL07kresleni_s_promennymi.pdf" target="_blank">PracL07 - kresleni s proměnnými</a>.
+Pracujte podle pracovního listu <a href="./pl/PracL07kresleni_s_promennymi.pdf" target="_blank">PracL07 - kreslení s proměnnými</a>.
 
 Pracovní soubor `pl07.py`
 
 ```python
 # Pracovní list č. 7
+
+01 dotykajici.py
+
+
+
+02 pozice_promenne.py
+
+import tkinter
+canvas = tkinter.Canvas()
+canvas.pack()
+x = 100
+y = 70
+# canvas.create_rectangle(x, y, x +   ,    , fill='yellow') doplňte a odkomentujte.
+
+03 obdelnik_promenne.py 
+
+
+
+04 levy_roh.py
+
+
+05 vedle_sebe.py
+
+
+06 stred_ctverce.py
+
+
+07 tri_soustredne.py
+
+
+08 to jsem zvedav
+
+
+09 stred_obdelniku.py
+
+
+
+10 nemusíte dělat
+
+
+11 rada_ctvercu.py musíte dělat
+
+
 ```
+
