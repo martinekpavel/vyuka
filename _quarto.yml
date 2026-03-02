@@ -82,6 +82,8 @@ website:
         - web_django/index.qmd
         - web_django/01hello.qmd
         - web_django/02apps.qmd
+        - web_django/03template.qmd
+        - web_django/04newyear.qmd
 
 format:
   html:
