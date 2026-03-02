@@ -118,11 +118,11 @@
   {
     "objectID": "web_django/02apps.html",
     "href": "web_django/02apps.html",
-    "title": "Hello ",
+    "title": "Hello str",
     "section": "",
     "text": "Doplníme soubor pro aplikaci hello\\views.py.\ndef brian(request):\n    return HttpResponse(\"Hello, Brian!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"brian\", views.brian, name=\"brian\")\na můžeme to otestovat, případně přidat další jména.\n\nCesta s řetězcem\nDoplníme soubor pro aplikaci hello\\views.py.\ndef great(request,name):\n    return HttpResponse(f\"Hello, {name.capitalize()}!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"&lt;str:name&gt;\", views.great, name=\"great\")\na můžeme to otestovat, zadáním různých slov do správné url\nhttps://localhost:8000/hello/retezec",
     "crumbs": [
-      "Hello <str:name>"
+      "Hello str"
     ]
   },
   {
