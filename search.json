@@ -69,25 +69,36 @@
     ]
   },
   {
-    "objectID": "web_python/index.html",
-    "href": "web_python/index.html",
-    "title": "Základy Python",
+    "objectID": "web_python/01install.html",
+    "href": "web_python/01install.html",
+    "title": "Instalace",
     "section": "",
-    "text": "Následující kapitoly vás provedou základy programování v Pythonu.\nV první lekce budeme Python instalovat a posléze si projdeme 20 připravených (na Teams) pracovních listů.\nPokud by došlo k tomu, že si pracovní listy projdete doma všechny dříve, mohu doporučit materiál:\n\nhttps://naucse.python.cz/course/pyladies/",
+    "text": "Do Googlu napíšeme “python”\n\n\n\nNajdeme standalone installer a stáhneme\n\n\n\n\nSpustíme instalátor, zaškrtneme PATH a vybereme Customize installation\n\n\n\nZvolíme instalaci pro všechny uživatele a je dobré vědět, kde ten python máme nainstalovaný.\n\n\n\nTady nic měnit nemusíme.\n\n\n\nJeště před ukončením instalace, klikneme na Disable path length limit.\n\n\n\nPracovní listy pracují s IDE IDLE (naleznete v nabídce Start).\n\n\n\nPro úvodní list doporučuji cmd.exe (powershell nebo terminál) kam napíšeme python a Enter. Následně pak přejdeme na Visual Studio Code.\n\n\nPokračujte prvním pracovním listem ze zadání v Teams.",
     "crumbs": [
       "Python",
-      "Základy Python"
+      "Instalace"
     ]
   },
   {
-    "objectID": "web_python/pl06.html",
-    "href": "web_python/pl06.html",
-    "title": "Pracovní list č. 6",
+    "objectID": "web_python/pl03.html",
+    "href": "web_python/pl03.html",
+    "title": "Pracovní list č. 3",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL06 - barvy.pdf.\nPracovní soubor pl06.py\n# Pracovní list č. 6 Barvy\n\n## 01 nejvetsi_obdelnik.py\n\n\n\n\n## 02 vybarveny.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_rectangle(30, 30, 130, 130, fill='red')\n# canvas.mainloop()\n\n## 03 vybarveny.py\n\n\n\n## 04 nizozemi.py\n\n\n\n## 05 irsko.py\n\n\n\n## 06 vlajka.py\n\n\n\n## 07 ramecek.py\n\n\n\n## 08 pres_sebe.py\n\n\n\n## 09 norsko.py\n\n\n\n## 10 5_misto_3.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_rectangle(90, 90, 150, 150, fill='yellow')\n# canvas.create_rectangle(150, 90, 210, 150, fill='red')\n# canvas.create_rectangle(90, 150, 150, 210, fill='green')\n# canvas.create_rectangle(30, 90, 90, 150, fill='red')\n# canvas.create_rectangle(90, 30, 150, 90, fill='green')\n# canvas.mainloop()",
+    "text": "Pracujte podle pracovního listu (zadaný v Teams)\nPracovní soubor pl03.py",
     "crumbs": [
       "Python",
-      "Pracovní list č. 6"
+      "Pracovní list č. 3"
+    ]
+  },
+  {
+    "objectID": "web_python/pl07.html",
+    "href": "web_python/pl07.html",
+    "title": "Pracovní list č. 7",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL07 - kreslení s proměnnými.\nPracovní soubor pl07.py\n# Pracovní list č. 7\n\n## 01 dotykajici.py\n\n\n\n## 02 pozice_promenne.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# x = 100\n# y = 70\n# canvas.create_rectangle(x, y, x +   ,    , fill='yellow') \n\n## 03 obdelnik_promenne.py \n\n\n\n## 04 levy_roh.py\n\n\n## 05 vedle_sebe.py\n\n\n## 06 stred_ctverce.py\n\n\n## 07 tri_soustredne.py\n\n\n## 08 to jsem zvedav\n\n\n## 09 stred_obdelniku.py\n\n\n\n## 10 nemusíte dělat\n\n\n## 11 rada_ctvercu.py musíte dělat",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 7"
     ]
   },
   {
@@ -784,25 +795,36 @@
     ]
   },
   {
-    "objectID": "web_python/pl03.html",
-    "href": "web_python/pl03.html",
-    "title": "Pracovní list č. 3",
+    "objectID": "web_python/pl06.html",
+    "href": "web_python/pl06.html",
+    "title": "Pracovní list č. 6",
     "section": "",
-    "text": "Pracujte podle pracovního listu (zadaný v Teams)\nPracovní soubor pl03.py",
+    "text": "Pracujte podle pracovního listu PracL06 - barvy.pdf.\nPracovní soubor pl06.py\n# Pracovní list č. 6 Barvy\n\n## 01 nejvetsi_obdelnik.py\n\n\n\n\n## 02 vybarveny.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_rectangle(30, 30, 130, 130, fill='red')\n# canvas.mainloop()\n\n## 03 vybarveny.py\n\n\n\n## 04 nizozemi.py\n\n\n\n## 05 irsko.py\n\n\n\n## 06 vlajka.py\n\n\n\n## 07 ramecek.py\n\n\n\n## 08 pres_sebe.py\n\n\n\n## 09 norsko.py\n\n\n\n## 10 5_misto_3.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_rectangle(90, 90, 150, 150, fill='yellow')\n# canvas.create_rectangle(150, 90, 210, 150, fill='red')\n# canvas.create_rectangle(90, 150, 150, 210, fill='green')\n# canvas.create_rectangle(30, 90, 90, 150, fill='red')\n# canvas.create_rectangle(90, 30, 150, 90, fill='green')\n# canvas.mainloop()",
     "crumbs": [
       "Python",
-      "Pracovní list č. 3"
+      "Pracovní list č. 6"
     ]
   },
   {
-    "objectID": "web_python/01install.html",
-    "href": "web_python/01install.html",
-    "title": "Instalace",
+    "objectID": "web_python/index.html",
+    "href": "web_python/index.html",
+    "title": "Základy Python",
     "section": "",
-    "text": "Do Googlu napíšeme “python”\n\n\n\nNajdeme standalone installer a stáhneme\n\n\n\n\nSpustíme instalátor, zaškrtneme PATH a vybereme Customize installation\n\n\n\nZvolíme instalaci pro všechny uživatele a je dobré vědět, kde ten python máme nainstalovaný.\n\n\n\nTady nic měnit nemusíme.\n\n\n\nJeště před ukončením instalace, klikneme na Disable path length limit.\n\n\n\nPracovní listy pracují s IDE IDLE (naleznete v nabídce Start).\n\n\n\nPro úvodní list doporučuji cmd.exe (powershell nebo terminál) kam napíšeme python a Enter. Následně pak přejdeme na Visual Studio Code.\n\n\nPokračujte prvním pracovním listem ze zadání v Teams.",
+    "text": "Následující kapitoly vás provedou základy programování v Pythonu.\nV první lekce budeme Python instalovat a posléze si projdeme 20 připravených (na Teams) pracovních listů.\nPokud by došlo k tomu, že si pracovní listy projdete doma všechny dříve, mohu doporučit materiál:\n\nhttps://naucse.python.cz/course/pyladies/",
     "crumbs": [
       "Python",
-      "Instalace"
+      "Základy Python"
+    ]
+  },
+  {
+    "objectID": "web_python/pl08.html",
+    "href": "web_python/pl08.html",
+    "title": "Pracovní list č. 8",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL08 - podprogramy.\nPracovní soubor pl08.py\n# Pracovní list č. 8\n\n\n## 01 duha.py není povinný\n\n## 02 vypis.py\n\n## 03 upravena 02 vypis.py\n\n\n## 04 upraveny 03\n\n\n## 05 pisen.py\n\n\n## 06 + 07 vizitka.py\n\n## 08 obrazce\n\n## 09 kresba_podprogram.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# def kresli():\n#   canvas.create_rectangle(10, 20, 30, 40, fill='red')\n\n# kresli()\n\n## 10 kriz",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 8"
     ]
   },
   {
