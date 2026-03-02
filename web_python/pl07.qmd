@@ -9,46 +9,46 @@ Pracovní soubor `pl07.py`
 ```python
 # Pracovní list č. 7
 
-01 dotykajici.py
+## 01 dotykajici.py
 
 
 
-02 pozice_promenne.py
+## 02 pozice_promenne.py
 
-import tkinter
-canvas = tkinter.Canvas()
-canvas.pack()
-x = 100
-y = 70
-# canvas.create_rectangle(x, y, x +   ,    , fill='yellow') doplňte a odkomentujte.
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# x = 100
+# y = 70
+# canvas.create_rectangle(x, y, x +   ,    , fill='yellow') 
 
-03 obdelnik_promenne.py 
-
-
-
-04 levy_roh.py
-
-
-05 vedle_sebe.py
-
-
-06 stred_ctverce.py
-
-
-07 tri_soustredne.py
-
-
-08 to jsem zvedav
-
-
-09 stred_obdelniku.py
+## 03 obdelnik_promenne.py 
 
 
 
-10 nemusíte dělat
+## 04 levy_roh.py
 
 
-11 rada_ctvercu.py musíte dělat
+## 05 vedle_sebe.py
+
+
+## 06 stred_ctverce.py
+
+
+## 07 tri_soustredne.py
+
+
+## 08 to jsem zvedav
+
+
+## 09 stred_obdelniku.py
+
+
+
+## 10 nemusíte dělat
+
+
+## 11 rada_ctvercu.py musíte dělat
 
 
 ```
