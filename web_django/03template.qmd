@@ -1,0 +1,61 @@
+---
+title: "Šablony"
+---
+
+Vytvořím složku `templates` v aplikaci.
+Ve složce templates vytvořím složku s názvem aplikace např. `hello`
+
+Níže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.
+
+Vytvořím soubory `layout.html` a `index.html`
+
+Obsah souboru `layout.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello | Title</title>
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
+```
+
+Obsah souboru `index.html`
+
+```html
+{% extends "hello/layout.html" %}
+
+{% block body %}
+   <h1>Hello {{ name }} </h1>
+{% endblock %}
+```
+
+## Použití if else v šabloně (využijete u aplikace newyear)
+
+```html
+  {% if newyear %}
+            <h1>YES</h1>
+  {% else %}
+            <h1>NO</h1>
+  {% endif %}
+```
+
+
+## Použití cyklu v šabloně (využijete později!)
+
+```html
+    <ul>
+        {% for flight in flights %}
+            <li><a href="{% url 'flight' flight.id %}">
+                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}
+            </a>
+            </li>
+        {% endfor %}
+    </ul>
+```
