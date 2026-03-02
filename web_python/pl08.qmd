@@ -8,4 +8,36 @@ Pracovní soubor `pl08.py`
 
 ```python
 # Pracovní list č. 8
+
+
+## 01 duha.py není povinný
+
+## 02 vypis.py
+
+## 03 upravena 02 vypis.py
+
+
+## 04 upraveny 03
+
+
+## 05 pisen.py
+
+
+## 06 + 07 vizitka.py
+
+## 08 obrazce
+
+## 09 kresba_podprogram.py
+
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# def kresli():
+#   canvas.create_rectangle(10, 20, 30, 40, fill='red')
+
+# kresli()
+
+## 10 kriz
+
+
 ```
