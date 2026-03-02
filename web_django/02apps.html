@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hello 2 – PVA</title>
+<title>Hello  – PVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -339,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/02apps.html">Hello 2</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/02apps.html">Hello <str:name></str:name></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -370,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../web_django/02apps.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Hello 2</span></a>
+ <span class="menu-text">Hello <str:name></str:name></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -396,7 +396,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#cesta-s-řetězcem" id="toc-cesta-s-řetězcem" class="nav-link active" data-scroll-target="#cesta-s-řetězcem">Cesta s řetězcem</a></li>
-  <li><a href="#šablony" id="toc-šablony" class="nav-link" data-scroll-target="#šablony">Šablony</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/02apps.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/02apps.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
     </div>
@@ -406,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hello 2</h1>
+<h1 class="title">Hello <str:name></str:name></h1>
 </div>
 
 
@@ -436,10 +435,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> HttpResponse(<span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss">!"</span>)  </span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Doplníme</strong> seznam <code>urlpatterns</code> v souboru s cestami pro aplikaci <code>hello\urls.py</code></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">"&lt;str:name&gt;"</span>, views.great, name<span class="op">=</span><span class="st">"great"</span>)</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
-<p>a můžeme to otestovat.</p>
-</section>
-<section id="šablony" class="level3">
-<h3 class="anchored" data-anchor-id="šablony">Šablony</h3>
+<p>a můžeme to otestovat, zadáním různých slov do správné url</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>https://localhost:8000/hello/retezec</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
