@@ -1,5 +1,5 @@
 ---
-title: "Hello 2"
+title: "Hello <str:name>"
 ---
 
 **Doplníme** soubor pro aplikaci `hello\views.py`.
@@ -32,8 +32,8 @@ def great(request,name):
     path("<str:name>", views.great, name="great")
 ```
 
-a můžeme to otestovat.
+a můžeme to otestovat, zadáním různých slov do správné url
 
-### Šablony
-
-
+```cmd
+https://localhost:8000/hello/retezec
+```
