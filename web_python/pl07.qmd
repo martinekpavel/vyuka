@@ -21,6 +21,7 @@ Pracovní soubor `pl07.py`
 # x = 100
 # y = 70
 # canvas.create_rectangle(x, y, x +   ,    , fill='yellow') 
+# canvas.mainloop()
 
 ## 03 obdelnik_promenne.py 
 
