@@ -95,7 +95,7 @@
     "href": "web_python/pl07.html",
     "title": "Pracovní list č. 7",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL07 - kreslení s proměnnými.\nPracovní soubor pl07.py\n# Pracovní list č. 7\n\n## 01 dotykajici.py\n\n\n\n## 02 pozice_promenne.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# x = 100\n# y = 70\n# canvas.create_rectangle(x, y, x +   ,    , fill='yellow') \n\n## 03 obdelnik_promenne.py \n\n\n\n## 04 levy_roh.py\n\n\n## 05 vedle_sebe.py\n\n\n## 06 stred_ctverce.py\n\n\n## 07 tri_soustredne.py\n\n\n## 08 to jsem zvedav\n\n\n## 09 stred_obdelniku.py\n\n\n\n## 10 nemusíte dělat\n\n\n## 11 rada_ctvercu.py musíte dělat",
+    "text": "Pracujte podle pracovního listu PracL07 - kreslení s proměnnými.\nPracovní soubor pl07.py\n# Pracovní list č. 7\n\n## 01 dotykajici.py\n\n\n\n## 02 pozice_promenne.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# x = 100\n# y = 70\n# canvas.create_rectangle(x, y, x +   ,    , fill='yellow') \n# canvas.mainloop()\n\n## 03 obdelnik_promenne.py \n\n\n\n## 04 levy_roh.py\n\n\n## 05 vedle_sebe.py\n\n\n## 06 stred_ctverce.py\n\n\n## 07 tri_soustredne.py\n\n\n## 08 to jsem zvedav\n\n\n## 09 stred_obdelniku.py\n\n\n\n## 10 nemusíte dělat\n\n\n## 11 rada_ctvercu.py musíte dělat",
     "crumbs": [
       "Python",
       "Pracovní list č. 7"
