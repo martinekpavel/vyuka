@@ -1,0 +1,80 @@
+---
+title: "Tasks"
+---
+
+Nyní vytvoříme novou aplikaci v rámci daného projektu.
+
+```cmd
+python manage.py startapp tasks
+```
+  
+Udělám změny v souborech:
+
+1. `PROJECT_NAME\settings.py`
+2. `PROJECT_NAME\urls.py`
+3. `tasks\views.py`
+4. `tasks\urls.py # tento soubor musíme vytvořit`
+
+Vytvoříme složku `templates` v aplikaci.
+Ve složce templates vytvořím složku s názvem aplikace `tasks`
+
+Vytvořím soubory `layout.html` a `index.html`. Viz předchozí lekce.
+
+Spustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.
+
+```cmd
+python manage.py runserver
+```
+
+## Kód
+
+`tasks\views.py`
+
+```python
+tasks = ["foo","bar","baz"]
+
+def index(request):
+  return render(request, "tasks/index.html", {
+    "tasks": tasks
+  })
+```
+
+`templates/tasks/index.html`
+
+```html
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}
+            </li>
+        {% endfor %}
+    </ul>
+```
+
+`tasks\views.py`
+
+```python
+def add(request):
+  return render(request, "tasks/add.html")
+```
+
+`templates/tasks/add.html`
+
+```html
+{% block body %}
+    <h1>Add Task</h1>
+    <form action="{% url 'tasks:add' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <a href="{% url 'tasks:index' %}">View All Tasks</a>
+{% endblock %}
+```
+
+Doplníme
+`tasks\urls.py`
+
+```python
+app_name = tasks
+```
+
