@@ -4,25 +4,24 @@ title: "Tasks"
 
 Nyní vytvoříme novou aplikaci v rámci daného projektu.
 
-```cmd
+``` cmd
 python manage.py startapp tasks
 ```
-  
+
 Udělám změny v souborech:
 
-1. `PROJECT_NAME\settings.py`
-2. `PROJECT_NAME\urls.py`
-3. `tasks\views.py`
-4. `tasks\urls.py # tento soubor musíme vytvořit`
+1.  `PROJECT_NAME\settings.py`
+2.  `PROJECT_NAME\urls.py`
+3.  `tasks\views.py`
+4.  `tasks\urls.py # tento soubor musíme vytvořit`
 
-Vytvoříme složku `templates` v aplikaci.
-Ve složce templates vytvořím složku s názvem aplikace `tasks`
+Vytvoříme složku `templates` v aplikaci. Ve složce templates vytvořím složku s názvem aplikace `tasks`
 
 Vytvořím soubory `layout.html` a `index.html`. Viz předchozí lekce.
 
 Spustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.
 
-```cmd
+``` cmd
 python manage.py runserver
 ```
 
@@ -30,7 +29,7 @@ python manage.py runserver
 
 `tasks\views.py`
 
-```python
+``` python
 tasks = ["foo","bar","baz"]
 
 def index(request):
@@ -39,9 +38,9 @@ def index(request):
   })
 ```
 
-`templates/tasks/index.html`
+`templates\tasks\index.html`
 
-```html
+``` html
     <ul>
         {% for task in tasks %}
             <li>{{ task }}
@@ -52,14 +51,100 @@ def index(request):
 
 `tasks\views.py`
 
-```python
+``` python
 def add(request):
   return render(request, "tasks/add.html")
 ```
 
-`templates/tasks/add.html`
+Přidáme cestu pro přidávání úkolů do `tasks\urls.py`. Kód zde není uveden.
+
+---
+
+`templates\tasks\add.html`
+
+``` html
+{% block body %}
+    <h1>Add Task</h1>
+    <form>>
+        <input type="text" name="task">
+        <input type="submit">
+    </form>
+{% endblock %}
+```
+
+---
+
+### Odkazy
+
+`templates\tasks\add.html`
 
 ```html
+<!-- <a href="/tasks/add">Add a New Task</a> -->
+<a href="{% url 'add' %}">Add a New Task</a>
+```
+
+`templates\tasks\index.html`
+
+```html
+<a href="{% url 'index' %}">View All Tasks</a>
+```
+
+Video čas 1:10:09
+
+Řešení problému s odkazy: namespaces
+
+Doplníme `tasks\urls.py`
+
+``` python
+app_name = "tasks"
+```
+a upravíme odkazy:
+
+```html
+<a href="{% url 'tasks:index' %}">View All Tasks</a>
+<a href="{% url 'tasks:add' %}">Add a New Task</a>
+```
+
+### Zpracování formuláře
+
+`templates\tasks\add.html`
+
+``` html
+{% block body %}
+    <h1>Add Task</h1>
+    <form action="{% url 'tasks:add' %}" method="post">
+        {% csrf_token %} <!-- ochrana proti CSRF útokům  -->
+        <input type="text" name="task">
+        <input type="submit">
+    </form>
+    <a href="{% url 'tasks:index' %}">View All Tasks</a>
+{% endblock %}
+```
+
+Výklad video čas 1:13:27
+
+### Formuláře v Django
+
+`tasks\views.py`
+
+``` python
+from django import forms
+
+class NewTaskForm(forms.Form):
+    task = forms.CharField(label="New Task", max_length=100)
+
+
+def add(request):
+  return render(request, "tasks/add.html", {
+    "form": NewTaskForm()
+  })
+
+```
+Poslední úprava v add.html
+
+`templates\tasks\add.html`
+
+``` html
 {% block body %}
     <h1>Add Task</h1>
     <form action="{% url 'tasks:add' %}" method="post">
@@ -71,10 +156,52 @@ def add(request):
 {% endblock %}
 ```
 
-Doplníme
-`tasks\urls.py`
+Výklad video čas 1:21:05 (úprava formuláře, kontrola v prohlížeči a druhá na serveru)
 
-```python
-app_name = tasks
+Finální verze `tasks\views.py`
+
+``` python
+from django import forms
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import reverse
+
+class NewTaskForm(forms.Form):
+    task = forms.CharField(label="New Task")
+    # priority = forms.IntegerField(label="Priority", min_value=1, max_value=5)
+
+# Create your views here.
+def index(request):
+    if "tasks" not in request.session:
+        request.session["tasks"] = []
+    return render(request, "tasks/index.html", {
+        "tasks": request.session["tasks"]
+    })
+
+def add(request):
+    if request.method == "POST":
+        form = NewTaskForm(request.POST)
+        if form.is_valid():
+            task = form.cleaned_data["task"]
+            request.session["tasks"] += [task]
+            return HttpResponseRedirect(reverse("tasks:index"))
+        else:
+            return render(request, "tasks/add.html", {
+                "form": form
+            })
+    else:
+        return render(request, "tasks/add.html", {
+            "form": NewTaskForm()
+        })
+
 ```
+
+Nakonec je třeba provést migrace kvůli session.
+
+``` cmd
+python manage.py migrate
+``` 
+
+
+
 
