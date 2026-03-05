@@ -65,7 +65,7 @@ Přidáme cestu pro přidávání úkolů do `tasks\urls.py`. Kód zde není uve
 ``` html
 {% block body %}
     <h1>Add Task</h1>
-    <form>>
+    <form>
         <input type="text" name="task">
         <input type="submit">
     </form>
@@ -76,14 +76,15 @@ Přidáme cestu pro přidávání úkolů do `tasks\urls.py`. Kód zde není uve
 
 ### Odkazy
 
-`templates\tasks\add.html`
+`templates\tasks\index.html`
 
 ```html
 <!-- <a href="/tasks/add">Add a New Task</a> -->
 <a href="{% url 'add' %}">Add a New Task</a>
 ```
 
-`templates\tasks\index.html`
+`templates\tasks\add.html`
+
 
 ```html
 <a href="{% url 'index' %}">View All Tasks</a>
@@ -112,12 +113,12 @@ a upravíme odkazy:
 ``` html
 {% block body %}
     <h1>Add Task</h1>
-    <form action="{% url 'tasks:add' %}" method="post">
+    <form action="{% url 'add' %}" method="post">
         {% csrf_token %} <!-- ochrana proti CSRF útokům  -->
         <input type="text" name="task">
         <input type="submit">
     </form>
-    <a href="{% url 'tasks:index' %}">View All Tasks</a>
+    <a href="{% url 'index' %}">View All Tasks</a>
 {% endblock %}
 ```
 
@@ -147,12 +148,12 @@ Poslední úprava v add.html
 ``` html
 {% block body %}
     <h1>Add Task</h1>
-    <form action="{% url 'tasks:add' %}" method="post">
+    <form action="{% url 'add' %}" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit">
     </form>
-    <a href="{% url 'tasks:index' %}">View All Tasks</a>
+    <a href="{% url 'index' %}">View All Tasks</a>
 {% endblock %}
 ```
 
@@ -184,7 +185,7 @@ def add(request):
         if form.is_valid():
             task = form.cleaned_data["task"]
             request.session["tasks"] += [task]
-            return HttpResponseRedirect(reverse("tasks:index"))
+            return HttpResponseRedirect(reverse("index"))
         else:
             return render(request, "tasks/add.html", {
                 "form": form
