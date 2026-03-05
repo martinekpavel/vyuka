@@ -157,7 +157,11 @@ Poslední úprava v add.html
 {% endblock %}
 ```
 
+---
+
 Výklad video čas 1:21:05 (úprava formuláře, kontrola v prohlížeči a druhá na serveru)
+
+---
 
 Finální verze `tasks\views.py`
 
@@ -203,6 +207,10 @@ Nakonec je třeba provést migrace kvůli session.
 python manage.py migrate
 ``` 
 
+---
 
+V tuto chvíli bystě měli umět naprogramovat např. aplikaci, která zobrazuje náhodné vtipy pomocí knihovny [pyjokes](https://pypi.org/project/pyjokes/). Nebo aplikaci, která zobrazuje náhodné citáty pomocí knihovny [quoters](https://pypi.org/project/quoters/).
 
+--- 
 
+Jedničkáři si zkusí vyřešit [Projekt 1 - Wiki](https://cs50.harvard.edu/web/projects/1/wiki/)
