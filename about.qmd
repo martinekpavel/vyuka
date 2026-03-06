@@ -11,3 +11,6 @@ Pokud chcete vytvářet podobné weby, tak mrkněte sem <https://quarto.org/docs
 - <https://quarto.org/docs/authoring/markdown-basics.html>
 - <https://marvin-schmitt.com/blog/website-tutorial-quarto/>
 - <https://quarto.org/docs/authoring/callouts.html>
+
+### Proxmox
+- [5 things I ALWAYS do after Proxmox installation](https://www.youtube.com/watch?v=pcnJdJVTzc8)
