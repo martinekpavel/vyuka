@@ -1,0 +1,51 @@
+---
+title: "Pracovní list č. 9"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL09nahoda.pdf" target="_blank">PracL09 - náhoda</a>.
+
+Pracovní soubor `pl09.py`
+
+```python
+# Pracovní list č. 9
+
+
+## 01 
+
+
+## 02 
+
+## 03 
+
+
+## 04 
+
+
+## 05 
+
+
+## 06 
+# 
+# 
+# 07 
+
+
+## 08 
+
+
+## 09 
+
+
+
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+# def kresli():
+#   canvas.create_rectangle(10, 20, 30, 40, fill='red')
+
+# kresli()
+
+## 10 
+
+
+```
