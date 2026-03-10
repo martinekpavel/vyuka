@@ -22,22 +22,21 @@ Pracovní soubor `pl08.py`
 
 ## 05 pisen.py
 
+def refren():
+    print("Já mám koně vraný koně,")
+    print("to jsou koně mí")
+
+refren()
+refren()
+print()
+print("Když já jím dám ovsa,")
+print("oni skáčou hopsa")
+print()
+refren()
+refren()
 
 ## 06 + 07 vizitka.py
 
 ## 08 obrazce
-
-## 09 kresba_podprogram.py
-
-# import tkinter
-# canvas = tkinter.Canvas()
-# canvas.pack()
-# def kresli():
-#   canvas.create_rectangle(10, 20, 30, 40, fill='red')
-
-# kresli()
-
-## 10 kriz
-
 
 ```
