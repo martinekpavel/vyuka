@@ -77,6 +77,7 @@ website:
         - web_python/pl06.qmd
         - web_python/pl07.qmd
         - web_python/pl08.qmd
+        - web_python/pl09.qmd
     - title: "Django"
       style: "docked"
           # background: light
