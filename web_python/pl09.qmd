@@ -10,42 +10,67 @@ Pracovní soubor `pl09.py`
 # Pracovní list č. 9
 
 
-## 01 
+## 01 mrizka.py
 
+def cara():
+    pass
+
+def hulky():
+    pass
 
 ## 02 
 
-## 03 
+def ctvereckovany_papir():
+    pass
+
+## 03 haha
 
 
-## 04 
+
+## 04 kostka.py
+
+# import random
+# n = random.randint(1, 6)
+# print("Na kostce padla", n
+
+## 05 upravena kostka.py
 
 
-## 05 
-
-
-## 06 
+## 06 dvacetihranna_kostka.py
 # 
 # 
-# 07 
+## 07 nemusíte se tím trápit
+## 08 taky tak
+## 09 taky tak
+## 10 taky tak
 
 
-## 08 
+## 11 predpoved.py 
 
 
-## 09 
+## 12 pin.py
 
 
+## 13 datumy.py
+
+
+## 14 nahodny_ctverec.py
 
 # import tkinter
+# import random
+
 # canvas = tkinter.Canvas()
 # canvas.pack()
-# def kresli():
-#   canvas.create_rectangle(10, 20, 30, 40, fill='red')
 
-# kresli()
+# def nahodny_ctverec():
+#     x = random.randint(10, 300)  
+#     y = random.randint(10, 200)
+#     canvas.create_rectangle(x,  y,  x+ 50, y + 50, fill='orange')
 
-## 10 
+# nahodny_ctverec()
+# canvas.mainloop()
+
+## a tak dále pokračujte
 
 
 ```
