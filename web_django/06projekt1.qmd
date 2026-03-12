@@ -10,4 +10,6 @@ Nejlepší free hosting pro Django projekty je <a href="https://eu.pythonanywher
 
 Níže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu:  <a href="https://gluingeal.eu.pythonanywhere.com/" target="_blank">https://gluingeal.eu.pythonanywhere.com/</a>.
 
-- <a href="https://youtu.be/BqVrt-6yfy8" target="_blank">https://youtu.be/BqVrt-6yfy8</a>
+- registrace a django<a href="https://youtu.be/BqVrt-6yfy8" target="_blank">https://youtu.be/BqVrt-6yfy8</a>
+- aplikace vtip <a href="https://youtu.be/9n8sXo2l7jE" target="_blank">https://youtu.be/9n8sXo2l7jE</a>
+
