@@ -1,0 +1,9 @@
+---
+title: "Projekt Wiki"
+---
+
+V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.
+
+Zpracujte projekt dle zadání <a href="https://cs50.harvard.edu/web/projects/1/wiki/" target="_blank">https://cs50.harvard.edu/web/projects/1/wiki/</a>.
+
+Nejlepší free hosting pro Django projekty je <a href="https://eu.pythonanywhere.com/" target="_blank">https://eu.pythonanywhere.com/</a>. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.
