@@ -7,3 +7,7 @@ V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům proh
 Zpracujte projekt dle zadání <a href="https://cs50.harvard.edu/web/projects/1/wiki/" target="_blank">https://cs50.harvard.edu/web/projects/1/wiki/</a>.
 
 Nejlepší free hosting pro Django projekty je <a href="https://eu.pythonanywhere.com/" target="_blank">https://eu.pythonanywhere.com/</a>. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.
+
+Níže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu:  <a href="https://gluingeal.eu.pythonanywhere.com/" target="_blank">https://gluingeal.eu.pythonanywhere.com/</a>.
+
+- <a href="https://youtu.be/BqVrt-6yfy8" target="_blank">https://youtu.be/BqVrt-6yfy8</a>
