@@ -1,0 +1,27 @@
+---
+title: "Pracovní list č. 11"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL11program_s_opakovanim.pdf" target="_blank">PracL11 - cykly</a>.
+
+Pracovní soubor `pl11.py`
+
+```python
+# Pracovní list č. 11
+
+
+# canvas = tkinter.Canvas()
+# canvas.pack()
+
+# def nahodny_ctverec():
+#     x = random.randint(10, 300)  
+#     y = random.randint(10, 200)
+#     canvas.create_rectangle(x,  y,  x+ 50, y + 50, fill='orange')
+
+# nahodny_ctverec()
+# canvas.mainloop()
+
+## a tak dále pokračujte
+
+
+```
