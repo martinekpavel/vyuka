@@ -117,7 +117,7 @@
     "href": "web_python/pl10.html",
     "title": "Pracovní list č. 10",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL10 - kreslení textu..\nPracovní soubor pl10.py\n# Pracovní list č. 10\n\n\n# canvas = tkinter.Canvas()\n# canvas.pack()\n\n# def nahodny_ctverec():\n#     x = random.randint(10, 300)  \n#     y = random.randint(10, 200)\n#     canvas.create_rectangle(x,  y,  x+ 50, y + 50, fill='orange')\n\n# nahodny_ctverec()\n# canvas.mainloop()\n\n## a tak dále pokračujte",
+    "text": "Pracujte podle pracovního listu PracL10 - kreslení textu..\nPracovní soubor pl10.py\n# Pracovní list č. 10\n\n## 01 nakupy.py\n\n\n## 02 baliky.py\n\n\n## 03 text grafika.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_text(150, 50, text='posílám pozdrav z grafické plochy')\n# canvas.mainloop()\n\n## 04 okraje.py\nNyní se přesuňte na pracovní list č. 11",
     "crumbs": [
       "Python",
       "Pracovní list č. 10"
@@ -840,7 +840,7 @@
     "href": "web_python/pl11.html",
     "title": "Pracovní list č. 11",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL11 - cykly.\nPracovní soubor pl11.py\n# Pracovní list č. 11\n\n\n# canvas = tkinter.Canvas()\n# canvas.pack()\n\n# def nahodny_ctverec():\n#     x = random.randint(10, 300)  \n#     y = random.randint(10, 200)\n#     canvas.create_rectangle(x,  y,  x+ 50, y + 50, fill='orange')\n\n# nahodny_ctverec()\n# canvas.mainloop()\n\n## a tak dále pokračujte",
+    "text": "Pracujte podle pracovního listu PracL11 - cykly.\nPracovní soubor pl11.py\n# Pracovní list č. 11\n\n## 01 gps.py \n\n# import tkinter\n# import random\n# canvas = tkinter.Canvas()\n# canvas.pack()\n\n# def gps():\n#     x = random.randint(10, 300)  \n#     y = random.randint(10, 200)\n#     canvas.create_text(x, y, text='+')\n\n# canvas.mainloop()\n\n## a tak dále pokračujte",
     "crumbs": [
       "Python",
       "Pracovní list č. 11"
