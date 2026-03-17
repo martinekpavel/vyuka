@@ -113,18 +113,29 @@
     ]
   },
   {
+    "objectID": "web_python/pl10.html",
+    "href": "web_python/pl10.html",
+    "title": "Pracovní list č. 10",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL10 - kreslení textu..\nPracovní soubor pl10.py\n# Pracovní list č. 10\n\n\n# canvas = tkinter.Canvas()\n# canvas.pack()\n\n# def nahodny_ctverec():\n#     x = random.randint(10, 300)  \n#     y = random.randint(10, 200)\n#     canvas.create_rectangle(x,  y,  x+ 50, y + 50, fill='orange')\n\n# nahodny_ctverec()\n# canvas.mainloop()\n\n## a tak dále pokračujte",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 10"
+    ]
+  },
+  {
     "objectID": "202526-1d.html",
     "href": "202526-1d.html",
     "title": "1.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\n\n\n\n24. 3. 2026\n\n\n\n31. 3. 2026\n\n\n\n7. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\n\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\n\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\n\n\n\n31. 3. 2026\n\n\n\n7. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\n\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\n\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
   },
   {
     "objectID": "202526-1d.html#výuka",
     "href": "202526-1d.html#výuka",
     "title": "1.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\n\n\n\n24. 3. 2026\n\n\n\n31. 3. 2026\n\n\n\n7. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\n\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\n\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\n\n\n\n31. 3. 2026\n\n\n\n7. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\n\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\n\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
   },
   {
     "objectID": "index.html",
@@ -178,7 +189,7 @@
     "href": "web_django/06projekt1.html",
     "title": "Projekt Wiki",
     "section": "",
-    "text": "V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.\nZpracujte projekt dle zadání https://cs50.harvard.edu/web/projects/1/wiki/.\nNejlepší free hosting pro Django projekty je https://eu.pythonanywhere.com/. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.",
+    "text": "V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.\nZpracujte projekt dle zadání https://cs50.harvard.edu/web/projects/1/wiki/.\nNejlepší free hosting pro Django projekty je https://eu.pythonanywhere.com/. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.\nNíže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu: https://gluingeal.eu.pythonanywhere.com/.\n\nregistrace a djangohttps://youtu.be/BqVrt-6yfy8\naplikace vtip https://youtu.be/GEKjrunSIvg",
     "crumbs": [
       "Projekt Wiki"
     ]
@@ -822,6 +833,17 @@
     "crumbs": [
       "Python",
       "Pracovní list č. 4"
+    ]
+  },
+  {
+    "objectID": "web_python/pl11.html",
+    "href": "web_python/pl11.html",
+    "title": "Pracovní list č. 11",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL11 - cykly.\nPracovní soubor pl11.py\n# Pracovní list č. 11\n\n\n# canvas = tkinter.Canvas()\n# canvas.pack()\n\n# def nahodny_ctverec():\n#     x = random.randint(10, 300)  \n#     y = random.randint(10, 200)\n#     canvas.create_rectangle(x,  y,  x+ 50, y + 50, fill='orange')\n\n# nahodny_ctverec()\n# canvas.mainloop()\n\n## a tak dále pokračujte",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 11"
     ]
   },
   {
