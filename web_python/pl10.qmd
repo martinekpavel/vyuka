@@ -9,19 +9,21 @@ Pracovní soubor `pl10.py`
 ```python
 # Pracovní list č. 10
 
+## 01 nakupy.py
 
+
+## 02 baliky.py
+
+
+## 03 text grafika.py
+
+# import tkinter
 # canvas = tkinter.Canvas()
 # canvas.pack()
-
-# def nahodny_ctverec():
-#     x = random.randint(10, 300)  
-#     y = random.randint(10, 200)
-#     canvas.create_rectangle(x,  y,  x+ 50, y + 50, fill='orange')
-
-# nahodny_ctverec()
+# canvas.create_text(150, 50, text='posílám pozdrav z grafické plochy')
 # canvas.mainloop()
 
-## a tak dále pokračujte
-
+## 04 okraje.py
 
 ```
+Nyní se přesuňte na pracovní list č. 11

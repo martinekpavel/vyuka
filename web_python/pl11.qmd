@@ -9,16 +9,18 @@ Pracovní soubor `pl11.py`
 ```python
 # Pracovní list č. 11
 
+## 01 gps.py 
 
+# import tkinter
+# import random
 # canvas = tkinter.Canvas()
 # canvas.pack()
 
-# def nahodny_ctverec():
+# def gps():
 #     x = random.randint(10, 300)  
 #     y = random.randint(10, 200)
-#     canvas.create_rectangle(x,  y,  x+ 50, y + 50, fill='orange')
+#     canvas.create_text(x, y, text='+')
 
-# nahodny_ctverec()
 # canvas.mainloop()
 
 ## a tak dále pokračujte
