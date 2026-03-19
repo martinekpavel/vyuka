@@ -1,0 +1,22 @@
+---
+title: "SQL a Django"
+---
+
+V tomto projektu se naučíte, jak používat SQL v Django pro práci s databází. Django používá ORM (Object-Relational Mapping), což umožňuje pracovat s databází pomocí Python kódu místo psaní SQL dotazů.
+
+
+Podklady pro výuku (videa, kódy, transkript, prezentace):
+
+- <a href="https://cs50.harvard.edu/web/weeks/4/" target="_blank">https://cs50.harvard.edu/web/weeks/4/</a>
+
+YouTube lekce: 
+
+- <a href="https://youtu.be/YzP164YANAU?si=RfZXo22trNGsWM46" target="_blank">https://youtu.be/YzP164YANAU?si=RfZXo22trNGsWM46</a>
+
+Zdrojové soubory: 
+
+- <a href="https://cdn.cs50.net/web/2020/spring/lectures/4/src4.zip" target="_blank">https://cdn.cs50.net/web/2020/spring/lectures/4/src4.zip</a>
+
+Pdf prezentace:
+
+- <a href="https://cdn.cs50.net/web/2020/spring/lectures/4/lecture4.pdf" target="_blank">https://cdn.cs50.net/web/2020/spring/lectures/4/lecture4.pdf</a>
