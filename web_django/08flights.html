@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Úvod do Djanga – PVA</title>
+<title>SQL a Django – PVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../web_django/01hello.html" rel="next">
+<link href="../web_django/07sql.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -303,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/index.html">Úvod do Djanga</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/08flights.html">SQL a Django</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -321,7 +356,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_django/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../web_django/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Úvod do Djanga</span></a>
   </div>
 </li>
@@ -369,7 +404,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_django/08flights.html" class="sidebar-item-text sidebar-link">
+  <a href="../web_django/08flights.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">SQL a Django</span></a>
   </div>
 </li>
@@ -378,8 +413,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Na této stránce</h2>
+   
+  <ul>
+  <li><a href="#django---projekt-airline" id="toc-django---projekt-airline" class="nav-link active" data-scroll-target="#django---projekt-airline">Django - projekt Airline</a>
+  <ul class="collapse">
+  <li><a href="#tvorba-projektu" id="toc-tvorba-projektu" class="nav-link" data-scroll-target="#tvorba-projektu">Tvorba projektu</a></li>
+  <li><a href="#první-aplikace-flights-v-projektu" id="toc-první-aplikace-flights-v-projektu" class="nav-link" data-scroll-target="#první-aplikace-flights-v-projektu">První aplikace (Flights) v projektu</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/08flights.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/08flights.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -387,7 +432,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Úvod do Djanga</h1>
+<h1 class="title">SQL a Django</h1>
 </div>
 
 
@@ -404,20 +449,106 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Podklady pro výuku (videa, kódy, transkript, prezentace):</p>
-<ul>
-<li><a href="https://cs50.harvard.edu/web/weeks/3/" target="_blank">https://cs50.harvard.edu/web/weeks/3/</a></li>
-</ul>
-<p>YouTube lekce:</p>
-<ul>
-<li><a href="https://youtu.be/w8q0C-C1js4?si=VeyTaNxZ3ajo1HWg" target="_blank">https://youtu.be/w8q0C-C1js4?si=VeyTaNxZ3ajo1HWg</a></li>
-</ul>
-<p>Zdrojové soubory:</p>
-<ul>
-<li><a href="https://cdn.cs50.net/web/2020/spring/lectures/3/src3.zip" target="_blank">https://cdn.cs50.net/web/2020/spring/lectures/3/src3.zip</a></li>
-</ul>
+<section id="django---projekt-airline" class="level1">
+<h1>Django - projekt Airline</h1>
+<section id="tvorba-projektu" class="level3">
+<h3 class="anchored" data-anchor-id="tvorba-projektu">Tvorba projektu</h3>
+<pre><code>django-admin startproject airline</code></pre>
+</section>
+<section id="první-aplikace-flights-v-projektu" class="level3">
+<h3 class="anchored" data-anchor-id="první-aplikace-flights-v-projektu">První aplikace (Flights) v projektu</h3>
+<pre><code>python manage.py startapp flights</code></pre>
+<p>V souboru <code>airline\settings.py</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>INSTALLED_APPS <span class="op">=</span> [</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'flights'</span>, <span class="co"># doplníme název aplikace</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'django.contrib.admin'</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'django.contrib.auth'</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'django.contrib.contenttypes'</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'django.contrib.sessions'</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'django.contrib.messages'</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'django.contrib.staticfiles'</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>V souboru <code>airline\urls.py</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.contrib <span class="im">import</span> admin</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.urls <span class="im">import</span> path, include</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>urlpatterns <span class="op">=</span> [</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'admin/'</span>, admin.site.urls),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'flights/'</span>, include(<span class="st">'flights.urls'</span>)),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Vytvoříme strukturu tabulek v databázi. V souboru aplikace <code>flights\models.py</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Airport(models.Model):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    code <span class="op">=</span> models.CharField(max_length<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    city <span class="op">=</span> models.CharField(max_length<span class="op">=</span><span class="dv">64</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>city<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>code<span class="sc">}</span><span class="ss">)"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Flight(models.Model):</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    origin <span class="op">=</span> models.ForeignKey(Airport, on_delete<span class="op">=</span>models.CASCADE, related_name<span class="op">=</span><span class="st">"departures"</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    destination <span class="op">=</span> models.ForeignKey(Airport, on_delete<span class="op">=</span>models.CASCADE, related_name<span class="op">=</span><span class="st">"arrivals"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    duration <span class="op">=</span> models.IntegerField()</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span><span class="bu">id</span><span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>origin<span class="sc">}</span><span class="ss"> -&gt; </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>destination<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>duration<span class="sc">}</span><span class="ss">)"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Passenger(models.Model):</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    first <span class="op">=</span> models.CharField(max_length<span class="op">=</span><span class="dv">64</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    last <span class="op">=</span> models.CharField(max_length<span class="op">=</span><span class="dv">64</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    flights <span class="op">=</span> models.ManyToManyField(Flight, blank<span class="op">=</span><span class="va">True</span>, related_name<span class="op">=</span><span class="st">"passengers"</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>first<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>last<span class="sc">}</span><span class="ss">"</span>    </span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Další typy modelů (datových typu jednotlivých polí v tabulce) naleznete v <a href="https://docs.djangoproject.com/en/5.0/ref/models/fields/">dokumentaci Djanga</a>.</p>
+<p>Vytvoříte soubor pro aplikaci <code>flights\urls.py</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.urls <span class="im">import</span> path </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> . <span class="im">import</span> views</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>urlpatterns <span class="op">=</span> [</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">""</span>, views.index, name<span class="op">=</span><span class="st">"index"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nyní vytvoříte správné šablony (layout.html a index.html) např. podle <a href="django-templates.md">django-templates</a>.</p>
+<p>Do bloku <code>{% block body %}</code> vložíte kód:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        {% for flight in flights %}</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{% url 'flight' flight.id %}"</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        {% endfor %}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">ul</span><span class="dt">&gt;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pozor, protože nemáme funkci s názvem <code>flight</code>, web nebude fungovat, dokud ji nenaprogramujeme.</p>
+<p>Upravíte soubor pro aplikaci <code>flights\views.py</code> (logika aplikace, soubor funkcí, které renderují výstupy pro šablony)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> .models <span class="im">import</span> Flight</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> index(request):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> render(request, <span class="st">"flights/index.html"</span>, {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"flights"</span>: Flight.objects.<span class="bu">all</span>()</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    })</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Připravíme a vytvoříme databázi (v cmd.exe)</p>
+<pre><code>python manage.py makemigrations</code></pre>
+<pre><code>python manage.py migrate</code></pre>
+<p>Vytvoříte superuživatele (zvolíte uživatelské jméno a heslo) pomocí příkazu:</p>
+<pre><code>python manage.py createsuperuser</code></pre>
+<p>Výstup může vypadat takto:</p>
+<pre><code>(virtual-django) C:\airline&gt;python manage.py createsuperuser
+Username (leave blank to use 'martinek.p'): admin
+Email address:
+Password:
+Password (again):
+Superuser created successfully.</code></pre>
+<p>Upravíme soubor <code>admin.py</code> v aplikaci:</p>
+<pre><code>from .models import Airport, Flight, Passenger
+
+admin.site.register(Airport)
+admin.site.register(Flight)
+admin.site.register(Passenger)</code></pre>
+<p>A nyní můžeme přímo editovat databázi v admin rozhraní aplikace.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -835,11 +966,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../web_django/07sql.html" class="pagination-link" aria-label="SQL a Django">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">SQL a Django</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../web_django/01hello.html" class="pagination-link" aria-label="Hello App">
-        <span class="nav-page-text">Hello App</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -850,7 +981,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/index.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/index.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/08flights.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/08flights.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a> ❤️</p>
 </div>
