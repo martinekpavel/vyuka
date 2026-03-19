@@ -70,7 +70,7 @@ class Passenger(models.Model):
         return f"{self.first} {self.last}"    
 ```
 
-Další typy modelů (datových typu jednotlivých polí v tabulce) naleznete v [dokumentaci Djanga](https://docs.djangoproject.com/en/5.0/ref/models/fields/).
+Další typy modelů (datových typu jednotlivých polí v tabulce) naleznete v <a href="https://docs.djangoproject.com/en/6.0/ref/models/fields/" target="_blank">dokumentaci Djanga</a>.
 
 Vytvoříte soubor pro aplikaci `flights\urls.py`
 
@@ -98,7 +98,6 @@ Do bloku `{% block body %}` vložíte kód:
         {% endfor %}
     </ul>
 ```
-Pozor, protože nemáme funkci s názvem `flight`, web nebude fungovat, dokud ji nenaprogramujeme.
 
 Upravíte soubor pro aplikaci `flights\views.py` (logika aplikace, soubor funkcí, které renderují výstupy pro šablony)
 
@@ -114,22 +113,22 @@ def index(request):
 
 Připravíme a vytvoříme databázi (v cmd.exe)
 
-```
+```cmd
 python manage.py makemigrations
 ```
 
-```
+```cmd
 python manage.py migrate
 ```
 
 Vytvoříte superuživatele (zvolíte uživatelské jméno a heslo) pomocí příkazu:
 
-```
+```cmd
 python manage.py createsuperuser
 ```
 Výstup může vypadat takto:
 
-```
+```cmd
 (virtual-django) C:\airline>python manage.py createsuperuser
 Username (leave blank to use 'martinek.p'): admin
 Email address:
@@ -140,7 +139,7 @@ Superuser created successfully.
 
 Upravíme soubor `admin.py` v aplikaci:
 
-```
+```python
 from .models import Airport, Flight, Passenger
 
 admin.site.register(Airport)
