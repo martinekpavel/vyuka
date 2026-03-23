@@ -80,6 +80,7 @@ website:
         - web_python/pl09.qmd
         - web_python/pl10.qmd
         - web_python/pl11.qmd
+        - web_python/pl12.qmd
 
     - title: "Django"
       style: "docked"
