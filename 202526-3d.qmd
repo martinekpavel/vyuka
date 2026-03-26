@@ -45,7 +45,7 @@ title: "3.D šk. rok 2025/2026"
 `12. 3. 2026` | [Wiki](web_django/06projekt1.qmd) (46,47/47,48)
 `19. 3. 2026` | [SQL](web_django/07sql.qmd) + [Airline](web_django/08flights.qmd) (48,49/49,50)
 `26. 3. 2026` | [Airline 2](web_django/09flights.qmd) (50,51/51,52)
- `2. 4. 2026` |
+ `2. 4. 2026` | [Uživatelé](web_django/10users.qmd) (52,53/53,54)
  `9. 4. 2026` |
 
 ### 4. čtvrtetí
