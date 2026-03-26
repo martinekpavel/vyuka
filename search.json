@@ -149,255 +149,381 @@
     "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\nProxmox\n\n5 things I ALWAYS do after Proxmox installation"
   },
   {
-    "objectID": "web_django/02apps.html",
-    "href": "web_django/02apps.html",
-    "title": "Hello str",
+    "objectID": "web_django/09flights.html",
+    "href": "web_django/09flights.html",
+    "title": "Airline 2",
     "section": "",
-    "text": "Doplníme soubor pro aplikaci hello\\views.py.\ndef brian(request):\n    return HttpResponse(\"Hello, Brian!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"brian\", views.brian, name=\"brian\")\na můžeme to otestovat, případně přidat další jména.\n\nCesta s řetězcem\nDoplníme soubor pro aplikaci hello\\views.py.\ndef great(request,name):\n    return HttpResponse(f\"Hello, {name.capitalize()}!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"&lt;str:name&gt;\", views.great, name=\"great\")\na můžeme to otestovat, zadáním různých slov do správné url\nhttps://localhost:8000/hello/retezec",
+    "text": "Django - projekt Airline\nMohou se hodit moje poznámky ke gitu\n\nGit\n\n\nTvorba odkazu na konkrétní let\nDoplníme do šablony odkaz na konkrétní let:\n&lt;li&gt;\n    &lt;a href=\"{% url 'flight' flight.id %}\"&gt; \n        Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n    &lt;/a&gt;\n&lt;/li&gt;\nA protože url 'flight' ještě nemáme, vytvoříme ji v flights\\urls.py:\npath(\"&lt;int:flight_id&gt;\", views.flight, name=\"flight\"),\nDo souboru flights\\views.py doplníme funkci pro zobrazení konkrétního letu:\ndef flight(request, flight_id):\n    flight = Flight.objects.get(pk=flight_id)\n    return render(request, \"flights/flight.html\", {\n          \"flight\": flight\n    })\n\n\nChci zobrazit pasažéry na webu\nDo souboru flights\\views.py do funkce flight, do dat pro šablonu přidám:\n\"passengers\": flight.passengers.all()\na do šablony doplním:\n &lt;h2&gt;Passengers&lt;/h2&gt;\n    {% for p in passengers %}\n        &lt;li&gt;{{p.first}} {{p.last}}&lt;/li&gt;\n    {% empty %}\n        No passengers.\n    {% endfor %}\nVytvořím odkaz na seznam letů\n&lt;a href=\"{% url 'index' %}\"&gt;Back to Flight List&lt;/a&gt;\n\n\nChci mít možnost přidat pasažéry k letu\nMěli byste vědět, kam doplníte tento řádek\npath(\"&lt;int:flight_id&gt;/book\", views.book, name=\"book\"),\nVe správném souboru uděláme následující změny:\nfrom django.http import HttpResponseRedirect\nfrom django.urls import reverse\n\ndef book(request, flight_id):\n    if request.method == \"POST\":\n        flight = Flight.objects.get(pk=flight_id)\n        passenger = Passenger.objects.get(pk=int(request.POST[\"passenger\"]))\n        passenger.flights.add(flight)\n        return HttpResponseRedirect(reverse(\"flight\", args=(flight.id,)))\nUpravím šablonu daného letu tak, abych tam měl formulář pro přidání pasažéra\n&lt;h2&gt;Add Passenger&lt;/h2&gt;\n    &lt;form action=\"{% url 'book' flight.id %}\" method=\"POST\"&gt;\n        {% csrf_token %}\n        &lt;select name=\"passenger\" id=\"passenger\"&gt;\n            {% for passanger in non_passengers  %}\n            &lt;option value=\"{{ passanger.id }}\"&gt;{{ passanger }}&lt;/option&gt;\n            {% endfor %}\n        &lt;/select&gt;\n        &lt;input type=\"submit\" value=\"Add Passenger\"&gt;\n    &lt;/form&gt;\nDo funkce flight doplním proměnou, která do šablony odešle data těch pasažérů, kteří na daném letu nejsou:\n    \"non_passengers\": Passenger.objects.exclude(flights=flight).all()\n\n\nMohu si upravit zobrazení v admin rozhraní\nV souboru admin.py provedu úpravy\nclass FlightAdmin(admin.ModelAdmin):\n    list_display = (\"id\", \"origin\", \"destination\", \"duration\")\n\nclass PassengerAdmin(admin.ModelAdmin):\n    filter_horizontal = (\"flights\",)\n\nadmin.site.register(Flight, FlightAdmin)\nadmin.site.register(Passenger, PassengerAdmin)\na aplikace je hotova.",
     "crumbs": [
-      "Hello str"
+      "Airline 2"
     ]
   },
   {
-    "objectID": "web_django/index.html",
-    "href": "web_django/index.html",
-    "title": "Úvod do Djanga",
+    "objectID": "web_django/04newyear.html",
+    "href": "web_django/04newyear.html",
+    "title": "NewYear",
     "section": "",
-    "text": "Podklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/3/\n\nYouTube lekce:\n\nhttps://youtu.be/w8q0C-C1js4?si=VeyTaNxZ3ajo1HWg\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/3/src3.zip\n\nMohou se hodit moje poznámky ke gitu\n\nGit",
+    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace newyear\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
     "crumbs": [
-      "Úvod do Djanga"
+      "NewYear"
     ]
   },
   {
-    "objectID": "web_django/05tasks.html",
-    "href": "web_django/05tasks.html",
-    "title": "Tasks",
-    "section": "",
-    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace tasks\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
-    "crumbs": [
-      "Tasks"
-    ]
-  },
-  {
-    "objectID": "web_django/05tasks.html#kód",
-    "href": "web_django/05tasks.html#kód",
-    "title": "Tasks",
+    "objectID": "web_django/04newyear.html#kód",
+    "href": "web_django/04newyear.html#kód",
+    "title": "NewYear",
     "section": "Kód",
-    "text": "Kód\ntasks\\views.py\ntasks = [\"foo\",\"bar\",\"baz\"]\n\ndef index(request):\n  return render(request, \"tasks/index.html\", {\n    \"tasks\": tasks\n  })\ntemplates\\tasks\\index.html\n    &lt;ul&gt;\n        {% for task in tasks %}\n            &lt;li&gt;{{ task }}\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\ntasks\\views.py\ndef add(request):\n  return render(request, \"tasks/add.html\")\nPřidáme cestu pro přidávání úkolů do tasks\\urls.py. Kód zde není uveden.\n\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form&gt;\n        &lt;input type=\"text\" name=\"task\"&gt;\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\nOdkazy\ntemplates\\tasks\\index.html\n&lt;!-- &lt;a href=\"/tasks/add\"&gt;Add a New Task&lt;/a&gt; --&gt;\n&lt;a href=\"{% url 'add' %}\"&gt;Add a New Task&lt;/a&gt;\ntemplates\\tasks\\add.html\n&lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\nVideo čas 1:10:09\nŘešení problému s odkazy: namespaces\nDoplníme tasks\\urls.py\napp_name = \"tasks\"\na upravíme odkazy:\n&lt;a href=\"{% url 'tasks:index' %}\"&gt;View All Tasks&lt;/a&gt;\n&lt;a href=\"{% url 'tasks:add' %}\"&gt;Add a New Task&lt;/a&gt;\n\n\nZpracování formuláře\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form action=\"{% url 'add' %}\" method=\"post\"&gt;\n        {% csrf_token %} &lt;!-- ochrana proti CSRF útokům  --&gt;\n        &lt;input type=\"text\" name=\"task\"&gt;\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n    &lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\n{% endblock %}\nVýklad video čas 1:13:27\n\n\nFormuláře v Django\ntasks\\views.py\nfrom django import forms\n\nclass NewTaskForm(forms.Form):\n    task = forms.CharField(label=\"New Task\", max_length=100)\n\n\ndef add(request):\n  return render(request, \"tasks/add.html\", {\n    \"form\": NewTaskForm()\n  })\nPoslední úprava v add.html\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form action=\"{% url 'add' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        {{ form }}\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n    &lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\n{% endblock %}\n\nVýklad video čas 1:21:05 (úprava formuláře, kontrola v prohlížeči a druhá na serveru)\n\nFinální verze tasks\\views.py\nfrom django import forms\nfrom django.http import HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\nclass NewTaskForm(forms.Form):\n    task = forms.CharField(label=\"New Task\")\n    # priority = forms.IntegerField(label=\"Priority\", min_value=1, max_value=5)\n\n# Create your views here.\ndef index(request):\n    if \"tasks\" not in request.session:\n        request.session[\"tasks\"] = []\n    return render(request, \"tasks/index.html\", {\n        \"tasks\": request.session[\"tasks\"]\n    })\n\ndef add(request):\n    if request.method == \"POST\":\n        form = NewTaskForm(request.POST)\n        if form.is_valid():\n            task = form.cleaned_data[\"task\"]\n            request.session[\"tasks\"] += [task]\n            return HttpResponseRedirect(reverse(\"index\"))\n        else:\n            return render(request, \"tasks/add.html\", {\n                \"form\": form\n            })\n    else:\n        return render(request, \"tasks/add.html\", {\n            \"form\": NewTaskForm()\n        })\nNakonec je třeba provést migrace kvůli session.\npython manage.py migrate\n\nV tuto chvíli bystě měli umět naprogramovat např. aplikaci, která zobrazuje náhodné vtipy pomocí knihovny pyjokes. Nebo aplikaci, která zobrazuje náhodné citáty pomocí knihovny quoters.\n\nJedničkáři si zkusí vyřešit Projekt 1 - Wiki",
+    "text": "Kód\nKód souboru newyear\\views.py:\nimport datetime\n\nfrom django.shortcuts import render\n\n# Create your views here.\ndef index(request):\n    now = datetime.datetime.now()\n    return render(request, \"newyear/index.html\", {\n        \"newyear\": now.month == 1 and now.day == 1\n    })\nKód souboru newyear\\urls.py:\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
     "crumbs": [
-      "Tasks"
+      "NewYear"
     ]
   },
   {
-    "objectID": "web_django/06projekt1.html",
-    "href": "web_django/06projekt1.html",
-    "title": "Projekt Wiki",
+    "objectID": "web_django/07sql.html",
+    "href": "web_django/07sql.html",
+    "title": "SQL a Django",
     "section": "",
-    "text": "V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.\nZpracujte projekt dle zadání https://cs50.harvard.edu/web/projects/1/wiki/.\nNejlepší free hosting pro Django projekty je https://eu.pythonanywhere.com/. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.\nNíže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu: https://gluingeal.eu.pythonanywhere.com/.\n\nregistrace a djangohttps://youtu.be/BqVrt-6yfy8\naplikace vtip https://youtu.be/GEKjrunSIvg",
+    "text": "V tomto projektu se naučíte, jak používat SQL v Django pro práci s databází. Django používá ORM (Object-Relational Mapping), což umožňuje pracovat s databází pomocí Python kódu místo psaní SQL dotazů.\nPodklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/4/\n\nYouTube lekce:\n\nhttps://youtu.be/YzP164YANAU?si=RfZXo22trNGsWM46\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/src4.zip\n\nPdf prezentace:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/lecture4.pdf",
     "crumbs": [
-      "Projekt Wiki"
+      "SQL a Django"
     ]
   },
   {
-    "objectID": "web_django/03template.html",
-    "href": "web_django/03template.html",
-    "title": "Šablony",
+    "objectID": "web_django/01hello.html",
+    "href": "web_django/01hello.html",
+    "title": "Hello App",
     "section": "",
-    "text": "Vytvořím složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace např. hello\nNíže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.\nVytvořím soubory layout.html a index.html\nObsah souboru layout.html\nObsah souboru index.html",
+    "text": "prereq: instalace python\n\nInstalace Djanga\npip install django\na jste připraveni vytvořit svůj projekt (webovou aplikaci).\n\n\n\n\n\n\nVarování\n\n\n\nZda je všechno OK lze vyzkoušet ihned příkazem django-admin. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné PATH.\n\n\n\n\nNový projekt\ndjango-admin startproject PROJECT_NAME\nPříkaz nám vytvoří novou složku s novým projektem a jeho soubory.\n\n\n\n\n\n\nVarování\n\n\n\nPokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku!\ndjango-admin startproject PROJECT_NAME .\n\n\n\n\nNová aplikace\npython manage.py startapp hello\nV souboru PROJECT_NAME\\settings.py\nINSTALLED_APPS = [\n    'hello', # doplníme název aplikace a nezapomeneme na čárku!\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nDoplníte soubor pro aplikaci hello\\views.py (logika aplikace, soubor funkcí, které renderují výstupy)\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world\")  \nVytvoříte soubor s cestami pro aplikaci hello\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nV souboru PROJECT_NAME\\urls.py doplníme cesty.\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('hello/', include('hello.urls')),\n]\n\n\nSpuštění dev web serveru\npython manage.py runserver\na nejspíše máte server na adrese:\nhttp://localhost:8000\n\n\n\n\n\n\nVarování\n\n\n\nNelekejte se varovných hlášení, protože nemáte cestu pro / adresu, musíte za lomítko zadat ještě název aplikace hello a pak by vše mělo fungovat.",
     "crumbs": [
-      "Šablony"
+      "Hello App"
     ]
   },
   {
-    "objectID": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
-    "href": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
-    "title": "Šablony",
-    "section": "Použití if else v šabloně (využijete u aplikace newyear)",
-    "text": "Použití if else v šabloně (využijete u aplikace newyear)\n  {% if newyear %}\n            &lt;h1&gt;YES&lt;/h1&gt;\n  {% else %}\n            &lt;h1&gt;NO&lt;/h1&gt;\n  {% endif %}",
-    "crumbs": [
-      "Šablony"
-    ]
-  },
-  {
-    "objectID": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
-    "href": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
-    "title": "Šablony",
-    "section": "Použití cyklu v šabloně (využijete později!)",
-    "text": "Použití cyklu v šabloně (využijete později!)\n    &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"{% url 'flight' flight.id %}\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;",
-    "crumbs": [
-      "Šablony"
-    ]
-  },
-  {
-    "objectID": "web_algo/02diag.html",
-    "href": "web_algo/02diag.html",
-    "title": "Diagramy 1",
+    "objectID": "web_django/08flights.html",
+    "href": "web_django/08flights.html",
+    "title": "Airline",
     "section": "",
-    "text": "Opakování z minulé hodiny (kahoot).\nStudent navrhne algoritmus pro řešení zadané úlohy. Graficky jej znázorní pomocí vývojového diagramu. Najde a opraví chybu.\nPožadovaný software: http://www.flowgorithm.org/",
+    "text": "Django - projekt Airline\n\nTvorba projektu\ndjango-admin startproject airline\n\n\nPrvní aplikace (Flights) v projektu\npython manage.py startapp flights\nV souboru airline\\settings.py\nINSTALLED_APPS = [\n    'flights', # doplníme název aplikace\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nV souboru airline\\urls.py\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('flights/', include('flights.urls')),\n]\nVytvoříme strukturu tabulek v databázi. V souboru aplikace flights\\models.py\nclass Airport(models.Model):\n    code = models.CharField(max_length=3)\n    city = models.CharField(max_length=64)\n\n    def __str__(self):\n        return f\"{self.city} ({self.code})\"\n    \nclass Flight(models.Model):\n    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"departures\")\n    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"arrivals\")\n    duration = models.IntegerField()\n\n    def __str__(self):\n        return f\"{self.id}: {self.origin} -&gt; {self.destination} ({self.duration})\"\n\nclass Passenger(models.Model):\n    first = models.CharField(max_length=64)\n    last = models.CharField(max_length=64)\n    flights = models.ManyToManyField(Flight, blank=True, related_name=\"passengers\")\n\n    def __str__(self):\n        return f\"{self.first} {self.last}\"    \nDalší typy modelů (datových typu jednotlivých polí v tabulce) naleznete v dokumentaci Djanga.\nVytvoříte soubor pro aplikaci flights\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nNyní vytvoříte správné šablony (layout.html a index.html) např. podle django-templates.\nDo bloku {% block body %} vložíte kód:\n  &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"#\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\nUpravíte soubor pro aplikaci flights\\views.py (logika aplikace, soubor funkcí, které renderují výstupy pro šablony)\nfrom .models import Flight\n\ndef index(request):\n    return render(request, \"flights/index.html\", {\n        \"flights\": Flight.objects.all()\n    })\nPřipravíme a vytvoříme databázi (v cmd.exe)\npython manage.py makemigrations\npython manage.py migrate\nVytvoříte superuživatele (zvolíte uživatelské jméno a heslo) pomocí příkazu:\npython manage.py createsuperuser\nVýstup může vypadat takto:\n(virtual-django) C:\\airline&gt;python manage.py createsuperuser\nUsername (leave blank to use 'martinek.p'): admin\nEmail address:\nPassword:\nPassword (again):\nSuperuser created successfully.\nUpravíme soubor admin.py v aplikaci:\nfrom .models import Airport, Flight, Passenger\n\nadmin.site.register(Airport)\nadmin.site.register(Flight)\nadmin.site.register(Passenger)\nA nyní můžeme přímo editovat databázi v admin rozhraní aplikace.",
     "crumbs": [
-      "Algoritmy",
-      "Diagramy 1"
+      "Airline"
     ]
   },
   {
-    "objectID": "web_algo/02diag.html#úloha-1---kontrola-zadaného-pin",
-    "href": "web_algo/02diag.html#úloha-1---kontrola-zadaného-pin",
-    "title": "Diagramy 1",
-    "section": "Úloha 1 - kontrola zadaného PIN",
-    "text": "Úloha 1 - kontrola zadaného PIN\nPoužité proměnné\n\nP - představuje správné PIN\nX - počet chybných pokusů\nA - pin zadané uživatelem\n\n\n\n\n\n\nflowchart TB\n    A([\"Začátek\"]) --&gt; B[\"P = 4530\"]\n    B --&gt; C[\"X = 0\"]\n    C --&gt; D{\"X == 3\"}\n    D -- Pravda --&gt; E[/\"Karta zablokována\"/]\n    D -- Nepravda --&gt; F[/\"Čti A\"/]\n    F --&gt; G{\"A == P\"}\n    G -- Pravda --&gt; I[\"Provedení výběru\"]\n    G -- Nepravda --&gt; H[\"X = X + 1\"]\n    H --&gt; D\n    I --&gt; Z\n    E --&gt; Z([\"Konec\"])\n\n\n\n\n\n\nOtázky\n\nProč je prvek Čti A, zařazen až za rozhodovací prvek X == 3?\nPokud je karta zablokována, existuje nějaká šance se vrátit zpět a dát další PIN?\nPokud by mělo být povoleno 5 chybných pokusů, jakou konkrétní změnu je nutné provést?\nJak konkrétně upravit diagram, aby před třetím pokusem o zadání PIN vypsal varování “Pozor, toto je poslední pokus”?",
+    "objectID": "202526-3d.html",
+    "href": "202526-3d.html",
+    "title": "3.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\nodpadá\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+  },
+  {
+    "objectID": "202526-3d.html#výuka",
+    "href": "202526-3d.html#výuka",
+    "title": "3.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\nodpadá\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+  },
+  {
+    "objectID": "web_algo/03diag.html",
+    "href": "web_algo/03diag.html",
+    "title": "Diagramy 2",
+    "section": "",
+    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 1"
+      "Diagramy 2"
     ]
   },
   {
-    "objectID": "web_algo/02diag.html#cyklus",
-    "href": "web_algo/02diag.html#cyklus",
-    "title": "Diagramy 1",
-    "section": "Cyklus",
-    "text": "Cyklus\n\n\n\n\n\nflowchart TB\n    A[\"`Cyklus\n    I = 1, N`\"]\n    Z([\"Začátek\"]) --&gt; A \n    A --&gt; B[\"Prvky uvnitř cyklu\"]\n    B --&gt; C[\"Konec cyklu\"]\n    C .-&gt; A\n    C --&gt; K([\"Konec\"])\n\n    A@{ shape: hex}\n    C@{ shape: hex}",
+    "objectID": "web_algo/03diag.html#opakování",
+    "href": "web_algo/03diag.html#opakování",
+    "title": "Diagramy 2",
+    "section": "",
+    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 1"
+      "Diagramy 2"
     ]
   },
   {
-    "objectID": "web_algo/02diag.html#kolik-čísel-je-záporných",
-    "href": "web_algo/02diag.html#kolik-čísel-je-záporných",
-    "title": "Diagramy 1",
-    "section": "Kolik čísel je záporných?",
-    "text": "Kolik čísel je záporných?\nPoužité proměnné: - P počet čísel, ze kterých budou hodnoty zjištovány - Z počet záporných čísel - A číslo, které posuzujeme\n\n\n\n\n\nflowchart TB\n    D[\"`Cyklus\n    I = 1, P`\"]\n    A([\"Začátek\"]) --&gt; B[\"Z = 0\"]\n    B --&gt; C[/\"Čti P\"/]\n    C --&gt; D\n    D --&gt; E[/\"Čti A\"/]\n    E --&gt; F{\"A &lt; 0\"}\n    F -- Pravda --&gt; G[\"Z = Z + 1\"]\n    F -- Nepravda --&gt; H[\"Konec cyklu\"]\n    G --&gt; H\n    H .-&gt; D\n    H --&gt; J[/\"Vypiš Z\"/]\n    J --&gt; K([\"Konec\"]) \n\n    D@{ shape: hex}\n    H@{ shape: hex}\n\n\n\n\n\n\nOtázky\n\nCo by se stalo, pokud by prvek Vypiš: Z byl umístěn nikoliv za koncem cyklu, nýbrž před jeho koncem?\nJakou úpravu by bylo nutné udeělat, aby algoritmus vypsal, kolik čísel z neznámého počtu se rovná nule?\nJakou úpravu by bylo nutné udělat, aby algoritmus vypsal, kolik čísel z neznámého počtu je v intervalu 50-100?",
+    "objectID": "web_algo/03diag.html#želví-grafika",
+    "href": "web_algo/03diag.html#želví-grafika",
+    "title": "Diagramy 2",
+    "section": "Želví grafika",
+    "text": "Želví grafika\n\nhttps://www.umimeinformatiku.cz/zelvi-grafika\n\nPoužíváme software Flowgorithm.",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 1"
+      "Diagramy 2"
     ]
   },
   {
-    "objectID": "web_algo/02diag.html#pracovní-list---nalezení-chyb-v-algoritmech",
-    "href": "web_algo/02diag.html#pracovní-list---nalezení-chyb-v-algoritmech",
-    "title": "Diagramy 1",
-    "section": "Pracovní list - nalezení chyb v algoritmech",
-    "text": "Pracovní list - nalezení chyb v algoritmech\nNakopírováno",
-    "crumbs": [
-      "Algoritmy",
-      "Diagramy 1"
-    ]
-  },
-  {
-    "objectID": "web_algo/02diag.html#tvorba-algoritmu",
-    "href": "web_algo/02diag.html#tvorba-algoritmu",
-    "title": "Diagramy 1",
+    "objectID": "web_algo/03diag.html#tvorba-algoritmu",
+    "href": "web_algo/03diag.html#tvorba-algoritmu",
+    "title": "Diagramy 2",
     "section": "Tvorba algoritmu",
     "text": "Tvorba algoritmu\n\nVytvořte vývojový diagram s algoritmem, který porovná dvě zadaná čísla. Tato čísla vypíše v tomto pořadí: nejprve větší a poté menší číslo.\nVytvořte vývojový diagram s algoritmem, který vypíše největší číslo ze tří zadaných čísel.\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4.",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 1"
+      "Diagramy 2"
     ]
   },
   {
-    "objectID": "web_algo/index.html",
-    "href": "web_algo/index.html",
-    "title": "Základy Algoritmizace",
+    "objectID": "web_algo/05diag.html",
+    "href": "web_algo/05diag.html",
+    "title": "Diagramy",
     "section": "",
-    "text": "Co je to algoritmus?\nPřesný návod nebo postup pro vyřešení konkrétní úlohy.\nAlgoritmy - NEzkreslená věda - Youtube\nNa algoritmus se můžeme dívat jako na sled příkazů, které od někoho přijímáme (když algoritmus vykonáváme) nebo jej vymýšlíme a sdělujeme (tomu, kdo jej vykoná). Algoritmus má vždy vést k řešení nějakého problému a musí se sestávat z příkazů, kterým ten, kdo je vykonává, dobře rozumí, nemůže si je vyložit různým způsobem a může tak algoritmus bezmyšlenkovitě vykonat. Algoritmy umožňují automatické vykonávání pokynů, vedoucí k řešení problémů.\nAlgoritmické úlohy a vzdělávací cíle. Online. Informatika s bobříkem. 2024. Dostupné z: https://wakelet.com/wake/3GJF18eCVEDcx8kyYTaPg. [cit. 2025-12-01].\n\nVlastnosti algoritmů\n\nmusí mít začátek a konec - po konečném počtu kroků musí dojít od počátku do konce\nmusí být věcně správný - pokud chci obvod kruhu, musím mít správný vzoreček\nmusí být jednoznačný - v každém jeho kroku musí být jasné, jaký bude jeho následující krok\nmusí být obecný - schopný řešit co nějvětší množství podobných problémů\nmusí být opakovatelný - za stejných podmínek vracet stejné výsledky\nmusí být srozumitelný - osobě, pro kterou je určen\n\n\n\nZpůsob zápisů algoritmů\n\nslovní vyjádření\n\ni pro lajky, nejméně přesné, kuchařky, návody\n\nmatematický zápis\n\njednoznačný, pro určité úkoly, mohou chybět podmínky, vzorečky pro výpočty\n\nrozhodovací tabulky\n\njednoznačnost, přehlednost, nehodí se pro každý typ úloh, rozvrh\n\nvývojové diagramy\n\nsymbolický jazyk pro názorné zobrazení algoritmu, používá se při vývoji softwaru\n\npočítačové programy\n\npro programátory a počítače, mohou být nepřehledné\n\n\n\n\nVývojové diagramy\n\n\n\n\n\nflowchart TB\n    A([\"Začátek\"]) --&gt; E[/\"Vstupy a výstupy\"/]\n    E --&gt; B{\"Rozhodovací blok\"}\n    B -- Pravda --&gt; H[\"Cyklus\"]\n    B -- Nepravda --&gt; D[\"Podprogram 2\"]\n    D --&gt; G\n    H --&gt; F[\"Příkazy\"]\n    F --&gt; I[\"Konec cyklu\"]\n    I .-&gt; H\n    I --&gt; G([\"Konec\"])\n\n    D@{ shape: subproc}\n    H@{ shape: hex}\n    I@{ shape: hex}",
-    "crumbs": [
-      "Algoritmy",
-      "Základy Algoritmizace"
-    ]
+    "text": "viz zadání v Teams\n\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4."
   },
   {
-    "objectID": "web_algo/04ibobr.html",
-    "href": "web_algo/04ibobr.html",
-    "title": "Soutěž iBobr",
+    "objectID": "web_html/02git.html",
+    "href": "web_html/02git.html",
+    "title": "Git",
     "section": "",
-    "text": "Vyřešte zadání junior rok 2024 (2. skupina) 2023 (1. skupina)\nSdílejte skóre do Teams."
+    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
+    "crumbs": [
+      "HTML",
+      "Git"
+    ]
   },
   {
-    "objectID": "web_html/06menu.html",
-    "href": "web_html/06menu.html",
-    "title": "Menu webu",
+    "objectID": "web_html/02git.html#odkazy-k-samostudiu",
+    "href": "web_html/02git.html#odkazy-k-samostudiu",
+    "title": "Git",
     "section": "",
-    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
     "crumbs": [
       "HTML",
-      "Menu webu"
+      "Git"
     ]
   },
   {
-    "objectID": "web_html/06menu.html#font-awesome",
-    "href": "web_html/06menu.html#font-awesome",
-    "title": "Menu webu",
+    "objectID": "web_html/02git.html#moje-poznámky-ke-gitu",
+    "href": "web_html/02git.html#moje-poznámky-ke-gitu",
+    "title": "Git",
+    "section": "Moje poznámky ke gitu",
+    "text": "Moje poznámky ke gitu\n\nNejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.\nVlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám:\n\ngit config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nNa linuxovém serveru postupuji podle tohoto návodu. https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53\nls -al ~/.ssh\nssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github -C \"ssh key for github\"\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_github\nnano ~/.ssh/config\nObsah souboru\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  AddKeysToAgent yes\ncat ~/.ssh/id_ed25519_github.pub\nNow, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.\n\nA potom nakonfiguruji repozitář\n\ngit init\ngit add *\ngit commit -m \"first commit\"\ngit remote add origin git@github.com:martinekpavel/oahosting.git\ngit push -u origin main\na hotovo!",
+    "crumbs": [
+      "HTML",
+      "Git"
+    ]
+  },
+  {
+    "objectID": "web_html/12search.html",
+    "href": "web_html/12search.html",
+    "title": "Projekt Google Search",
     "section": "",
-    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "text": "Vytvořte nový repozitář googlesearch\nOtevřete ve VS Code jako nový projekt\nVytvořte web dle zadání: https://cs50.harvard.edu/web/projects/0/search/\nCommit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)",
     "crumbs": [
       "HTML",
-      "Menu webu"
+      "Projekt Google Search"
     ]
   },
   {
-    "objectID": "web_html/06menu.html#menu-html",
-    "href": "web_html/06menu.html#menu-html",
-    "title": "Menu webu",
-    "section": "Menu (html)",
-    "text": "Menu (html)\n&lt;nav id=\"navbar\"&gt;\n    &lt;div class=\"logo\"&gt;\n        Moje &lt;span class=\"text-primary\"&gt;firma&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#home\"&gt;Úvod&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#about\"&gt;O nás&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#kontakt\"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;",
-    "crumbs": [
-      "HTML",
-      "Menu webu"
-    ]
-  },
-  {
-    "objectID": "web_html/06menu.html#menu-css",
-    "href": "web_html/06menu.html#menu-css",
-    "title": "Menu webu",
-    "section": "Menu (css)",
-    "text": "Menu (css)\n#navbar {\n    background-color: #333;\n    color: white;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 16px;\n    font-size: 24px;\n    font-weight: bold;\n}\n\n#navbar a {\n    color: white;\n    text-decoration: none;\n}\n\n#navbar ul {\n    display: flex;\n    list-style: none;\n    align-items: center;\n}\n\n#navbar ul li a {\n    padding: 10px;\n    margin: 0 4px;\n}\n\n#navbar ul li a:hover {\n    background-color: #93cb52;\n    border-radius: 5px;\n}",
-    "crumbs": [
-      "HTML",
-      "Menu webu"
-    ]
-  },
-  {
-    "objectID": "web_html/06menu.html#úkol",
-    "href": "web_html/06menu.html#úkol",
-    "title": "Menu webu",
-    "section": "Úkol",
-    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nÚpravy budou minimálně zahrnovat:\n\nvše z minulých zadání\nmenu v záhlaví stránky\ndalší html stránka (odkaz v menu)",
-    "crumbs": [
-      "HTML",
-      "Menu webu"
-    ]
-  },
-  {
-    "objectID": "web_html/05css.html",
-    "href": "web_html/05css.html",
-    "title": "Základy CSS",
+    "objectID": "web_html/08portfolio.html",
+    "href": "web_html/08portfolio.html",
+    "title": "Portfolio",
     "section": "",
-    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html#css",
+    "text": "Cíl hodiny: Vytvořit portfolio page",
     "crumbs": [
       "HTML",
-      "Základy CSS"
+      "Portfolio"
     ]
   },
   {
-    "objectID": "web_html/05css.html#kaskádové-styly",
-    "href": "web_html/05css.html#kaskádové-styly",
-    "title": "Základy CSS",
-    "section": "Kaskádové styly",
-    "text": "Kaskádové styly\nDavidova učebnice: https://docs.google.com/document/d/1J6NPwn97r0TGJra6QRh3oyNromnFBJCfvnddp1hmHuE/ kapitoly 15 – 36\n\nKam ty naše styly můžeme zapisovat?\ninline aplikované přímo na nějaký prvek webu\n&lt;h1 style=\"color: red\"&gt;Můj web&lt;/h1&gt;\ninterně přímo v hlavičce webu\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;style&gt;h1 { color: green; }&lt;/style&gt;&lt;/head&gt;\nexterně v samostatném souboru\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;&lt;/head&gt;\n\n\nJak cílíme na prvky v našem webu?\nPomocí selektorů https://www.w3schools.com/cssref/css_selectors.php\nTry selectors https://www.w3schools.com/cssref/trysel.php\nCSS Diner (hra) https://flukeout.github.io/\nDalší hry: https://nikitahl.com/learn-css-by-playing-games\n\n\nPříklady a syntaxe\n\n\n\nhtml kód\ncss kód\n\n\n\n\n&lt;h1&gt;\nh1 { color: red; }\n\n\n&lt;div id=\"idecko\"&gt;&lt;/div&gt;\n#idecko { color: red; }\n\n\n&lt;div class=\"trida\"&gt;&lt;/div&gt;\n.trida { color: red; }\n\n\n\nPoznámka: id v kódu stránky máme pouze jednou class může být vícekrát\n\n\nBlokové a inline elementy\nSeznam: https://www.w3schools.com/htmL/html_blocks.asp\nAnonymní blokový element: &lt;div&gt;&lt;/div&gt; Anonymní inline element: &lt;span&gt;&lt;/span&gt;\nVětšinou k nim přidáváme id nebo class.\n\n\nCo můžeme nastavovat ?\n\nbarvu písma color:\nbarvu pozadí background-color\nohraničení border\nodsazení z vnějšku margin\nodsazení uvnitř padding\nzaoblení rohů border-radius\nstyl písma font-family\nstínování https://getcssscan.com/css-box-shadow-examples\ntisíc dalších věcí\n\n\n\nDevTools (F12)\n\n\n\nJak zarovnat web na střed\n\nvytvořte element, kterým vše obalíte &lt;div class=\"containter\"&gt; ... &lt;/div&gt;\nnastavte mu požadovanou šířku (css) .container {max-width: 1024px;}\nnastavte margin vlevo a vpravo na auto .container {margin: auto;}\n\n\n\nZkuste\nhtml.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n\n&lt;head&gt;\n    &lt;title&gt;Document&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n&lt;/head&gt;\n\n&lt;body&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;h1&gt;Nadpis&lt;/h1&gt;\n        &lt;p&gt;Malá ukázka&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/body&gt;\n\n&lt;/html&gt;\nstyle.css\nbody {\n    background-color: lightgray;\n}\n\n.container {\n    background-color: white;\n    max-width: 600px;\n    border-radius: 15px;\n    box-shadow: rgba(0, 0, 0, 0.35)\n                     0px 5px 15px;\n    margin: 100px auto;\n    padding: 5px 30px;\n}",
+    "objectID": "web_html/08portfolio.html#portfolio",
+    "href": "web_html/08portfolio.html#portfolio",
+    "title": "Portfolio",
+    "section": "Portfolio",
+    "text": "Portfolio\n\nsvůj stávající projekt přesuňte do nové složky -&gt; např. html\ndo Teams sdílejte odkaz na svůj (nyní) starý projekt:\n\nváš_účet_na_githubu.github.io/html\n\nUpravte odkazy na validaci!\nVytvořte portfolio např. podle:\n\nhttps://personal-portfolio.freecodecamp.rocks/\n\npoužijte jen to, co dokážete vysvětlit\nvšechny zdroje ocitujte\ndoplňte ikony na validaci html a css",
     "crumbs": [
       "HTML",
-      "Základy CSS"
+      "Portfolio"
     ]
   },
   {
-    "objectID": "web_html/05css.html#úkol",
-    "href": "web_html/05css.html#úkol",
-    "title": "Základy CSS",
-    "section": "Úkol",
-    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nVyhledejte na internetu informace o kontrastu písma webových stránek. Jak kontrolovat, jak správně nastavit.\nÚpravy budou minimálně zahrnovat:\n\nzměna pozadí na body\nzaoblení rohů obrázku\nzměna odsazení\nzarovnání webu na střed (viz výše)\nzměna barvy písma v souladu s pravidly o kontrastu\nněco co mne překvapí 😊",
+    "objectID": "web_html/08portfolio.html#další-zdroje",
+    "href": "web_html/08portfolio.html#další-zdroje",
+    "title": "Portfolio",
+    "section": "Další zdroje",
+    "text": "Další zdroje\n\nhttps://picsum.photos/\nhttps://unsplash.com/\nhttps://www.color-hex.com/color-palettes/popular.php",
     "crumbs": [
       "HTML",
-      "Základy CSS"
+      "Portfolio"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
+    "href": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
+    "title": "Portfolio",
+    "section": "Rekap 1. čtvrtletí",
+    "text": "Rekap 1. čtvrtletí\n\nPožadavky web\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Portfolio"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html",
+    "href": "web_html/index.html",
+    "title": "Základy HTML",
+    "section": "",
+    "text": "Následující kapitoly vás provedou základy HTML kódování.",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html#zajímavé-odkazy",
+    "href": "web_html/index.html#zajímavé-odkazy",
+    "title": "Základy HTML",
+    "section": "Zajímavé odkazy",
+    "text": "Zajímavé odkazy\n\nhttps://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\nrepo: https://github.com/acchou/html-css-cheat-sheet/\n\nhttps://bit.ly/HtmlCssUcebnice\nhttps://cs50.harvard.edu/web/",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
+    ]
+  },
+  {
+    "objectID": "web_html/04publish.html",
+    "href": "web_html/04publish.html",
+    "title": "Publikace webu",
+    "section": "",
+    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "crumbs": [
+      "HTML",
+      "Publikace webu"
+    ]
+  },
+  {
+    "objectID": "web_html/04publish.html#github-pages",
+    "href": "web_html/04publish.html#github-pages",
+    "title": "Publikace webu",
+    "section": "",
+    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "crumbs": [
+      "HTML",
+      "Publikace webu"
+    ]
+  },
+  {
+    "objectID": "web_html/10rekap.html",
+    "href": "web_html/10rekap.html",
+    "title": "Rekapitulace 1. čtvrtetí",
+    "section": "",
+    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Rekapitulace 1. čtvrtetí"
+    ]
+  },
+  {
+    "objectID": "web_html/10rekap.html#rekap-1.-čtvrtletí",
+    "href": "web_html/10rekap.html#rekap-1.-čtvrtletí",
+    "title": "Rekapitulace 1. čtvrtetí",
+    "section": "",
+    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Rekapitulace 1. čtvrtetí"
+    ]
+  },
+  {
+    "objectID": "web_html/03html.html",
+    "href": "web_html/03html.html",
+    "title": "Základy HTML",
+    "section": "",
+    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\n\n\n\n\n\nUpozorněníÚkol\n\n\n\nVytvořte validní webovou stránku na libovolné téma, která obsahuje následující položky:\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
+    ]
+  },
+  {
+    "objectID": "web_html/13webai.html",
+    "href": "web_html/13webai.html",
+    "title": "Tvorba webu pomocí AI",
+    "section": "",
+    "text": "Vyberté si téma\nZaložte nový repozitář na Githubu\nOtevřete jej jako nový projekt ve Visual Studio\nPomocí AI nástroje vytvořte web (český), který má minimálně 3 stránky\nDokumentujte a zveřejněte postup (prompty, nástroj) například v readme.md\nNa týmsech je dotazník ohledně AI (máte-li čas, vyplňte)\nV rámci toho projektu popište i technologie, které AI použila\nNa úvodní stránku webu uveďte informaci, že se jedná o web vytvořený AI a školní projekt",
+    "crumbs": [
+      "HTML",
+      "Tvorba webu pomocí AI"
+    ]
+  },
+  {
+    "objectID": "web_html/13webai.html#nástroje",
+    "href": "web_html/13webai.html#nástroje",
+    "title": "Tvorba webu pomocí AI",
+    "section": "Nástroje",
+    "text": "Nástroje\n\nMicrosoft Copilot https://office.com\nChatGPT\nhttps://DeepSite.io\n\n\n\n\n\n\n\nPoznámka\n\n\n\nNezapomeňte kód validovat a zahrnout do portfolia.",
+    "crumbs": [
+      "HTML",
+      "Tvorba webu pomocí AI"
+    ]
+  },
+  {
+    "objectID": "web_html/11projekt.html",
+    "href": "web_html/11projekt.html",
+    "title": "Tvorba webu na téma",
+    "section": "",
+    "text": "V hlavní složce projektu si vytvoříme soubor index.html a vytvoříme složky img a css.\nVe složce css vytvoříme soubor style.css.\nHTML šablonu za nás zvládne emmet: !. Jen změníme lang a title.\nV hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.\n&lt;meta name=\"description\" content=\"Vítejte na webovce knihovny na Kvapice\"&gt;\n&lt;meta name=\"keywords\" content=\"knihovna,obchodka,opava\"&gt;\n&lt;link rel=\"stylesheet\" href=\"css/style.css\"&gt;\nBudeme chtít také používat ikonky Font Awesome, proto nalinkujeme do hlavičky potřebný soubor.\nhttps://cdnjs.com/libraries/font-awesome",
+    "crumbs": [
+      "HTML",
+      "Tvorba webu na téma"
+    ]
+  },
+  {
+    "objectID": "web_html/11projekt.html#příprava-struktury-složek-a-souborů",
+    "href": "web_html/11projekt.html#příprava-struktury-složek-a-souborů",
+    "title": "Tvorba webu na téma",
+    "section": "",
+    "text": "V hlavní složce projektu si vytvoříme soubor index.html a vytvoříme složky img a css.\nVe složce css vytvoříme soubor style.css.\nHTML šablonu za nás zvládne emmet: !. Jen změníme lang a title.\nV hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.\n&lt;meta name=\"description\" content=\"Vítejte na webovce knihovny na Kvapice\"&gt;\n&lt;meta name=\"keywords\" content=\"knihovna,obchodka,opava\"&gt;\n&lt;link rel=\"stylesheet\" href=\"css/style.css\"&gt;\nBudeme chtít také používat ikonky Font Awesome, proto nalinkujeme do hlavičky potřebný soubor.\nhttps://cdnjs.com/libraries/font-awesome",
+    "crumbs": [
+      "HTML",
+      "Tvorba webu na téma"
+    ]
+  },
+  {
+    "objectID": "web_html/11projekt.html#menu-webu",
+    "href": "web_html/11projekt.html#menu-webu",
+    "title": "Tvorba webu na téma",
+    "section": "Menu webu",
+    "text": "Menu webu\nZačneme upravovat body našeho webu.\n    &lt;nav id=\"navbar\"&gt;\n      &lt;h1 id=\"logo\"&gt;\n        &lt;i class=\"fas fa-book-open text-primary\"&gt;&lt;/i&gt;\n        Knihovna\n        &lt;span class=\"text-primary\"&gt;na Kvapilce&lt;/span&gt;\n      &lt;/h1&gt;\n\n      &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#home\"&gt;Úvod&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#what\"&gt;Co děláme&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#who\"&gt;O nás&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#contact\"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;\n      &lt;/ul&gt;\n    &lt;/nav&gt;\na protože chce po kliknutí na odkaz Úvod se dostat na úvodní stránku, tak doplníme k prvku body id=\"home\".\nV tento okamžik můžeme upravovat soubor kaskádových stylů.\nChceme-li jiné písmo, můžeme využít google fonts a importovat si jej do souboru kaskádových stylů.\nProvedeme tzn. CSS reset a nastavíme písmo pro body.\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  line-height: 1.4;\n}\nNa vysvětlení menu jsme měli samostatnou hodinu, použijeme 2x flexbox pro pozicování prvků. A menu ukotvíme jako horní řádek obrazovky.\n/* Navbar */\n#navbar {\n  position: sticky;\n  top: 0;\n  background: #333;\n  color: white;\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem;\n  z-index: 1;\n}\n\n#navbar a {\n  color: white;\n  text-decoration: none;\n}\n\n#navbar ul {\n  display: flex;\n  list-style: none;\n  align-items: center;\n}\n\n#navbar ul li a {\n  padding: 0.75rem;\n  margin: 0 0.25rem;\n}\n\n#navbar ul li a:hover {\n  background-color: #93cb52;\n  border-radius: 5px;\n}\n\n#navbar #logo {\n    font-size: 1.5em;\n    font-weight: bold;\n}",
+    "crumbs": [
+      "HTML",
+      "Tvorba webu na téma"
+    ]
+  },
+  {
+    "objectID": "web_html/11projekt.html#showcase",
+    "href": "web_html/11projekt.html#showcase",
+    "title": "Tvorba webu na téma",
+    "section": "Showcase",
+    "text": "Showcase\nNyní mrkneme na otvírák vašeho webu. Věnujte pozornost následujícím prvkům a jejich id a class.\n&lt;!-- Header: Showcase --&gt;\n    &lt;header id=\"showcase\"&gt;\n      &lt;div class=\"showcase-content\"&gt;\n        &lt;div class=\"l-heading\"&gt;Milujeme knihy a knihy milují nás&lt;/div&gt;\n        &lt;p class=\"lead\"&gt;\n          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,\n          repellendus.\n        &lt;/p&gt;\n        &lt;a href=\"#what\" class=\"btn\"&gt;Dozvědět se víc&lt;/a&gt;\n      &lt;/div&gt;\na opět úprava kaskádových stylů.\n/* Showcase */\n\n#showcase {\n  background: #333 url('../img/showcase.jpg') no-repeat center center/cover;\n  height: 100vh;\n  color: #fff;\n}\n\n/* Photo by &lt;a href=\"https://unsplash.com/@itfeelslikefilm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\"&gt;🇸🇮 Janko Ferlič&lt;/a&gt; on &lt;a href=\"https://unsplash.com/s/photos/library?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\"&gt;Unsplash&lt;/a&gt; */\n\n#showcase .showcase-content {\n  display: flex;\n  flex-direction: column;\n  text-align: center;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n  padding: 0 2rem;\n  /* Overlay */\n  position: absolute;\n  top: 65px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n}",
+    "crumbs": [
+      "HTML",
+      "Tvorba webu na téma"
+    ]
+  },
+  {
+    "objectID": "web_html/09search.html",
+    "href": "web_html/09search.html",
+    "title": "Projekt Google Search",
+    "section": "",
+    "text": "Vytvořte nový repozitář googlesearch\nOtevřete ve VS Code jako nový projekt\nVytvořte web dle zadání: https://cs50.harvard.edu/web/projects/0/search/\nCommit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)",
+    "crumbs": [
+      "HTML",
+      "Projekt Google Search"
+    ]
+  },
+  {
+    "objectID": "web_html/07mediaq.html",
+    "href": "web_html/07mediaq.html",
+    "title": "Responzivnost",
+    "section": "",
+    "text": "Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech\n\nResponzivní web\n\nnastavení viewport https://www.w3schools.com/css/css_rwd_viewport.asp\npoužití proměnlivých width oproti pevným\nmedia queries - různé styly pro různá rozlišení\nrem místo px\nmetoda mobile first\n\n.big {\n    font-size: 3rem;\n    font-weight: bold;\n}\n&lt;div id=\"widescreen\" class=\"big\"&gt;widescreen&lt;/div&gt;\n&lt;div id=\"normal\" class=\"big\"&gt;normal&lt;/div&gt;\n&lt;div id=\"tablet\" class=\"big\"&gt;tablet&lt;/div&gt;\n&lt;div id=\"smartphone\" class=\"big\"&gt;smartphone&lt;/div&gt;\n&lt;div id=\"landscape\" class=\"big\"&gt;landscape&lt;/div&gt;\nbody {\n    background-color: grey;\n    color: white;\n    text-align: center;\n    padding-top: 100px;\n}\n\n.big { /* doplníme */\n    display: none;\n    text-transform: capitalize;\n}\n@media(max-width:500px) {\n    body {\n        background-color: red;\n    }\n\n    #smartphone {\n        display: block;\n    }\n}\n@media(min-width: 501px) and (max-width:768px) {\n    body {\n        background-color: green;\n    }\n\n    #tablet {\n        display: block;\n    }\n}\n@media(min-width: 769px) and (max-width:1200px) {\n    body {\n        background-color: cyan;\n    }\n\n    #normal {\n        display: block;\n    }\n}\n@media(min-width: 1201px) {\n    body {\n        background-color: black;\n    }\n\n    #widescreen {\n        display: block;\n    }\n}\n@media(max-height: 500px) {\n    body {\n        background-color: orange;\n    }\n\n    #landscape {\n        display: block;\n    }\n}\n\n\nRelativní jednotky em vs rem\nhttps://www.w3schools.com/cssref/css_units.php\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nDoplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.\nPoužijte ve svém projektu sekce &lt;header&gt;, &lt;main&gt; a &lt;footer&gt;.\nhttps://www.w3schools.com/html/html5_semantic_elements.asp\nPoužijte v zápatí svého webu ikony pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.",
+    "crumbs": [
+      "HTML",
+      "Responzivnost"
     ]
   },
   {
@@ -478,371 +604,255 @@
     ]
   },
   {
-    "objectID": "web_html/07mediaq.html",
-    "href": "web_html/07mediaq.html",
-    "title": "Responzivnost",
+    "objectID": "web_html/05css.html",
+    "href": "web_html/05css.html",
+    "title": "Základy CSS",
     "section": "",
-    "text": "Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech\n\nResponzivní web\n\nnastavení viewport https://www.w3schools.com/css/css_rwd_viewport.asp\npoužití proměnlivých width oproti pevným\nmedia queries - různé styly pro různá rozlišení\nrem místo px\nmetoda mobile first\n\n.big {\n    font-size: 3rem;\n    font-weight: bold;\n}\n&lt;div id=\"widescreen\" class=\"big\"&gt;widescreen&lt;/div&gt;\n&lt;div id=\"normal\" class=\"big\"&gt;normal&lt;/div&gt;\n&lt;div id=\"tablet\" class=\"big\"&gt;tablet&lt;/div&gt;\n&lt;div id=\"smartphone\" class=\"big\"&gt;smartphone&lt;/div&gt;\n&lt;div id=\"landscape\" class=\"big\"&gt;landscape&lt;/div&gt;\nbody {\n    background-color: grey;\n    color: white;\n    text-align: center;\n    padding-top: 100px;\n}\n\n.big { /* doplníme */\n    display: none;\n    text-transform: capitalize;\n}\n@media(max-width:500px) {\n    body {\n        background-color: red;\n    }\n\n    #smartphone {\n        display: block;\n    }\n}\n@media(min-width: 501px) and (max-width:768px) {\n    body {\n        background-color: green;\n    }\n\n    #tablet {\n        display: block;\n    }\n}\n@media(min-width: 769px) and (max-width:1200px) {\n    body {\n        background-color: cyan;\n    }\n\n    #normal {\n        display: block;\n    }\n}\n@media(min-width: 1201px) {\n    body {\n        background-color: black;\n    }\n\n    #widescreen {\n        display: block;\n    }\n}\n@media(max-height: 500px) {\n    body {\n        background-color: orange;\n    }\n\n    #landscape {\n        display: block;\n    }\n}\n\n\nRelativní jednotky em vs rem\nhttps://www.w3schools.com/cssref/css_units.php\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nDoplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.\nPoužijte ve svém projektu sekce &lt;header&gt;, &lt;main&gt; a &lt;footer&gt;.\nhttps://www.w3schools.com/html/html5_semantic_elements.asp\nPoužijte v zápatí svého webu ikony pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.",
+    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html#css",
     "crumbs": [
       "HTML",
-      "Responzivnost"
+      "Základy CSS"
     ]
   },
   {
-    "objectID": "web_html/09search.html",
-    "href": "web_html/09search.html",
-    "title": "Projekt Google Search",
+    "objectID": "web_html/05css.html#kaskádové-styly",
+    "href": "web_html/05css.html#kaskádové-styly",
+    "title": "Základy CSS",
+    "section": "Kaskádové styly",
+    "text": "Kaskádové styly\nDavidova učebnice: https://docs.google.com/document/d/1J6NPwn97r0TGJra6QRh3oyNromnFBJCfvnddp1hmHuE/ kapitoly 15 – 36\n\nKam ty naše styly můžeme zapisovat?\ninline aplikované přímo na nějaký prvek webu\n&lt;h1 style=\"color: red\"&gt;Můj web&lt;/h1&gt;\ninterně přímo v hlavičce webu\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;style&gt;h1 { color: green; }&lt;/style&gt;&lt;/head&gt;\nexterně v samostatném souboru\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;&lt;/head&gt;\n\n\nJak cílíme na prvky v našem webu?\nPomocí selektorů https://www.w3schools.com/cssref/css_selectors.php\nTry selectors https://www.w3schools.com/cssref/trysel.php\nCSS Diner (hra) https://flukeout.github.io/\nDalší hry: https://nikitahl.com/learn-css-by-playing-games\n\n\nPříklady a syntaxe\n\n\n\nhtml kód\ncss kód\n\n\n\n\n&lt;h1&gt;\nh1 { color: red; }\n\n\n&lt;div id=\"idecko\"&gt;&lt;/div&gt;\n#idecko { color: red; }\n\n\n&lt;div class=\"trida\"&gt;&lt;/div&gt;\n.trida { color: red; }\n\n\n\nPoznámka: id v kódu stránky máme pouze jednou class může být vícekrát\n\n\nBlokové a inline elementy\nSeznam: https://www.w3schools.com/htmL/html_blocks.asp\nAnonymní blokový element: &lt;div&gt;&lt;/div&gt; Anonymní inline element: &lt;span&gt;&lt;/span&gt;\nVětšinou k nim přidáváme id nebo class.\n\n\nCo můžeme nastavovat ?\n\nbarvu písma color:\nbarvu pozadí background-color\nohraničení border\nodsazení z vnějšku margin\nodsazení uvnitř padding\nzaoblení rohů border-radius\nstyl písma font-family\nstínování https://getcssscan.com/css-box-shadow-examples\ntisíc dalších věcí\n\n\n\nDevTools (F12)\n\n\n\nJak zarovnat web na střed\n\nvytvořte element, kterým vše obalíte &lt;div class=\"containter\"&gt; ... &lt;/div&gt;\nnastavte mu požadovanou šířku (css) .container {max-width: 1024px;}\nnastavte margin vlevo a vpravo na auto .container {margin: auto;}\n\n\n\nZkuste\nhtml.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n\n&lt;head&gt;\n    &lt;title&gt;Document&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n&lt;/head&gt;\n\n&lt;body&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;h1&gt;Nadpis&lt;/h1&gt;\n        &lt;p&gt;Malá ukázka&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/body&gt;\n\n&lt;/html&gt;\nstyle.css\nbody {\n    background-color: lightgray;\n}\n\n.container {\n    background-color: white;\n    max-width: 600px;\n    border-radius: 15px;\n    box-shadow: rgba(0, 0, 0, 0.35)\n                     0px 5px 15px;\n    margin: 100px auto;\n    padding: 5px 30px;\n}",
+    "crumbs": [
+      "HTML",
+      "Základy CSS"
+    ]
+  },
+  {
+    "objectID": "web_html/05css.html#úkol",
+    "href": "web_html/05css.html#úkol",
+    "title": "Základy CSS",
+    "section": "Úkol",
+    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nVyhledejte na internetu informace o kontrastu písma webových stránek. Jak kontrolovat, jak správně nastavit.\nÚpravy budou minimálně zahrnovat:\n\nzměna pozadí na body\nzaoblení rohů obrázku\nzměna odsazení\nzarovnání webu na střed (viz výše)\nzměna barvy písma v souladu s pravidly o kontrastu\nněco co mne překvapí 😊",
+    "crumbs": [
+      "HTML",
+      "Základy CSS"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html",
+    "href": "web_html/06menu.html",
+    "title": "Menu webu",
     "section": "",
-    "text": "Vytvořte nový repozitář googlesearch\nOtevřete ve VS Code jako nový projekt\nVytvořte web dle zadání: https://cs50.harvard.edu/web/projects/0/search/\nCommit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)",
+    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
     "crumbs": [
       "HTML",
-      "Projekt Google Search"
+      "Menu webu"
     ]
   },
   {
-    "objectID": "web_html/11projekt.html",
-    "href": "web_html/11projekt.html",
-    "title": "Tvorba webu na téma",
+    "objectID": "web_html/06menu.html#font-awesome",
+    "href": "web_html/06menu.html#font-awesome",
+    "title": "Menu webu",
     "section": "",
-    "text": "V hlavní složce projektu si vytvoříme soubor index.html a vytvoříme složky img a css.\nVe složce css vytvoříme soubor style.css.\nHTML šablonu za nás zvládne emmet: !. Jen změníme lang a title.\nV hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.\n&lt;meta name=\"description\" content=\"Vítejte na webovce knihovny na Kvapice\"&gt;\n&lt;meta name=\"keywords\" content=\"knihovna,obchodka,opava\"&gt;\n&lt;link rel=\"stylesheet\" href=\"css/style.css\"&gt;\nBudeme chtít také používat ikonky Font Awesome, proto nalinkujeme do hlavičky potřebný soubor.\nhttps://cdnjs.com/libraries/font-awesome",
+    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
     "crumbs": [
       "HTML",
-      "Tvorba webu na téma"
+      "Menu webu"
     ]
   },
   {
-    "objectID": "web_html/11projekt.html#příprava-struktury-složek-a-souborů",
-    "href": "web_html/11projekt.html#příprava-struktury-složek-a-souborů",
-    "title": "Tvorba webu na téma",
+    "objectID": "web_html/06menu.html#menu-html",
+    "href": "web_html/06menu.html#menu-html",
+    "title": "Menu webu",
+    "section": "Menu (html)",
+    "text": "Menu (html)\n&lt;nav id=\"navbar\"&gt;\n    &lt;div class=\"logo\"&gt;\n        Moje &lt;span class=\"text-primary\"&gt;firma&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#home\"&gt;Úvod&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#about\"&gt;O nás&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#kontakt\"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#menu-css",
+    "href": "web_html/06menu.html#menu-css",
+    "title": "Menu webu",
+    "section": "Menu (css)",
+    "text": "Menu (css)\n#navbar {\n    background-color: #333;\n    color: white;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 16px;\n    font-size: 24px;\n    font-weight: bold;\n}\n\n#navbar a {\n    color: white;\n    text-decoration: none;\n}\n\n#navbar ul {\n    display: flex;\n    list-style: none;\n    align-items: center;\n}\n\n#navbar ul li a {\n    padding: 10px;\n    margin: 0 4px;\n}\n\n#navbar ul li a:hover {\n    background-color: #93cb52;\n    border-radius: 5px;\n}",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#úkol",
+    "href": "web_html/06menu.html#úkol",
+    "title": "Menu webu",
+    "section": "Úkol",
+    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nÚpravy budou minimálně zahrnovat:\n\nvše z minulých zadání\nmenu v záhlaví stránky\ndalší html stránka (odkaz v menu)",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_algo/04ibobr.html",
+    "href": "web_algo/04ibobr.html",
+    "title": "Soutěž iBobr",
     "section": "",
-    "text": "V hlavní složce projektu si vytvoříme soubor index.html a vytvoříme složky img a css.\nVe složce css vytvoříme soubor style.css.\nHTML šablonu za nás zvládne emmet: !. Jen změníme lang a title.\nV hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.\n&lt;meta name=\"description\" content=\"Vítejte na webovce knihovny na Kvapice\"&gt;\n&lt;meta name=\"keywords\" content=\"knihovna,obchodka,opava\"&gt;\n&lt;link rel=\"stylesheet\" href=\"css/style.css\"&gt;\nBudeme chtít také používat ikonky Font Awesome, proto nalinkujeme do hlavičky potřebný soubor.\nhttps://cdnjs.com/libraries/font-awesome",
-    "crumbs": [
-      "HTML",
-      "Tvorba webu na téma"
-    ]
+    "text": "Vyřešte zadání junior rok 2024 (2. skupina) 2023 (1. skupina)\nSdílejte skóre do Teams."
   },
   {
-    "objectID": "web_html/11projekt.html#menu-webu",
-    "href": "web_html/11projekt.html#menu-webu",
-    "title": "Tvorba webu na téma",
-    "section": "Menu webu",
-    "text": "Menu webu\nZačneme upravovat body našeho webu.\n    &lt;nav id=\"navbar\"&gt;\n      &lt;h1 id=\"logo\"&gt;\n        &lt;i class=\"fas fa-book-open text-primary\"&gt;&lt;/i&gt;\n        Knihovna\n        &lt;span class=\"text-primary\"&gt;na Kvapilce&lt;/span&gt;\n      &lt;/h1&gt;\n\n      &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#home\"&gt;Úvod&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#what\"&gt;Co děláme&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#who\"&gt;O nás&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#contact\"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;\n      &lt;/ul&gt;\n    &lt;/nav&gt;\na protože chce po kliknutí na odkaz Úvod se dostat na úvodní stránku, tak doplníme k prvku body id=\"home\".\nV tento okamžik můžeme upravovat soubor kaskádových stylů.\nChceme-li jiné písmo, můžeme využít google fonts a importovat si jej do souboru kaskádových stylů.\nProvedeme tzn. CSS reset a nastavíme písmo pro body.\n* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  line-height: 1.4;\n}\nNa vysvětlení menu jsme měli samostatnou hodinu, použijeme 2x flexbox pro pozicování prvků. A menu ukotvíme jako horní řádek obrazovky.\n/* Navbar */\n#navbar {\n  position: sticky;\n  top: 0;\n  background: #333;\n  color: white;\n  display: flex;\n  justify-content: space-between;\n  padding: 1rem;\n  z-index: 1;\n}\n\n#navbar a {\n  color: white;\n  text-decoration: none;\n}\n\n#navbar ul {\n  display: flex;\n  list-style: none;\n  align-items: center;\n}\n\n#navbar ul li a {\n  padding: 0.75rem;\n  margin: 0 0.25rem;\n}\n\n#navbar ul li a:hover {\n  background-color: #93cb52;\n  border-radius: 5px;\n}\n\n#navbar #logo {\n    font-size: 1.5em;\n    font-weight: bold;\n}",
-    "crumbs": [
-      "HTML",
-      "Tvorba webu na téma"
-    ]
-  },
-  {
-    "objectID": "web_html/11projekt.html#showcase",
-    "href": "web_html/11projekt.html#showcase",
-    "title": "Tvorba webu na téma",
-    "section": "Showcase",
-    "text": "Showcase\nNyní mrkneme na otvírák vašeho webu. Věnujte pozornost následujícím prvkům a jejich id a class.\n&lt;!-- Header: Showcase --&gt;\n    &lt;header id=\"showcase\"&gt;\n      &lt;div class=\"showcase-content\"&gt;\n        &lt;div class=\"l-heading\"&gt;Milujeme knihy a knihy milují nás&lt;/div&gt;\n        &lt;p class=\"lead\"&gt;\n          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,\n          repellendus.\n        &lt;/p&gt;\n        &lt;a href=\"#what\" class=\"btn\"&gt;Dozvědět se víc&lt;/a&gt;\n      &lt;/div&gt;\na opět úprava kaskádových stylů.\n/* Showcase */\n\n#showcase {\n  background: #333 url('../img/showcase.jpg') no-repeat center center/cover;\n  height: 100vh;\n  color: #fff;\n}\n\n/* Photo by &lt;a href=\"https://unsplash.com/@itfeelslikefilm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\"&gt;🇸🇮 Janko Ferlič&lt;/a&gt; on &lt;a href=\"https://unsplash.com/s/photos/library?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\"&gt;Unsplash&lt;/a&gt; */\n\n#showcase .showcase-content {\n  display: flex;\n  flex-direction: column;\n  text-align: center;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n  padding: 0 2rem;\n  /* Overlay */\n  position: absolute;\n  top: 65px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n}",
-    "crumbs": [
-      "HTML",
-      "Tvorba webu na téma"
-    ]
-  },
-  {
-    "objectID": "web_html/13webai.html",
-    "href": "web_html/13webai.html",
-    "title": "Tvorba webu pomocí AI",
+    "objectID": "web_algo/index.html",
+    "href": "web_algo/index.html",
+    "title": "Základy Algoritmizace",
     "section": "",
-    "text": "Vyberté si téma\nZaložte nový repozitář na Githubu\nOtevřete jej jako nový projekt ve Visual Studio\nPomocí AI nástroje vytvořte web (český), který má minimálně 3 stránky\nDokumentujte a zveřejněte postup (prompty, nástroj) například v readme.md\nNa týmsech je dotazník ohledně AI (máte-li čas, vyplňte)\nV rámci toho projektu popište i technologie, které AI použila\nNa úvodní stránku webu uveďte informaci, že se jedná o web vytvořený AI a školní projekt",
-    "crumbs": [
-      "HTML",
-      "Tvorba webu pomocí AI"
-    ]
-  },
-  {
-    "objectID": "web_html/13webai.html#nástroje",
-    "href": "web_html/13webai.html#nástroje",
-    "title": "Tvorba webu pomocí AI",
-    "section": "Nástroje",
-    "text": "Nástroje\n\nMicrosoft Copilot https://office.com\nChatGPT\nhttps://DeepSite.io\n\n\n\n\n\n\n\nPoznámka\n\n\n\nNezapomeňte kód validovat a zahrnout do portfolia.",
-    "crumbs": [
-      "HTML",
-      "Tvorba webu pomocí AI"
-    ]
-  },
-  {
-    "objectID": "web_html/03html.html",
-    "href": "web_html/03html.html",
-    "title": "Základy HTML",
-    "section": "",
-    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\n\n\n\n\n\nUpozorněníÚkol\n\n\n\nVytvořte validní webovou stránku na libovolné téma, která obsahuje následující položky:\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web",
-    "crumbs": [
-      "HTML",
-      "Základy HTML"
-    ]
-  },
-  {
-    "objectID": "web_html/10rekap.html",
-    "href": "web_html/10rekap.html",
-    "title": "Rekapitulace 1. čtvrtetí",
-    "section": "",
-    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
-    "crumbs": [
-      "HTML",
-      "Rekapitulace 1. čtvrtetí"
-    ]
-  },
-  {
-    "objectID": "web_html/10rekap.html#rekap-1.-čtvrtletí",
-    "href": "web_html/10rekap.html#rekap-1.-čtvrtletí",
-    "title": "Rekapitulace 1. čtvrtetí",
-    "section": "",
-    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
-    "crumbs": [
-      "HTML",
-      "Rekapitulace 1. čtvrtetí"
-    ]
-  },
-  {
-    "objectID": "web_html/04publish.html",
-    "href": "web_html/04publish.html",
-    "title": "Publikace webu",
-    "section": "",
-    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
-    "crumbs": [
-      "HTML",
-      "Publikace webu"
-    ]
-  },
-  {
-    "objectID": "web_html/04publish.html#github-pages",
-    "href": "web_html/04publish.html#github-pages",
-    "title": "Publikace webu",
-    "section": "",
-    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
-    "crumbs": [
-      "HTML",
-      "Publikace webu"
-    ]
-  },
-  {
-    "objectID": "web_html/index.html",
-    "href": "web_html/index.html",
-    "title": "Základy HTML",
-    "section": "",
-    "text": "Následující kapitoly vás provedou základy HTML kódování.",
-    "crumbs": [
-      "HTML",
-      "Základy HTML"
-    ]
-  },
-  {
-    "objectID": "web_html/index.html#zajímavé-odkazy",
-    "href": "web_html/index.html#zajímavé-odkazy",
-    "title": "Základy HTML",
-    "section": "Zajímavé odkazy",
-    "text": "Zajímavé odkazy\n\nhttps://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\nrepo: https://github.com/acchou/html-css-cheat-sheet/\n\nhttps://bit.ly/HtmlCssUcebnice\nhttps://cs50.harvard.edu/web/",
-    "crumbs": [
-      "HTML",
-      "Základy HTML"
-    ]
-  },
-  {
-    "objectID": "web_html/08portfolio.html",
-    "href": "web_html/08portfolio.html",
-    "title": "Portfolio",
-    "section": "",
-    "text": "Cíl hodiny: Vytvořit portfolio page",
-    "crumbs": [
-      "HTML",
-      "Portfolio"
-    ]
-  },
-  {
-    "objectID": "web_html/08portfolio.html#portfolio",
-    "href": "web_html/08portfolio.html#portfolio",
-    "title": "Portfolio",
-    "section": "Portfolio",
-    "text": "Portfolio\n\nsvůj stávající projekt přesuňte do nové složky -&gt; např. html\ndo Teams sdílejte odkaz na svůj (nyní) starý projekt:\n\nváš_účet_na_githubu.github.io/html\n\nUpravte odkazy na validaci!\nVytvořte portfolio např. podle:\n\nhttps://personal-portfolio.freecodecamp.rocks/\n\npoužijte jen to, co dokážete vysvětlit\nvšechny zdroje ocitujte\ndoplňte ikony na validaci html a css",
-    "crumbs": [
-      "HTML",
-      "Portfolio"
-    ]
-  },
-  {
-    "objectID": "web_html/08portfolio.html#další-zdroje",
-    "href": "web_html/08portfolio.html#další-zdroje",
-    "title": "Portfolio",
-    "section": "Další zdroje",
-    "text": "Další zdroje\n\nhttps://picsum.photos/\nhttps://unsplash.com/\nhttps://www.color-hex.com/color-palettes/popular.php",
-    "crumbs": [
-      "HTML",
-      "Portfolio"
-    ]
-  },
-  {
-    "objectID": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
-    "href": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
-    "title": "Portfolio",
-    "section": "Rekap 1. čtvrtletí",
-    "text": "Rekap 1. čtvrtletí\n\nPožadavky web\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
-    "crumbs": [
-      "HTML",
-      "Portfolio"
-    ]
-  },
-  {
-    "objectID": "web_html/12search.html",
-    "href": "web_html/12search.html",
-    "title": "Projekt Google Search",
-    "section": "",
-    "text": "Vytvořte nový repozitář googlesearch\nOtevřete ve VS Code jako nový projekt\nVytvořte web dle zadání: https://cs50.harvard.edu/web/projects/0/search/\nCommit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)",
-    "crumbs": [
-      "HTML",
-      "Projekt Google Search"
-    ]
-  },
-  {
-    "objectID": "web_html/02git.html",
-    "href": "web_html/02git.html",
-    "title": "Git",
-    "section": "",
-    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
-    "crumbs": [
-      "HTML",
-      "Git"
-    ]
-  },
-  {
-    "objectID": "web_html/02git.html#odkazy-k-samostudiu",
-    "href": "web_html/02git.html#odkazy-k-samostudiu",
-    "title": "Git",
-    "section": "",
-    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
-    "crumbs": [
-      "HTML",
-      "Git"
-    ]
-  },
-  {
-    "objectID": "web_html/02git.html#moje-poznámky-ke-gitu",
-    "href": "web_html/02git.html#moje-poznámky-ke-gitu",
-    "title": "Git",
-    "section": "Moje poznámky ke gitu",
-    "text": "Moje poznámky ke gitu\n\nNejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.\nVlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám:\n\ngit config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nNa linuxovém serveru postupuji podle tohoto návodu. https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53\nls -al ~/.ssh\nssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github -C \"ssh key for github\"\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_github\nnano ~/.ssh/config\nObsah souboru\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  AddKeysToAgent yes\ncat ~/.ssh/id_ed25519_github.pub\nNow, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.\n\nA potom nakonfiguruji repozitář\n\ngit init\ngit add *\ngit commit -m \"first commit\"\ngit remote add origin git@github.com:martinekpavel/oahosting.git\ngit push -u origin main\na hotovo!",
-    "crumbs": [
-      "HTML",
-      "Git"
-    ]
-  },
-  {
-    "objectID": "web_algo/05diag.html",
-    "href": "web_algo/05diag.html",
-    "title": "Diagramy",
-    "section": "",
-    "text": "viz zadání v Teams\n\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4."
-  },
-  {
-    "objectID": "web_algo/03diag.html",
-    "href": "web_algo/03diag.html",
-    "title": "Diagramy 2",
-    "section": "",
-    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
+    "text": "Co je to algoritmus?\nPřesný návod nebo postup pro vyřešení konkrétní úlohy.\nAlgoritmy - NEzkreslená věda - Youtube\nNa algoritmus se můžeme dívat jako na sled příkazů, které od někoho přijímáme (když algoritmus vykonáváme) nebo jej vymýšlíme a sdělujeme (tomu, kdo jej vykoná). Algoritmus má vždy vést k řešení nějakého problému a musí se sestávat z příkazů, kterým ten, kdo je vykonává, dobře rozumí, nemůže si je vyložit různým způsobem a může tak algoritmus bezmyšlenkovitě vykonat. Algoritmy umožňují automatické vykonávání pokynů, vedoucí k řešení problémů.\nAlgoritmické úlohy a vzdělávací cíle. Online. Informatika s bobříkem. 2024. Dostupné z: https://wakelet.com/wake/3GJF18eCVEDcx8kyYTaPg. [cit. 2025-12-01].\n\nVlastnosti algoritmů\n\nmusí mít začátek a konec - po konečném počtu kroků musí dojít od počátku do konce\nmusí být věcně správný - pokud chci obvod kruhu, musím mít správný vzoreček\nmusí být jednoznačný - v každém jeho kroku musí být jasné, jaký bude jeho následující krok\nmusí být obecný - schopný řešit co nějvětší množství podobných problémů\nmusí být opakovatelný - za stejných podmínek vracet stejné výsledky\nmusí být srozumitelný - osobě, pro kterou je určen\n\n\n\nZpůsob zápisů algoritmů\n\nslovní vyjádření\n\ni pro lajky, nejméně přesné, kuchařky, návody\n\nmatematický zápis\n\njednoznačný, pro určité úkoly, mohou chybět podmínky, vzorečky pro výpočty\n\nrozhodovací tabulky\n\njednoznačnost, přehlednost, nehodí se pro každý typ úloh, rozvrh\n\nvývojové diagramy\n\nsymbolický jazyk pro názorné zobrazení algoritmu, používá se při vývoji softwaru\n\npočítačové programy\n\npro programátory a počítače, mohou být nepřehledné\n\n\n\n\nVývojové diagramy\n\n\n\n\n\nflowchart TB\n    A([\"Začátek\"]) --&gt; E[/\"Vstupy a výstupy\"/]\n    E --&gt; B{\"Rozhodovací blok\"}\n    B -- Pravda --&gt; H[\"Cyklus\"]\n    B -- Nepravda --&gt; D[\"Podprogram 2\"]\n    D --&gt; G\n    H --&gt; F[\"Příkazy\"]\n    F --&gt; I[\"Konec cyklu\"]\n    I .-&gt; H\n    I --&gt; G([\"Konec\"])\n\n    D@{ shape: subproc}\n    H@{ shape: hex}\n    I@{ shape: hex}",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 2"
+      "Základy Algoritmizace"
     ]
   },
   {
-    "objectID": "web_algo/03diag.html#opakování",
-    "href": "web_algo/03diag.html#opakování",
-    "title": "Diagramy 2",
+    "objectID": "web_algo/02diag.html",
+    "href": "web_algo/02diag.html",
+    "title": "Diagramy 1",
     "section": "",
-    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
+    "text": "Opakování z minulé hodiny (kahoot).\nStudent navrhne algoritmus pro řešení zadané úlohy. Graficky jej znázorní pomocí vývojového diagramu. Najde a opraví chybu.\nPožadovaný software: http://www.flowgorithm.org/",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 2"
+      "Diagramy 1"
     ]
   },
   {
-    "objectID": "web_algo/03diag.html#želví-grafika",
-    "href": "web_algo/03diag.html#želví-grafika",
-    "title": "Diagramy 2",
-    "section": "Želví grafika",
-    "text": "Želví grafika\n\nhttps://www.umimeinformatiku.cz/zelvi-grafika\n\nPoužíváme software Flowgorithm.",
+    "objectID": "web_algo/02diag.html#úloha-1---kontrola-zadaného-pin",
+    "href": "web_algo/02diag.html#úloha-1---kontrola-zadaného-pin",
+    "title": "Diagramy 1",
+    "section": "Úloha 1 - kontrola zadaného PIN",
+    "text": "Úloha 1 - kontrola zadaného PIN\nPoužité proměnné\n\nP - představuje správné PIN\nX - počet chybných pokusů\nA - pin zadané uživatelem\n\n\n\n\n\n\nflowchart TB\n    A([\"Začátek\"]) --&gt; B[\"P = 4530\"]\n    B --&gt; C[\"X = 0\"]\n    C --&gt; D{\"X == 3\"}\n    D -- Pravda --&gt; E[/\"Karta zablokována\"/]\n    D -- Nepravda --&gt; F[/\"Čti A\"/]\n    F --&gt; G{\"A == P\"}\n    G -- Pravda --&gt; I[\"Provedení výběru\"]\n    G -- Nepravda --&gt; H[\"X = X + 1\"]\n    H --&gt; D\n    I --&gt; Z\n    E --&gt; Z([\"Konec\"])\n\n\n\n\n\n\nOtázky\n\nProč je prvek Čti A, zařazen až za rozhodovací prvek X == 3?\nPokud je karta zablokována, existuje nějaká šance se vrátit zpět a dát další PIN?\nPokud by mělo být povoleno 5 chybných pokusů, jakou konkrétní změnu je nutné provést?\nJak konkrétně upravit diagram, aby před třetím pokusem o zadání PIN vypsal varování “Pozor, toto je poslední pokus”?",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 2"
+      "Diagramy 1"
     ]
   },
   {
-    "objectID": "web_algo/03diag.html#tvorba-algoritmu",
-    "href": "web_algo/03diag.html#tvorba-algoritmu",
-    "title": "Diagramy 2",
+    "objectID": "web_algo/02diag.html#cyklus",
+    "href": "web_algo/02diag.html#cyklus",
+    "title": "Diagramy 1",
+    "section": "Cyklus",
+    "text": "Cyklus\n\n\n\n\n\nflowchart TB\n    A[\"`Cyklus\n    I = 1, N`\"]\n    Z([\"Začátek\"]) --&gt; A \n    A --&gt; B[\"Prvky uvnitř cyklu\"]\n    B --&gt; C[\"Konec cyklu\"]\n    C .-&gt; A\n    C --&gt; K([\"Konec\"])\n\n    A@{ shape: hex}\n    C@{ shape: hex}",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 1"
+    ]
+  },
+  {
+    "objectID": "web_algo/02diag.html#kolik-čísel-je-záporných",
+    "href": "web_algo/02diag.html#kolik-čísel-je-záporných",
+    "title": "Diagramy 1",
+    "section": "Kolik čísel je záporných?",
+    "text": "Kolik čísel je záporných?\nPoužité proměnné: - P počet čísel, ze kterých budou hodnoty zjištovány - Z počet záporných čísel - A číslo, které posuzujeme\n\n\n\n\n\nflowchart TB\n    D[\"`Cyklus\n    I = 1, P`\"]\n    A([\"Začátek\"]) --&gt; B[\"Z = 0\"]\n    B --&gt; C[/\"Čti P\"/]\n    C --&gt; D\n    D --&gt; E[/\"Čti A\"/]\n    E --&gt; F{\"A &lt; 0\"}\n    F -- Pravda --&gt; G[\"Z = Z + 1\"]\n    F -- Nepravda --&gt; H[\"Konec cyklu\"]\n    G --&gt; H\n    H .-&gt; D\n    H --&gt; J[/\"Vypiš Z\"/]\n    J --&gt; K([\"Konec\"]) \n\n    D@{ shape: hex}\n    H@{ shape: hex}\n\n\n\n\n\n\nOtázky\n\nCo by se stalo, pokud by prvek Vypiš: Z byl umístěn nikoliv za koncem cyklu, nýbrž před jeho koncem?\nJakou úpravu by bylo nutné udeělat, aby algoritmus vypsal, kolik čísel z neznámého počtu se rovná nule?\nJakou úpravu by bylo nutné udělat, aby algoritmus vypsal, kolik čísel z neznámého počtu je v intervalu 50-100?",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 1"
+    ]
+  },
+  {
+    "objectID": "web_algo/02diag.html#pracovní-list---nalezení-chyb-v-algoritmech",
+    "href": "web_algo/02diag.html#pracovní-list---nalezení-chyb-v-algoritmech",
+    "title": "Diagramy 1",
+    "section": "Pracovní list - nalezení chyb v algoritmech",
+    "text": "Pracovní list - nalezení chyb v algoritmech\nNakopírováno",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 1"
+    ]
+  },
+  {
+    "objectID": "web_algo/02diag.html#tvorba-algoritmu",
+    "href": "web_algo/02diag.html#tvorba-algoritmu",
+    "title": "Diagramy 1",
     "section": "Tvorba algoritmu",
     "text": "Tvorba algoritmu\n\nVytvořte vývojový diagram s algoritmem, který porovná dvě zadaná čísla. Tato čísla vypíše v tomto pořadí: nejprve větší a poté menší číslo.\nVytvořte vývojový diagram s algoritmem, který vypíše největší číslo ze tří zadaných čísel.\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4.",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 2"
+      "Diagramy 1"
     ]
   },
   {
-    "objectID": "202526-3d.html",
-    "href": "202526-3d.html",
-    "title": "3.D šk. rok 2025/2026",
+    "objectID": "web_django/03template.html",
+    "href": "web_django/03template.html",
+    "title": "Šablony",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
-  },
-  {
-    "objectID": "202526-3d.html#výuka",
-    "href": "202526-3d.html#výuka",
-    "title": "3.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\n\n\n\n26. 3. 2026\n\n\n\n2. 4. 2026\n\n\n\n9. 4. 2026\n\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\n\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
-  },
-  {
-    "objectID": "web_django/08flights.html",
-    "href": "web_django/08flights.html",
-    "title": "Airline",
-    "section": "",
-    "text": "Django - projekt Airline\n\nTvorba projektu\ndjango-admin startproject airline\n\n\nPrvní aplikace (Flights) v projektu\npython manage.py startapp flights\nV souboru airline\\settings.py\nINSTALLED_APPS = [\n    'flights', # doplníme název aplikace\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nV souboru airline\\urls.py\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('flights/', include('flights.urls')),\n]\nVytvoříme strukturu tabulek v databázi. V souboru aplikace flights\\models.py\nclass Airport(models.Model):\n    code = models.CharField(max_length=3)\n    city = models.CharField(max_length=64)\n\n    def __str__(self):\n        return f\"{self.city} ({self.code})\"\n    \nclass Flight(models.Model):\n    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"departures\")\n    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"arrivals\")\n    duration = models.IntegerField()\n\n    def __str__(self):\n        return f\"{self.id}: {self.origin} -&gt; {self.destination} ({self.duration})\"\n\nclass Passenger(models.Model):\n    first = models.CharField(max_length=64)\n    last = models.CharField(max_length=64)\n    flights = models.ManyToManyField(Flight, blank=True, related_name=\"passengers\")\n\n    def __str__(self):\n        return f\"{self.first} {self.last}\"    \nDalší typy modelů (datových typu jednotlivých polí v tabulce) naleznete v dokumentaci Djanga.\nVytvoříte soubor pro aplikaci flights\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nNyní vytvoříte správné šablony (layout.html a index.html) např. podle django-templates.\nDo bloku {% block body %} vložíte kód:\n  &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"#\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\nUpravíte soubor pro aplikaci flights\\views.py (logika aplikace, soubor funkcí, které renderují výstupy pro šablony)\nfrom .models import Flight\n\ndef index(request):\n    return render(request, \"flights/index.html\", {\n        \"flights\": Flight.objects.all()\n    })\nPřipravíme a vytvoříme databázi (v cmd.exe)\npython manage.py makemigrations\npython manage.py migrate\nVytvoříte superuživatele (zvolíte uživatelské jméno a heslo) pomocí příkazu:\npython manage.py createsuperuser\nVýstup může vypadat takto:\n(virtual-django) C:\\airline&gt;python manage.py createsuperuser\nUsername (leave blank to use 'martinek.p'): admin\nEmail address:\nPassword:\nPassword (again):\nSuperuser created successfully.\nUpravíme soubor admin.py v aplikaci:\nfrom .models import Airport, Flight, Passenger\n\nadmin.site.register(Airport)\nadmin.site.register(Flight)\nadmin.site.register(Passenger)\nA nyní můžeme přímo editovat databázi v admin rozhraní aplikace.",
+    "text": "Vytvořím složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace např. hello\nNíže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.\nVytvořím soubory layout.html a index.html\nObsah souboru layout.html\nObsah souboru index.html",
     "crumbs": [
-      "Airline"
+      "Šablony"
     ]
   },
   {
-    "objectID": "web_django/01hello.html",
-    "href": "web_django/01hello.html",
-    "title": "Hello App",
-    "section": "",
-    "text": "prereq: instalace python\n\nInstalace Djanga\npip install django\na jste připraveni vytvořit svůj projekt (webovou aplikaci).\n\n\n\n\n\n\nVarování\n\n\n\nZda je všechno OK lze vyzkoušet ihned příkazem django-admin. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné PATH.\n\n\n\n\nNový projekt\ndjango-admin startproject PROJECT_NAME\nPříkaz nám vytvoří novou složku s novým projektem a jeho soubory.\n\n\n\n\n\n\nVarování\n\n\n\nPokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku!\ndjango-admin startproject PROJECT_NAME .\n\n\n\n\nNová aplikace\npython manage.py startapp hello\nV souboru PROJECT_NAME\\settings.py\nINSTALLED_APPS = [\n    'hello', # doplníme název aplikace a nezapomeneme na čárku!\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nDoplníte soubor pro aplikaci hello\\views.py (logika aplikace, soubor funkcí, které renderují výstupy)\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world\")  \nVytvoříte soubor s cestami pro aplikaci hello\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nV souboru PROJECT_NAME\\urls.py doplníme cesty.\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('hello/', include('hello.urls')),\n]\n\n\nSpuštění dev web serveru\npython manage.py runserver\na nejspíše máte server na adrese:\nhttp://localhost:8000\n\n\n\n\n\n\nVarování\n\n\n\nNelekejte se varovných hlášení, protože nemáte cestu pro / adresu, musíte za lomítko zadat ještě název aplikace hello a pak by vše mělo fungovat.",
+    "objectID": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
+    "href": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
+    "title": "Šablony",
+    "section": "Použití if else v šabloně (využijete u aplikace newyear)",
+    "text": "Použití if else v šabloně (využijete u aplikace newyear)\n  {% if newyear %}\n            &lt;h1&gt;YES&lt;/h1&gt;\n  {% else %}\n            &lt;h1&gt;NO&lt;/h1&gt;\n  {% endif %}",
     "crumbs": [
-      "Hello App"
+      "Šablony"
     ]
   },
   {
-    "objectID": "web_django/07sql.html",
-    "href": "web_django/07sql.html",
-    "title": "SQL a Django",
-    "section": "",
-    "text": "V tomto projektu se naučíte, jak používat SQL v Django pro práci s databází. Django používá ORM (Object-Relational Mapping), což umožňuje pracovat s databází pomocí Python kódu místo psaní SQL dotazů.\nPodklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/4/\n\nYouTube lekce:\n\nhttps://youtu.be/YzP164YANAU?si=RfZXo22trNGsWM46\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/src4.zip\n\nPdf prezentace:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/lecture4.pdf",
+    "objectID": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
+    "href": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
+    "title": "Šablony",
+    "section": "Použití cyklu v šabloně (využijete později!)",
+    "text": "Použití cyklu v šabloně (využijete později!)\n    &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"{% url 'flight' flight.id %}\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;",
     "crumbs": [
-      "SQL a Django"
+      "Šablony"
     ]
   },
   {
-    "objectID": "web_django/04newyear.html",
-    "href": "web_django/04newyear.html",
-    "title": "NewYear",
+    "objectID": "web_django/06projekt1.html",
+    "href": "web_django/06projekt1.html",
+    "title": "Projekt Wiki",
     "section": "",
-    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace newyear\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
+    "text": "V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.\nZpracujte projekt dle zadání https://cs50.harvard.edu/web/projects/1/wiki/.\nNejlepší free hosting pro Django projekty je https://eu.pythonanywhere.com/. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.\nNíže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu: https://gluingeal.eu.pythonanywhere.com/.\n\nregistrace a djangohttps://youtu.be/BqVrt-6yfy8\naplikace vtip https://youtu.be/GEKjrunSIvg",
     "crumbs": [
-      "NewYear"
+      "Projekt Wiki"
     ]
   },
   {
-    "objectID": "web_django/04newyear.html#kód",
-    "href": "web_django/04newyear.html#kód",
-    "title": "NewYear",
+    "objectID": "web_django/05tasks.html",
+    "href": "web_django/05tasks.html",
+    "title": "Tasks",
+    "section": "",
+    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace tasks\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
+    "crumbs": [
+      "Tasks"
+    ]
+  },
+  {
+    "objectID": "web_django/05tasks.html#kód",
+    "href": "web_django/05tasks.html#kód",
+    "title": "Tasks",
     "section": "Kód",
-    "text": "Kód\nKód souboru newyear\\views.py:\nimport datetime\n\nfrom django.shortcuts import render\n\n# Create your views here.\ndef index(request):\n    now = datetime.datetime.now()\n    return render(request, \"newyear/index.html\", {\n        \"newyear\": now.month == 1 and now.day == 1\n    })\nKód souboru newyear\\urls.py:\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
+    "text": "Kód\ntasks\\views.py\ntasks = [\"foo\",\"bar\",\"baz\"]\n\ndef index(request):\n  return render(request, \"tasks/index.html\", {\n    \"tasks\": tasks\n  })\ntemplates\\tasks\\index.html\n    &lt;ul&gt;\n        {% for task in tasks %}\n            &lt;li&gt;{{ task }}\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\ntasks\\views.py\ndef add(request):\n  return render(request, \"tasks/add.html\")\nPřidáme cestu pro přidávání úkolů do tasks\\urls.py. Kód zde není uveden.\n\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form&gt;\n        &lt;input type=\"text\" name=\"task\"&gt;\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\nOdkazy\ntemplates\\tasks\\index.html\n&lt;!-- &lt;a href=\"/tasks/add\"&gt;Add a New Task&lt;/a&gt; --&gt;\n&lt;a href=\"{% url 'add' %}\"&gt;Add a New Task&lt;/a&gt;\ntemplates\\tasks\\add.html\n&lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\nVideo čas 1:10:09\nŘešení problému s odkazy: namespaces\nDoplníme tasks\\urls.py\napp_name = \"tasks\"\na upravíme odkazy:\n&lt;a href=\"{% url 'tasks:index' %}\"&gt;View All Tasks&lt;/a&gt;\n&lt;a href=\"{% url 'tasks:add' %}\"&gt;Add a New Task&lt;/a&gt;\n\n\nZpracování formuláře\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form action=\"{% url 'add' %}\" method=\"post\"&gt;\n        {% csrf_token %} &lt;!-- ochrana proti CSRF útokům  --&gt;\n        &lt;input type=\"text\" name=\"task\"&gt;\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n    &lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\n{% endblock %}\nVýklad video čas 1:13:27\n\n\nFormuláře v Django\ntasks\\views.py\nfrom django import forms\n\nclass NewTaskForm(forms.Form):\n    task = forms.CharField(label=\"New Task\", max_length=100)\n\n\ndef add(request):\n  return render(request, \"tasks/add.html\", {\n    \"form\": NewTaskForm()\n  })\nPoslední úprava v add.html\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form action=\"{% url 'add' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        {{ form }}\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n    &lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\n{% endblock %}\n\nVýklad video čas 1:21:05 (úprava formuláře, kontrola v prohlížeči a druhá na serveru)\n\nFinální verze tasks\\views.py\nfrom django import forms\nfrom django.http import HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\nclass NewTaskForm(forms.Form):\n    task = forms.CharField(label=\"New Task\")\n    # priority = forms.IntegerField(label=\"Priority\", min_value=1, max_value=5)\n\n# Create your views here.\ndef index(request):\n    if \"tasks\" not in request.session:\n        request.session[\"tasks\"] = []\n    return render(request, \"tasks/index.html\", {\n        \"tasks\": request.session[\"tasks\"]\n    })\n\ndef add(request):\n    if request.method == \"POST\":\n        form = NewTaskForm(request.POST)\n        if form.is_valid():\n            task = form.cleaned_data[\"task\"]\n            request.session[\"tasks\"] += [task]\n            return HttpResponseRedirect(reverse(\"index\"))\n        else:\n            return render(request, \"tasks/add.html\", {\n                \"form\": form\n            })\n    else:\n        return render(request, \"tasks/add.html\", {\n            \"form\": NewTaskForm()\n        })\nNakonec je třeba provést migrace kvůli session.\npython manage.py migrate\n\nV tuto chvíli bystě měli umět naprogramovat např. aplikaci, která zobrazuje náhodné vtipy pomocí knihovny pyjokes. Nebo aplikaci, která zobrazuje náhodné citáty pomocí knihovny quoters.\n\nJedničkáři si zkusí vyřešit Projekt 1 - Wiki",
     "crumbs": [
-      "NewYear"
+      "Tasks"
+    ]
+  },
+  {
+    "objectID": "web_django/index.html",
+    "href": "web_django/index.html",
+    "title": "Úvod do Djanga",
+    "section": "",
+    "text": "Podklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/3/\n\nYouTube lekce:\n\nhttps://youtu.be/w8q0C-C1js4?si=VeyTaNxZ3ajo1HWg\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/3/src3.zip\n\nMohou se hodit moje poznámky ke gitu\n\nGit",
+    "crumbs": [
+      "Úvod do Djanga"
+    ]
+  },
+  {
+    "objectID": "web_django/02apps.html",
+    "href": "web_django/02apps.html",
+    "title": "Hello str",
+    "section": "",
+    "text": "Doplníme soubor pro aplikaci hello\\views.py.\ndef brian(request):\n    return HttpResponse(\"Hello, Brian!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"brian\", views.brian, name=\"brian\")\na můžeme to otestovat, případně přidat další jména.\n\nCesta s řetězcem\nDoplníme soubor pro aplikaci hello\\views.py.\ndef great(request,name):\n    return HttpResponse(f\"Hello, {name.capitalize()}!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"&lt;str:name&gt;\", views.great, name=\"great\")\na můžeme to otestovat, zadáním různých slov do správné url\nhttps://localhost:8000/hello/retezec",
+    "crumbs": [
+      "Hello str"
     ]
   },
   {

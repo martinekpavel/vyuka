@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projekt Wiki – PVA</title>
+<title>Airline 2 – PVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../web_django/07sql.html" rel="next">
-<link href="../web_django/05tasks.html" rel="prev">
+<link href="../web_django/08flights.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -304,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/06projekt1.html">Projekt Wiki</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/09flights.html">Airline 2</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -358,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_django/06projekt1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../web_django/06projekt1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Projekt Wiki</span></a>
   </div>
 </li>
@@ -376,7 +410,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_django/09flights.html" class="sidebar-item-text sidebar-link">
+  <a href="../web_django/09flights.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Airline 2</span></a>
   </div>
 </li>
@@ -385,8 +419,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Na této stránce</h2>
+   
+  <ul>
+  <li><a href="#django---projekt-airline" id="toc-django---projekt-airline" class="nav-link active" data-scroll-target="#django---projekt-airline">Django - projekt Airline</a>
+  <ul class="collapse">
+  <li><a href="#tvorba-odkazu-na-konkrétní-let" id="toc-tvorba-odkazu-na-konkrétní-let" class="nav-link" data-scroll-target="#tvorba-odkazu-na-konkrétní-let">Tvorba odkazu na konkrétní let</a></li>
+  <li><a href="#chci-zobrazit-pasažéry-na-webu" id="toc-chci-zobrazit-pasažéry-na-webu" class="nav-link" data-scroll-target="#chci-zobrazit-pasažéry-na-webu">Chci zobrazit pasažéry na webu</a></li>
+  <li><a href="#chci-mít-možnost-přidat-pasažéry-k-letu" id="toc-chci-mít-možnost-přidat-pasažéry-k-letu" class="nav-link" data-scroll-target="#chci-mít-možnost-přidat-pasažéry-k-letu">Chci mít možnost přidat pasažéry k letu</a></li>
+  <li><a href="#mohu-si-upravit-zobrazení-v-admin-rozhraní" id="toc-mohu-si-upravit-zobrazení-v-admin-rozhraní" class="nav-link" data-scroll-target="#mohu-si-upravit-zobrazení-v-admin-rozhraní">Mohu si upravit zobrazení v admin rozhraní</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/09flights.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/09flights.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -394,7 +440,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projekt Wiki</h1>
+<h1 class="title">Airline 2</h1>
 </div>
 
 
@@ -411,16 +457,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.</p>
-<p>Zpracujte projekt dle zadání <a href="https://cs50.harvard.edu/web/projects/1/wiki/" target="_blank">https://cs50.harvard.edu/web/projects/1/wiki/</a>.</p>
-<p>Nejlepší free hosting pro Django projekty je <a href="https://eu.pythonanywhere.com/" target="_blank">https://eu.pythonanywhere.com/</a>. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.</p>
-<p>Níže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu: <a href="https://gluingeal.eu.pythonanywhere.com/" target="_blank">https://gluingeal.eu.pythonanywhere.com/</a>.</p>
+<section id="django---projekt-airline" class="level1">
+<h1>Django - projekt Airline</h1>
+<p>Mohou se hodit moje poznámky ke gitu</p>
 <ul>
-<li>registrace a django<a href="https://youtu.be/BqVrt-6yfy8" target="_blank">https://youtu.be/BqVrt-6yfy8</a></li>
-<li>aplikace vtip <a href="https://youtu.be/GEKjrunSIvg" target="_blank">https://youtu.be/GEKjrunSIvg</a></li>
+<li><a href="../web_html/02git.html" target="_blank">Git</a></li>
 </ul>
+<section id="tvorba-odkazu-na-konkrétní-let" class="level3">
+<h3 class="anchored" data-anchor-id="tvorba-odkazu-na-konkrétní-let">Tvorba odkazu na konkrétní let</h3>
+<p>Doplníme do šablony odkaz na konkrétní let:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{% url 'flight' flight.id %}"</span><span class="dt">&gt;</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A protože <code>url 'flight'</code> ještě nemáme, vytvoříme ji v <code>flights\urls.py</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>path(<span class="st">"&lt;int:flight_id&gt;"</span>, views.flight, name<span class="op">=</span><span class="st">"flight"</span>),</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Do souboru <code>flights\views.py</code> doplníme funkci pro zobrazení konkrétního letu:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> flight(request, flight_id):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    flight <span class="op">=</span> Flight.objects.get(pk<span class="op">=</span>flight_id)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> render(request, <span class="st">"flights/flight.html"</span>, {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"flight"</span>: flight</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    })</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="chci-zobrazit-pasažéry-na-webu" class="level3">
+<h3 class="anchored" data-anchor-id="chci-zobrazit-pasažéry-na-webu">Chci zobrazit pasažéry na webu</h3>
+<p>Do souboru <code>flights\views.py</code> do funkce <code>flight</code>, do dat pro šablonu přidám:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">"passengers"</span>: flight.passengers.<span class="bu">all</span>()</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>a do šablony doplním:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a> <span class="op">&lt;</span>h2<span class="op">&gt;</span>Passengers<span class="op">&lt;/</span>h2<span class="op">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    {<span class="op">%</span> <span class="cf">for</span> p <span class="kw">in</span> passengers <span class="op">%</span>}</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>li<span class="op">&gt;</span>{{p.first}} {{p.last}}<span class="op">&lt;/</span>li<span class="op">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    {<span class="op">%</span> empty <span class="op">%</span>}</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        No passengers.</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    {<span class="op">%</span> endfor <span class="op">%</span>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Vytvořím odkaz na seznam letů</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>a href<span class="op">=</span><span class="st">"{</span><span class="sc">% u</span><span class="st">rl 'index' %}"</span><span class="op">&gt;</span>Back to Flight List<span class="op">&lt;/</span>a<span class="op">&gt;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="chci-mít-možnost-přidat-pasažéry-k-letu" class="level3">
+<h3 class="anchored" data-anchor-id="chci-mít-možnost-přidat-pasažéry-k-letu">Chci mít možnost přidat pasažéry k letu</h3>
+<p>Měli byste vědět, kam doplníte tento řádek</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>path(<span class="st">"&lt;int:flight_id&gt;/book"</span>, views.book, name<span class="op">=</span><span class="st">"book"</span>),</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ve správném souboru uděláme následující změny:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.http <span class="im">import</span> HttpResponseRedirect</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.urls <span class="im">import</span> reverse</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> book(request, flight_id):</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> request.method <span class="op">==</span> <span class="st">"POST"</span>:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        flight <span class="op">=</span> Flight.objects.get(pk<span class="op">=</span>flight_id)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        passenger <span class="op">=</span> Passenger.objects.get(pk<span class="op">=</span><span class="bu">int</span>(request.POST[<span class="st">"passenger"</span>]))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        passenger.flights.add(flight)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> HttpResponseRedirect(reverse(<span class="st">"flight"</span>, args<span class="op">=</span>(flight.<span class="bu">id</span>,)))</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Upravím šablonu daného letu tak, abych tam měl formulář pro přidání pasažéra</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>Add Passenger<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> action</span><span class="op">=</span><span class="st">"{% url 'book' flight.id %}"</span><span class="ot"> method</span><span class="op">=</span><span class="st">"POST"</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        {% csrf_token %}</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">select</span><span class="ot"> name</span><span class="op">=</span><span class="st">"passenger"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"passenger"</span><span class="dt">&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>            {% for passanger in non_passengers  %}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">option</span><span class="ot"> value</span><span class="op">=</span><span class="st">"{{ passanger.id }}"</span><span class="dt">&gt;</span>{{ passanger }}<span class="dt">&lt;/</span><span class="kw">option</span><span class="dt">&gt;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>            {% endfor %}</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">select</span><span class="dt">&gt;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"submit"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Add Passenger"</span><span class="dt">&gt;</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Do funkce <code>flight</code> doplním proměnou, která do šablony odešle data těch pasažérů, kteří na daném letu nejsou:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>    <span class="co">"non_passengers"</span>: Passenger.objects.exclude(flights<span class="op">=</span>flight).<span class="bu">all</span>()</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="mohu-si-upravit-zobrazení-v-admin-rozhraní" class="level3">
+<h3 class="anchored" data-anchor-id="mohu-si-upravit-zobrazení-v-admin-rozhraní">Mohu si upravit zobrazení v admin rozhraní</h3>
+<p>V souboru <code>admin.py</code> provedu úpravy</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> FlightAdmin(admin.ModelAdmin):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    list_display <span class="op">=</span> (<span class="st">"id"</span>, <span class="st">"origin"</span>, <span class="st">"destination"</span>, <span class="st">"duration"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PassengerAdmin(admin.ModelAdmin):</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    filter_horizontal <span class="op">=</span> (<span class="st">"flights"</span>,)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>admin.site.register(Flight, FlightAdmin)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>admin.site.register(Passenger, PassengerAdmin)</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>a aplikace je hotova.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -838,14 +955,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../web_django/05tasks.html" class="pagination-link" aria-label="Tasks">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tasks</span>
+      <a href="../web_django/08flights.html" class="pagination-link" aria-label="Airline">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Airline</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../web_django/07sql.html" class="pagination-link" aria-label="SQL a Django">
-        <span class="nav-page-text">SQL a Django</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -856,7 +970,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/06projekt1.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/06projekt1.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/09flights.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/09flights.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a> ❤️</p>
 </div>
