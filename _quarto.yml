@@ -95,6 +95,7 @@ website:
         - web_django/06projekt1.qmd
         - web_django/07sql.qmd
         - web_django/08flights.qmd
+        - web_django/09flights.qmd
 
 format:
   html:
