@@ -1,0 +1,16 @@
+---
+title: "Pracovní list č. 14"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL14elipsy_a_kruhy.pdf" target="_blank">PracL14 - elipsy a kruhy</a>.
+
+Pracovní soubor `pl14.py`
+
+```python
+# Pracovní list č. 14
+
+
+
+
+
+```
