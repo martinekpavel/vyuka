@@ -34,54 +34,5 @@ canvas.mainloop()
 ## 04 + 05 zlaty_poklad.py s mezerami
 
 
- 
-## 05 Máme takovouto povídku (povidka.py): 
-# Na stromě bylo 0 vrabců, jeden přiletěl a už je tam 1 vrabců 
-
-
- 
-## 06 Vrabci z předchozí povídky odlétají 
-
-
-
-## 07 Máme kartičky s čísly od 0 do 9, které chceme náhodně rozložit po ploše. Vytvoř program 
-# deset_karticek.py, který pomocí cyklu postupně nakreslí deset takových kartiček na 
-# náhodných pozicích
-
-
-
-## 08. Na chodníku je rozhozených pět cizokrajných bankovek s hodnotami 10, 20, 30, 40 
-# a 50. Napiš program bankovky.py, který takové bankovky nakreslí pomocí for cyklu
-
-
-
-
-## 09. Vytvoř nový program kresleni_cisel.py a přepiš do něj následující kód, který kreslí 
-# čísla na grafickou plochu: 
-
-import tkinter 
-canvas = tkinter.Canvas() 
-canvas.pack() 
-
-for i in range(8): 
-    x = i * 50 
-    canvas.create_text(x, 100, text=i, font='arial 30') 
-
-canvas.mainloop()
-
-
-## 10. Uprav předchozí program tak, aby se čísla kreslila přibližně na úhlopříčce grafické plochy 
-# podobně jako na následujícím obrázku
-
-
-## 11. Uprav předchozí program tak, aby se čísla kreslila přibližně na úhlopříčce grafické plochy 
-# podobně jako na následujícím obrázku
-
-
-## 12 Víš, jak vypadá padající had z domina? Vytvoř program domino.py, který pomocí cyklu 
-# a obdélníku nakreslí zatím ještě stojící kostky domina
-
-
-## 13 Napiš program velka_pyramida.py, který pomocí cyklu a obdélníku nakreslí 
-# takovouto pyramidu: 
+## pokračujte dle pdf
 ```
