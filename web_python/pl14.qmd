@@ -2,15 +2,31 @@
 title: "Pracovní list č. 14"
 ---
 
-Pracujte podle pracovního listu <a href="./pl/PracL14elipsy_a_kruhy.pdf" target="_blank">PracL14 - elipsy a kruhy</a>.
+Pracujte podle pracovního listu <a href="./pl/PracL14elipsy_a_kruhy.pdf" target="_blank">PracL14 - elipsy a kruhy</a> pouze prvních 5 cvičení.
 
 Pracovní soubor `pl14.py`
 
 ```python
 # Pracovní list č. 14
 
+## 01 Napiš program soucet_99.py, který pomocí cyklu zjistí, jaký je součet čísel 0 + 1 + 2 + ... + 99. Výsledek program vypíše pomocí příkazu print. 
 
+## 02 2. V jazyce Python kreslíme elipsy a kruhy příkazem create_oval. Vytvoř nový program elipsa.py a zapiš do něj následující kód:
+import tkinter
 
+canvas = tkinter.Canvas()
+canvas.pack()
 
+canvas.create_oval(10, 10, 200, 150)
+canvas.mainloop()
 
+## Vyzkoušej, co program nakreslí. 
+
+## 03. Přidej na konec programu příkaz pro kreslení obdélníku se stejnými čísly, jako jsou v příkazu create_oval. Jaká bude vzájemná pozice elipsy a obdélníku? 
+
+## 04 vez.py
+
+## 05 Diskutuj se sousedem, jak nakreslit kruh. Potom změň předchozí program tak, aby se místo věže kreslil sněhulák. 
+
+## Nyní se vrhněte na pracovní list č. 15.
 ```

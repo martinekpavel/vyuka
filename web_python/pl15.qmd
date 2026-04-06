@@ -1,0 +1,37 @@
+---
+title: "Pracovní list č. 15"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL15kruhy_a_cykly.pdf" target="_blank">PracL15 - kruhy a cykly</a>.
+
+Pracovní soubor `pl15.py`
+
+```python
+# Pracovní list č. 15
+
+## 01 dve_kruznice.py
+
+## 02 upravene dve_dve_kruznice.py
+
+## 03 terc.py
+
+
+## 04 gramovon.py
+
+## 05 upraveny terc.py
+
+## 06 upraveny terc.py
+
+## 07 retizek.py
+
+## 08 mince.py
+
+## 09 upravene mince.py
+
+## 10 random_choice.py
+
+## 11
+
+## 12
+
+```

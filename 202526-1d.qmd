@@ -44,7 +44,7 @@ title: "1.D šk. rok 2025/2026"
 `17. 3. 2026` | [Pracovní list 10](web_python/pl10.qmd) [+ 11](web_python/pl11.qmd) (44,45/42,43)
 `24. 3. 2026` | [Pracovní list 12](web_python/pl12.qmd) (46,47/44,45)
 `31. 3. 2026` | [Pracovní list 13](web_python/pl13.qmd) (48,49/46,47)
- `7. 4. 2026` | 
+ `7. 4. 2026` | [Pracovní list 14](web_python/pl14.qmd) [+ 15](web_python/pl15.qmd) (50,51/48,49)
 
 ### 4. čtvrtetí
 
