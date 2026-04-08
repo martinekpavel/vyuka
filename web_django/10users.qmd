@@ -182,9 +182,21 @@ Vytvoříme šablonu:  `.\templates\aplikace\sign_up.html`
 {% endblock %}
 ```
 
+Kromě `.as_p` nabízí Django další vestavěné formáty:
+
+| Metoda | HTML obal (Wrapper) | Poznámka |
+| :--- | :--- | :------------ |
+| `{{ form.as_div }}` | `<div>` | Nejmodernější přístup. |
+| `{{ form.as_table }}` | `<tr>` | V šabloně přidejte tag `<table>`. |
+| `{{ form.as_ul }}` | `<li>` | V šabloně přidejte tag `<ul>`. |
+
 Chceme-li ve formuláři češtinu upravíme `settings.py`
 
 ```python
 # LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'cs'
 ```
+
+Nakonec můžete přidat bootstrap pro lepší vzhled webové aplikace.
+Buď klasicky nebo pomocí <a target="_blank" href="https://pypi.org/project/django-bootstrap5/">django-bootstrap5</a>
+
