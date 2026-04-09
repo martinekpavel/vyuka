@@ -602,9 +602,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;/</span>form<span class="op">&gt;</span></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>{<span class="op">%</span> endblock <span class="op">%</span>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Kromě <code>.as_p</code> nabízí Django další vestavěné formáty:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metoda</th>
+<th style="text-align: left;">HTML obal (Wrapper)</th>
+<th style="text-align: left;">Poznámka</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>{ form.as_div }</code></td>
+<td style="text-align: left;"><code>&lt;div&gt;</code></td>
+<td style="text-align: left;">Nejmodernější přístup.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>{ form.as_table }</code></td>
+<td style="text-align: left;"><code>&lt;tr&gt;</code></td>
+<td style="text-align: left;">V šabloně přidejte tag <code>&lt;table&gt;</code>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>{ form.as_ul }</code></td>
+<td style="text-align: left;"><code>&lt;li&gt;</code></td>
+<td style="text-align: left;">V šabloně přidejte tag <code>&lt;ul&gt;</code>.</td>
+</tr>
+</tbody>
+</table>
 <p>Chceme-li ve formuláři češtinu upravíme <code>settings.py</code></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># LANGUAGE_CODE = 'en-us'</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>LANGUAGE_CODE <span class="op">=</span> <span class="st">'cs'</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nakonec můžete přidat bootstrap pro lepší vzhled webové aplikace. Buď klasicky nebo pomocí <a target="_blank" href="https://pypi.org/project/django-bootstrap5/">django-bootstrap5</a></p>
 
 
 </section>
