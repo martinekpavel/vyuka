@@ -8,3 +8,4 @@ U všech úloh jsou navíc možnosti:
 - program se zacyklí
 
 Z menu vlevo vyberte konkrétní rok.
+
