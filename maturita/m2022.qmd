@@ -12,7 +12,7 @@ U všech úloh jsou navíc možnosti:
 
 Uvažme následující funkci. Co vypíše pro volání `sos(2, 3)`?
 
-```{php}
+```php
 function sos($tecka, $carka): void
 {
     for ($i = 0; $i < $tecka; $i++) {
@@ -26,7 +26,7 @@ function sos($tecka, $carka): void
 
 Uvažme následující funkci. Co vypíše pro volání `zobraz(3)`?
 
-```{php}
+```php
 function zobraz($cislo): void
 {
     $vysledek = 3;
@@ -45,7 +45,7 @@ function zobraz($cislo): void
 
 Uvažme následující funkci. Co vypíše pro volání `sequence(2, 3, 4)`?
 
-```{php}
+```php
 function sequence($init, $step, $n): void
 {
     $x = $init;
@@ -58,7 +58,7 @@ function sequence($init, $step, $n): void
 
 Uvažme následující funkci. Jaký poslední řádek vypíše pro volání `roll_dice_until(7)`?
 
-```{php}
+```php
 function roll_dice_until($stop_value): void 
 {
  while ($outcome != $stop_value) {
@@ -73,7 +73,7 @@ function roll_dice_until($stop_value): void
 
 Uvažme následující funkci. Co vypíše pro volání `sequence(5, 2, 3)`?
 
-```{php}
+```php
 function sequence($init, $step, $n): void
 {
     $x = $init;
@@ -86,7 +86,7 @@ function sequence($init, $step, $n): void
 
 Uvažme následující funkci. Jaký poslední řádek vypíše pro volání `roll_dice_until(6)`?
 
-```{php}
+```php
 function roll_dice_until($stop_value): void 
 {
  while ($outcome != $stop_value) {

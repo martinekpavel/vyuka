@@ -9,9 +9,9 @@ U všech úloh jsou navíc možnosti:
 
 ## 2025 - podzim
 
-Uvažme následující funkci:
+Uvažme následující funkci. Co se vypíše pro volání `fun(2, 3, 4)`?
 
-```{php}
+```php
 function fun($a, $b, $c): void
 {
     for ($i = a; $i < $b; $i++) {
@@ -22,10 +22,10 @@ function fun($a, $b, $c): void
     }
 }
 ```
-Určete, co se vypíše pro volání `fun(2, 3, 4)`.
 
 Uvažme následující funkci:
-```{php}
+
+```php
 function nuf($a, $b, $c): void
 {
     while ($a < $b) {
@@ -42,7 +42,7 @@ Určete, co se vypíše pro volání `nuf(2, 5, 1)`.
 
 Uvažme následující funkci:
 
-```{php}
+```php
 function fun($a, $b, $c): void
 {
     for ($i = a; $i <= $b; $i++) {
@@ -57,7 +57,7 @@ Určete, co se vypíše pro volání `fun(1, 2, 3)`.
 
 Uvažme následující funkci:
 
-```{php}
+```php
 function nuf($a, $b, $c): void
 {
     while ($a < $b) {
@@ -72,7 +72,7 @@ Určete, co se vypíše pro volání `nuf(1, 2, 3)`.
 
 Uvažme následující funkci:
 
-```{php}
+```php
 function fun($a, $b, $c): void
 {
     for ($i = a; $i <= $b; $i++) {
@@ -87,7 +87,7 @@ Určete, co se vypíše pro volání `fun(1, 2, 3)`.
 
 Uvažme následující funkci. Co se vypíše pro volání `nuf(1, 2, 3)`?:
 
-```{php}
+```php
 function nuf($a, $b, $c): void
 {
     while ($a < $b) {
@@ -101,7 +101,7 @@ function nuf($a, $b, $c): void
 
 Uvažme následující funkci. Co se vypíše pro volání `fun(1, 5, 2)`?
 
-```{php}
+```php
 function fun($a, $b, $c): void
 {
     for ($i = a; $i < $b; $i++) {
@@ -115,7 +115,7 @@ function fun($a, $b, $c): void
 
 Uvažme následující funkci. Co se vypíše pro volání `nuf(1, 5, 2)`.
 
-```{php}
+```php
 function nuf($a, $b, $c): void
 {
     while ($a > $b) {

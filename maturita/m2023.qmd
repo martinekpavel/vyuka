@@ -11,7 +11,7 @@ U všech úloh jsou navíc možnosti:
 
 Uvažme následující funkci. Kolikrát proběhne cyklus `for` pro volání `e(3,3)`. Co vypíše pro volání `e(2, 4)`:
 
-```{php}
+```php
 function e($b, $c): void
 {
     for ($i = $b; $i < $c; $i++) {
@@ -24,7 +24,7 @@ function e($b, $c): void
 
 Uvažme následující funkci. Co vypíše pro volání `d2b(3)`:
 
-```{php}
+```php
 function d2b($n): void
 {
     $vysledek = 0;
@@ -41,7 +41,7 @@ function d2b($n): void
 
 Uvažme následující funkci. Kolikrát proběhne cyklus `for` pro volání `a(0, 2, 4)`. Co vypíše pro volání `a(1, 3, 0)`:
 
-```{php}
+```php
 function a($b, $c, $d): void
 {
     for ($i = $b; $i < $c; $i++) {
@@ -54,7 +54,7 @@ function a($b, $c, $d): void
 
 Uvažme následující funkci. Co vypíše pro volání `d2b(2)`:
 
-```{php}
+```php
 function d2b($n): void
 {
     $vysledek = '';
@@ -70,7 +70,7 @@ function d2b($n): void
 Uvažme následující funkci. Kolikrát proběhne cyklus `for` pro volání `e(1, 3)`. Co vypíše pro volání `e(2, 4)`:
 
 
-```{php}
+```php
 function e($b, $c): void
 {
     for ($i = $b; $i <= $c; $i++) {
@@ -83,7 +83,7 @@ function e($b, $c): void
 
 Uvažme následující funkci. Co vypíše pro volání `d2b(3)`:
 
-```{php}
+```php
 function d2b($n): void
 {
     $vysledek = '';
