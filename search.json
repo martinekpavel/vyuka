@@ -104,12 +104,12 @@
   {
     "objectID": "web_python/pl16.html",
     "href": "web_python/pl16.html",
-    "title": "Pracovní list č. 15",
+    "title": "Pracovní list č. 16",
     "section": "",
     "text": "Pracujte podle pracovního listu PracL16 - větvení.\nPracovní soubor pl16.py\n# Pracovní list č. 16\n\n## 01 semafor_velky.py\n\n## 02 nahodny_pozdrav.py\n\n## 03+4 je třeba spustit python terminál abyste viděli &gt;&gt;&gt;\n\n## 05+6+7\n\nteplota = 25 \nprint('Je', teplota, 'stupňů.') \nif teplota &gt; 20: \n    print('Dnes je teplo.') \nelse: \n    print('Dnes je zima.') \nprint('Správně se obleč.')\n\n\n## 08 cena_dopisu.py\n\n## 09 zmrzlina.py\n\n## 10+11 novy_velky_semafor.py\n\n\n## 12 krabice.py\n\n## 13 kruhy_nad_sebou.py",
     "crumbs": [
       "Python",
-      "Pracovní list č. 15"
+      "Pracovní list č. 16"
     ]
   },
   {
