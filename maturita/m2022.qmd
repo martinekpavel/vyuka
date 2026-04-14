@@ -1,0 +1,103 @@
+---
+title: "Maturitní úlohy z PVA"
+---
+
+U všech úloh jsou navíc možnosti:
+
+- program nevypíše nic
+- program se zacyklí
+
+
+## 2022 - podzim
+
+Uvažme následující funkci. Co vypíše pro volání `sos(2, 3)`?
+
+```{php}
+function sos($tecka, $carka): void
+{
+    for ($i = 0; $i < $tecka; $i++) {
+        echo '.';
+    }
+    for ($i = 0; $i < $carka; $i++) {
+        echo $carka;
+    }
+}
+```
+
+Uvažme následující funkci. Co vypíše pro volání `zobraz(3)`?
+
+```{php}
+function zobraz($cislo): void
+{
+    $vysledek = 3;
+    while ($vysledek > 0) {
+       for ($i = 0; $i < $vysledek; $i++) {
+            echo $cislo;
+        }
+        $vysledek = $vysledek - 1;
+        $cislo = $cislo + 1;
+        echo "\n";
+    }
+}
+``` 
+
+## 2022 - jaro
+
+Uvažme následující funkci. Co vypíše pro volání `sequence(2, 3, 4)`?
+
+```{php}
+function sequence($init, $step, $n): void
+{
+    $x = $init;
+    for ($i = 0; $i < $n; $i++) {
+        echo $x, ' ';
+        $x = $x + $step;
+    }
+}
+```
+
+Uvažme následující funkci. Jaký poslední řádek vypíše pro volání `roll_dice_until(7)`?
+
+```{php}
+function roll_dice_until($stop_value): void 
+{
+ while ($outcome != $stop_value) {
+    $outcome = rand(1, 6);
+    for ($i = 0; $i < $outcome; $i++) {
+        echo '.';
+    }
+    echo "\n";
+    }
+}
+``` 
+
+Uvažme následující funkci. Co vypíše pro volání `sequence(5, 2, 3)`?
+
+```{php}
+function sequence($init, $step, $n): void
+{
+    $x = $init;
+    for ($i = 0; $i < $n; $i++) {
+        echo $x, ' ';
+        $x = $x + $step;
+    }
+}
+```
+
+Uvažme následující funkci. Jaký poslední řádek vypíše pro volání `roll_dice_until(6)`?
+
+```{php}
+function roll_dice_until($stop_value): void 
+{
+ while ($outcome != $stop_value) {
+    $outcome = rand(1, 6);
+    for ($i = 0; $i < $outcome; $i++) {
+        echo '.';
+    }
+    echo "\n";
+    }
+}
+``` 
+
+
+

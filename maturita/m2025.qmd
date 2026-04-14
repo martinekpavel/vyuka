@@ -1,0 +1,130 @@
+---
+title: "Maturitní úlohy z PVA"
+---
+
+U všech úloh jsou navíc možnosti:
+
+- program nevypíše nic
+- program se zacyklí
+
+## 2025 - podzim
+
+Uvažme následující funkci:
+
+```{php}
+function fun($a, $b, $c): void
+{
+    for ($i = a; $i < $b; $i++) {
+        if ($a == 0)
+            echo $c + $i;
+        else
+            echo $a + $c;
+    }
+}
+```
+Určete, co se vypíše pro volání `fun(2, 3, 4)`.
+
+Uvažme následující funkci:
+```{php}
+function nuf($a, $b, $c): void
+{
+    while ($a < $b) {
+        if ($a % 2 == 0)
+            echo $a;
+        else
+            echo $c;
+    }
+}
+```
+Určete, co se vypíše pro volání `nuf(2, 5, 1)`.
+
+## 2025 - jaro
+
+Uvažme následující funkci:
+
+```{php}
+function fun($a, $b, $c): void
+{
+    for ($i = a; $i <= $b; $i++) {
+        if ($a == 0)
+            echo $c + $i;
+        else
+            echo $a + $c;
+    }
+}
+```
+Určete, co se vypíše pro volání `fun(1, 2, 3)`.
+
+Uvažme následující funkci:
+
+```{php}
+function nuf($a, $b, $c): void
+{
+    while ($a < $b) {
+        if ($a % 2 == 0)
+            echo $a;
+        else
+            echo $c;
+    }
+}
+```
+Určete, co se vypíše pro volání `nuf(1, 2, 3)`.
+
+Uvažme následující funkci:
+
+```{php}
+function fun($a, $b, $c): void
+{
+    for ($i = a; $i <= $b; $i++) {
+        if ($a == 0)
+            echo $c + $i;
+        else
+            echo $a + $c;
+    }
+}
+```
+Určete, co se vypíše pro volání `fun(1, 2, 3)`.
+
+Uvažme následující funkci. Co se vypíše pro volání `nuf(1, 2, 3)`?:
+
+```{php}
+function nuf($a, $b, $c): void
+{
+    while ($a < $b) {
+        if ($a % 2 == 0)
+            echo $a;
+        else
+            echo $c;
+    }
+}
+```
+
+Uvažme následující funkci. Co se vypíše pro volání `fun(1, 5, 2)`?
+
+```{php}
+function fun($a, $b, $c): void
+{
+    for ($i = a; $i < $b; $i++) {
+        if ($a == 0)
+            echo $c + $i;
+        else
+            echo $a + $c;
+    }
+}
+```
+
+Uvažme následující funkci. Co se vypíše pro volání `nuf(1, 5, 2)`.
+
+```{php}
+function nuf($a, $b, $c): void
+{
+    while ($a > $b) {
+        if ($a % 2 == 0)
+            echo $a;
+        else
+            echo $c;
+    }
+}
+```
+
+

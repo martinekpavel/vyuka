@@ -1,0 +1,10 @@
+---
+title: "Maturitní úlohy z PVA"
+---
+
+U všech úloh jsou navíc možnosti:
+
+- program nevypíše nic
+- program se zacyklí
+
+Z menu vlevo vyberte konkrétní rok.

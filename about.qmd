@@ -21,4 +21,4 @@ Pokud chcete vytvářet podobné weby, tak mrkněte sem <https://quarto.org/docs
 - `du -sh .*/` - zjistí velikost složek a souborů v aktuálním adresáři
 - `df -h` - zjistí využití disků
 - `free -h` - zjistí využití RAM
-- `alias ll='ls -la --color=auto'` - vytvoří alias pro zobrazení detailního seznamu sbarveným
+- `alias ll='ls -la --color=auto'` - vytvoří alias pro zobrazení detailního seznamu
