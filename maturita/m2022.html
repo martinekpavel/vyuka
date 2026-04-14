@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -406,71 +441,71 @@ ul.task-list li input[type="checkbox"] {
 <section id="podzim" class="level2">
 <h2 class="anchored" data-anchor-id="podzim">2022 - podzim</h2>
 <p>Uvažme následující funkci. Co vypíše pro volání <code>sos(2, 3)</code>?</p>
-<pre><code>function sos($tecka, $carka): void
-{
-    for ($i = 0; $i &lt; $tecka; $i++) {
-        echo '.';
-    }
-    for ($i = 0; $i &lt; $carka; $i++) {
-        echo $carka;
-    }
-}</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> sos(<span class="va">$tecka</span><span class="ot">,</span> <span class="va">$carka</span>)<span class="ot">:</span> <span class="dt">void</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="va">$i</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span> <span class="va">$i</span> <span class="op">&lt;</span> <span class="va">$tecka</span><span class="ot">;</span> <span class="va">$i</span><span class="op">++</span>) {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="st">'.'</span><span class="ot">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="va">$i</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span> <span class="va">$i</span> <span class="op">&lt;</span> <span class="va">$carka</span><span class="ot">;</span> <span class="va">$i</span><span class="op">++</span>) {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="va">$carka</span><span class="ot">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Uvažme následující funkci. Co vypíše pro volání <code>zobraz(3)</code>?</p>
-<pre><code>function zobraz($cislo): void
-{
-    $vysledek = 3;
-    while ($vysledek &gt; 0) {
-       for ($i = 0; $i &lt; $vysledek; $i++) {
-            echo $cislo;
-        }
-        $vysledek = $vysledek - 1;
-        $cislo = $cislo + 1;
-        echo "\n";
-    }
-}</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> zobraz(<span class="va">$cislo</span>)<span class="ot">:</span> <span class="dt">void</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">$vysledek</span> <span class="op">=</span> <span class="dv">3</span><span class="ot">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> (<span class="va">$vysledek</span> <span class="op">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>       <span class="cf">for</span> (<span class="va">$i</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span> <span class="va">$i</span> <span class="op">&lt;</span> <span class="va">$vysledek</span><span class="ot">;</span> <span class="va">$i</span><span class="op">++</span>) {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="va">$cislo</span><span class="ot">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">$vysledek</span> <span class="op">=</span> <span class="va">$vysledek</span> <span class="op">-</span> <span class="dv">1</span><span class="ot">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">$cislo</span> <span class="op">=</span> <span class="va">$cislo</span> <span class="op">+</span> <span class="dv">1</span><span class="ot">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span><span class="ot">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="jaro" class="level2">
 <h2 class="anchored" data-anchor-id="jaro">2022 - jaro</h2>
 <p>Uvažme následující funkci. Co vypíše pro volání <code>sequence(2, 3, 4)</code>?</p>
-<pre><code>function sequence($init, $step, $n): void
-{
-    $x = $init;
-    for ($i = 0; $i &lt; $n; $i++) {
-        echo $x, ' ';
-        $x = $x + $step;
-    }
-}</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="cn">sequence</span>(<span class="va">$init</span><span class="ot">,</span> <span class="va">$step</span><span class="ot">,</span> <span class="va">$n</span>)<span class="ot">:</span> <span class="dt">void</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">$x</span> <span class="op">=</span> <span class="va">$init</span><span class="ot">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="va">$i</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span> <span class="va">$i</span> <span class="op">&lt;</span> <span class="va">$n</span><span class="ot">;</span> <span class="va">$i</span><span class="op">++</span>) {</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="va">$x</span><span class="ot">,</span> <span class="st">' '</span><span class="ot">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">$x</span> <span class="op">=</span> <span class="va">$x</span> <span class="op">+</span> <span class="va">$step</span><span class="ot">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Uvažme následující funkci. Jaký poslední řádek vypíše pro volání <code>roll_dice_until(7)</code>?</p>
-<pre><code>function roll_dice_until($stop_value): void 
-{
- while ($outcome != $stop_value) {
-    $outcome = rand(1, 6);
-    for ($i = 0; $i &lt; $outcome; $i++) {
-        echo '.';
-    }
-    echo "\n";
-    }
-}</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> roll_dice_until(<span class="va">$stop_value</span>)<span class="ot">:</span> <span class="dt">void</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">while</span> (<span class="va">$outcome</span> <span class="op">!=</span> <span class="va">$stop_value</span>) {</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">$outcome</span> <span class="op">=</span> <span class="fu">rand</span>(<span class="dv">1</span><span class="ot">,</span> <span class="dv">6</span>)<span class="ot">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="va">$i</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span> <span class="va">$i</span> <span class="op">&lt;</span> <span class="va">$outcome</span><span class="ot">;</span> <span class="va">$i</span><span class="op">++</span>) {</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="st">'.'</span><span class="ot">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span><span class="ot">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Uvažme následující funkci. Co vypíše pro volání <code>sequence(5, 2, 3)</code>?</p>
-<pre><code>function sequence($init, $step, $n): void
-{
-    $x = $init;
-    for ($i = 0; $i &lt; $n; $i++) {
-        echo $x, ' ';
-        $x = $x + $step;
-    }
-}</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="cn">sequence</span>(<span class="va">$init</span><span class="ot">,</span> <span class="va">$step</span><span class="ot">,</span> <span class="va">$n</span>)<span class="ot">:</span> <span class="dt">void</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">$x</span> <span class="op">=</span> <span class="va">$init</span><span class="ot">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="va">$i</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span> <span class="va">$i</span> <span class="op">&lt;</span> <span class="va">$n</span><span class="ot">;</span> <span class="va">$i</span><span class="op">++</span>) {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="va">$x</span><span class="ot">,</span> <span class="st">' '</span><span class="ot">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">$x</span> <span class="op">=</span> <span class="va">$x</span> <span class="op">+</span> <span class="va">$step</span><span class="ot">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Uvažme následující funkci. Jaký poslední řádek vypíše pro volání <code>roll_dice_until(6)</code>?</p>
-<pre><code>function roll_dice_until($stop_value): void 
-{
- while ($outcome != $stop_value) {
-    $outcome = rand(1, 6);
-    for ($i = 0; $i &lt; $outcome; $i++) {
-        echo '.';
-    }
-    echo "\n";
-    }
-}</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> roll_dice_until(<span class="va">$stop_value</span>)<span class="ot">:</span> <span class="dt">void</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">while</span> (<span class="va">$outcome</span> <span class="op">!=</span> <span class="va">$stop_value</span>) {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">$outcome</span> <span class="op">=</span> <span class="fu">rand</span>(<span class="dv">1</span><span class="ot">,</span> <span class="dv">6</span>)<span class="ot">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="va">$i</span> <span class="op">=</span> <span class="dv">0</span><span class="ot">;</span> <span class="va">$i</span> <span class="op">&lt;</span> <span class="va">$outcome</span><span class="ot">;</span> <span class="va">$i</span><span class="op">++</span>) {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">echo</span> <span class="st">'.'</span><span class="ot">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span><span class="ot">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>

@@ -275,7 +275,7 @@
     "href": "maturita/m2025.html#podzim",
     "title": "rok 2025",
     "section": "2025 - podzim",
-    "text": "2025 - podzim\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(2, 3, 4).\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(2, 5, 1).",
+    "text": "2025 - podzim\nUvažme následující funkci. Co se vypíše pro volání fun(2, 3, 4)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(2, 5, 1).",
     "crumbs": [
       "rok 2025"
     ]
