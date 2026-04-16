@@ -21,15 +21,12 @@ Pokud chcete vytvářet podobné weby, tak mrkněte sem <https://quarto.org/docs
 - `du -sh .*/` - zjistí velikost složek a souborů v aktuálním adresáři
 - `df -h` - zjistí využití disků
 - `free -h` - zjistí využití RAM
-<<<<<<< HEAD
 - `alias ll='ls -la --color=auto'` - vytvoří alias pro zobrazení detailního seznamu sbarveným
 
 
-### A tohle pořád hledám ve VSC, default terminal
+### Default cmd terminal 
 
 ```bash
 "terminal.integrated.defaultProfile.windows": "Command Prompt",
 ```
-=======
-- `alias ll='ls -la --color=auto'` - vytvoří alias pro zobrazení detailního seznamu
->>>>>>> bd477aef86826c855fb80a5cf814e197e11dab9b
+
