@@ -532,7 +532,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>urlpatterns <span class="op">=</span> [</span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">""</span>, views.index, name<span class="op">=</span><span class="st">"index"</span>)</span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Nyní vytvoříte správné šablony (layout.html a index.html) např. podle <a href="django-templates.md">django-templates</a>.</p>
+<p>Nyní vytvoříte správné šablony (layout.html a index.html) např. podle <a href="https://github.com/martinekpavel/PVA-23-24-3D/blob/main/django-templates.md">django-templates</a>.</p>
 <p>Do bloku <code>{% block body %}</code> vložíte kód:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">ul</span><span class="dt">&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        {% for flight in flights %}</span>
