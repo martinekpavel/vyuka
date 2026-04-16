@@ -1,5 +1,93 @@
 [
   {
+    "objectID": "web_python/pl16.html",
+    "href": "web_python/pl16.html",
+    "title": "Pracovní list č. 16",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL16 - větvení.\nPracovní soubor pl16.py\n# Pracovní list č. 16\n\n## 01 semafor_velky.py\n\n## 02 nahodny_pozdrav.py\n\n## 03+4 je třeba spustit python terminál abyste viděli &gt;&gt;&gt;\n\n## 05+6+7\n\nteplota = 25 \nprint('Je', teplota, 'stupňů.') \nif teplota &gt; 20: \n    print('Dnes je teplo.') \nelse: \n    print('Dnes je zima.') \nprint('Správně se obleč.')\n\n\n## 08 cena_dopisu.py\n\n## 09 zmrzlina.py\n\n## 10+11 novy_velky_semafor.py\n\n\n## 12 krabice.py\n\n## 13 kruhy_nad_sebou.py",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 16"
+    ]
+  },
+  {
+    "objectID": "web_python/pl14.html",
+    "href": "web_python/pl14.html",
+    "title": "Pracovní list č. 14",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL14 - elipsy a kruhy pouze prvních 5 cvičení.\nPracovní soubor pl14.py\n# Pracovní list č. 14\n\n## 01 Napiš program soucet_99.py, který pomocí cyklu zjistí, jaký je součet čísel 0 + 1 + 2 + ... + 99. Výsledek program vypíše pomocí příkazu print. \n\n## 02 2. V jazyce Python kreslíme elipsy a kruhy příkazem create_oval. Vytvoř nový program elipsa.py a zapiš do něj následující kód:\nimport tkinter\n\ncanvas = tkinter.Canvas()\ncanvas.pack()\n\ncanvas.create_oval(10, 10, 200, 150)\ncanvas.mainloop()\n\n## Vyzkoušej, co program nakreslí. \n\n## 03. Přidej na konec programu příkaz pro kreslení obdélníku se stejnými čísly, jako jsou v příkazu create_oval. Jaká bude vzájemná pozice elipsy a obdélníku? \n\n## 04 vez.py\n\n## 05 Diskutuj se sousedem, jak nakreslit kruh. Potom změň předchozí program tak, aby se místo věže kreslil sněhulák. \n\n## Nyní se vrhněte na pracovní list č. 15.",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 14"
+    ]
+  },
+  {
+    "objectID": "web_python/pl12.html",
+    "href": "web_python/pl12.html",
+    "title": "Pracovní list č. 12",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL12 - cykly.\nPracovní soubor pl12.py\n# Pracovní list č. 12\n\n## 01 rikanka.py - nemusíte dělat\n\n## 02 rada_cisel.py\n\nfor i in range(10): \n    print('číslo', i)\n\n## 03 a\n\n## 03 b\n\n## 03 c\n\n## 03 d\n\n \n## 04 Vytvoř program druhe_mocniny.py, který pomocí for cyklu vypíše čísla a jejich \n# druhé mocniny:\n\n\n \n## 05 Máme takovouto povídku (povidka.py): \n# Na stromě bylo 0 vrabců, jeden přiletěl a už je tam 1 vrabců \n\n\n \n## 06 Vrabci z předchozí povídky odlétají \n\n\n\n## 07 Máme kartičky s čísly od 0 do 9, které chceme náhodně rozložit po ploše. Vytvoř program \n# deset_karticek.py, který pomocí cyklu postupně nakreslí deset takových kartiček na \n# náhodných pozicích\n\n\n\n## 08. Na chodníku je rozhozených pět cizokrajných bankovek s hodnotami 10, 20, 30, 40 \n# a 50. Napiš program bankovky.py, který takové bankovky nakreslí pomocí for cyklu\n\n\n\n\n## 09. Vytvoř nový program kresleni_cisel.py a přepiš do něj následující kód, který kreslí \n# čísla na grafickou plochu: \n\nimport tkinter \ncanvas = tkinter.Canvas() \ncanvas.pack() \n\nfor i in range(8): \n    x = i * 50 \n    canvas.create_text(x, 100, text=i, font='arial 30') \n\ncanvas.mainloop()\n\n\n## 10. Uprav předchozí program tak, aby se čísla kreslila přibližně na úhlopříčce grafické plochy \n# podobně jako na následujícím obrázku\n\n\n## 11. Uprav předchozí program tak, aby se čísla kreslila přibližně na úhlopříčce grafické plochy \n# podobně jako na následujícím obrázku\n\n\n## 12 Víš, jak vypadá padající had z domina? Vytvoř program domino.py, který pomocí cyklu \n# a obdélníku nakreslí zatím ještě stojící kostky domina\n\n\n## 13 Napiš program velka_pyramida.py, který pomocí cyklu a obdélníku nakreslí \n# takovouto pyramidu:",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 12"
+    ]
+  },
+  {
+    "objectID": "web_python/pl10.html",
+    "href": "web_python/pl10.html",
+    "title": "Pracovní list č. 10",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL10 - kreslení textu..\nPracovní soubor pl10.py\n# Pracovní list č. 10\n\n## 01 nakupy.py\n\n\n## 02 baliky.py\n\n\n## 03 text grafika.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_text(150, 50, text='posílám pozdrav z grafické plochy')\n# canvas.mainloop()\n\n## 04 okraje.py\nNyní se přesuňte na pracovní list č. 11",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 10"
+    ]
+  },
+  {
+    "objectID": "web_python/pl08.html",
+    "href": "web_python/pl08.html",
+    "title": "Pracovní list č. 8",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL08 - podprogramy.\nPracovní soubor pl08.py\n# Pracovní list č. 8\n\n\n## 01 duha.py není povinný\n\n## 02 vypis.py\n\n## 03 upravena 02 vypis.py\n\n\n## 04 upraveny 03\n\n\n## 05 pisen.py\n\ndef refren():\n    print(\"Já mám koně vraný koně,\")\n    print(\"to jsou koně mí\")\n\nrefren()\nrefren()\nprint()\nprint(\"Když já jím dám ovsa,\")\nprint(\"oni skáčou hopsa\")\nprint()\nrefren()\nrefren()\n\n## 06 + 07 vizitka.py\n\n## 08 obrazce",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 8"
+    ]
+  },
+  {
+    "objectID": "web_python/pl06.html",
+    "href": "web_python/pl06.html",
+    "title": "Pracovní list č. 6",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL06 - barvy.pdf.\nPracovní soubor pl06.py\n# Pracovní list č. 6 Barvy\n\n## 01 nejvetsi_obdelnik.py\n\n\n\n\n## 02 vybarveny.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_rectangle(30, 30, 130, 130, fill='red')\n# canvas.mainloop()\n\n## 03 vybarveny.py\n\n\n\n## 04 nizozemi.py\n\n\n\n## 05 irsko.py\n\n\n\n## 06 vlajka.py\n\n\n\n## 07 ramecek.py\n\n\n\n## 08 pres_sebe.py\n\n\n\n## 09 norsko.py\n\n\n\n## 10 5_misto_3.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_rectangle(90, 90, 150, 150, fill='yellow')\n# canvas.create_rectangle(150, 90, 210, 150, fill='red')\n# canvas.create_rectangle(90, 150, 150, 210, fill='green')\n# canvas.create_rectangle(30, 90, 90, 150, fill='red')\n# canvas.create_rectangle(90, 30, 150, 90, fill='green')\n# canvas.mainloop()",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 6"
+    ]
+  },
+  {
+    "objectID": "web_python/pl04.html",
+    "href": "web_python/pl04.html",
+    "title": "Pracovní list č. 4",
+    "section": "",
+    "text": "Pracujte podle pracovního listu PracL04vypisy.pdf.\nPracovní soubor pl04.py",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 4"
+    ]
+  },
+  {
+    "objectID": "web_python/index.html",
+    "href": "web_python/index.html",
+    "title": "Základy Python",
+    "section": "",
+    "text": "Následující kapitoly vás provedou základy programování v Pythonu.\nV první lekce budeme Python instalovat a posléze si projdeme 20 připravených (na Teams) pracovních listů.\nPokud by došlo k tomu, že si pracovní listy projdete doma všechny dříve, mohu doporučit materiál:\n\nhttps://naucse.python.cz/course/pyladies/",
+    "crumbs": [
+      "Python",
+      "Základy Python"
+    ]
+  },
+  {
     "objectID": "web_js/knp.html",
     "href": "web_js/knp.html",
     "title": "Kámen nůžky papír",
@@ -12,28 +100,6 @@
     "title": "Game of Life",
     "section": "",
     "text": "Informace a podklady jsou v MS Teams"
-  },
-  {
-    "objectID": "web_js/04lekcejs.html",
-    "href": "web_js/04lekcejs.html",
-    "title": "Lekce 04",
-    "section": "",
-    "text": "Videolekce 1:06:30\nZe zdrojových souborů načteme\n\ntasks0.html\ntasks1.html\ntasks2.html\ninterval.html\nstorage.html",
-    "crumbs": [
-      "JavaScript",
-      "Lekce 04"
-    ]
-  },
-  {
-    "objectID": "web_js/04lekcejs.html#úkol",
-    "href": "web_js/04lekcejs.html#úkol",
-    "title": "Lekce 04",
-    "section": "Úkol",
-    "text": "Úkol\nNaprogramujte aplikaci pro zadávání úkolů, která si bude pamatovat seznam úkolu po znovunačtení stránky v prohlížeči. Odevzdejte kód, který dokážete vysvětlit.",
-    "crumbs": [
-      "JavaScript",
-      "Lekce 04"
-    ]
   },
   {
     "objectID": "web_js/api.html",
@@ -58,492 +124,69 @@
     ]
   },
   {
-    "objectID": "web_js/02lekcejs.html",
-    "href": "web_js/02lekcejs.html",
-    "title": "Lekce 02",
+    "objectID": "web_js/03lekcejs.html",
+    "href": "web_js/03lekcejs.html",
+    "title": "Lekce 03",
     "section": "",
-    "text": "Vytvoříme šablonu html souboru.\nDo &lt;head&gt; umístíme &lt;script&gt;&lt;/script&gt;.\nMezi značky napíšeme kód:\nlet counter = 0;\nfunction count() {\n    counter++;\n    document.querySelector('h1').innerHTML = counter;\n    }\nDo html kódu patří tlačítko a k němu přiřazená výše uvedená funkce. Nad něj patří element &lt;h1&gt;&lt;/h1&gt;.\nJakmile vyzkoušíte, zkusme udělat malou úpravu. Vytvoříme a nalinkujeme soubor se styly, kam přidáme styl pro class .red, která nastaví barvu písma na červenou.\nUpravíme funkci.\nfunction count() {\n    counter++;\n\n    if (counter % 10 === 0) {\n        document.querySelector(\"h1\").classList.add('red');}\n    else {\n        document.querySelector(\"h1\").classList.remove('red');\n        }\n    document.querySelector('h1').innerHTML = counter;\n    }\nZkusme oddělit JavaScript od html kódu:\ndocument.querySelector('button').onclick = count;\nJenže!\nPozor věnujte pozornost předávání názvu funkce bez závorek.\nKód bude fungovat, pokud odchytneme událost načtení DOM.\nSprávný script, který můžeme (a uděláme to tak) umístit do odděleného souboru.\nlet counter = 0;\n\ndocument.addEventListener('DOMContentLoaded', function() {\n    document.querySelector('button').onclick = count;\n    });\n\nfunction count() {\n    counter++;\n\n    if (counter % 10 === 0) {\n        document.querySelector(\"h1\").classList.add('red');}\n    else {\n        document.querySelector(\"h1\").classList.remove('red');\n        }\n    document.querySelector('h1').innerHTML = counter;\n}\nPro načtení souboru s JavaScriptem použijeme: &lt;script src=\"counter.js\"&gt;&lt;/script&gt;\nA nyní formulářík.\nhello3.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;Hello!&lt;/title&gt;\n        &lt;script&gt;\n            document.addEventListener('DOMContentLoaded', function() {\n                document.querySelector('form').onsubmit = function() {\n                    const name = document.querySelector('#name').value;\n                    alert(`Hello, ${name}!`);\n                };\n            });\n        &lt;/script&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;Hello!&lt;/h1&gt;\n        &lt;form&gt;\n            &lt;input autofocus=\"\" id=\"name\" placeholder=\"Name\" type=\"text\"&gt;\n            &lt;input type=\"submit\"&gt;\n        &lt;/form&gt;\n    \n\n&lt;/body&gt;&lt;/html&gt;\nZa mne lepší úprava:\nconst name = document.querySelector('#name').value;\n// alert(`Hello, ${name}!`);\nevent.preventDefault();\ndocument.querySelector('h1').innerHTML = `Hello ${name}`;\n\nÚkol\n\nNapište program, který nám převede stupně Celsia na stupně Farenheita\nPoužijte správné techniky výše uvedené\nSdílejte odkaz na web, který zahrnete do svého portfolia",
+    "text": "Ze zdrojových souborů načteme colors0.html.\nPokud chceme kód vyplepšit, použijeme třídu class=“color-change”. A speciální data atribut!\nA upravíme skript:\nOtestujeme v konzoli. Video 55:00.",
     "crumbs": [
       "JavaScript",
-      "Lekce 02"
+      "Lekce 03"
     ]
   },
   {
-    "objectID": "web_python/pl08.html",
-    "href": "web_python/pl08.html",
-    "title": "Pracovní list č. 8",
+    "objectID": "web_js/03lekcejs.html#šipková-notace",
+    "href": "web_js/03lekcejs.html#šipková-notace",
+    "title": "Lekce 03",
+    "section": "Šipková notace",
+    "text": "Šipková notace\ndocument.querySelectorAll('.color-change').forEach(button =&gt; {\n    button.onclick = () =&gt; {\n        document.querySelector('#hello').style.color = button.dataset.color;\n        };\n    });",
+    "crumbs": [
+      "JavaScript",
+      "Lekce 03"
+    ]
+  },
+  {
+    "objectID": "web_js/03lekcejs.html#form---select",
+    "href": "web_js/03lekcejs.html#form---select",
+    "title": "Lekce 03",
+    "section": "Form - Select",
+    "text": "Form - Select\nZe zdrojových souborů načteme colors3.html.\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;script&gt;\n            document.addEventListener('DOMContentLoaded', () =&gt; {\n\n                // Change the color of the heading when dropdown changes\n                document.querySelector('#color-change').onchange = function() {\n                    document.querySelector('#hello').style.color = this.value;\n                };\n\n            });\n        &lt;/script&gt;\n        &lt;title&gt;Colors&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1 id=\"hello\"&gt;Hello!&lt;/h1&gt;\n        &lt;select id=\"color-change\"&gt;\n            &lt;option value=\"black\"&gt;Black&lt;/option&gt;\n            &lt;option value=\"red\"&gt;Red&lt;/option&gt;\n            &lt;option value=\"blue\"&gt;Blue&lt;/option&gt;\n            &lt;option value=\"green\"&gt;Green&lt;/option&gt;\n        &lt;/select&gt;\n    &lt;/body&gt;\n&lt;/html&gt;",
+    "crumbs": [
+      "JavaScript",
+      "Lekce 03"
+    ]
+  },
+  {
+    "objectID": "web_js/01lekcejs.html",
+    "href": "web_js/01lekcejs.html",
+    "title": "Lekce 01",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL08 - podprogramy.\nPracovní soubor pl08.py\n# Pracovní list č. 8\n\n\n## 01 duha.py není povinný\n\n## 02 vypis.py\n\n## 03 upravena 02 vypis.py\n\n\n## 04 upraveny 03\n\n\n## 05 pisen.py\n\ndef refren():\n    print(\"Já mám koně vraný koně,\")\n    print(\"to jsou koně mí\")\n\nrefren()\nrefren()\nprint()\nprint(\"Když já jím dám ovsa,\")\nprint(\"oni skáčou hopsa\")\nprint()\nrefren()\nrefren()\n\n## 06 + 07 vizitka.py\n\n## 08 obrazce",
+    "text": "JavaScriptový kód nebo link na soubor se obvykle vyskytuje v &lt;head&gt;&lt;/head&gt; nebo těsně před uzavíracím tagem &lt;/body&gt;.\nV praxi se setkáte se vším možným, nicméně budete odevzdávat kód, kde budete linkovat js soubor v &lt;head&gt;.",
     "crumbs": [
-      "Python",
-      "Pracovní list č. 8"
+      "JavaScript",
+      "Lekce 01"
     ]
   },
   {
-    "objectID": "web_python/index.html",
-    "href": "web_python/index.html",
-    "title": "Základy Python",
+    "objectID": "web_js/01lekcejs.html#umístění-skriptu",
+    "href": "web_js/01lekcejs.html#umístění-skriptu",
+    "title": "Lekce 01",
     "section": "",
-    "text": "Následující kapitoly vás provedou základy programování v Pythonu.\nV první lekce budeme Python instalovat a posléze si projdeme 20 připravených (na Teams) pracovních listů.\nPokud by došlo k tomu, že si pracovní listy projdete doma všechny dříve, mohu doporučit materiál:\n\nhttps://naucse.python.cz/course/pyladies/",
+    "text": "JavaScriptový kód nebo link na soubor se obvykle vyskytuje v &lt;head&gt;&lt;/head&gt; nebo těsně před uzavíracím tagem &lt;/body&gt;.\nV praxi se setkáte se vším možným, nicméně budete odevzdávat kód, kde budete linkovat js soubor v &lt;head&gt;.",
     "crumbs": [
-      "Python",
-      "Základy Python"
+      "JavaScript",
+      "Lekce 01"
     ]
   },
   {
-    "objectID": "web_python/pl15.html",
-    "href": "web_python/pl15.html",
-    "title": "Pracovní list č. 15",
-    "section": "",
-    "text": "Pracujte podle pracovního listu PracL15 - kruhy a cykly.\nPracovní soubor pl15.py\n# Pracovní list č. 15\n\n## 01 dve_kruznice.py\n\n## 02 upravene dve_dve_kruznice.py\n\n## 03 terc.py\n\n\n## 04 gramovon.py\n\n## 05 upraveny terc.py\n\n## 06 upraveny terc.py\n\n## 07 retizek.py\n\n## 08 mince.py\n\n## 09 upravene mince.py\n\n## 10 random_choice.py\n\n## 11\n\n## 12",
+    "objectID": "web_js/01lekcejs.html#ukázky-kódu",
+    "href": "web_js/01lekcejs.html#ukázky-kódu",
+    "title": "Lekce 01",
+    "section": "Ukázky kódu",
+    "text": "Ukázky kódu\nSoubor hello0.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;Hello!&lt;/title&gt;\n        &lt;script&gt;\n            alert('Hello, world!');\n        &lt;/script&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;Hello!&lt;/h1&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\nZkusíme přidat do kódu tlačítko a nastavit událost kliknutí, po kliknutí se spustí funkce.\n&lt;button onclick=\"hello()\"&gt;Click Here&lt;/button&gt;\na napíšeme danou funkci na správné místo\nfunction hello() {\n                document.querySelector('h1').innerHTML = 'Goodbye!';\n            }\nSoubor counter0.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;Count&lt;/title&gt;\n        &lt;script&gt;\n            let counter = 0;\n            function count() {\n                counter++;\n                alert(counter);\n            }\n        &lt;/script&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;button onclick=\"count()\"&gt;Count&lt;/button&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\nBude doplněno dle videa.",
     "crumbs": [
-      "Python",
-      "Pracovní list č. 15"
-    ]
-  },
-  {
-    "objectID": "web_python/pl16.html",
-    "href": "web_python/pl16.html",
-    "title": "Pracovní list č. 16",
-    "section": "",
-    "text": "Pracujte podle pracovního listu PracL16 - větvení.\nPracovní soubor pl16.py\n# Pracovní list č. 16\n\n## 01 semafor_velky.py\n\n## 02 nahodny_pozdrav.py\n\n## 03+4 je třeba spustit python terminál abyste viděli &gt;&gt;&gt;\n\n## 05+6+7\n\nteplota = 25 \nprint('Je', teplota, 'stupňů.') \nif teplota &gt; 20: \n    print('Dnes je teplo.') \nelse: \n    print('Dnes je zima.') \nprint('Správně se obleč.')\n\n\n## 08 cena_dopisu.py\n\n## 09 zmrzlina.py\n\n## 10+11 novy_velky_semafor.py\n\n\n## 12 krabice.py\n\n## 13 kruhy_nad_sebou.py",
-    "crumbs": [
-      "Python",
-      "Pracovní list č. 16"
-    ]
-  },
-  {
-    "objectID": "web_python/pl06.html",
-    "href": "web_python/pl06.html",
-    "title": "Pracovní list č. 6",
-    "section": "",
-    "text": "Pracujte podle pracovního listu PracL06 - barvy.pdf.\nPracovní soubor pl06.py\n# Pracovní list č. 6 Barvy\n\n## 01 nejvetsi_obdelnik.py\n\n\n\n\n## 02 vybarveny.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_rectangle(30, 30, 130, 130, fill='red')\n# canvas.mainloop()\n\n## 03 vybarveny.py\n\n\n\n## 04 nizozemi.py\n\n\n\n## 05 irsko.py\n\n\n\n## 06 vlajka.py\n\n\n\n## 07 ramecek.py\n\n\n\n## 08 pres_sebe.py\n\n\n\n## 09 norsko.py\n\n\n\n## 10 5_misto_3.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_rectangle(90, 90, 150, 150, fill='yellow')\n# canvas.create_rectangle(150, 90, 210, 150, fill='red')\n# canvas.create_rectangle(90, 150, 150, 210, fill='green')\n# canvas.create_rectangle(30, 90, 90, 150, fill='red')\n# canvas.create_rectangle(90, 30, 150, 90, fill='green')\n# canvas.mainloop()",
-    "crumbs": [
-      "Python",
-      "Pracovní list č. 6"
-    ]
-  },
-  {
-    "objectID": "web_python/pl13.html",
-    "href": "web_python/pl13.html",
-    "title": "Pracovní list č. 13",
-    "section": "",
-    "text": "Pracujte podle pracovního listu PracL13 - výrazy v cyklu.\nPracovní soubor pl13.py\n# Pracovní list č. 13\n\n## 01 druhe_mocniny_platno.py\n\n\n\n## 02 na papir napiste a zkontrolujte\n\nimport tkinter \n \ncanvas = tkinter.Canvas() \ncanvas.pack() \n \ny = 10 \nfor i in range(11): \n    canvas.create_text(10, y, text=i) \n    y = y + 20\n\ncanvas.mainloop()\n\n## 03 rada_ctvercu.py\n\n\n \n## 04 + 05 zlaty_poklad.py s mezerami\n\n\n## pokračujte dle pdf",
-    "crumbs": [
-      "Python",
-      "Pracovní list č. 13"
-    ]
-  },
-  {
-    "objectID": "web_python/pl11.html",
-    "href": "web_python/pl11.html",
-    "title": "Pracovní list č. 11",
-    "section": "",
-    "text": "Pracujte podle pracovního listu PracL11 - cykly.\nPracovní soubor pl11.py\n# Pracovní list č. 11\n\n## 01 gps.py \n\n# import tkinter\n# import random\n# canvas = tkinter.Canvas()\n# canvas.pack()\n\n# def gps():\n#     x = random.randint(10, 300)  \n#     y = random.randint(10, 200)\n#     canvas.create_text(x, y, text='+')\n\n# canvas.mainloop()\n\n## a tak dále pokračujte",
-    "crumbs": [
-      "Python",
-      "Pracovní list č. 11"
-    ]
-  },
-  {
-    "objectID": "web_python/pl04.html",
-    "href": "web_python/pl04.html",
-    "title": "Pracovní list č. 4",
-    "section": "",
-    "text": "Pracujte podle pracovního listu PracL04vypisy.pdf.\nPracovní soubor pl04.py",
-    "crumbs": [
-      "Python",
-      "Pracovní list č. 4"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "O webu",
-    "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "about.html#užitečné-odkazy",
-    "href": "about.html#užitečné-odkazy",
-    "title": "O webu",
-    "section": "Užitečné odkazy",
-    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\nProxmox\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\nLinuxové příkazy, co pořád zapomínám\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu"
-  },
-  {
-    "objectID": "web_django/09flights.html",
-    "href": "web_django/09flights.html",
-    "title": "Airline 2",
-    "section": "",
-    "text": "Django - projekt Airline\nMohou se hodit moje poznámky ke gitu\n\nGit\n\n\nTvorba odkazu na konkrétní let\nDoplníme do šablony odkaz na konkrétní let:\n&lt;li&gt;\n    &lt;a href=\"{% url 'flight' flight.id %}\"&gt; \n        Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n    &lt;/a&gt;\n&lt;/li&gt;\nA protože url 'flight' ještě nemáme, vytvoříme ji v flights\\urls.py:\npath(\"&lt;int:flight_id&gt;\", views.flight, name=\"flight\"),\nDo souboru flights\\views.py doplníme funkci pro zobrazení konkrétního letu:\ndef flight(request, flight_id):\n    flight = Flight.objects.get(pk=flight_id)\n    return render(request, \"flights/flight.html\", {\n          \"flight\": flight\n    })\n\n\nChci zobrazit pasažéry na webu\nDo souboru flights\\views.py do funkce flight, do dat pro šablonu přidám:\n\"passengers\": flight.passengers.all()\na do šablony doplním:\n &lt;h2&gt;Passengers&lt;/h2&gt;\n    {% for p in passengers %}\n        &lt;li&gt;{{p.first}} {{p.last}}&lt;/li&gt;\n    {% empty %}\n        No passengers.\n    {% endfor %}\nVytvořím odkaz na seznam letů\n&lt;a href=\"{% url 'index' %}\"&gt;Back to Flight List&lt;/a&gt;\n\n\nChci mít možnost přidat pasažéry k letu\nMěli byste vědět, kam doplníte tento řádek\npath(\"&lt;int:flight_id&gt;/book\", views.book, name=\"book\"),\nVe správném souboru uděláme následující změny:\nfrom django.http import HttpResponseRedirect\nfrom django.urls import reverse\n\ndef book(request, flight_id):\n    if request.method == \"POST\":\n        flight = Flight.objects.get(pk=flight_id)\n        passenger = Passenger.objects.get(pk=int(request.POST[\"passenger\"]))\n        passenger.flights.add(flight)\n        return HttpResponseRedirect(reverse(\"flight\", args=(flight.id,)))\nUpravím šablonu daného letu tak, abych tam měl formulář pro přidání pasažéra\n&lt;h2&gt;Add Passenger&lt;/h2&gt;\n    &lt;form action=\"{% url 'book' flight.id %}\" method=\"POST\"&gt;\n        {% csrf_token %}\n        &lt;select name=\"passenger\" id=\"passenger\"&gt;\n            {% for passanger in non_passengers  %}\n            &lt;option value=\"{{ passanger.id }}\"&gt;{{ passanger }}&lt;/option&gt;\n            {% endfor %}\n        &lt;/select&gt;\n        &lt;input type=\"submit\" value=\"Add Passenger\"&gt;\n    &lt;/form&gt;\nDo funkce flight doplním proměnou, která do šablony odešle data těch pasažérů, kteří na daném letu nejsou:\n    \"non_passengers\": Passenger.objects.exclude(flights=flight).all()\n\n\nMohu si upravit zobrazení v admin rozhraní\nV souboru admin.py provedu úpravy\nclass FlightAdmin(admin.ModelAdmin):\n    list_display = (\"id\", \"origin\", \"destination\", \"duration\")\n\nclass PassengerAdmin(admin.ModelAdmin):\n    filter_horizontal = (\"flights\",)\n\nadmin.site.register(Flight, FlightAdmin)\nadmin.site.register(Passenger, PassengerAdmin)\na aplikace je hotova.",
-    "crumbs": [
-      "Airline 2"
-    ]
-  },
-  {
-    "objectID": "web_django/04newyear.html",
-    "href": "web_django/04newyear.html",
-    "title": "NewYear",
-    "section": "",
-    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace newyear\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
-    "crumbs": [
-      "NewYear"
-    ]
-  },
-  {
-    "objectID": "web_django/04newyear.html#kód",
-    "href": "web_django/04newyear.html#kód",
-    "title": "NewYear",
-    "section": "Kód",
-    "text": "Kód\nKód souboru newyear\\views.py:\nimport datetime\n\nfrom django.shortcuts import render\n\n# Create your views here.\ndef index(request):\n    now = datetime.datetime.now()\n    return render(request, \"newyear/index.html\", {\n        \"newyear\": now.month == 1 and now.day == 1\n    })\nKód souboru newyear\\urls.py:\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
-    "crumbs": [
-      "NewYear"
-    ]
-  },
-  {
-    "objectID": "web_django/07sql.html",
-    "href": "web_django/07sql.html",
-    "title": "SQL a Django",
-    "section": "",
-    "text": "V tomto projektu se naučíte, jak používat SQL v Django pro práci s databází. Django používá ORM (Object-Relational Mapping), což umožňuje pracovat s databází pomocí Python kódu místo psaní SQL dotazů.\nPodklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/4/\n\nYouTube lekce:\n\nhttps://youtu.be/YzP164YANAU?si=RfZXo22trNGsWM46\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/src4.zip\n\nPdf prezentace:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/lecture4.pdf",
-    "crumbs": [
-      "SQL a Django"
-    ]
-  },
-  {
-    "objectID": "web_django/01hello.html",
-    "href": "web_django/01hello.html",
-    "title": "Hello App",
-    "section": "",
-    "text": "prereq: instalace python\n\nInstalace Djanga\npip install django\na jste připraveni vytvořit svůj projekt (webovou aplikaci).\n\n\n\n\n\n\nVarování\n\n\n\nZda je všechno OK lze vyzkoušet ihned příkazem django-admin. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné PATH.\n\n\n\n\nNový projekt\ndjango-admin startproject PROJECT_NAME\nPříkaz nám vytvoří novou složku s novým projektem a jeho soubory.\n\n\n\n\n\n\nVarování\n\n\n\nPokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku!\ndjango-admin startproject PROJECT_NAME .\n\n\n\n\nNová aplikace\npython manage.py startapp hello\nV souboru PROJECT_NAME\\settings.py\nINSTALLED_APPS = [\n    'hello', # doplníme název aplikace a nezapomeneme na čárku!\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nDoplníte soubor pro aplikaci hello\\views.py (logika aplikace, soubor funkcí, které renderují výstupy)\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world\")  \nVytvoříte soubor s cestami pro aplikaci hello\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nV souboru PROJECT_NAME\\urls.py doplníme cesty.\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('hello/', include('hello.urls')),\n]\n\n\nSpuštění dev web serveru\npython manage.py runserver\na nejspíše máte server na adrese:\nhttp://localhost:8000\n\n\n\n\n\n\nVarování\n\n\n\nNelekejte se varovných hlášení, protože nemáte cestu pro / adresu, musíte za lomítko zadat ještě název aplikace hello a pak by vše mělo fungovat.",
-    "crumbs": [
-      "Hello App"
-    ]
-  },
-  {
-    "objectID": "web_django/06projekt1.html",
-    "href": "web_django/06projekt1.html",
-    "title": "Projekt Wiki",
-    "section": "",
-    "text": "V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.\nZpracujte projekt dle zadání https://cs50.harvard.edu/web/projects/1/wiki/.\nNejlepší free hosting pro Django projekty je https://eu.pythonanywhere.com/. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.\nNíže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu: https://gluingeal.eu.pythonanywhere.com/.\n\nregistrace a djangohttps://youtu.be/BqVrt-6yfy8\naplikace vtip https://youtu.be/GEKjrunSIvg",
-    "crumbs": [
-      "Projekt Wiki"
-    ]
-  },
-  {
-    "objectID": "web_django/03template.html",
-    "href": "web_django/03template.html",
-    "title": "Šablony",
-    "section": "",
-    "text": "Vytvořím složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace např. hello\nNíže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.\nVytvořím soubory layout.html a index.html\nObsah souboru layout.html\nObsah souboru index.html",
-    "crumbs": [
-      "Šablony"
-    ]
-  },
-  {
-    "objectID": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
-    "href": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
-    "title": "Šablony",
-    "section": "Použití if else v šabloně (využijete u aplikace newyear)",
-    "text": "Použití if else v šabloně (využijete u aplikace newyear)\n  {% if newyear %}\n            &lt;h1&gt;YES&lt;/h1&gt;\n  {% else %}\n            &lt;h1&gt;NO&lt;/h1&gt;\n  {% endif %}",
-    "crumbs": [
-      "Šablony"
-    ]
-  },
-  {
-    "objectID": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
-    "href": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
-    "title": "Šablony",
-    "section": "Použití cyklu v šabloně (využijete později!)",
-    "text": "Použití cyklu v šabloně (využijete později!)\n    &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"{% url 'flight' flight.id %}\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;",
-    "crumbs": [
-      "Šablony"
-    ]
-  },
-  {
-    "objectID": "maturita/m2025.html",
-    "href": "maturita/m2025.html",
-    "title": "rok 2025",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:",
-    "crumbs": [
-      "rok 2025"
-    ]
-  },
-  {
-    "objectID": "maturita/m2025.html#podzim",
-    "href": "maturita/m2025.html#podzim",
-    "title": "rok 2025",
-    "section": "2025 - podzim",
-    "text": "2025 - podzim\nUvažme následující funkci. Co se vypíše pro volání fun(2, 3, 4)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(2, 5, 1).",
-    "crumbs": [
-      "rok 2025"
-    ]
-  },
-  {
-    "objectID": "maturita/m2025.html#jaro",
-    "href": "maturita/m2025.html#jaro",
-    "title": "rok 2025",
-    "section": "2025 - jaro",
-    "text": "2025 - jaro\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(1, 2, 3).\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 2, 3)?:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání fun(1, 5, 2)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 5, 2).\nfunction nuf($a, $b, $c): void\n{\n    while ($a &gt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}",
-    "crumbs": [
-      "rok 2025"
-    ]
-  },
-  {
-    "objectID": "maturita/m2023.html",
-    "href": "maturita/m2023.html",
-    "title": "rok 2023",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:",
-    "crumbs": [
-      "rok 2023"
-    ]
-  },
-  {
-    "objectID": "maturita/m2023.html#podzim",
-    "href": "maturita/m2023.html#podzim",
-    "title": "rok 2023",
-    "section": "2023 - podzim",
-    "text": "2023 - podzim\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání e(3,3). Co vypíše pro volání e(2, 4):\nfunction e($b, $c): void\n{\n    for ($i = $b; $i &lt; $c; $i++) {\n        if ($i == $c) {\n            echo $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(3):\nfunction d2b($n): void\n{\n    $vysledek = 0;\n    while ($n &gt;= 1) {\n        $b = $n + 2;\n        $n = $n - 1;\n        $vysledek = $vysledek + $b;\n    }\n    echo $vysledek;\n}",
-    "crumbs": [
-      "rok 2023"
-    ]
-  },
-  {
-    "objectID": "maturita/m2023.html#jaro",
-    "href": "maturita/m2023.html#jaro",
-    "title": "rok 2023",
-    "section": "2023 - jaro",
-    "text": "2023 - jaro\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání a(0, 2, 4). Co vypíše pro volání a(1, 3, 0):\nfunction a($b, $c, $d): void\n{\n    for ($i = $b; $i &lt; $c; $i++) {\n        if ($i &gt; $d) {\n            echo $d, $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(2):\nfunction d2b($n): void\n{\n    $vysledek = '';\n    while ($n &gt;= 1) {\n        $b = $n % 2;\n        (int) $n = (int) $n / 2;\n        $vysledek = $b . $vysledek; // spojování řetězců\n    }\n    echo $vysledek;\n}\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání e(1, 3). Co vypíše pro volání e(2, 4):\nfunction e($b, $c): void\n{\n    for ($i = $b; $i &lt;= $c; $i++) {\n        if ($i == $c) {\n            echo $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(3):\nfunction d2b($n): void\n{\n    $vysledek = '';\n    while ($n &gt;= 1) {\n        $b = $n % 2;\n        (int) $n = (int) $n / 2;\n        $vysledek = $b . $vysledek; // spojování řetězců\n    }\n    echo $vysledek;\n}",
-    "crumbs": [
-      "rok 2023"
-    ]
-  },
-  {
-    "objectID": "maturita/index.html",
-    "href": "maturita/index.html",
-    "title": "Maturitní úlohy z PVA",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:\n\nprogram nevypíše nic\nprogram se zacyklí\n\nZ menu vlevo vyberte konkrétní rok.",
-    "crumbs": [
-      "Maturitní úlohy z PVA"
-    ]
-  },
-  {
-    "objectID": "web_algo/03diag.html",
-    "href": "web_algo/03diag.html",
-    "title": "Diagramy 2",
-    "section": "",
-    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
-    "crumbs": [
-      "Algoritmy",
-      "Diagramy 2"
-    ]
-  },
-  {
-    "objectID": "web_algo/03diag.html#opakování",
-    "href": "web_algo/03diag.html#opakování",
-    "title": "Diagramy 2",
-    "section": "",
-    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
-    "crumbs": [
-      "Algoritmy",
-      "Diagramy 2"
-    ]
-  },
-  {
-    "objectID": "web_algo/03diag.html#želví-grafika",
-    "href": "web_algo/03diag.html#želví-grafika",
-    "title": "Diagramy 2",
-    "section": "Želví grafika",
-    "text": "Želví grafika\n\nhttps://www.umimeinformatiku.cz/zelvi-grafika\n\nPoužíváme software Flowgorithm.",
-    "crumbs": [
-      "Algoritmy",
-      "Diagramy 2"
-    ]
-  },
-  {
-    "objectID": "web_algo/03diag.html#tvorba-algoritmu",
-    "href": "web_algo/03diag.html#tvorba-algoritmu",
-    "title": "Diagramy 2",
-    "section": "Tvorba algoritmu",
-    "text": "Tvorba algoritmu\n\nVytvořte vývojový diagram s algoritmem, který porovná dvě zadaná čísla. Tato čísla vypíše v tomto pořadí: nejprve větší a poté menší číslo.\nVytvořte vývojový diagram s algoritmem, který vypíše největší číslo ze tří zadaných čísel.\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4.",
-    "crumbs": [
-      "Algoritmy",
-      "Diagramy 2"
-    ]
-  },
-  {
-    "objectID": "web_algo/05diag.html",
-    "href": "web_algo/05diag.html",
-    "title": "Diagramy",
-    "section": "",
-    "text": "viz zadání v Teams\n\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4."
-  },
-  {
-    "objectID": "web_html/02git.html",
-    "href": "web_html/02git.html",
-    "title": "Git",
-    "section": "",
-    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
-    "crumbs": [
-      "HTML",
-      "Git"
-    ]
-  },
-  {
-    "objectID": "web_html/02git.html#odkazy-k-samostudiu",
-    "href": "web_html/02git.html#odkazy-k-samostudiu",
-    "title": "Git",
-    "section": "",
-    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
-    "crumbs": [
-      "HTML",
-      "Git"
-    ]
-  },
-  {
-    "objectID": "web_html/02git.html#moje-poznámky-ke-gitu",
-    "href": "web_html/02git.html#moje-poznámky-ke-gitu",
-    "title": "Git",
-    "section": "Moje poznámky ke gitu",
-    "text": "Moje poznámky ke gitu\n\nNejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.\nVlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám:\n\ngit config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nNa linuxovém serveru postupuji podle tohoto návodu. https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53\nls -al ~/.ssh\nssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github -C \"ssh key for github\"\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_github\nnano ~/.ssh/config\nObsah souboru\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  AddKeysToAgent yes\ncat ~/.ssh/id_ed25519_github.pub\nNow, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.\n\nA potom nakonfiguruji repozitář\n\ngit init\ngit add *\ngit commit -m \"first commit\"\ngit remote add origin git@github.com:martinekpavel/oahosting.git\ngit push -u origin main\na hotovo!",
-    "crumbs": [
-      "HTML",
-      "Git"
-    ]
-  },
-  {
-    "objectID": "web_html/12search.html",
-    "href": "web_html/12search.html",
-    "title": "Projekt Google Search",
-    "section": "",
-    "text": "Vytvořte nový repozitář googlesearch\nOtevřete ve VS Code jako nový projekt\nVytvořte web dle zadání: https://cs50.harvard.edu/web/projects/0/search/\nCommit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)",
-    "crumbs": [
-      "HTML",
-      "Projekt Google Search"
-    ]
-  },
-  {
-    "objectID": "web_html/08portfolio.html",
-    "href": "web_html/08portfolio.html",
-    "title": "Portfolio",
-    "section": "",
-    "text": "Cíl hodiny: Vytvořit portfolio page",
-    "crumbs": [
-      "HTML",
-      "Portfolio"
-    ]
-  },
-  {
-    "objectID": "web_html/08portfolio.html#portfolio",
-    "href": "web_html/08portfolio.html#portfolio",
-    "title": "Portfolio",
-    "section": "Portfolio",
-    "text": "Portfolio\n\nsvůj stávající projekt přesuňte do nové složky -&gt; např. html\ndo Teams sdílejte odkaz na svůj (nyní) starý projekt:\n\nváš_účet_na_githubu.github.io/html\n\nUpravte odkazy na validaci!\nVytvořte portfolio např. podle:\n\nhttps://personal-portfolio.freecodecamp.rocks/\n\npoužijte jen to, co dokážete vysvětlit\nvšechny zdroje ocitujte\ndoplňte ikony na validaci html a css",
-    "crumbs": [
-      "HTML",
-      "Portfolio"
-    ]
-  },
-  {
-    "objectID": "web_html/08portfolio.html#další-zdroje",
-    "href": "web_html/08portfolio.html#další-zdroje",
-    "title": "Portfolio",
-    "section": "Další zdroje",
-    "text": "Další zdroje\n\nhttps://picsum.photos/\nhttps://unsplash.com/\nhttps://www.color-hex.com/color-palettes/popular.php",
-    "crumbs": [
-      "HTML",
-      "Portfolio"
-    ]
-  },
-  {
-    "objectID": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
-    "href": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
-    "title": "Portfolio",
-    "section": "Rekap 1. čtvrtletí",
-    "text": "Rekap 1. čtvrtletí\n\nPožadavky web\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
-    "crumbs": [
-      "HTML",
-      "Portfolio"
-    ]
-  },
-  {
-    "objectID": "web_html/index.html",
-    "href": "web_html/index.html",
-    "title": "Základy HTML",
-    "section": "",
-    "text": "Následující kapitoly vás provedou základy HTML kódování.",
-    "crumbs": [
-      "HTML",
-      "Základy HTML"
-    ]
-  },
-  {
-    "objectID": "web_html/index.html#zajímavé-odkazy",
-    "href": "web_html/index.html#zajímavé-odkazy",
-    "title": "Základy HTML",
-    "section": "Zajímavé odkazy",
-    "text": "Zajímavé odkazy\n\nhttps://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\nrepo: https://github.com/acchou/html-css-cheat-sheet/\n\nhttps://bit.ly/HtmlCssUcebnice\nhttps://cs50.harvard.edu/web/",
-    "crumbs": [
-      "HTML",
-      "Základy HTML"
-    ]
-  },
-  {
-    "objectID": "web_html/04publish.html",
-    "href": "web_html/04publish.html",
-    "title": "Publikace webu",
-    "section": "",
-    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
-    "crumbs": [
-      "HTML",
-      "Publikace webu"
-    ]
-  },
-  {
-    "objectID": "web_html/04publish.html#github-pages",
-    "href": "web_html/04publish.html#github-pages",
-    "title": "Publikace webu",
-    "section": "",
-    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
-    "crumbs": [
-      "HTML",
-      "Publikace webu"
-    ]
-  },
-  {
-    "objectID": "web_html/10rekap.html",
-    "href": "web_html/10rekap.html",
-    "title": "Rekapitulace 1. čtvrtetí",
-    "section": "",
-    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
-    "crumbs": [
-      "HTML",
-      "Rekapitulace 1. čtvrtetí"
-    ]
-  },
-  {
-    "objectID": "web_html/10rekap.html#rekap-1.-čtvrtletí",
-    "href": "web_html/10rekap.html#rekap-1.-čtvrtletí",
-    "title": "Rekapitulace 1. čtvrtetí",
-    "section": "",
-    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
-    "crumbs": [
-      "HTML",
-      "Rekapitulace 1. čtvrtetí"
-    ]
-  },
-  {
-    "objectID": "web_html/03html.html",
-    "href": "web_html/03html.html",
-    "title": "Základy HTML",
-    "section": "",
-    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\n\n\n\n\n\nUpozorněníÚkol\n\n\n\nVytvořte validní webovou stránku na libovolné téma, která obsahuje následující položky:\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web",
-    "crumbs": [
-      "HTML",
-      "Základy HTML"
+      "JavaScript",
+      "Lekce 01"
     ]
   },
   {
@@ -635,6 +278,50 @@
     ]
   },
   {
+    "objectID": "web_html/05css.html",
+    "href": "web_html/05css.html",
+    "title": "Základy CSS",
+    "section": "",
+    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html#css",
+    "crumbs": [
+      "HTML",
+      "Základy CSS"
+    ]
+  },
+  {
+    "objectID": "web_html/05css.html#kaskádové-styly",
+    "href": "web_html/05css.html#kaskádové-styly",
+    "title": "Základy CSS",
+    "section": "Kaskádové styly",
+    "text": "Kaskádové styly\nDavidova učebnice: https://docs.google.com/document/d/1J6NPwn97r0TGJra6QRh3oyNromnFBJCfvnddp1hmHuE/ kapitoly 15 – 36\n\nKam ty naše styly můžeme zapisovat?\ninline aplikované přímo na nějaký prvek webu\n&lt;h1 style=\"color: red\"&gt;Můj web&lt;/h1&gt;\ninterně přímo v hlavičce webu\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;style&gt;h1 { color: green; }&lt;/style&gt;&lt;/head&gt;\nexterně v samostatném souboru\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;&lt;/head&gt;\n\n\nJak cílíme na prvky v našem webu?\nPomocí selektorů https://www.w3schools.com/cssref/css_selectors.php\nTry selectors https://www.w3schools.com/cssref/trysel.php\nCSS Diner (hra) https://flukeout.github.io/\nDalší hry: https://nikitahl.com/learn-css-by-playing-games\n\n\nPříklady a syntaxe\n\n\n\nhtml kód\ncss kód\n\n\n\n\n&lt;h1&gt;\nh1 { color: red; }\n\n\n&lt;div id=\"idecko\"&gt;&lt;/div&gt;\n#idecko { color: red; }\n\n\n&lt;div class=\"trida\"&gt;&lt;/div&gt;\n.trida { color: red; }\n\n\n\nPoznámka: id v kódu stránky máme pouze jednou class může být vícekrát\n\n\nBlokové a inline elementy\nSeznam: https://www.w3schools.com/htmL/html_blocks.asp\nAnonymní blokový element: &lt;div&gt;&lt;/div&gt; Anonymní inline element: &lt;span&gt;&lt;/span&gt;\nVětšinou k nim přidáváme id nebo class.\n\n\nCo můžeme nastavovat ?\n\nbarvu písma color:\nbarvu pozadí background-color\nohraničení border\nodsazení z vnějšku margin\nodsazení uvnitř padding\nzaoblení rohů border-radius\nstyl písma font-family\nstínování https://getcssscan.com/css-box-shadow-examples\ntisíc dalších věcí\n\n\n\nDevTools (F12)\n\n\n\nJak zarovnat web na střed\n\nvytvořte element, kterým vše obalíte &lt;div class=\"containter\"&gt; ... &lt;/div&gt;\nnastavte mu požadovanou šířku (css) .container {max-width: 1024px;}\nnastavte margin vlevo a vpravo na auto .container {margin: auto;}\n\n\n\nZkuste\nhtml.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n\n&lt;head&gt;\n    &lt;title&gt;Document&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n&lt;/head&gt;\n\n&lt;body&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;h1&gt;Nadpis&lt;/h1&gt;\n        &lt;p&gt;Malá ukázka&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/body&gt;\n\n&lt;/html&gt;\nstyle.css\nbody {\n    background-color: lightgray;\n}\n\n.container {\n    background-color: white;\n    max-width: 600px;\n    border-radius: 15px;\n    box-shadow: rgba(0, 0, 0, 0.35)\n                     0px 5px 15px;\n    margin: 100px auto;\n    padding: 5px 30px;\n}",
+    "crumbs": [
+      "HTML",
+      "Základy CSS"
+    ]
+  },
+  {
+    "objectID": "web_html/05css.html#úkol",
+    "href": "web_html/05css.html#úkol",
+    "title": "Základy CSS",
+    "section": "Úkol",
+    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nVyhledejte na internetu informace o kontrastu písma webových stránek. Jak kontrolovat, jak správně nastavit.\nÚpravy budou minimálně zahrnovat:\n\nzměna pozadí na body\nzaoblení rohů obrázku\nzměna odsazení\nzarovnání webu na střed (viz výše)\nzměna barvy písma v souladu s pravidly o kontrastu\nněco co mne překvapí 😊",
+    "crumbs": [
+      "HTML",
+      "Základy CSS"
+    ]
+  },
+  {
+    "objectID": "web_html/03html.html",
+    "href": "web_html/03html.html",
+    "title": "Základy HTML",
+    "section": "",
+    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\n\n\n\n\n\nUpozorněníÚkol\n\n\n\nVytvořte validní webovou stránku na libovolné téma, která obsahuje následující položky:\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
+    ]
+  },
+  {
     "objectID": "web_html/01uvod.html",
     "href": "web_html/01uvod.html",
     "title": "Úvodní hodina",
@@ -712,99 +399,84 @@
     ]
   },
   {
-    "objectID": "web_html/05css.html",
-    "href": "web_html/05css.html",
-    "title": "Základy CSS",
+    "objectID": "web_django/10users.html",
+    "href": "web_django/10users.html",
+    "title": "Uživatelé",
     "section": "",
-    "text": "https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html#css",
+    "text": "Vytvoříme novou aplikaci users:\npython manage.py startapp users\nDo souboru settings.py doplním:\nINSTALLED_APPS = [\n    'flights',\n    'users', # doplníme název aplikace\n    'django.contrib.admin',\n    ...\n]\nDo souboru airline\\urls.py doplním:\n    path('users/', include('users.urls')),\nVytvoříme soubor pro aplikaci users\\urls.py\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.user, name=\"user\"),\n    path(\"login\", views.login_view, name=\"login\"),\n    path(\"logout\", views.logout_view, name=\"logout\")\n]\nUpravíme soubor users\\views.py:\nfrom django.contrib.auth import authenticate, login, logout\nfrom django.http import HttpResponse, HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\n# Create your views here.\ndef user(request):\n    if not request.user.is_authenticated:\n        return HttpResponseRedirect(reverse(\"login\"))\n    return render(request, \"users/user.html\")\n\ndef login_view(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return HttpResponseRedirect(reverse(\"user\"))\n        else:\n            return render(request, \"users/login.html\", {\n                \"message\": \"Invalid credentials.\"\n            })\n    else:\n        return render(request, \"users/login.html\")\n\ndef logout_view(request):\n    logout(request)\n    return render(request, \"users/login.html\", {\n        \"message\": \"Logged out.\"\n    })\nVytvoříme šablony users\\templates\\users\\layout.html, users\\templates\\users\\login.html, users\\templates\\users\\user.html.\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Log In&lt;/h1&gt;\n\n    {% if message %}\n        &lt;div&gt;{{ message }}&lt;/div&gt;\n    {% endif %}\n\n    &lt;form action=\"{% url 'login' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        &lt;input type=\"text\" name=\"username\" placeholder=\"Username\"&gt;\n        &lt;input type=\"password\" name=\"password\" placeholder=\"Password\"&gt;\n        &lt;input type=\"submit\" value=\"Login\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Welcome, {{ request.user.first_name }}&lt;/h1&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;Username: {{ request.user.username }}&lt;/li&gt;\n        &lt;li&gt;Email: {{ request.user.email }}&lt;/li&gt;\n    &lt;/ul&gt;\n\n    &lt;a href=\"{% url 'logout' %}\"&gt;Log Out&lt;/a&gt;\n{% endblock %}",
     "crumbs": [
-      "HTML",
-      "Základy CSS"
+      "Uživatelé"
     ]
   },
   {
-    "objectID": "web_html/05css.html#kaskádové-styly",
-    "href": "web_html/05css.html#kaskádové-styly",
-    "title": "Základy CSS",
-    "section": "Kaskádové styly",
-    "text": "Kaskádové styly\nDavidova učebnice: https://docs.google.com/document/d/1J6NPwn97r0TGJra6QRh3oyNromnFBJCfvnddp1hmHuE/ kapitoly 15 – 36\n\nKam ty naše styly můžeme zapisovat?\ninline aplikované přímo na nějaký prvek webu\n&lt;h1 style=\"color: red\"&gt;Můj web&lt;/h1&gt;\ninterně přímo v hlavičce webu\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;style&gt;h1 { color: green; }&lt;/style&gt;&lt;/head&gt;\nexterně v samostatném souboru\n&lt;head&gt;&lt;title&gt;Můj web&lt;/title&gt;&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;&lt;/head&gt;\n\n\nJak cílíme na prvky v našem webu?\nPomocí selektorů https://www.w3schools.com/cssref/css_selectors.php\nTry selectors https://www.w3schools.com/cssref/trysel.php\nCSS Diner (hra) https://flukeout.github.io/\nDalší hry: https://nikitahl.com/learn-css-by-playing-games\n\n\nPříklady a syntaxe\n\n\n\nhtml kód\ncss kód\n\n\n\n\n&lt;h1&gt;\nh1 { color: red; }\n\n\n&lt;div id=\"idecko\"&gt;&lt;/div&gt;\n#idecko { color: red; }\n\n\n&lt;div class=\"trida\"&gt;&lt;/div&gt;\n.trida { color: red; }\n\n\n\nPoznámka: id v kódu stránky máme pouze jednou class může být vícekrát\n\n\nBlokové a inline elementy\nSeznam: https://www.w3schools.com/htmL/html_blocks.asp\nAnonymní blokový element: &lt;div&gt;&lt;/div&gt; Anonymní inline element: &lt;span&gt;&lt;/span&gt;\nVětšinou k nim přidáváme id nebo class.\n\n\nCo můžeme nastavovat ?\n\nbarvu písma color:\nbarvu pozadí background-color\nohraničení border\nodsazení z vnějšku margin\nodsazení uvnitř padding\nzaoblení rohů border-radius\nstyl písma font-family\nstínování https://getcssscan.com/css-box-shadow-examples\ntisíc dalších věcí\n\n\n\nDevTools (F12)\n\n\n\nJak zarovnat web na střed\n\nvytvořte element, kterým vše obalíte &lt;div class=\"containter\"&gt; ... &lt;/div&gt;\nnastavte mu požadovanou šířku (css) .container {max-width: 1024px;}\nnastavte margin vlevo a vpravo na auto .container {margin: auto;}\n\n\n\nZkuste\nhtml.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n\n&lt;head&gt;\n    &lt;title&gt;Document&lt;/title&gt;\n    &lt;link rel=\"stylesheet\" href=\"style.css\"&gt;\n&lt;/head&gt;\n\n&lt;body&gt;\n    &lt;div class=\"container\"&gt;\n        &lt;h1&gt;Nadpis&lt;/h1&gt;\n        &lt;p&gt;Malá ukázka&lt;/p&gt;\n    &lt;/div&gt;\n&lt;/body&gt;\n\n&lt;/html&gt;\nstyle.css\nbody {\n    background-color: lightgray;\n}\n\n.container {\n    background-color: white;\n    max-width: 600px;\n    border-radius: 15px;\n    box-shadow: rgba(0, 0, 0, 0.35)\n                     0px 5px 15px;\n    margin: 100px auto;\n    padding: 5px 30px;\n}",
-    "crumbs": [
-      "HTML",
-      "Základy CSS"
-    ]
-  },
-  {
-    "objectID": "web_html/05css.html#úkol",
-    "href": "web_html/05css.html#úkol",
-    "title": "Základy CSS",
-    "section": "Úkol",
-    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nVyhledejte na internetu informace o kontrastu písma webových stránek. Jak kontrolovat, jak správně nastavit.\nÚpravy budou minimálně zahrnovat:\n\nzměna pozadí na body\nzaoblení rohů obrázku\nzměna odsazení\nzarovnání webu na střed (viz výše)\nzměna barvy písma v souladu s pravidly o kontrastu\nněco co mne překvapí 😊",
-    "crumbs": [
-      "HTML",
-      "Základy CSS"
-    ]
-  },
-  {
-    "objectID": "web_html/06menu.html",
-    "href": "web_html/06menu.html",
-    "title": "Menu webu",
+    "objectID": "web_django/10users.html#ověřování-uživatelů",
+    "href": "web_django/10users.html#ověřování-uživatelů",
+    "title": "Uživatelé",
     "section": "",
-    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "text": "Vytvoříme novou aplikaci users:\npython manage.py startapp users\nDo souboru settings.py doplním:\nINSTALLED_APPS = [\n    'flights',\n    'users', # doplníme název aplikace\n    'django.contrib.admin',\n    ...\n]\nDo souboru airline\\urls.py doplním:\n    path('users/', include('users.urls')),\nVytvoříme soubor pro aplikaci users\\urls.py\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.user, name=\"user\"),\n    path(\"login\", views.login_view, name=\"login\"),\n    path(\"logout\", views.logout_view, name=\"logout\")\n]\nUpravíme soubor users\\views.py:\nfrom django.contrib.auth import authenticate, login, logout\nfrom django.http import HttpResponse, HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\n# Create your views here.\ndef user(request):\n    if not request.user.is_authenticated:\n        return HttpResponseRedirect(reverse(\"login\"))\n    return render(request, \"users/user.html\")\n\ndef login_view(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return HttpResponseRedirect(reverse(\"user\"))\n        else:\n            return render(request, \"users/login.html\", {\n                \"message\": \"Invalid credentials.\"\n            })\n    else:\n        return render(request, \"users/login.html\")\n\ndef logout_view(request):\n    logout(request)\n    return render(request, \"users/login.html\", {\n        \"message\": \"Logged out.\"\n    })\nVytvoříme šablony users\\templates\\users\\layout.html, users\\templates\\users\\login.html, users\\templates\\users\\user.html.\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Log In&lt;/h1&gt;\n\n    {% if message %}\n        &lt;div&gt;{{ message }}&lt;/div&gt;\n    {% endif %}\n\n    &lt;form action=\"{% url 'login' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        &lt;input type=\"text\" name=\"username\" placeholder=\"Username\"&gt;\n        &lt;input type=\"password\" name=\"password\" placeholder=\"Password\"&gt;\n        &lt;input type=\"submit\" value=\"Login\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Welcome, {{ request.user.first_name }}&lt;/h1&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;Username: {{ request.user.username }}&lt;/li&gt;\n        &lt;li&gt;Email: {{ request.user.email }}&lt;/li&gt;\n    &lt;/ul&gt;\n\n    &lt;a href=\"{% url 'logout' %}\"&gt;Log Out&lt;/a&gt;\n{% endblock %}",
     "crumbs": [
-      "HTML",
-      "Menu webu"
+      "Uživatelé"
     ]
   },
   {
-    "objectID": "web_html/06menu.html#font-awesome",
-    "href": "web_html/06menu.html#font-awesome",
-    "title": "Menu webu",
+    "objectID": "web_django/10users.html#registrace-uživatele",
+    "href": "web_django/10users.html#registrace-uživatele",
+    "title": "Uživatelé",
+    "section": "Registrace uživatele",
+    "text": "Registrace uživatele\nZdroj: https://dev.to/donesrom/how-to-set-up-django-built-in-registration-in-2023-41hg\nVytvoříme soubor s formulářem v rámci naší aplikace: formular.py\nfrom django import forms \nfrom django.contrib.auth.forms import UserCreationForm\nfrom django.contrib.auth.models import User\n\nclass RegistrationForm(UserCreationForm):\n    email = forms.EmailField(required=True)\n\n    class Meta:\n        model = User\n        fields = [\"username\", \"first_name\", \"last_name\",\"email\", \"password1\", \"password2\"]\nV souboru aplikace upravíme views.py\nfrom . formular import *\nfrom django.shortcuts import render, redirect # přidáme redirect\nfrom django.contrib.auth.forms import *\n\ndef sign_up(request):\n    if request.method == \"POST\":\n        form = RegistrationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request,user)\n            return redirect(\"/\")\n    else:\n        form = RegistrationForm()\n    \n    return render(request, \"users\\sign_up.html\", {\n        \"form\":form\n        })\nUpravíme urls.py aplikace:\npath(\"sign_up\", views.sign_up, name=\"sign_up\")\nVytvoříme šablonu: .\\templates\\aplikace\\sign_up.html\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n&lt;h3&gt;Registrace uživatele&lt;/h3&gt;\n&lt;form method=\"post\"&gt;\n    {% csrf_token %}\n    {{ form.as_p }}\n    &lt;button type=\"submit\"&gt;Sign up&lt;/button&gt;\n&lt;/form&gt;\n\n{% endblock %}\nKromě .as_p nabízí Django další vestavěné formáty:\n\n\n\nMetoda\nHTML obal (Wrapper)\nPoznámka\n\n\n\n\n{ form.as_div }\n&lt;div&gt;\nNejmodernější přístup.\n\n\n{ form.as_table }\n&lt;tr&gt;\nV šabloně přidejte tag &lt;table&gt;.\n\n\n{ form.as_ul }\n&lt;li&gt;\nV šabloně přidejte tag &lt;ul&gt;.\n\n\n\nChceme-li ve formuláři češtinu upravíme settings.py\n# LANGUAGE_CODE = 'en-us'\nLANGUAGE_CODE = 'cs'\nNakonec můžete přidat bootstrap pro lepší vzhled webové aplikace. Buď klasicky nebo pomocí django-bootstrap5",
+    "crumbs": [
+      "Uživatelé"
+    ]
+  },
+  {
+    "objectID": "web_django/08flights.html",
+    "href": "web_django/08flights.html",
+    "title": "Airline",
     "section": "",
-    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "text": "Django - projekt Airline\n\nTvorba projektu\ndjango-admin startproject airline\n\n\nPrvní aplikace (Flights) v projektu\npython manage.py startapp flights\nV souboru airline\\settings.py\nINSTALLED_APPS = [\n    'flights', # doplníme název aplikace\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nV souboru airline\\urls.py\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('flights/', include('flights.urls')),\n]\nVytvoříme strukturu tabulek v databázi. V souboru aplikace flights\\models.py\nclass Airport(models.Model):\n    code = models.CharField(max_length=3)\n    city = models.CharField(max_length=64)\n\n    def __str__(self):\n        return f\"{self.city} ({self.code})\"\n    \nclass Flight(models.Model):\n    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"departures\")\n    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"arrivals\")\n    duration = models.IntegerField()\n\n    def __str__(self):\n        return f\"{self.id}: {self.origin} -&gt; {self.destination} ({self.duration})\"\n\nclass Passenger(models.Model):\n    first = models.CharField(max_length=64)\n    last = models.CharField(max_length=64)\n    flights = models.ManyToManyField(Flight, blank=True, related_name=\"passengers\")\n\n    def __str__(self):\n        return f\"{self.first} {self.last}\"    \nDalší typy modelů (datových typu jednotlivých polí v tabulce) naleznete v dokumentaci Djanga.\nVytvoříte soubor pro aplikaci flights\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nNyní vytvoříte správné šablony (layout.html a index.html) např. podle django-templates.\nDo bloku {% block body %} vložíte kód:\n  &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"#\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\nUpravíte soubor pro aplikaci flights\\views.py (logika aplikace, soubor funkcí, které renderují výstupy pro šablony)\nfrom .models import Flight\n\ndef index(request):\n    return render(request, \"flights/index.html\", {\n        \"flights\": Flight.objects.all()\n    })\nPřipravíme a vytvoříme databázi (v cmd.exe)\npython manage.py makemigrations\npython manage.py migrate\nVytvoříte superuživatele (zvolíte uživatelské jméno a heslo) pomocí příkazu:\npython manage.py createsuperuser\nVýstup může vypadat takto:\n(virtual-django) C:\\airline&gt;python manage.py createsuperuser\nUsername (leave blank to use 'martinek.p'): admin\nEmail address:\nPassword:\nPassword (again):\nSuperuser created successfully.\nUpravíme soubor admin.py v aplikaci:\nfrom .models import Airport, Flight, Passenger\n\nadmin.site.register(Airport)\nadmin.site.register(Flight)\nadmin.site.register(Passenger)\nA nyní můžeme přímo editovat databázi v admin rozhraní aplikace.",
     "crumbs": [
-      "HTML",
-      "Menu webu"
+      "Airline"
     ]
   },
   {
-    "objectID": "web_html/06menu.html#menu-html",
-    "href": "web_html/06menu.html#menu-html",
-    "title": "Menu webu",
-    "section": "Menu (html)",
-    "text": "Menu (html)\n&lt;nav id=\"navbar\"&gt;\n    &lt;div class=\"logo\"&gt;\n        Moje &lt;span class=\"text-primary\"&gt;firma&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#home\"&gt;Úvod&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#about\"&gt;O nás&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#kontakt\"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;",
-    "crumbs": [
-      "HTML",
-      "Menu webu"
-    ]
-  },
-  {
-    "objectID": "web_html/06menu.html#menu-css",
-    "href": "web_html/06menu.html#menu-css",
-    "title": "Menu webu",
-    "section": "Menu (css)",
-    "text": "Menu (css)\n#navbar {\n    background-color: #333;\n    color: white;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 16px;\n    font-size: 24px;\n    font-weight: bold;\n}\n\n#navbar a {\n    color: white;\n    text-decoration: none;\n}\n\n#navbar ul {\n    display: flex;\n    list-style: none;\n    align-items: center;\n}\n\n#navbar ul li a {\n    padding: 10px;\n    margin: 0 4px;\n}\n\n#navbar ul li a:hover {\n    background-color: #93cb52;\n    border-radius: 5px;\n}",
-    "crumbs": [
-      "HTML",
-      "Menu webu"
-    ]
-  },
-  {
-    "objectID": "web_html/06menu.html#úkol",
-    "href": "web_html/06menu.html#úkol",
-    "title": "Menu webu",
-    "section": "Úkol",
-    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nÚpravy budou minimálně zahrnovat:\n\nvše z minulých zadání\nmenu v záhlaví stránky\ndalší html stránka (odkaz v menu)",
-    "crumbs": [
-      "HTML",
-      "Menu webu"
-    ]
-  },
-  {
-    "objectID": "web_algo/04ibobr.html",
-    "href": "web_algo/04ibobr.html",
-    "title": "Soutěž iBobr",
+    "objectID": "web_django/06projekt1.html",
+    "href": "web_django/06projekt1.html",
+    "title": "Projekt Wiki",
     "section": "",
-    "text": "Vyřešte zadání junior rok 2024 (2. skupina) 2023 (1. skupina)\nSdílejte skóre do Teams."
+    "text": "V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.\nZpracujte projekt dle zadání https://cs50.harvard.edu/web/projects/1/wiki/.\nNejlepší free hosting pro Django projekty je https://eu.pythonanywhere.com/. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.\nNíže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu: https://gluingeal.eu.pythonanywhere.com/.\n\nregistrace a djangohttps://youtu.be/BqVrt-6yfy8\naplikace vtip https://youtu.be/GEKjrunSIvg",
+    "crumbs": [
+      "Projekt Wiki"
+    ]
+  },
+  {
+    "objectID": "web_django/04newyear.html",
+    "href": "web_django/04newyear.html",
+    "title": "NewYear",
+    "section": "",
+    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace newyear\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
+    "crumbs": [
+      "NewYear"
+    ]
+  },
+  {
+    "objectID": "web_django/04newyear.html#kód",
+    "href": "web_django/04newyear.html#kód",
+    "title": "NewYear",
+    "section": "Kód",
+    "text": "Kód\nKód souboru newyear\\views.py:\nimport datetime\n\nfrom django.shortcuts import render\n\n# Create your views here.\ndef index(request):\n    now = datetime.datetime.now()\n    return render(request, \"newyear/index.html\", {\n        \"newyear\": now.month == 1 and now.day == 1\n    })\nKód souboru newyear\\urls.py:\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
+    "crumbs": [
+      "NewYear"
+    ]
+  },
+  {
+    "objectID": "web_django/02apps.html",
+    "href": "web_django/02apps.html",
+    "title": "Hello str",
+    "section": "",
+    "text": "Doplníme soubor pro aplikaci hello\\views.py.\ndef brian(request):\n    return HttpResponse(\"Hello, Brian!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"brian\", views.brian, name=\"brian\")\na můžeme to otestovat, případně přidat další jména.\n\nCesta s řetězcem\nDoplníme soubor pro aplikaci hello\\views.py.\ndef great(request,name):\n    return HttpResponse(f\"Hello, {name.capitalize()}!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"&lt;str:name&gt;\", views.great, name=\"great\")\na můžeme to otestovat, zadáním různých slov do správné url\nhttps://localhost:8000/hello/retezec",
+    "crumbs": [
+      "Hello str"
+    ]
   },
   {
     "objectID": "web_algo/index.html",
@@ -816,6 +488,13 @@
       "Algoritmy",
       "Základy Algoritmizace"
     ]
+  },
+  {
+    "objectID": "web_algo/04ibobr.html",
+    "href": "web_algo/04ibobr.html",
+    "title": "Soutěž iBobr",
+    "section": "",
+    "text": "Vyřešte zadání junior rok 2024 (2. skupina) 2023 (1. skupina)\nSdílejte skóre do Teams."
   },
   {
     "objectID": "web_algo/02diag.html",
@@ -884,36 +563,6 @@
     ]
   },
   {
-    "objectID": "maturita/m2022.html",
-    "href": "maturita/m2022.html",
-    "title": "rok 2022",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:",
-    "crumbs": [
-      "rok 2022"
-    ]
-  },
-  {
-    "objectID": "maturita/m2022.html#podzim",
-    "href": "maturita/m2022.html#podzim",
-    "title": "rok 2022",
-    "section": "2022 - podzim",
-    "text": "2022 - podzim\nUvažme následující funkci. Co vypíše pro volání sos(2, 3)?\nfunction sos($tecka, $carka): void\n{\n    for ($i = 0; $i &lt; $tecka; $i++) {\n        echo '.';\n    }\n    for ($i = 0; $i &lt; $carka; $i++) {\n        echo $carka;\n    }\n}\nUvažme následující funkci. Co vypíše pro volání zobraz(3)?\nfunction zobraz($cislo): void\n{\n    $vysledek = 3;\n    while ($vysledek &gt; 0) {\n       for ($i = 0; $i &lt; $vysledek; $i++) {\n            echo $cislo;\n        }\n        $vysledek = $vysledek - 1;\n        $cislo = $cislo + 1;\n        echo \"\\n\";\n    }\n}",
-    "crumbs": [
-      "rok 2022"
-    ]
-  },
-  {
-    "objectID": "maturita/m2022.html#jaro",
-    "href": "maturita/m2022.html#jaro",
-    "title": "rok 2022",
-    "section": "2022 - jaro",
-    "text": "2022 - jaro\nUvažme následující funkci. Co vypíše pro volání sequence(2, 3, 4)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(7)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}\nUvažme následující funkci. Co vypíše pro volání sequence(5, 2, 3)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(6)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}",
-    "crumbs": [
-      "rok 2022"
-    ]
-  },
-  {
     "objectID": "maturita/m2024.html",
     "href": "maturita/m2024.html",
     "title": "rok 2024",
@@ -944,6 +593,43 @@
     ]
   },
   {
+    "objectID": "maturita/m2022.html",
+    "href": "maturita/m2022.html",
+    "title": "rok 2022",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "maturita/m2022.html#podzim",
+    "href": "maturita/m2022.html#podzim",
+    "title": "rok 2022",
+    "section": "2022 - podzim",
+    "text": "2022 - podzim\nUvažme následující funkci. Co vypíše pro volání sos(2, 3)?\nfunction sos($tecka, $carka): void\n{\n    for ($i = 0; $i &lt; $tecka; $i++) {\n        echo '.';\n    }\n    for ($i = 0; $i &lt; $carka; $i++) {\n        echo $carka;\n    }\n}\nUvažme následující funkci. Co vypíše pro volání zobraz(3)?\nfunction zobraz($cislo): void\n{\n    $vysledek = 3;\n    while ($vysledek &gt; 0) {\n       for ($i = 0; $i &lt; $vysledek; $i++) {\n            echo $cislo;\n        }\n        $vysledek = $vysledek - 1;\n        $cislo = $cislo + 1;\n        echo \"\\n\";\n    }\n}",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "maturita/m2022.html#jaro",
+    "href": "maturita/m2022.html#jaro",
+    "title": "rok 2022",
+    "section": "2022 - jaro",
+    "text": "2022 - jaro\nUvažme následující funkci. Co vypíše pro volání sequence(2, 3, 4)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(7)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}\nUvažme následující funkci. Co vypíše pro volání sequence(5, 2, 3)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(6)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programování a vývoj aplikací",
+    "section": "",
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud naleznete chybu, dejte mi vědět.\n👨‍🦲 Pavel Martínek"
+  },
+  {
     "objectID": "202526-3d.html",
     "href": "202526-3d.html",
     "title": "3.D šk. rok 2025/2026",
@@ -958,43 +644,192 @@
     "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\nodpadá\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
   },
   {
-    "objectID": "web_django/08flights.html",
-    "href": "web_django/08flights.html",
-    "title": "Airline",
+    "objectID": "202526-1d.html",
+    "href": "202526-1d.html",
+    "title": "1.D šk. rok 2025/2026",
     "section": "",
-    "text": "Django - projekt Airline\n\nTvorba projektu\ndjango-admin startproject airline\n\n\nPrvní aplikace (Flights) v projektu\npython manage.py startapp flights\nV souboru airline\\settings.py\nINSTALLED_APPS = [\n    'flights', # doplníme název aplikace\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nV souboru airline\\urls.py\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('flights/', include('flights.urls')),\n]\nVytvoříme strukturu tabulek v databázi. V souboru aplikace flights\\models.py\nclass Airport(models.Model):\n    code = models.CharField(max_length=3)\n    city = models.CharField(max_length=64)\n\n    def __str__(self):\n        return f\"{self.city} ({self.code})\"\n    \nclass Flight(models.Model):\n    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"departures\")\n    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"arrivals\")\n    duration = models.IntegerField()\n\n    def __str__(self):\n        return f\"{self.id}: {self.origin} -&gt; {self.destination} ({self.duration})\"\n\nclass Passenger(models.Model):\n    first = models.CharField(max_length=64)\n    last = models.CharField(max_length=64)\n    flights = models.ManyToManyField(Flight, blank=True, related_name=\"passengers\")\n\n    def __str__(self):\n        return f\"{self.first} {self.last}\"    \nDalší typy modelů (datových typu jednotlivých polí v tabulce) naleznete v dokumentaci Djanga.\nVytvoříte soubor pro aplikaci flights\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nNyní vytvoříte správné šablony (layout.html a index.html) např. podle django-templates.\nDo bloku {% block body %} vložíte kód:\n  &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"#\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\nUpravíte soubor pro aplikaci flights\\views.py (logika aplikace, soubor funkcí, které renderují výstupy pro šablony)\nfrom .models import Flight\n\ndef index(request):\n    return render(request, \"flights/index.html\", {\n        \"flights\": Flight.objects.all()\n    })\nPřipravíme a vytvoříme databázi (v cmd.exe)\npython manage.py makemigrations\npython manage.py migrate\nVytvoříte superuživatele (zvolíte uživatelské jméno a heslo) pomocí příkazu:\npython manage.py createsuperuser\nVýstup může vypadat takto:\n(virtual-django) C:\\airline&gt;python manage.py createsuperuser\nUsername (leave blank to use 'martinek.p'): admin\nEmail address:\nPassword:\nPassword (again):\nSuperuser created successfully.\nUpravíme soubor admin.py v aplikaci:\nfrom .models import Airport, Flight, Passenger\n\nadmin.site.register(Airport)\nadmin.site.register(Flight)\nadmin.site.register(Passenger)\nA nyní můžeme přímo editovat databázi v admin rozhraní aplikace.",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+  },
+  {
+    "objectID": "202526-1d.html#výuka",
+    "href": "202526-1d.html#výuka",
+    "title": "1.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "O webu",
+    "section": "",
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html#užitečné-odkazy",
+    "href": "about.html#užitečné-odkazy",
+    "title": "O webu",
+    "section": "Užitečné odkazy",
+    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\nProxmox\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\nLinuxové příkazy, co pořád zapomínám\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu sbarveným\n\n\n\nA tohle pořád hledám ve VSC, default terminal\n\"terminal.integrated.defaultProfile.windows\": \"Command Prompt\",\n======= - alias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu &gt;&gt;&gt;&gt;&gt;&gt;&gt; bd477aef86826c855fb80a5cf814e197e11dab9b"
+  },
+  {
+    "objectID": "maturita/index.html",
+    "href": "maturita/index.html",
+    "title": "Maturitní úlohy z PVA",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:\n\nprogram nevypíše nic\nprogram se zacyklí\n\nZ menu vlevo vyberte konkrétní rok.",
     "crumbs": [
-      "Airline"
+      "Maturitní úlohy z PVA"
     ]
   },
   {
-    "objectID": "web_django/10users.html",
-    "href": "web_django/10users.html",
-    "title": "Uživatelé",
+    "objectID": "maturita/m2023.html",
+    "href": "maturita/m2023.html",
+    "title": "rok 2023",
     "section": "",
-    "text": "Vytvoříme novou aplikaci users:\npython manage.py startapp users\nDo souboru settings.py doplním:\nINSTALLED_APPS = [\n    'flights',\n    'users', # doplníme název aplikace\n    'django.contrib.admin',\n    ...\n]\nDo souboru airline\\urls.py doplním:\n    path('users/', include('users.urls')),\nVytvoříme soubor pro aplikaci users\\urls.py\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.user, name=\"user\"),\n    path(\"login\", views.login_view, name=\"login\"),\n    path(\"logout\", views.logout_view, name=\"logout\")\n]\nUpravíme soubor users\\views.py:\nfrom django.contrib.auth import authenticate, login, logout\nfrom django.http import HttpResponse, HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\n# Create your views here.\ndef user(request):\n    if not request.user.is_authenticated:\n        return HttpResponseRedirect(reverse(\"login\"))\n    return render(request, \"users/user.html\")\n\ndef login_view(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return HttpResponseRedirect(reverse(\"user\"))\n        else:\n            return render(request, \"users/login.html\", {\n                \"message\": \"Invalid credentials.\"\n            })\n    else:\n        return render(request, \"users/login.html\")\n\ndef logout_view(request):\n    logout(request)\n    return render(request, \"users/login.html\", {\n        \"message\": \"Logged out.\"\n    })\nVytvoříme šablony users\\templates\\users\\layout.html, users\\templates\\users\\login.html, users\\templates\\users\\user.html.\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Log In&lt;/h1&gt;\n\n    {% if message %}\n        &lt;div&gt;{{ message }}&lt;/div&gt;\n    {% endif %}\n\n    &lt;form action=\"{% url 'login' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        &lt;input type=\"text\" name=\"username\" placeholder=\"Username\"&gt;\n        &lt;input type=\"password\" name=\"password\" placeholder=\"Password\"&gt;\n        &lt;input type=\"submit\" value=\"Login\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Welcome, {{ request.user.first_name }}&lt;/h1&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;Username: {{ request.user.username }}&lt;/li&gt;\n        &lt;li&gt;Email: {{ request.user.email }}&lt;/li&gt;\n    &lt;/ul&gt;\n\n    &lt;a href=\"{% url 'logout' %}\"&gt;Log Out&lt;/a&gt;\n{% endblock %}",
+    "text": "U všech úloh jsou navíc možnosti:",
     "crumbs": [
-      "Uživatelé"
+      "rok 2023"
     ]
   },
   {
-    "objectID": "web_django/10users.html#ověřování-uživatelů",
-    "href": "web_django/10users.html#ověřování-uživatelů",
-    "title": "Uživatelé",
-    "section": "",
-    "text": "Vytvoříme novou aplikaci users:\npython manage.py startapp users\nDo souboru settings.py doplním:\nINSTALLED_APPS = [\n    'flights',\n    'users', # doplníme název aplikace\n    'django.contrib.admin',\n    ...\n]\nDo souboru airline\\urls.py doplním:\n    path('users/', include('users.urls')),\nVytvoříme soubor pro aplikaci users\\urls.py\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.user, name=\"user\"),\n    path(\"login\", views.login_view, name=\"login\"),\n    path(\"logout\", views.logout_view, name=\"logout\")\n]\nUpravíme soubor users\\views.py:\nfrom django.contrib.auth import authenticate, login, logout\nfrom django.http import HttpResponse, HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\n# Create your views here.\ndef user(request):\n    if not request.user.is_authenticated:\n        return HttpResponseRedirect(reverse(\"login\"))\n    return render(request, \"users/user.html\")\n\ndef login_view(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return HttpResponseRedirect(reverse(\"user\"))\n        else:\n            return render(request, \"users/login.html\", {\n                \"message\": \"Invalid credentials.\"\n            })\n    else:\n        return render(request, \"users/login.html\")\n\ndef logout_view(request):\n    logout(request)\n    return render(request, \"users/login.html\", {\n        \"message\": \"Logged out.\"\n    })\nVytvoříme šablony users\\templates\\users\\layout.html, users\\templates\\users\\login.html, users\\templates\\users\\user.html.\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Log In&lt;/h1&gt;\n\n    {% if message %}\n        &lt;div&gt;{{ message }}&lt;/div&gt;\n    {% endif %}\n\n    &lt;form action=\"{% url 'login' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        &lt;input type=\"text\" name=\"username\" placeholder=\"Username\"&gt;\n        &lt;input type=\"password\" name=\"password\" placeholder=\"Password\"&gt;\n        &lt;input type=\"submit\" value=\"Login\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Welcome, {{ request.user.first_name }}&lt;/h1&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;Username: {{ request.user.username }}&lt;/li&gt;\n        &lt;li&gt;Email: {{ request.user.email }}&lt;/li&gt;\n    &lt;/ul&gt;\n\n    &lt;a href=\"{% url 'logout' %}\"&gt;Log Out&lt;/a&gt;\n{% endblock %}",
+    "objectID": "maturita/m2023.html#podzim",
+    "href": "maturita/m2023.html#podzim",
+    "title": "rok 2023",
+    "section": "2023 - podzim",
+    "text": "2023 - podzim\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání e(3,3). Co vypíše pro volání e(2, 4):\nfunction e($b, $c): void\n{\n    for ($i = $b; $i &lt; $c; $i++) {\n        if ($i == $c) {\n            echo $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(3):\nfunction d2b($n): void\n{\n    $vysledek = 0;\n    while ($n &gt;= 1) {\n        $b = $n + 2;\n        $n = $n - 1;\n        $vysledek = $vysledek + $b;\n    }\n    echo $vysledek;\n}",
     "crumbs": [
-      "Uživatelé"
+      "rok 2023"
     ]
   },
   {
-    "objectID": "web_django/10users.html#registrace-uživatele",
-    "href": "web_django/10users.html#registrace-uživatele",
-    "title": "Uživatelé",
-    "section": "Registrace uživatele",
-    "text": "Registrace uživatele\nZdroj: https://dev.to/donesrom/how-to-set-up-django-built-in-registration-in-2023-41hg\nVytvoříme soubor s formulářem v rámci naší aplikace: formular.py\nfrom django import forms \nfrom django.contrib.auth.forms import UserCreationForm\nfrom django.contrib.auth.models import User\n\nclass RegistrationForm(UserCreationForm):\n    email = forms.EmailField(required=True)\n\n    class Meta:\n        model = User\n        fields = [\"username\", \"first_name\", \"last_name\",\"email\", \"password1\", \"password2\"]\nV souboru aplikace upravíme views.py\nfrom . formular import *\nfrom django.shortcuts import render, redirect # přidáme redirect\nfrom django.contrib.auth.forms import *\n\ndef sign_up(request):\n    if request.method == \"POST\":\n        form = RegistrationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request,user)\n            return redirect(\"/\")\n    else:\n        form = RegistrationForm()\n    \n    return render(request, \"users\\sign_up.html\", {\n        \"form\":form\n        })\nUpravíme urls.py aplikace:\npath(\"sign_up\", views.sign_up, name=\"sign_up\")\nVytvoříme šablonu: .\\templates\\aplikace\\sign_up.html\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n&lt;h3&gt;Registrace uživatele&lt;/h3&gt;\n&lt;form method=\"post\"&gt;\n    {% csrf_token %}\n    {{ form.as_p }}\n    &lt;button type=\"submit\"&gt;Sign up&lt;/button&gt;\n&lt;/form&gt;\n\n{% endblock %}\nKromě .as_p nabízí Django další vestavěné formáty:\n\n\n\nMetoda\nHTML obal (Wrapper)\nPoznámka\n\n\n\n\n{ form.as_div }\n&lt;div&gt;\nNejmodernější přístup.\n\n\n{ form.as_table }\n&lt;tr&gt;\nV šabloně přidejte tag &lt;table&gt;.\n\n\n{ form.as_ul }\n&lt;li&gt;\nV šabloně přidejte tag &lt;ul&gt;.\n\n\n\nChceme-li ve formuláři češtinu upravíme settings.py\n# LANGUAGE_CODE = 'en-us'\nLANGUAGE_CODE = 'cs'\nNakonec můžete přidat bootstrap pro lepší vzhled webové aplikace. Buď klasicky nebo pomocí django-bootstrap5",
+    "objectID": "maturita/m2023.html#jaro",
+    "href": "maturita/m2023.html#jaro",
+    "title": "rok 2023",
+    "section": "2023 - jaro",
+    "text": "2023 - jaro\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání a(0, 2, 4). Co vypíše pro volání a(1, 3, 0):\nfunction a($b, $c, $d): void\n{\n    for ($i = $b; $i &lt; $c; $i++) {\n        if ($i &gt; $d) {\n            echo $d, $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(2):\nfunction d2b($n): void\n{\n    $vysledek = '';\n    while ($n &gt;= 1) {\n        $b = $n % 2;\n        (int) $n = (int) $n / 2;\n        $vysledek = $b . $vysledek; // spojování řetězců\n    }\n    echo $vysledek;\n}\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání e(1, 3). Co vypíše pro volání e(2, 4):\nfunction e($b, $c): void\n{\n    for ($i = $b; $i &lt;= $c; $i++) {\n        if ($i == $c) {\n            echo $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(3):\nfunction d2b($n): void\n{\n    $vysledek = '';\n    while ($n &gt;= 1) {\n        $b = $n % 2;\n        (int) $n = (int) $n / 2;\n        $vysledek = $b . $vysledek; // spojování řetězců\n    }\n    echo $vysledek;\n}",
     "crumbs": [
-      "Uživatelé"
+      "rok 2023"
+    ]
+  },
+  {
+    "objectID": "maturita/m2025.html",
+    "href": "maturita/m2025.html",
+    "title": "rok 2025",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:",
+    "crumbs": [
+      "rok 2025"
+    ]
+  },
+  {
+    "objectID": "maturita/m2025.html#podzim",
+    "href": "maturita/m2025.html#podzim",
+    "title": "rok 2025",
+    "section": "2025 - podzim",
+    "text": "2025 - podzim\nUvažme následující funkci. Co se vypíše pro volání fun(2, 3, 4)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = $a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(2, 5, 1).",
+    "crumbs": [
+      "rok 2025"
+    ]
+  },
+  {
+    "objectID": "maturita/m2025.html#jaro",
+    "href": "maturita/m2025.html#jaro",
+    "title": "rok 2025",
+    "section": "2025 - jaro",
+    "text": "2025 - jaro\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(1, 2, 3).\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 2, 3)?:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání fun(1, 5, 2)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 5, 2).\nfunction nuf($a, $b, $c): void\n{\n    while ($a &gt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}",
+    "crumbs": [
+      "rok 2025"
+    ]
+  },
+  {
+    "objectID": "web_algo/03diag.html",
+    "href": "web_algo/03diag.html",
+    "title": "Diagramy 2",
+    "section": "",
+    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 2"
+    ]
+  },
+  {
+    "objectID": "web_algo/03diag.html#opakování",
+    "href": "web_algo/03diag.html#opakování",
+    "title": "Diagramy 2",
+    "section": "",
+    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 2"
+    ]
+  },
+  {
+    "objectID": "web_algo/03diag.html#želví-grafika",
+    "href": "web_algo/03diag.html#želví-grafika",
+    "title": "Diagramy 2",
+    "section": "Želví grafika",
+    "text": "Želví grafika\n\nhttps://www.umimeinformatiku.cz/zelvi-grafika\n\nPoužíváme software Flowgorithm.",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 2"
+    ]
+  },
+  {
+    "objectID": "web_algo/03diag.html#tvorba-algoritmu",
+    "href": "web_algo/03diag.html#tvorba-algoritmu",
+    "title": "Diagramy 2",
+    "section": "Tvorba algoritmu",
+    "text": "Tvorba algoritmu\n\nVytvořte vývojový diagram s algoritmem, který porovná dvě zadaná čísla. Tato čísla vypíše v tomto pořadí: nejprve větší a poté menší číslo.\nVytvořte vývojový diagram s algoritmem, který vypíše největší číslo ze tří zadaných čísel.\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4.",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 2"
+    ]
+  },
+  {
+    "objectID": "web_algo/05diag.html",
+    "href": "web_algo/05diag.html",
+    "title": "Diagramy",
+    "section": "",
+    "text": "viz zadání v Teams\n\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4."
+  },
+  {
+    "objectID": "web_django/01hello.html",
+    "href": "web_django/01hello.html",
+    "title": "Hello App",
+    "section": "",
+    "text": "prereq: instalace python\n\nInstalace Djanga\npip install django\na jste připraveni vytvořit svůj projekt (webovou aplikaci).\n\n\n\n\n\n\nVarování\n\n\n\nZda je všechno OK lze vyzkoušet ihned příkazem django-admin. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné PATH.\n\n\n\n\nNový projekt\ndjango-admin startproject PROJECT_NAME\nPříkaz nám vytvoří novou složku s novým projektem a jeho soubory.\n\n\n\n\n\n\nVarování\n\n\n\nPokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku!\ndjango-admin startproject PROJECT_NAME .\n\n\n\n\nNová aplikace\npython manage.py startapp hello\nV souboru PROJECT_NAME\\settings.py\nINSTALLED_APPS = [\n    'hello', # doplníme název aplikace a nezapomeneme na čárku!\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nDoplníte soubor pro aplikaci hello\\views.py (logika aplikace, soubor funkcí, které renderují výstupy)\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world\")  \nVytvoříte soubor s cestami pro aplikaci hello\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nV souboru PROJECT_NAME\\urls.py doplníme cesty.\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('hello/', include('hello.urls')),\n]\n\n\nSpuštění dev web serveru\npython manage.py runserver\na nejspíše máte server na adrese:\nhttp://localhost:8000\n\n\n\n\n\n\nVarování\n\n\n\nNelekejte se varovných hlášení, protože nemáte cestu pro / adresu, musíte za lomítko zadat ještě název aplikace hello a pak by vše mělo fungovat.",
+    "crumbs": [
+      "Hello App"
+    ]
+  },
+  {
+    "objectID": "web_django/03template.html",
+    "href": "web_django/03template.html",
+    "title": "Šablony",
+    "section": "",
+    "text": "Vytvořím složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace např. hello\nNíže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.\nVytvořím soubory layout.html a index.html\nObsah souboru layout.html\nObsah souboru index.html",
+    "crumbs": [
+      "Šablony"
+    ]
+  },
+  {
+    "objectID": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
+    "href": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
+    "title": "Šablony",
+    "section": "Použití if else v šabloně (využijete u aplikace newyear)",
+    "text": "Použití if else v šabloně (využijete u aplikace newyear)\n  {% if newyear %}\n            &lt;h1&gt;YES&lt;/h1&gt;\n  {% else %}\n            &lt;h1&gt;NO&lt;/h1&gt;\n  {% endif %}",
+    "crumbs": [
+      "Šablony"
+    ]
+  },
+  {
+    "objectID": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
+    "href": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
+    "title": "Šablony",
+    "section": "Použití cyklu v šabloně (využijete později!)",
+    "text": "Použití cyklu v šabloně (využijete později!)\n    &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"{% url 'flight' flight.id %}\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;",
+    "crumbs": [
+      "Šablony"
     ]
   },
   {
@@ -1018,6 +853,26 @@
     ]
   },
   {
+    "objectID": "web_django/07sql.html",
+    "href": "web_django/07sql.html",
+    "title": "SQL a Django",
+    "section": "",
+    "text": "V tomto projektu se naučíte, jak používat SQL v Django pro práci s databází. Django používá ORM (Object-Relational Mapping), což umožňuje pracovat s databází pomocí Python kódu místo psaní SQL dotazů.\nPodklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/4/\n\nYouTube lekce:\n\nhttps://youtu.be/YzP164YANAU?si=RfZXo22trNGsWM46\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/src4.zip\n\nPdf prezentace:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/lecture4.pdf",
+    "crumbs": [
+      "SQL a Django"
+    ]
+  },
+  {
+    "objectID": "web_django/09flights.html",
+    "href": "web_django/09flights.html",
+    "title": "Airline 2",
+    "section": "",
+    "text": "Django - projekt Airline\nMohou se hodit moje poznámky ke gitu\n\nGit\n\n\nTvorba odkazu na konkrétní let\nDoplníme do šablony odkaz na konkrétní let:\n&lt;li&gt;\n    &lt;a href=\"{% url 'flight' flight.id %}\"&gt; \n        Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n    &lt;/a&gt;\n&lt;/li&gt;\nA protože url 'flight' ještě nemáme, vytvoříme ji v flights\\urls.py:\npath(\"&lt;int:flight_id&gt;\", views.flight, name=\"flight\"),\nDo souboru flights\\views.py doplníme funkci pro zobrazení konkrétního letu:\ndef flight(request, flight_id):\n    flight = Flight.objects.get(pk=flight_id)\n    return render(request, \"flights/flight.html\", {\n          \"flight\": flight\n    })\n\n\nChci zobrazit pasažéry na webu\nDo souboru flights\\views.py do funkce flight, do dat pro šablonu přidám:\n\"passengers\": flight.passengers.all()\na do šablony doplním:\n &lt;h2&gt;Passengers&lt;/h2&gt;\n    {% for p in passengers %}\n        &lt;li&gt;{{p.first}} {{p.last}}&lt;/li&gt;\n    {% empty %}\n        No passengers.\n    {% endfor %}\nVytvořím odkaz na seznam letů\n&lt;a href=\"{% url 'index' %}\"&gt;Back to Flight List&lt;/a&gt;\n\n\nChci mít možnost přidat pasažéry k letu\nMěli byste vědět, kam doplníte tento řádek\npath(\"&lt;int:flight_id&gt;/book\", views.book, name=\"book\"),\nVe správném souboru uděláme následující změny:\nfrom django.http import HttpResponseRedirect\nfrom django.urls import reverse\n\ndef book(request, flight_id):\n    if request.method == \"POST\":\n        flight = Flight.objects.get(pk=flight_id)\n        passenger = Passenger.objects.get(pk=int(request.POST[\"passenger\"]))\n        passenger.flights.add(flight)\n        return HttpResponseRedirect(reverse(\"flight\", args=(flight.id,)))\nUpravím šablonu daného letu tak, abych tam měl formulář pro přidání pasažéra\n&lt;h2&gt;Add Passenger&lt;/h2&gt;\n    &lt;form action=\"{% url 'book' flight.id %}\" method=\"POST\"&gt;\n        {% csrf_token %}\n        &lt;select name=\"passenger\" id=\"passenger\"&gt;\n            {% for passanger in non_passengers  %}\n            &lt;option value=\"{{ passanger.id }}\"&gt;{{ passanger }}&lt;/option&gt;\n            {% endfor %}\n        &lt;/select&gt;\n        &lt;input type=\"submit\" value=\"Add Passenger\"&gt;\n    &lt;/form&gt;\nDo funkce flight doplním proměnou, která do šablony odešle data těch pasažérů, kteří na daném letu nejsou:\n    \"non_passengers\": Passenger.objects.exclude(flights=flight).all()\n\n\nMohu si upravit zobrazení v admin rozhraní\nV souboru admin.py provedu úpravy\nclass FlightAdmin(admin.ModelAdmin):\n    list_display = (\"id\", \"origin\", \"destination\", \"duration\")\n\nclass PassengerAdmin(admin.ModelAdmin):\n    filter_horizontal = (\"flights\",)\n\nadmin.site.register(Flight, FlightAdmin)\nadmin.site.register(Passenger, PassengerAdmin)\na aplikace je hotova.",
+    "crumbs": [
+      "Airline 2"
+    ]
+  },
+  {
     "objectID": "web_django/index.html",
     "href": "web_django/index.html",
     "title": "Úvod do Djanga",
@@ -1028,45 +883,285 @@
     ]
   },
   {
-    "objectID": "web_django/02apps.html",
-    "href": "web_django/02apps.html",
-    "title": "Hello str",
+    "objectID": "web_html/02git.html",
+    "href": "web_html/02git.html",
+    "title": "Git",
     "section": "",
-    "text": "Doplníme soubor pro aplikaci hello\\views.py.\ndef brian(request):\n    return HttpResponse(\"Hello, Brian!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"brian\", views.brian, name=\"brian\")\na můžeme to otestovat, případně přidat další jména.\n\nCesta s řetězcem\nDoplníme soubor pro aplikaci hello\\views.py.\ndef great(request,name):\n    return HttpResponse(f\"Hello, {name.capitalize()}!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"&lt;str:name&gt;\", views.great, name=\"great\")\na můžeme to otestovat, zadáním různých slov do správné url\nhttps://localhost:8000/hello/retezec",
+    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
     "crumbs": [
-      "Hello str"
+      "HTML",
+      "Git"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programování a vývoj aplikací",
+    "objectID": "web_html/02git.html#odkazy-k-samostudiu",
+    "href": "web_html/02git.html#odkazy-k-samostudiu",
+    "title": "Git",
     "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud naleznete chybu, dejte mi vědět.\n👨‍🦲 Pavel Martínek"
+    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
+    "crumbs": [
+      "HTML",
+      "Git"
+    ]
   },
   {
-    "objectID": "202526-1d.html",
-    "href": "202526-1d.html",
-    "title": "1.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "objectID": "web_html/02git.html#moje-poznámky-ke-gitu",
+    "href": "web_html/02git.html#moje-poznámky-ke-gitu",
+    "title": "Git",
+    "section": "Moje poznámky ke gitu",
+    "text": "Moje poznámky ke gitu\n\nNejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.\nVlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám:\n\ngit config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nNa linuxovém serveru postupuji podle tohoto návodu. https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53\nls -al ~/.ssh\nssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github -C \"ssh key for github\"\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_github\nnano ~/.ssh/config\nObsah souboru\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  AddKeysToAgent yes\ncat ~/.ssh/id_ed25519_github.pub\nNow, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.\n\nA potom nakonfiguruji repozitář\n\ngit init\ngit add *\ngit commit -m \"first commit\"\ngit remote add origin git@github.com:martinekpavel/oahosting.git\ngit push -u origin main\na hotovo!",
+    "crumbs": [
+      "HTML",
+      "Git"
+    ]
   },
   {
-    "objectID": "202526-1d.html#výuka",
-    "href": "202526-1d.html#výuka",
-    "title": "1.D šk. rok 2025/2026",
+    "objectID": "web_html/04publish.html",
+    "href": "web_html/04publish.html",
+    "title": "Publikace webu",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "crumbs": [
+      "HTML",
+      "Publikace webu"
+    ]
   },
   {
-    "objectID": "web_python/pl10.html",
-    "href": "web_python/pl10.html",
-    "title": "Pracovní list č. 10",
+    "objectID": "web_html/04publish.html#github-pages",
+    "href": "web_html/04publish.html#github-pages",
+    "title": "Publikace webu",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL10 - kreslení textu..\nPracovní soubor pl10.py\n# Pracovní list č. 10\n\n## 01 nakupy.py\n\n\n## 02 baliky.py\n\n\n## 03 text grafika.py\n\n# import tkinter\n# canvas = tkinter.Canvas()\n# canvas.pack()\n# canvas.create_text(150, 50, text='posílám pozdrav z grafické plochy')\n# canvas.mainloop()\n\n## 04 okraje.py\nNyní se přesuňte na pracovní list č. 11",
+    "text": "Následující odstavce popíší publikaci statických stránek (html,css,js) na github pages. Originální návod: https://docs.github.com/en/pages/quickstart\n\n\nVytvoříme nový repozitář, který se bude jmenovat “váš účet”.github.io\n\nrepozitář bude public\nzapneme Add README\n\n\n\n\n\n\n\nVarování\n\n\n\nPozor “váš účet” musí být opravdu název vašeho účtu, nic víc (děláte tu často chybu).\n\n\n\n\n\n\nPřejdeme do Settings a najdeme záložku Pages\nVybereme Branch -&gt; bude tam Main a dáme Save\n\n\n\nbg right contain\n\n\nMinutku počkáme a objeví se naše webová adresa\n\n\n\n\n\n\nPoznámka\n\n\n\nPokud se nic nebude dít, přepněte větev, dejte Save a pak znovu na tu správnou.\n\n\n\n\n\n\n\n\nDůležité\n\n\n\n\nPřidáme adresu (Propojit) jako řešení zadání do Teams\n\n\n\n### Github Clone\nNaklonujeme repozitář na svůj disk pomocí VSC.\nA vybereme umístění našeho projektu (např. C:\\github, nebo Stažené\\github-repos apod.)\n\n\n\n\nVložíme soubor s názvem index.html (přejmenujeme svůj soubor)\n\nUděláme Commit sem\n\nNEBO sem a potvrdíme (toto se objeví, pokud nevyplníme commit viz obrázek výše)\n\nSync Changes a možná bude třeba řešit autentizaci.",
+    "crumbs": [
+      "HTML",
+      "Publikace webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html",
+    "href": "web_html/06menu.html",
+    "title": "Menu webu",
+    "section": "",
+    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#font-awesome",
+    "href": "web_html/06menu.html#font-awesome",
+    "title": "Menu webu",
+    "section": "",
+    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#menu-html",
+    "href": "web_html/06menu.html#menu-html",
+    "title": "Menu webu",
+    "section": "Menu (html)",
+    "text": "Menu (html)\n&lt;nav id=\"navbar\"&gt;\n    &lt;div class=\"logo\"&gt;\n        Moje &lt;span class=\"text-primary\"&gt;firma&lt;/span&gt;\n    &lt;/div&gt;\n    &lt;ul&gt;\n        &lt;li&gt;&lt;a href=\"#home\"&gt;Úvod&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#about\"&gt;O nás&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=\"#kontakt\"&gt;Kontakt&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n&lt;/nav&gt;",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#menu-css",
+    "href": "web_html/06menu.html#menu-css",
+    "title": "Menu webu",
+    "section": "Menu (css)",
+    "text": "Menu (css)\n#navbar {\n    background-color: #333;\n    color: white;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 16px;\n    font-size: 24px;\n    font-weight: bold;\n}\n\n#navbar a {\n    color: white;\n    text-decoration: none;\n}\n\n#navbar ul {\n    display: flex;\n    list-style: none;\n    align-items: center;\n}\n\n#navbar ul li a {\n    padding: 10px;\n    margin: 0 4px;\n}\n\n#navbar ul li a:hover {\n    background-color: #93cb52;\n    border-radius: 5px;\n}",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/06menu.html#úkol",
+    "href": "web_html/06menu.html#úkol",
+    "title": "Menu webu",
+    "section": "Úkol",
+    "text": "Úkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nÚpravy budou minimálně zahrnovat:\n\nvše z minulých zadání\nmenu v záhlaví stránky\ndalší html stránka (odkaz v menu)",
+    "crumbs": [
+      "HTML",
+      "Menu webu"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html",
+    "href": "web_html/08portfolio.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Cíl hodiny: Vytvořit portfolio page",
+    "crumbs": [
+      "HTML",
+      "Portfolio"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html#portfolio",
+    "href": "web_html/08portfolio.html#portfolio",
+    "title": "Portfolio",
+    "section": "Portfolio",
+    "text": "Portfolio\n\nsvůj stávající projekt přesuňte do nové složky -&gt; např. html\ndo Teams sdílejte odkaz na svůj (nyní) starý projekt:\n\nváš_účet_na_githubu.github.io/html\n\nUpravte odkazy na validaci!\nVytvořte portfolio např. podle:\n\nhttps://personal-portfolio.freecodecamp.rocks/\n\npoužijte jen to, co dokážete vysvětlit\nvšechny zdroje ocitujte\ndoplňte ikony na validaci html a css",
+    "crumbs": [
+      "HTML",
+      "Portfolio"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html#další-zdroje",
+    "href": "web_html/08portfolio.html#další-zdroje",
+    "title": "Portfolio",
+    "section": "Další zdroje",
+    "text": "Další zdroje\n\nhttps://picsum.photos/\nhttps://unsplash.com/\nhttps://www.color-hex.com/color-palettes/popular.php",
+    "crumbs": [
+      "HTML",
+      "Portfolio"
+    ]
+  },
+  {
+    "objectID": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
+    "href": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
+    "title": "Portfolio",
+    "section": "Rekap 1. čtvrtletí",
+    "text": "Rekap 1. čtvrtletí\n\nPožadavky web\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Portfolio"
+    ]
+  },
+  {
+    "objectID": "web_html/10rekap.html",
+    "href": "web_html/10rekap.html",
+    "title": "Rekapitulace 1. čtvrtetí",
+    "section": "",
+    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Rekapitulace 1. čtvrtetí"
+    ]
+  },
+  {
+    "objectID": "web_html/10rekap.html#rekap-1.-čtvrtletí",
+    "href": "web_html/10rekap.html#rekap-1.-čtvrtletí",
+    "title": "Rekapitulace 1. čtvrtetí",
+    "section": "",
+    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "crumbs": [
+      "HTML",
+      "Rekapitulace 1. čtvrtetí"
+    ]
+  },
+  {
+    "objectID": "web_html/12search.html",
+    "href": "web_html/12search.html",
+    "title": "Projekt Google Search",
+    "section": "",
+    "text": "Vytvořte nový repozitář googlesearch\nOtevřete ve VS Code jako nový projekt\nVytvořte web dle zadání: https://cs50.harvard.edu/web/projects/0/search/\nCommit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)",
+    "crumbs": [
+      "HTML",
+      "Projekt Google Search"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html",
+    "href": "web_html/index.html",
+    "title": "Základy HTML",
+    "section": "",
+    "text": "Následující kapitoly vás provedou základy HTML kódování.",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html#zajímavé-odkazy",
+    "href": "web_html/index.html#zajímavé-odkazy",
+    "title": "Základy HTML",
+    "section": "Zajímavé odkazy",
+    "text": "Zajímavé odkazy\n\nhttps://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\nrepo: https://github.com/acchou/html-css-cheat-sheet/\n\nhttps://bit.ly/HtmlCssUcebnice\nhttps://cs50.harvard.edu/web/",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
+    ]
+  },
+  {
+    "objectID": "web_js/02lekcejs.html",
+    "href": "web_js/02lekcejs.html",
+    "title": "Lekce 02",
+    "section": "",
+    "text": "Vytvoříme šablonu html souboru.\nDo &lt;head&gt; umístíme &lt;script&gt;&lt;/script&gt;.\nMezi značky napíšeme kód:\nlet counter = 0;\nfunction count() {\n    counter++;\n    document.querySelector('h1').innerHTML = counter;\n    }\nDo html kódu patří tlačítko a k němu přiřazená výše uvedená funkce. Nad něj patří element &lt;h1&gt;&lt;/h1&gt;.\nJakmile vyzkoušíte, zkusme udělat malou úpravu. Vytvoříme a nalinkujeme soubor se styly, kam přidáme styl pro class .red, která nastaví barvu písma na červenou.\nUpravíme funkci.\nfunction count() {\n    counter++;\n\n    if (counter % 10 === 0) {\n        document.querySelector(\"h1\").classList.add('red');}\n    else {\n        document.querySelector(\"h1\").classList.remove('red');\n        }\n    document.querySelector('h1').innerHTML = counter;\n    }\nZkusme oddělit JavaScript od html kódu:\ndocument.querySelector('button').onclick = count;\nJenže!\nPozor věnujte pozornost předávání názvu funkce bez závorek.\nKód bude fungovat, pokud odchytneme událost načtení DOM.\nSprávný script, který můžeme (a uděláme to tak) umístit do odděleného souboru.\nlet counter = 0;\n\ndocument.addEventListener('DOMContentLoaded', function() {\n    document.querySelector('button').onclick = count;\n    });\n\nfunction count() {\n    counter++;\n\n    if (counter % 10 === 0) {\n        document.querySelector(\"h1\").classList.add('red');}\n    else {\n        document.querySelector(\"h1\").classList.remove('red');\n        }\n    document.querySelector('h1').innerHTML = counter;\n}\nPro načtení souboru s JavaScriptem použijeme: &lt;script src=\"counter.js\"&gt;&lt;/script&gt;\nA nyní formulářík.\nhello3.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;Hello!&lt;/title&gt;\n        &lt;script&gt;\n            document.addEventListener('DOMContentLoaded', function() {\n                document.querySelector('form').onsubmit = function() {\n                    const name = document.querySelector('#name').value;\n                    alert(`Hello, ${name}!`);\n                };\n            });\n        &lt;/script&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;Hello!&lt;/h1&gt;\n        &lt;form&gt;\n            &lt;input autofocus=\"\" id=\"name\" placeholder=\"Name\" type=\"text\"&gt;\n            &lt;input type=\"submit\"&gt;\n        &lt;/form&gt;\n    \n\n&lt;/body&gt;&lt;/html&gt;\nZa mne lepší úprava:\nconst name = document.querySelector('#name').value;\n// alert(`Hello, ${name}!`);\nevent.preventDefault();\ndocument.querySelector('h1').innerHTML = `Hello ${name}`;\n\nÚkol\n\nNapište program, který nám převede stupně Celsia na stupně Farenheita\nPoužijte správné techniky výše uvedené\nSdílejte odkaz na web, který zahrnete do svého portfolia",
+    "crumbs": [
+      "JavaScript",
+      "Lekce 02"
+    ]
+  },
+  {
+    "objectID": "web_js/04lekcejs.html",
+    "href": "web_js/04lekcejs.html",
+    "title": "Lekce 04",
+    "section": "",
+    "text": "Videolekce 1:06:30\nZe zdrojových souborů načteme\n\ntasks0.html\ntasks1.html\ntasks2.html\ninterval.html\nstorage.html",
+    "crumbs": [
+      "JavaScript",
+      "Lekce 04"
+    ]
+  },
+  {
+    "objectID": "web_js/04lekcejs.html#úkol",
+    "href": "web_js/04lekcejs.html#úkol",
+    "title": "Lekce 04",
+    "section": "Úkol",
+    "text": "Úkol\nNaprogramujte aplikaci pro zadávání úkolů, která si bude pamatovat seznam úkolu po znovunačtení stránky v prohlížeči. Odevzdejte kód, který dokážete vysvětlit.",
+    "crumbs": [
+      "JavaScript",
+      "Lekce 04"
+    ]
+  },
+  {
+    "objectID": "web_js/chat.html",
+    "href": "web_js/chat.html",
+    "title": "Node.js chat app",
+    "section": "",
+    "text": "Informace a podklady jsou v MS Teams"
+  },
+  {
+    "objectID": "web_js/index.html",
+    "href": "web_js/index.html",
+    "title": "Úvod do JavaScriptu",
+    "section": "",
+    "text": "Podklady pro výuku (videa, kódy, transkript, prezentace): https://cs50.harvard.edu/web/weeks/5/.\nYouTube lekce: https://youtu.be/x5trGVMKTdY?si=U9paExRU_CniqsO6\nZdrojové soubory: https://cdn.cs50.net/web/2020/spring/lectures/5/src5.zip",
+    "crumbs": [
+      "JavaScript",
+      "Úvod do JavaScriptu"
+    ]
+  },
+  {
+    "objectID": "web_python/01install.html",
+    "href": "web_python/01install.html",
+    "title": "Instalace",
+    "section": "",
+    "text": "Do Googlu napíšeme “python”\n\n\n\nNajdeme standalone installer a stáhneme\n\n\n\n\nSpustíme instalátor, zaškrtneme PATH a vybereme Customize installation\n\n\n\nZvolíme instalaci pro všechny uživatele a je dobré vědět, kde ten python máme nainstalovaný.\n\n\n\nTady nic měnit nemusíme.\n\n\n\nJeště před ukončením instalace, klikneme na Disable path length limit.\n\n\n\nPracovní listy pracují s IDE IDLE (naleznete v nabídce Start).\n\n\n\nPro úvodní list doporučuji cmd.exe (powershell nebo terminál) kam napíšeme python a Enter. Následně pak přejdeme na Visual Studio Code.\n\n\nPokračujte prvním pracovním listem ze zadání v Teams.",
     "crumbs": [
       "Python",
-      "Pracovní list č. 10"
+      "Instalace"
+    ]
+  },
+  {
+    "objectID": "web_python/pl03.html",
+    "href": "web_python/pl03.html",
+    "title": "Pracovní list č. 3",
+    "section": "",
+    "text": "Pracujte podle pracovního listu (zadaný v Teams)\nPracovní soubor pl03.py",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 3"
     ]
   },
   {
@@ -1092,50 +1187,6 @@
     ]
   },
   {
-    "objectID": "web_python/pl12.html",
-    "href": "web_python/pl12.html",
-    "title": "Pracovní list č. 12",
-    "section": "",
-    "text": "Pracujte podle pracovního listu PracL12 - cykly.\nPracovní soubor pl12.py\n# Pracovní list č. 12\n\n## 01 rikanka.py - nemusíte dělat\n\n## 02 rada_cisel.py\n\nfor i in range(10): \n    print('číslo', i)\n\n## 03 a\n\n## 03 b\n\n## 03 c\n\n## 03 d\n\n \n## 04 Vytvoř program druhe_mocniny.py, který pomocí for cyklu vypíše čísla a jejich \n# druhé mocniny:\n\n\n \n## 05 Máme takovouto povídku (povidka.py): \n# Na stromě bylo 0 vrabců, jeden přiletěl a už je tam 1 vrabců \n\n\n \n## 06 Vrabci z předchozí povídky odlétají \n\n\n\n## 07 Máme kartičky s čísly od 0 do 9, které chceme náhodně rozložit po ploše. Vytvoř program \n# deset_karticek.py, který pomocí cyklu postupně nakreslí deset takových kartiček na \n# náhodných pozicích\n\n\n\n## 08. Na chodníku je rozhozených pět cizokrajných bankovek s hodnotami 10, 20, 30, 40 \n# a 50. Napiš program bankovky.py, který takové bankovky nakreslí pomocí for cyklu\n\n\n\n\n## 09. Vytvoř nový program kresleni_cisel.py a přepiš do něj následující kód, který kreslí \n# čísla na grafickou plochu: \n\nimport tkinter \ncanvas = tkinter.Canvas() \ncanvas.pack() \n\nfor i in range(8): \n    x = i * 50 \n    canvas.create_text(x, 100, text=i, font='arial 30') \n\ncanvas.mainloop()\n\n\n## 10. Uprav předchozí program tak, aby se čísla kreslila přibližně na úhlopříčce grafické plochy \n# podobně jako na následujícím obrázku\n\n\n## 11. Uprav předchozí program tak, aby se čísla kreslila přibližně na úhlopříčce grafické plochy \n# podobně jako na následujícím obrázku\n\n\n## 12 Víš, jak vypadá padající had z domina? Vytvoř program domino.py, který pomocí cyklu \n# a obdélníku nakreslí zatím ještě stojící kostky domina\n\n\n## 13 Napiš program velka_pyramida.py, který pomocí cyklu a obdélníku nakreslí \n# takovouto pyramidu:",
-    "crumbs": [
-      "Python",
-      "Pracovní list č. 12"
-    ]
-  },
-  {
-    "objectID": "web_python/pl03.html",
-    "href": "web_python/pl03.html",
-    "title": "Pracovní list č. 3",
-    "section": "",
-    "text": "Pracujte podle pracovního listu (zadaný v Teams)\nPracovní soubor pl03.py",
-    "crumbs": [
-      "Python",
-      "Pracovní list č. 3"
-    ]
-  },
-  {
-    "objectID": "web_python/pl14.html",
-    "href": "web_python/pl14.html",
-    "title": "Pracovní list č. 14",
-    "section": "",
-    "text": "Pracujte podle pracovního listu PracL14 - elipsy a kruhy pouze prvních 5 cvičení.\nPracovní soubor pl14.py\n# Pracovní list č. 14\n\n## 01 Napiš program soucet_99.py, který pomocí cyklu zjistí, jaký je součet čísel 0 + 1 + 2 + ... + 99. Výsledek program vypíše pomocí příkazu print. \n\n## 02 2. V jazyce Python kreslíme elipsy a kruhy příkazem create_oval. Vytvoř nový program elipsa.py a zapiš do něj následující kód:\nimport tkinter\n\ncanvas = tkinter.Canvas()\ncanvas.pack()\n\ncanvas.create_oval(10, 10, 200, 150)\ncanvas.mainloop()\n\n## Vyzkoušej, co program nakreslí. \n\n## 03. Přidej na konec programu příkaz pro kreslení obdélníku se stejnými čísly, jako jsou v příkazu create_oval. Jaká bude vzájemná pozice elipsy a obdélníku? \n\n## 04 vez.py\n\n## 05 Diskutuj se sousedem, jak nakreslit kruh. Potom změň předchozí program tak, aby se místo věže kreslil sněhulák. \n\n## Nyní se vrhněte na pracovní list č. 15.",
-    "crumbs": [
-      "Python",
-      "Pracovní list č. 14"
-    ]
-  },
-  {
-    "objectID": "web_python/01install.html",
-    "href": "web_python/01install.html",
-    "title": "Instalace",
-    "section": "",
-    "text": "Do Googlu napíšeme “python”\n\n\n\nNajdeme standalone installer a stáhneme\n\n\n\n\nSpustíme instalátor, zaškrtneme PATH a vybereme Customize installation\n\n\n\nZvolíme instalaci pro všechny uživatele a je dobré vědět, kde ten python máme nainstalovaný.\n\n\n\nTady nic měnit nemusíme.\n\n\n\nJeště před ukončením instalace, klikneme na Disable path length limit.\n\n\n\nPracovní listy pracují s IDE IDLE (naleznete v nabídce Start).\n\n\n\nPro úvodní list doporučuji cmd.exe (powershell nebo terminál) kam napíšeme python a Enter. Následně pak přejdeme na Visual Studio Code.\n\n\nPokračujte prvním pracovním listem ze zadání v Teams.",
-    "crumbs": [
-      "Python",
-      "Instalace"
-    ]
-  },
-  {
     "objectID": "web_python/pl09.html",
     "href": "web_python/pl09.html",
     "title": "Pracovní list č. 9",
@@ -1147,87 +1198,36 @@
     ]
   },
   {
-    "objectID": "web_js/index.html",
-    "href": "web_js/index.html",
-    "title": "Úvod do JavaScriptu",
+    "objectID": "web_python/pl11.html",
+    "href": "web_python/pl11.html",
+    "title": "Pracovní list č. 11",
     "section": "",
-    "text": "Podklady pro výuku (videa, kódy, transkript, prezentace): https://cs50.harvard.edu/web/weeks/5/.\nYouTube lekce: https://youtu.be/x5trGVMKTdY?si=U9paExRU_CniqsO6\nZdrojové soubory: https://cdn.cs50.net/web/2020/spring/lectures/5/src5.zip",
+    "text": "Pracujte podle pracovního listu PracL11 - cykly.\nPracovní soubor pl11.py\n# Pracovní list č. 11\n\n## 01 gps.py \n\n# import tkinter\n# import random\n# canvas = tkinter.Canvas()\n# canvas.pack()\n\n# def gps():\n#     x = random.randint(10, 300)  \n#     y = random.randint(10, 200)\n#     canvas.create_text(x, y, text='+')\n\n# canvas.mainloop()\n\n## a tak dále pokračujte",
     "crumbs": [
-      "JavaScript",
-      "Úvod do JavaScriptu"
+      "Python",
+      "Pracovní list č. 11"
     ]
   },
   {
-    "objectID": "web_js/01lekcejs.html",
-    "href": "web_js/01lekcejs.html",
-    "title": "Lekce 01",
+    "objectID": "web_python/pl13.html",
+    "href": "web_python/pl13.html",
+    "title": "Pracovní list č. 13",
     "section": "",
-    "text": "JavaScriptový kód nebo link na soubor se obvykle vyskytuje v &lt;head&gt;&lt;/head&gt; nebo těsně před uzavíracím tagem &lt;/body&gt;.\nV praxi se setkáte se vším možným, nicméně budete odevzdávat kód, kde budete linkovat js soubor v &lt;head&gt;.",
+    "text": "Pracujte podle pracovního listu PracL13 - výrazy v cyklu.\nPracovní soubor pl13.py\n# Pracovní list č. 13\n\n## 01 druhe_mocniny_platno.py\n\n\n\n## 02 na papir napiste a zkontrolujte\n\nimport tkinter \n \ncanvas = tkinter.Canvas() \ncanvas.pack() \n \ny = 10 \nfor i in range(11): \n    canvas.create_text(10, y, text=i) \n    y = y + 20\n\ncanvas.mainloop()\n\n## 03 rada_ctvercu.py\n\n\n \n## 04 + 05 zlaty_poklad.py s mezerami\n\n\n## pokračujte dle pdf",
     "crumbs": [
-      "JavaScript",
-      "Lekce 01"
+      "Python",
+      "Pracovní list č. 13"
     ]
   },
   {
-    "objectID": "web_js/01lekcejs.html#umístění-skriptu",
-    "href": "web_js/01lekcejs.html#umístění-skriptu",
-    "title": "Lekce 01",
+    "objectID": "web_python/pl15.html",
+    "href": "web_python/pl15.html",
+    "title": "Pracovní list č. 15",
     "section": "",
-    "text": "JavaScriptový kód nebo link na soubor se obvykle vyskytuje v &lt;head&gt;&lt;/head&gt; nebo těsně před uzavíracím tagem &lt;/body&gt;.\nV praxi se setkáte se vším možným, nicméně budete odevzdávat kód, kde budete linkovat js soubor v &lt;head&gt;.",
+    "text": "Pracujte podle pracovního listu PracL15 - kruhy a cykly.\nPracovní soubor pl15.py\n# Pracovní list č. 15\n\n## 01 dve_kruznice.py\n\n## 02 upravene dve_dve_kruznice.py\n\n## 03 terc.py\n\n\n## 04 gramovon.py\n\n## 05 upraveny terc.py\n\n## 06 upraveny terc.py\n\n## 07 retizek.py\n\n## 08 mince.py\n\n## 09 upravene mince.py\n\n## 10 random_choice.py\n\n## 11\n\n## 12",
     "crumbs": [
-      "JavaScript",
-      "Lekce 01"
-    ]
-  },
-  {
-    "objectID": "web_js/01lekcejs.html#ukázky-kódu",
-    "href": "web_js/01lekcejs.html#ukázky-kódu",
-    "title": "Lekce 01",
-    "section": "Ukázky kódu",
-    "text": "Ukázky kódu\nSoubor hello0.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;Hello!&lt;/title&gt;\n        &lt;script&gt;\n            alert('Hello, world!');\n        &lt;/script&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1&gt;Hello!&lt;/h1&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\nZkusíme přidat do kódu tlačítko a nastavit událost kliknutí, po kliknutí se spustí funkce.\n&lt;button onclick=\"hello()\"&gt;Click Here&lt;/button&gt;\na napíšeme danou funkci na správné místo\nfunction hello() {\n                document.querySelector('h1').innerHTML = 'Goodbye!';\n            }\nSoubor counter0.html\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;title&gt;Count&lt;/title&gt;\n        &lt;script&gt;\n            let counter = 0;\n            function count() {\n                counter++;\n                alert(counter);\n            }\n        &lt;/script&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;button onclick=\"count()\"&gt;Count&lt;/button&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\nBude doplněno dle videa.",
-    "crumbs": [
-      "JavaScript",
-      "Lekce 01"
-    ]
-  },
-  {
-    "objectID": "web_js/chat.html",
-    "href": "web_js/chat.html",
-    "title": "Node.js chat app",
-    "section": "",
-    "text": "Informace a podklady jsou v MS Teams"
-  },
-  {
-    "objectID": "web_js/03lekcejs.html",
-    "href": "web_js/03lekcejs.html",
-    "title": "Lekce 03",
-    "section": "",
-    "text": "Ze zdrojových souborů načteme colors0.html.\nPokud chceme kód vyplepšit, použijeme třídu class=“color-change”. A speciální data atribut!\nA upravíme skript:\nOtestujeme v konzoli. Video 55:00.",
-    "crumbs": [
-      "JavaScript",
-      "Lekce 03"
-    ]
-  },
-  {
-    "objectID": "web_js/03lekcejs.html#šipková-notace",
-    "href": "web_js/03lekcejs.html#šipková-notace",
-    "title": "Lekce 03",
-    "section": "Šipková notace",
-    "text": "Šipková notace\ndocument.querySelectorAll('.color-change').forEach(button =&gt; {\n    button.onclick = () =&gt; {\n        document.querySelector('#hello').style.color = button.dataset.color;\n        };\n    });",
-    "crumbs": [
-      "JavaScript",
-      "Lekce 03"
-    ]
-  },
-  {
-    "objectID": "web_js/03lekcejs.html#form---select",
-    "href": "web_js/03lekcejs.html#form---select",
-    "title": "Lekce 03",
-    "section": "Form - Select",
-    "text": "Form - Select\nZe zdrojových souborů načteme colors3.html.\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;script&gt;\n            document.addEventListener('DOMContentLoaded', () =&gt; {\n\n                // Change the color of the heading when dropdown changes\n                document.querySelector('#color-change').onchange = function() {\n                    document.querySelector('#hello').style.color = this.value;\n                };\n\n            });\n        &lt;/script&gt;\n        &lt;title&gt;Colors&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;h1 id=\"hello\"&gt;Hello!&lt;/h1&gt;\n        &lt;select id=\"color-change\"&gt;\n            &lt;option value=\"black\"&gt;Black&lt;/option&gt;\n            &lt;option value=\"red\"&gt;Red&lt;/option&gt;\n            &lt;option value=\"blue\"&gt;Blue&lt;/option&gt;\n            &lt;option value=\"green\"&gt;Green&lt;/option&gt;\n        &lt;/select&gt;\n    &lt;/body&gt;\n&lt;/html&gt;",
-    "crumbs": [
-      "JavaScript",
-      "Lekce 03"
+      "Python",
+      "Pracovní list č. 15"
     ]
   }
 ]
