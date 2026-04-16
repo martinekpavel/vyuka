@@ -1,0 +1,75 @@
+---
+title: "XAMPP MySQL db"
+---
+
+Vypneme MySQL server v XAMPP Control Panelu.
+
+Stáhneme novou verzi. Složku mysql přejmenujeme na mysql_old a rozbalíme novou verzi do složky mysql.
+
+Nevím, zda to má význam ale kopíruji 2 složky a 3 soubory z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.
+
+V XAMPP Control Panelu klikneme na `Shell` a zadáme:
+
+```cmd
+mysql_install_db
+```
+Zadejte tento příkaz vytvoří úplně novou systémovou strukturu přímo pro novou verzi MariaDB.
+
+V prohlížeči v phpMyAdmin jděte do záložky Import.
+Najděte soubor v: `C:\xampp\phpMyAdmin\sql\create_tables.sql`.
+Importujte tento soubor do phpMyAdmin, aby se vytvořily potřebné tabulky pro správu uživatelů a oprávnění.
+
+Otevřete `C:\xampp\phpMyAdmin\config.inc.php`.
+
+Najděte řádek:
+
+```php
+$cfg['Servers'][$i]['auth_type'] = 'config';
+```
+
+Zkuste ho změnit na:
+
+```php
+$cfg['Servers'][$i]['auth_type'] = 'cookie';
+```
+Zadejte heslo pro uživatele `root` (pokud jste ho nastavili
+dříve) a potvrďte. Po dokončení restartujte MySQL server v XAMPP Control Panelu.
+
+Nainstalujeme klienta mysql pro Python:
+```cmd
+pip install mysqlclient 
+```
+V souboru `settings.py` upravíme nastavení pro připojení k databázi:
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blabla',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '', #Emptyforlocalhostthroughdomainsocketsor'127.0.0.1' for  through TCP.
+        'PORT': '', # Set to empty string for default.
+        "OPTIONS": {
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
+    }
+}
+```
+
+Nyní můžeme spustit příkazy pro vytvoření databáze a migrace:
+
+```cmd
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+```
+
+Po úspěšném vytvoření superuživatele můžeme spustit vývojový server:
+
+```cmd
+python manage.py runserver
+```
+
+A přistoupit k administraci na adrese `http://localhost:8000/admin/` a přihlásit se pomocí vytvořeného superuživatele. Nyní můžete spravovat databázi přes admin rozhraní Django.
+
+
