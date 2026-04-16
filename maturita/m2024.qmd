@@ -1,0 +1,94 @@
+---
+title: "rok 2024"
+---
+
+U všech úloh jsou navíc možnosti:
+
+- program nevypíše nic
+- program se zacyklí
+
+
+## 2024 - podzim
+
+Uvažme následující funkci. Co vypíše pro volání `ff(2, 2, 3, 3)`?
+
+```php
+function ff($a, $b, $c, $d): void
+{
+    for ($i = a; $i <= $b; $i++) {
+        if ($i > $c) {
+            echo $d + $i;
+        }
+    }
+}   
+```
+
+Uvažme následující funkci. Co vypíše pro volání `gg(2, 2, 3, 3)`:
+
+```php
+function gg($a, $b, $c, $d): void
+{
+    while ($a < $d) {
+        if ($c < $d) {
+            $a = $a + $a;
+            echo $a;
+        }
+    }
+}
+```
+
+## 2024 - jaro
+
+Uvažme následující funkci. Co vypíše pro volání `ff(1, 2, 3, 4)`:
+
+```php
+function ff($a, $b, $c, $d): void
+{
+    for ($i = a; $i <= $b; $i++) {
+        if ($i > $c) {
+            echo $d + $i;
+        }
+    }
+}   
+```
+
+Uvažme následující funkci. Co vypíše pro volání `gg(1, 2, 3, 4)`:
+
+```php
+function gg($a, $b, $c, $d): void
+{
+    while ($a < $d) {
+        if ($c < $d) {
+            $a = $a + $a;
+            echo $a;
+        }
+    }
+}
+```
+
+Uvažme následující funkci. Co vypíše pro volání `f(1, 2, 3, 4)`:
+
+```php
+function ff($a, $b, $c, $d): void
+{
+    for ($i = a; $i <= $b; $i++) {
+        if ($i < $c) {
+            echo $d + $i;
+        }
+    }
+}   
+```
+
+Uvažme následující funkci. Co vypíše pro volání `g(1, 2, 3, 4)`:
+
+```php
+function gg($a, $b, $c, $d): void
+{
+    while ($a < $d) {
+        if ($c < $d) {
+            $a = $a + $d;
+            echo $b + $a;
+        }
+    }
+}
+```

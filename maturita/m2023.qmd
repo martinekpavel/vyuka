@@ -1,0 +1,97 @@
+---
+title: "rok 2023"
+---
+
+U všech úloh jsou navíc možnosti:
+
+- program nevypíše nic
+- program se zacyklí
+
+## 2023 - podzim
+
+Uvažme následující funkci. Kolikrát proběhne cyklus `for` pro volání `e(3,3)`. Co vypíše pro volání `e(2, 4)`:
+
+```php
+function e($b, $c): void
+{
+    for ($i = $b; $i < $c; $i++) {
+        if ($i == $c) {
+            echo $c;
+        }
+    }
+}
+```
+
+Uvažme následující funkci. Co vypíše pro volání `d2b(3)`:
+
+```php
+function d2b($n): void
+{
+    $vysledek = 0;
+    while ($n >= 1) {
+        $b = $n + 2;
+        $n = $n - 1;
+        $vysledek = $vysledek + $b;
+    }
+    echo $vysledek;
+}
+```
+
+## 2023 - jaro
+
+Uvažme následující funkci. Kolikrát proběhne cyklus `for` pro volání `a(0, 2, 4)`. Co vypíše pro volání `a(1, 3, 0)`:
+
+```php
+function a($b, $c, $d): void
+{
+    for ($i = $b; $i < $c; $i++) {
+        if ($i > $d) {
+            echo $d, $c;
+        }
+    }
+}
+```
+
+Uvažme následující funkci. Co vypíše pro volání `d2b(2)`:
+
+```php
+function d2b($n): void
+{
+    $vysledek = '';
+    while ($n >= 1) {
+        $b = $n % 2;
+        (int) $n = (int) $n / 2;
+        $vysledek = $b . $vysledek; // spojování řetězců
+    }
+    echo $vysledek;
+}
+```
+
+Uvažme následující funkci. Kolikrát proběhne cyklus `for` pro volání `e(1, 3)`. Co vypíše pro volání `e(2, 4)`:
+
+
+```php
+function e($b, $c): void
+{
+    for ($i = $b; $i <= $c; $i++) {
+        if ($i == $c) {
+            echo $c;
+        }
+    }
+}
+``` 
+
+Uvažme následující funkci. Co vypíše pro volání `d2b(3)`:
+
+```php
+function d2b($n): void
+{
+    $vysledek = '';
+    while ($n >= 1) {
+        $b = $n % 2;
+        (int) $n = (int) $n / 2;
+        $vysledek = $b . $vysledek; // spojování řetězců
+    }
+    echo $vysledek;
+}
+```
