@@ -1042,7 +1042,7 @@
     "href": "web_django/11xampp.html",
     "title": "XAMPP MySQL db",
     "section": "",
-    "text": "Nainstalujeme XAMPP a spustíme a mrkneme do phpmyadmin\nVypneme jen MySQL server v XAMPP Control Panelu.\nStáhneme novou verzi. Složku c:přejmenujeme na mysql_old a rozbalíme novou verzi mariadb do složky mysql.\nNakopíruji 2 složky (backup, scripts) a 3 soubory (*.bat) z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.\nV XAMPP Control Panelu klikneme na Shell a zadáme:\nNajděte řádek:\nZkuste ho změnit na:",
+    "text": "Nainstalujeme XAMPP a spustíme a mrkneme do phpmyadmin\nVypneme jen MySQL server v XAMPP Control Panelu.\nStáhneme novou verzi. Složku c:\\xampp\\mysql přejmenujeme na mysql_old a rozbalíme novou verzi mariadb do složky mysql.\nNakopíruji 2 složky (backup, scripts) a 3 soubory (*.bat) z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.\nV XAMPP Control Panelu klikneme na Shell a zadáme:\nNajděte řádek:\nZkuste ho změnit na:",
     "crumbs": [
       "XAMPP MySQL db"
     ]
