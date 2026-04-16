@@ -399,102 +399,324 @@
     ]
   },
   {
-    "objectID": "web_django/10users.html",
-    "href": "web_django/10users.html",
-    "title": "Uživatelé",
+    "objectID": "web_django/11xampp.html",
+    "href": "web_django/11xampp.html",
+    "title": "XAMPP MySQL db",
     "section": "",
-    "text": "Vytvoříme novou aplikaci users:\npython manage.py startapp users\nDo souboru settings.py doplním:\nINSTALLED_APPS = [\n    'flights',\n    'users', # doplníme název aplikace\n    'django.contrib.admin',\n    ...\n]\nDo souboru airline\\urls.py doplním:\n    path('users/', include('users.urls')),\nVytvoříme soubor pro aplikaci users\\urls.py\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.user, name=\"user\"),\n    path(\"login\", views.login_view, name=\"login\"),\n    path(\"logout\", views.logout_view, name=\"logout\")\n]\nUpravíme soubor users\\views.py:\nfrom django.contrib.auth import authenticate, login, logout\nfrom django.http import HttpResponse, HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\n# Create your views here.\ndef user(request):\n    if not request.user.is_authenticated:\n        return HttpResponseRedirect(reverse(\"login\"))\n    return render(request, \"users/user.html\")\n\ndef login_view(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return HttpResponseRedirect(reverse(\"user\"))\n        else:\n            return render(request, \"users/login.html\", {\n                \"message\": \"Invalid credentials.\"\n            })\n    else:\n        return render(request, \"users/login.html\")\n\ndef logout_view(request):\n    logout(request)\n    return render(request, \"users/login.html\", {\n        \"message\": \"Logged out.\"\n    })\nVytvoříme šablony users\\templates\\users\\layout.html, users\\templates\\users\\login.html, users\\templates\\users\\user.html.\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Log In&lt;/h1&gt;\n\n    {% if message %}\n        &lt;div&gt;{{ message }}&lt;/div&gt;\n    {% endif %}\n\n    &lt;form action=\"{% url 'login' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        &lt;input type=\"text\" name=\"username\" placeholder=\"Username\"&gt;\n        &lt;input type=\"password\" name=\"password\" placeholder=\"Password\"&gt;\n        &lt;input type=\"submit\" value=\"Login\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Welcome, {{ request.user.first_name }}&lt;/h1&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;Username: {{ request.user.username }}&lt;/li&gt;\n        &lt;li&gt;Email: {{ request.user.email }}&lt;/li&gt;\n    &lt;/ul&gt;\n\n    &lt;a href=\"{% url 'logout' %}\"&gt;Log Out&lt;/a&gt;\n{% endblock %}",
+    "text": "Vypneme MySQL server v XAMPP Control Panelu.\nStáhneme novou verzi. Složku mysql přejmenujeme na mysql_old a rozbalíme novou verzi do složky mysql.\nNevím, zda to má význam ale kopíruji 2 složky a 3 soubory z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.\nV XAMPP Control Panelu klikneme na Shell a zadáme:\nmysql_install_db\nZadejte tento příkaz vytvoří úplně novou systémovou strukturu přímo pro novou verzi MariaDB.\nV prohlížeči v phpMyAdmin jděte do záložky Import. Najděte soubor v: C:\\xampp\\phpMyAdmin\\sql\\create_tables.sql. Importujte tento soubor do phpMyAdmin, aby se vytvořily potřebné tabulky pro správu uživatelů a oprávnění.\nOtevřete C:\\xampp\\phpMyAdmin\\config.inc.php.\nNajděte řádek:\n$cfg['Servers'][$i]['auth_type'] = 'config';\nZkuste ho změnit na:\n$cfg['Servers'][$i]['auth_type'] = 'cookie';\nZadejte heslo pro uživatele root (pokud jste ho nastavili dříve) a potvrďte. Po dokončení restartujte MySQL server v XAMPP Control Panelu.\nNainstalujeme klienta mysql pro Python:\npip install mysqlclient \nV souboru settings.py upravíme nastavení pro připojení k databázi:\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'blabla',\n        'USER': 'root',\n        'PASSWORD': '',\n        'HOST': '', #Emptyforlocalhostthroughdomainsocketsor'127.0.0.1' for  through TCP.\n        'PORT': '', # Set to empty string for default.\n        \"OPTIONS\": {\n            \"init_command\": \"SET sql_mode='STRICT_TRANS_TABLES'\",\n        }\n    }\n}\nNyní můžeme spustit příkazy pro vytvoření databáze a migrace:\npython manage.py makemigrations\npython manage.py migrate\npython manage.py createsuperuser\nPo úspěšném vytvoření superuživatele můžeme spustit vývojový server:\npython manage.py runserver\nA přistoupit k administraci na adrese http://localhost:8000/admin/ a přihlásit se pomocí vytvořeného superuživatele. Nyní můžete spravovat databázi přes admin rozhraní Django.",
     "crumbs": [
-      "Uživatelé"
+      "XAMPP MySQL db"
     ]
   },
   {
-    "objectID": "web_django/10users.html#ověřování-uživatelů",
-    "href": "web_django/10users.html#ověřování-uživatelů",
-    "title": "Uživatelé",
+    "objectID": "web_django/09flights.html",
+    "href": "web_django/09flights.html",
+    "title": "Airline 2",
     "section": "",
-    "text": "Vytvoříme novou aplikaci users:\npython manage.py startapp users\nDo souboru settings.py doplním:\nINSTALLED_APPS = [\n    'flights',\n    'users', # doplníme název aplikace\n    'django.contrib.admin',\n    ...\n]\nDo souboru airline\\urls.py doplním:\n    path('users/', include('users.urls')),\nVytvoříme soubor pro aplikaci users\\urls.py\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.user, name=\"user\"),\n    path(\"login\", views.login_view, name=\"login\"),\n    path(\"logout\", views.logout_view, name=\"logout\")\n]\nUpravíme soubor users\\views.py:\nfrom django.contrib.auth import authenticate, login, logout\nfrom django.http import HttpResponse, HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\n# Create your views here.\ndef user(request):\n    if not request.user.is_authenticated:\n        return HttpResponseRedirect(reverse(\"login\"))\n    return render(request, \"users/user.html\")\n\ndef login_view(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return HttpResponseRedirect(reverse(\"user\"))\n        else:\n            return render(request, \"users/login.html\", {\n                \"message\": \"Invalid credentials.\"\n            })\n    else:\n        return render(request, \"users/login.html\")\n\ndef logout_view(request):\n    logout(request)\n    return render(request, \"users/login.html\", {\n        \"message\": \"Logged out.\"\n    })\nVytvoříme šablony users\\templates\\users\\layout.html, users\\templates\\users\\login.html, users\\templates\\users\\user.html.\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Log In&lt;/h1&gt;\n\n    {% if message %}\n        &lt;div&gt;{{ message }}&lt;/div&gt;\n    {% endif %}\n\n    &lt;form action=\"{% url 'login' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        &lt;input type=\"text\" name=\"username\" placeholder=\"Username\"&gt;\n        &lt;input type=\"password\" name=\"password\" placeholder=\"Password\"&gt;\n        &lt;input type=\"submit\" value=\"Login\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Welcome, {{ request.user.first_name }}&lt;/h1&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;Username: {{ request.user.username }}&lt;/li&gt;\n        &lt;li&gt;Email: {{ request.user.email }}&lt;/li&gt;\n    &lt;/ul&gt;\n\n    &lt;a href=\"{% url 'logout' %}\"&gt;Log Out&lt;/a&gt;\n{% endblock %}",
+    "text": "Django - projekt Airline\nMohou se hodit moje poznámky ke gitu\n\nGit\n\n\nTvorba odkazu na konkrétní let\nDoplníme do šablony odkaz na konkrétní let:\n&lt;li&gt;\n    &lt;a href=\"{% url 'flight' flight.id %}\"&gt; \n        Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n    &lt;/a&gt;\n&lt;/li&gt;\nA protože url 'flight' ještě nemáme, vytvoříme ji v flights\\urls.py:\npath(\"&lt;int:flight_id&gt;\", views.flight, name=\"flight\"),\nDo souboru flights\\views.py doplníme funkci pro zobrazení konkrétního letu:\ndef flight(request, flight_id):\n    flight = Flight.objects.get(pk=flight_id)\n    return render(request, \"flights/flight.html\", {\n          \"flight\": flight\n    })\n\n\nChci zobrazit pasažéry na webu\nDo souboru flights\\views.py do funkce flight, do dat pro šablonu přidám:\n\"passengers\": flight.passengers.all()\na do šablony doplním:\n &lt;h2&gt;Passengers&lt;/h2&gt;\n    {% for p in passengers %}\n        &lt;li&gt;{{p.first}} {{p.last}}&lt;/li&gt;\n    {% empty %}\n        No passengers.\n    {% endfor %}\nVytvořím odkaz na seznam letů\n&lt;a href=\"{% url 'index' %}\"&gt;Back to Flight List&lt;/a&gt;\n\n\nChci mít možnost přidat pasažéry k letu\nMěli byste vědět, kam doplníte tento řádek\npath(\"&lt;int:flight_id&gt;/book\", views.book, name=\"book\"),\nVe správném souboru uděláme následující změny:\nfrom django.http import HttpResponseRedirect\nfrom django.urls import reverse\n\ndef book(request, flight_id):\n    if request.method == \"POST\":\n        flight = Flight.objects.get(pk=flight_id)\n        passenger = Passenger.objects.get(pk=int(request.POST[\"passenger\"]))\n        passenger.flights.add(flight)\n        return HttpResponseRedirect(reverse(\"flight\", args=(flight.id,)))\nUpravím šablonu daného letu tak, abych tam měl formulář pro přidání pasažéra\n&lt;h2&gt;Add Passenger&lt;/h2&gt;\n    &lt;form action=\"{% url 'book' flight.id %}\" method=\"POST\"&gt;\n        {% csrf_token %}\n        &lt;select name=\"passenger\" id=\"passenger\"&gt;\n            {% for passanger in non_passengers  %}\n            &lt;option value=\"{{ passanger.id }}\"&gt;{{ passanger }}&lt;/option&gt;\n            {% endfor %}\n        &lt;/select&gt;\n        &lt;input type=\"submit\" value=\"Add Passenger\"&gt;\n    &lt;/form&gt;\nDo funkce flight doplním proměnou, která do šablony odešle data těch pasažérů, kteří na daném letu nejsou:\n    \"non_passengers\": Passenger.objects.exclude(flights=flight).all()\n\n\nMohu si upravit zobrazení v admin rozhraní\nV souboru admin.py provedu úpravy\nclass FlightAdmin(admin.ModelAdmin):\n    list_display = (\"id\", \"origin\", \"destination\", \"duration\")\n\nclass PassengerAdmin(admin.ModelAdmin):\n    filter_horizontal = (\"flights\",)\n\nadmin.site.register(Flight, FlightAdmin)\nadmin.site.register(Passenger, PassengerAdmin)\na aplikace je hotova.",
     "crumbs": [
-      "Uživatelé"
+      "Airline 2"
     ]
   },
   {
-    "objectID": "web_django/10users.html#registrace-uživatele",
-    "href": "web_django/10users.html#registrace-uživatele",
-    "title": "Uživatelé",
-    "section": "Registrace uživatele",
-    "text": "Registrace uživatele\nZdroj: https://dev.to/donesrom/how-to-set-up-django-built-in-registration-in-2023-41hg\nVytvoříme soubor s formulářem v rámci naší aplikace: formular.py\nfrom django import forms \nfrom django.contrib.auth.forms import UserCreationForm\nfrom django.contrib.auth.models import User\n\nclass RegistrationForm(UserCreationForm):\n    email = forms.EmailField(required=True)\n\n    class Meta:\n        model = User\n        fields = [\"username\", \"first_name\", \"last_name\",\"email\", \"password1\", \"password2\"]\nV souboru aplikace upravíme views.py\nfrom . formular import *\nfrom django.shortcuts import render, redirect # přidáme redirect\nfrom django.contrib.auth.forms import *\n\ndef sign_up(request):\n    if request.method == \"POST\":\n        form = RegistrationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request,user)\n            return redirect(\"/\")\n    else:\n        form = RegistrationForm()\n    \n    return render(request, \"users\\sign_up.html\", {\n        \"form\":form\n        })\nUpravíme urls.py aplikace:\npath(\"sign_up\", views.sign_up, name=\"sign_up\")\nVytvoříme šablonu: .\\templates\\aplikace\\sign_up.html\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n&lt;h3&gt;Registrace uživatele&lt;/h3&gt;\n&lt;form method=\"post\"&gt;\n    {% csrf_token %}\n    {{ form.as_p }}\n    &lt;button type=\"submit\"&gt;Sign up&lt;/button&gt;\n&lt;/form&gt;\n\n{% endblock %}\nKromě .as_p nabízí Django další vestavěné formáty:\n\n\n\nMetoda\nHTML obal (Wrapper)\nPoznámka\n\n\n\n\n{ form.as_div }\n&lt;div&gt;\nNejmodernější přístup.\n\n\n{ form.as_table }\n&lt;tr&gt;\nV šabloně přidejte tag &lt;table&gt;.\n\n\n{ form.as_ul }\n&lt;li&gt;\nV šabloně přidejte tag &lt;ul&gt;.\n\n\n\nChceme-li ve formuláři češtinu upravíme settings.py\n# LANGUAGE_CODE = 'en-us'\nLANGUAGE_CODE = 'cs'\nNakonec můžete přidat bootstrap pro lepší vzhled webové aplikace. Buď klasicky nebo pomocí django-bootstrap5",
-    "crumbs": [
-      "Uživatelé"
-    ]
-  },
-  {
-    "objectID": "web_django/08flights.html",
-    "href": "web_django/08flights.html",
-    "title": "Airline",
+    "objectID": "web_django/07sql.html",
+    "href": "web_django/07sql.html",
+    "title": "SQL a Django",
     "section": "",
-    "text": "Django - projekt Airline\n\nTvorba projektu\ndjango-admin startproject airline\n\n\nPrvní aplikace (Flights) v projektu\npython manage.py startapp flights\nV souboru airline\\settings.py\nINSTALLED_APPS = [\n    'flights', # doplníme název aplikace\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nV souboru airline\\urls.py\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('flights/', include('flights.urls')),\n]\nVytvoříme strukturu tabulek v databázi. V souboru aplikace flights\\models.py\nclass Airport(models.Model):\n    code = models.CharField(max_length=3)\n    city = models.CharField(max_length=64)\n\n    def __str__(self):\n        return f\"{self.city} ({self.code})\"\n    \nclass Flight(models.Model):\n    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"departures\")\n    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"arrivals\")\n    duration = models.IntegerField()\n\n    def __str__(self):\n        return f\"{self.id}: {self.origin} -&gt; {self.destination} ({self.duration})\"\n\nclass Passenger(models.Model):\n    first = models.CharField(max_length=64)\n    last = models.CharField(max_length=64)\n    flights = models.ManyToManyField(Flight, blank=True, related_name=\"passengers\")\n\n    def __str__(self):\n        return f\"{self.first} {self.last}\"    \nDalší typy modelů (datových typu jednotlivých polí v tabulce) naleznete v dokumentaci Djanga.\nVytvoříte soubor pro aplikaci flights\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nNyní vytvoříte správné šablony (layout.html a index.html) např. podle django-templates.\nDo bloku {% block body %} vložíte kód:\n  &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"#\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\nUpravíte soubor pro aplikaci flights\\views.py (logika aplikace, soubor funkcí, které renderují výstupy pro šablony)\nfrom .models import Flight\n\ndef index(request):\n    return render(request, \"flights/index.html\", {\n        \"flights\": Flight.objects.all()\n    })\nPřipravíme a vytvoříme databázi (v cmd.exe)\npython manage.py makemigrations\npython manage.py migrate\nVytvoříte superuživatele (zvolíte uživatelské jméno a heslo) pomocí příkazu:\npython manage.py createsuperuser\nVýstup může vypadat takto:\n(virtual-django) C:\\airline&gt;python manage.py createsuperuser\nUsername (leave blank to use 'martinek.p'): admin\nEmail address:\nPassword:\nPassword (again):\nSuperuser created successfully.\nUpravíme soubor admin.py v aplikaci:\nfrom .models import Airport, Flight, Passenger\n\nadmin.site.register(Airport)\nadmin.site.register(Flight)\nadmin.site.register(Passenger)\nA nyní můžeme přímo editovat databázi v admin rozhraní aplikace.",
+    "text": "V tomto projektu se naučíte, jak používat SQL v Django pro práci s databází. Django používá ORM (Object-Relational Mapping), což umožňuje pracovat s databází pomocí Python kódu místo psaní SQL dotazů.\nPodklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/4/\n\nYouTube lekce:\n\nhttps://youtu.be/YzP164YANAU?si=RfZXo22trNGsWM46\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/src4.zip\n\nPdf prezentace:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/lecture4.pdf",
     "crumbs": [
-      "Airline"
+      "SQL a Django"
     ]
   },
   {
-    "objectID": "web_django/06projekt1.html",
-    "href": "web_django/06projekt1.html",
-    "title": "Projekt Wiki",
+    "objectID": "web_django/05tasks.html",
+    "href": "web_django/05tasks.html",
+    "title": "Tasks",
     "section": "",
-    "text": "V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.\nZpracujte projekt dle zadání https://cs50.harvard.edu/web/projects/1/wiki/.\nNejlepší free hosting pro Django projekty je https://eu.pythonanywhere.com/. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.\nNíže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu: https://gluingeal.eu.pythonanywhere.com/.\n\nregistrace a djangohttps://youtu.be/BqVrt-6yfy8\naplikace vtip https://youtu.be/GEKjrunSIvg",
+    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace tasks\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
     "crumbs": [
-      "Projekt Wiki"
+      "Tasks"
     ]
   },
   {
-    "objectID": "web_django/04newyear.html",
-    "href": "web_django/04newyear.html",
-    "title": "NewYear",
-    "section": "",
-    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace newyear\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
-    "crumbs": [
-      "NewYear"
-    ]
-  },
-  {
-    "objectID": "web_django/04newyear.html#kód",
-    "href": "web_django/04newyear.html#kód",
-    "title": "NewYear",
+    "objectID": "web_django/05tasks.html#kód",
+    "href": "web_django/05tasks.html#kód",
+    "title": "Tasks",
     "section": "Kód",
-    "text": "Kód\nKód souboru newyear\\views.py:\nimport datetime\n\nfrom django.shortcuts import render\n\n# Create your views here.\ndef index(request):\n    now = datetime.datetime.now()\n    return render(request, \"newyear/index.html\", {\n        \"newyear\": now.month == 1 and now.day == 1\n    })\nKód souboru newyear\\urls.py:\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
+    "text": "Kód\ntasks\\views.py\ntasks = [\"foo\",\"bar\",\"baz\"]\n\ndef index(request):\n  return render(request, \"tasks/index.html\", {\n    \"tasks\": tasks\n  })\ntemplates\\tasks\\index.html\n    &lt;ul&gt;\n        {% for task in tasks %}\n            &lt;li&gt;{{ task }}\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\ntasks\\views.py\ndef add(request):\n  return render(request, \"tasks/add.html\")\nPřidáme cestu pro přidávání úkolů do tasks\\urls.py. Kód zde není uveden.\n\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form&gt;\n        &lt;input type=\"text\" name=\"task\"&gt;\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\nOdkazy\ntemplates\\tasks\\index.html\n&lt;!-- &lt;a href=\"/tasks/add\"&gt;Add a New Task&lt;/a&gt; --&gt;\n&lt;a href=\"{% url 'add' %}\"&gt;Add a New Task&lt;/a&gt;\ntemplates\\tasks\\add.html\n&lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\nVideo čas 1:10:09\nŘešení problému s odkazy: namespaces\nDoplníme tasks\\urls.py\napp_name = \"tasks\"\na upravíme odkazy:\n&lt;a href=\"{% url 'tasks:index' %}\"&gt;View All Tasks&lt;/a&gt;\n&lt;a href=\"{% url 'tasks:add' %}\"&gt;Add a New Task&lt;/a&gt;\n\n\nZpracování formuláře\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form action=\"{% url 'add' %}\" method=\"post\"&gt;\n        {% csrf_token %} &lt;!-- ochrana proti CSRF útokům  --&gt;\n        &lt;input type=\"text\" name=\"task\"&gt;\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n    &lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\n{% endblock %}\nVýklad video čas 1:13:27\n\n\nFormuláře v Django\ntasks\\views.py\nfrom django import forms\n\nclass NewTaskForm(forms.Form):\n    task = forms.CharField(label=\"New Task\", max_length=100)\n\n\ndef add(request):\n  return render(request, \"tasks/add.html\", {\n    \"form\": NewTaskForm()\n  })\nPoslední úprava v add.html\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form action=\"{% url 'add' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        {{ form }}\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n    &lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\n{% endblock %}\n\nVýklad video čas 1:21:05 (úprava formuláře, kontrola v prohlížeči a druhá na serveru)\n\nFinální verze tasks\\views.py\nfrom django import forms\nfrom django.http import HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\nclass NewTaskForm(forms.Form):\n    task = forms.CharField(label=\"New Task\")\n    # priority = forms.IntegerField(label=\"Priority\", min_value=1, max_value=5)\n\n# Create your views here.\ndef index(request):\n    if \"tasks\" not in request.session:\n        request.session[\"tasks\"] = []\n    return render(request, \"tasks/index.html\", {\n        \"tasks\": request.session[\"tasks\"]\n    })\n\ndef add(request):\n    if request.method == \"POST\":\n        form = NewTaskForm(request.POST)\n        if form.is_valid():\n            task = form.cleaned_data[\"task\"]\n            request.session[\"tasks\"] += [task]\n            return HttpResponseRedirect(reverse(\"index\"))\n        else:\n            return render(request, \"tasks/add.html\", {\n                \"form\": form\n            })\n    else:\n        return render(request, \"tasks/add.html\", {\n            \"form\": NewTaskForm()\n        })\nNakonec je třeba provést migrace kvůli session.\npython manage.py migrate\n\nV tuto chvíli bystě měli umět naprogramovat např. aplikaci, která zobrazuje náhodné vtipy pomocí knihovny pyjokes. Nebo aplikaci, která zobrazuje náhodné citáty pomocí knihovny quoters.\n\nJedničkáři si zkusí vyřešit Projekt 1 - Wiki",
     "crumbs": [
-      "NewYear"
+      "Tasks"
     ]
   },
   {
-    "objectID": "web_django/02apps.html",
-    "href": "web_django/02apps.html",
-    "title": "Hello str",
+    "objectID": "web_django/03template.html",
+    "href": "web_django/03template.html",
+    "title": "Šablony",
     "section": "",
-    "text": "Doplníme soubor pro aplikaci hello\\views.py.\ndef brian(request):\n    return HttpResponse(\"Hello, Brian!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"brian\", views.brian, name=\"brian\")\na můžeme to otestovat, případně přidat další jména.\n\nCesta s řetězcem\nDoplníme soubor pro aplikaci hello\\views.py.\ndef great(request,name):\n    return HttpResponse(f\"Hello, {name.capitalize()}!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"&lt;str:name&gt;\", views.great, name=\"great\")\na můžeme to otestovat, zadáním různých slov do správné url\nhttps://localhost:8000/hello/retezec",
+    "text": "Vytvořím složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace např. hello\nNíže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.\nVytvořím soubory layout.html a index.html\nObsah souboru layout.html\nObsah souboru index.html",
     "crumbs": [
-      "Hello str"
+      "Šablony"
     ]
   },
   {
-    "objectID": "web_algo/index.html",
-    "href": "web_algo/index.html",
-    "title": "Základy Algoritmizace",
+    "objectID": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
+    "href": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
+    "title": "Šablony",
+    "section": "Použití if else v šabloně (využijete u aplikace newyear)",
+    "text": "Použití if else v šabloně (využijete u aplikace newyear)\n  {% if newyear %}\n            &lt;h1&gt;YES&lt;/h1&gt;\n  {% else %}\n            &lt;h1&gt;NO&lt;/h1&gt;\n  {% endif %}",
+    "crumbs": [
+      "Šablony"
+    ]
+  },
+  {
+    "objectID": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
+    "href": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
+    "title": "Šablony",
+    "section": "Použití cyklu v šabloně (využijete později!)",
+    "text": "Použití cyklu v šabloně (využijete později!)\n    &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"{% url 'flight' flight.id %}\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;",
+    "crumbs": [
+      "Šablony"
+    ]
+  },
+  {
+    "objectID": "web_django/01hello.html",
+    "href": "web_django/01hello.html",
+    "title": "Hello App",
     "section": "",
-    "text": "Co je to algoritmus?\nPřesný návod nebo postup pro vyřešení konkrétní úlohy.\nAlgoritmy - NEzkreslená věda - Youtube\nNa algoritmus se můžeme dívat jako na sled příkazů, které od někoho přijímáme (když algoritmus vykonáváme) nebo jej vymýšlíme a sdělujeme (tomu, kdo jej vykoná). Algoritmus má vždy vést k řešení nějakého problému a musí se sestávat z příkazů, kterým ten, kdo je vykonává, dobře rozumí, nemůže si je vyložit různým způsobem a může tak algoritmus bezmyšlenkovitě vykonat. Algoritmy umožňují automatické vykonávání pokynů, vedoucí k řešení problémů.\nAlgoritmické úlohy a vzdělávací cíle. Online. Informatika s bobříkem. 2024. Dostupné z: https://wakelet.com/wake/3GJF18eCVEDcx8kyYTaPg. [cit. 2025-12-01].\n\nVlastnosti algoritmů\n\nmusí mít začátek a konec - po konečném počtu kroků musí dojít od počátku do konce\nmusí být věcně správný - pokud chci obvod kruhu, musím mít správný vzoreček\nmusí být jednoznačný - v každém jeho kroku musí být jasné, jaký bude jeho následující krok\nmusí být obecný - schopný řešit co nějvětší množství podobných problémů\nmusí být opakovatelný - za stejných podmínek vracet stejné výsledky\nmusí být srozumitelný - osobě, pro kterou je určen\n\n\n\nZpůsob zápisů algoritmů\n\nslovní vyjádření\n\ni pro lajky, nejméně přesné, kuchařky, návody\n\nmatematický zápis\n\njednoznačný, pro určité úkoly, mohou chybět podmínky, vzorečky pro výpočty\n\nrozhodovací tabulky\n\njednoznačnost, přehlednost, nehodí se pro každý typ úloh, rozvrh\n\nvývojové diagramy\n\nsymbolický jazyk pro názorné zobrazení algoritmu, používá se při vývoji softwaru\n\npočítačové programy\n\npro programátory a počítače, mohou být nepřehledné\n\n\n\n\nVývojové diagramy\n\n\n\n\n\nflowchart TB\n    A([\"Začátek\"]) --&gt; E[/\"Vstupy a výstupy\"/]\n    E --&gt; B{\"Rozhodovací blok\"}\n    B -- Pravda --&gt; H[\"Cyklus\"]\n    B -- Nepravda --&gt; D[\"Podprogram 2\"]\n    D --&gt; G\n    H --&gt; F[\"Příkazy\"]\n    F --&gt; I[\"Konec cyklu\"]\n    I .-&gt; H\n    I --&gt; G([\"Konec\"])\n\n    D@{ shape: subproc}\n    H@{ shape: hex}\n    I@{ shape: hex}",
+    "text": "prereq: instalace python\n\nInstalace Djanga\npip install django\na jste připraveni vytvořit svůj projekt (webovou aplikaci).\n\n\n\n\n\n\nVarování\n\n\n\nZda je všechno OK lze vyzkoušet ihned příkazem django-admin. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné PATH.\n\n\n\n\nNový projekt\ndjango-admin startproject PROJECT_NAME\nPříkaz nám vytvoří novou složku s novým projektem a jeho soubory.\n\n\n\n\n\n\nVarování\n\n\n\nPokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku!\ndjango-admin startproject PROJECT_NAME .\n\n\n\n\nNová aplikace\npython manage.py startapp hello\nV souboru PROJECT_NAME\\settings.py\nINSTALLED_APPS = [\n    'hello', # doplníme název aplikace a nezapomeneme na čárku!\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nDoplníte soubor pro aplikaci hello\\views.py (logika aplikace, soubor funkcí, které renderují výstupy)\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world\")  \nVytvoříte soubor s cestami pro aplikaci hello\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nV souboru PROJECT_NAME\\urls.py doplníme cesty.\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('hello/', include('hello.urls')),\n]\n\n\nSpuštění dev web serveru\npython manage.py runserver\na nejspíše máte server na adrese:\nhttp://localhost:8000\n\n\n\n\n\n\nVarování\n\n\n\nNelekejte se varovných hlášení, protože nemáte cestu pro / adresu, musíte za lomítko zadat ještě název aplikace hello a pak by vše mělo fungovat.",
+    "crumbs": [
+      "Hello App"
+    ]
+  },
+  {
+    "objectID": "web_algo/05diag.html",
+    "href": "web_algo/05diag.html",
+    "title": "Diagramy",
+    "section": "",
+    "text": "viz zadání v Teams\n\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4."
+  },
+  {
+    "objectID": "web_algo/03diag.html",
+    "href": "web_algo/03diag.html",
+    "title": "Diagramy 2",
+    "section": "",
+    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
     "crumbs": [
       "Algoritmy",
-      "Základy Algoritmizace"
+      "Diagramy 2"
     ]
   },
   {
-    "objectID": "web_algo/04ibobr.html",
-    "href": "web_algo/04ibobr.html",
-    "title": "Soutěž iBobr",
+    "objectID": "web_algo/03diag.html#opakování",
+    "href": "web_algo/03diag.html#opakování",
+    "title": "Diagramy 2",
     "section": "",
-    "text": "Vyřešte zadání junior rok 2024 (2. skupina) 2023 (1. skupina)\nSdílejte skóre do Teams."
+    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 2"
+    ]
+  },
+  {
+    "objectID": "web_algo/03diag.html#želví-grafika",
+    "href": "web_algo/03diag.html#želví-grafika",
+    "title": "Diagramy 2",
+    "section": "Želví grafika",
+    "text": "Želví grafika\n\nhttps://www.umimeinformatiku.cz/zelvi-grafika\n\nPoužíváme software Flowgorithm.",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 2"
+    ]
+  },
+  {
+    "objectID": "web_algo/03diag.html#tvorba-algoritmu",
+    "href": "web_algo/03diag.html#tvorba-algoritmu",
+    "title": "Diagramy 2",
+    "section": "Tvorba algoritmu",
+    "text": "Tvorba algoritmu\n\nVytvořte vývojový diagram s algoritmem, který porovná dvě zadaná čísla. Tato čísla vypíše v tomto pořadí: nejprve větší a poté menší číslo.\nVytvořte vývojový diagram s algoritmem, který vypíše největší číslo ze tří zadaných čísel.\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4.",
+    "crumbs": [
+      "Algoritmy",
+      "Diagramy 2"
+    ]
+  },
+  {
+    "objectID": "maturita/m2025.html",
+    "href": "maturita/m2025.html",
+    "title": "rok 2025",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:",
+    "crumbs": [
+      "rok 2025"
+    ]
+  },
+  {
+    "objectID": "maturita/m2025.html#podzim",
+    "href": "maturita/m2025.html#podzim",
+    "title": "rok 2025",
+    "section": "2025 - podzim",
+    "text": "2025 - podzim\nUvažme následující funkci. Co se vypíše pro volání fun(2, 3, 4)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = $a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(2, 5, 1).",
+    "crumbs": [
+      "rok 2025"
+    ]
+  },
+  {
+    "objectID": "maturita/m2025.html#jaro",
+    "href": "maturita/m2025.html#jaro",
+    "title": "rok 2025",
+    "section": "2025 - jaro",
+    "text": "2025 - jaro\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(1, 2, 3).\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 2, 3)?:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání fun(1, 5, 2)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 5, 2).\nfunction nuf($a, $b, $c): void\n{\n    while ($a &gt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}",
+    "crumbs": [
+      "rok 2025"
+    ]
+  },
+  {
+    "objectID": "maturita/m2023.html",
+    "href": "maturita/m2023.html",
+    "title": "rok 2023",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:",
+    "crumbs": [
+      "rok 2023"
+    ]
+  },
+  {
+    "objectID": "maturita/m2023.html#podzim",
+    "href": "maturita/m2023.html#podzim",
+    "title": "rok 2023",
+    "section": "2023 - podzim",
+    "text": "2023 - podzim\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání e(3,3). Co vypíše pro volání e(2, 4):\nfunction e($b, $c): void\n{\n    for ($i = $b; $i &lt; $c; $i++) {\n        if ($i == $c) {\n            echo $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(3):\nfunction d2b($n): void\n{\n    $vysledek = 0;\n    while ($n &gt;= 1) {\n        $b = $n + 2;\n        $n = $n - 1;\n        $vysledek = $vysledek + $b;\n    }\n    echo $vysledek;\n}",
+    "crumbs": [
+      "rok 2023"
+    ]
+  },
+  {
+    "objectID": "maturita/m2023.html#jaro",
+    "href": "maturita/m2023.html#jaro",
+    "title": "rok 2023",
+    "section": "2023 - jaro",
+    "text": "2023 - jaro\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání a(0, 2, 4). Co vypíše pro volání a(1, 3, 0):\nfunction a($b, $c, $d): void\n{\n    for ($i = $b; $i &lt; $c; $i++) {\n        if ($i &gt; $d) {\n            echo $d, $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(2):\nfunction d2b($n): void\n{\n    $vysledek = '';\n    while ($n &gt;= 1) {\n        $b = $n % 2;\n        (int) $n = (int) $n / 2;\n        $vysledek = $b . $vysledek; // spojování řetězců\n    }\n    echo $vysledek;\n}\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání e(1, 3). Co vypíše pro volání e(2, 4):\nfunction e($b, $c): void\n{\n    for ($i = $b; $i &lt;= $c; $i++) {\n        if ($i == $c) {\n            echo $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(3):\nfunction d2b($n): void\n{\n    $vysledek = '';\n    while ($n &gt;= 1) {\n        $b = $n % 2;\n        (int) $n = (int) $n / 2;\n        $vysledek = $b . $vysledek; // spojování řetězců\n    }\n    echo $vysledek;\n}",
+    "crumbs": [
+      "rok 2023"
+    ]
+  },
+  {
+    "objectID": "maturita/index.html",
+    "href": "maturita/index.html",
+    "title": "Maturitní úlohy z PVA",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:\n\nprogram nevypíše nic\nprogram se zacyklí\n\nZ menu vlevo vyberte konkrétní rok.",
+    "crumbs": [
+      "Maturitní úlohy z PVA"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "O webu",
+    "section": "",
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html#užitečné-odkazy",
+    "href": "about.html#užitečné-odkazy",
+    "title": "O webu",
+    "section": "Užitečné odkazy",
+    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\nProxmox\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\nLinuxové příkazy, co pořád zapomínám\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu sbarveným\n\n\n\nA tohle pořád hledám ve VSC, default terminal\n\"terminal.integrated.defaultProfile.windows\": \"Command Prompt\",\n======= - alias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu &gt;&gt;&gt;&gt;&gt;&gt;&gt; bd477aef86826c855fb80a5cf814e197e11dab9b"
+  },
+  {
+    "objectID": "202526-1d.html",
+    "href": "202526-1d.html",
+    "title": "1.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+  },
+  {
+    "objectID": "202526-1d.html#výuka",
+    "href": "202526-1d.html#výuka",
+    "title": "1.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+  },
+  {
+    "objectID": "202526-3d.html",
+    "href": "202526-3d.html",
+    "title": "3.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\nodpadá\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+  },
+  {
+    "objectID": "202526-3d.html#výuka",
+    "href": "202526-3d.html#výuka",
+    "title": "3.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\nodpadá\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programování a vývoj aplikací",
+    "section": "",
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud naleznete chybu, dejte mi vědět.\n👨‍🦲 Pavel Martínek"
+  },
+  {
+    "objectID": "maturita/m2022.html",
+    "href": "maturita/m2022.html",
+    "title": "rok 2022",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "maturita/m2022.html#podzim",
+    "href": "maturita/m2022.html#podzim",
+    "title": "rok 2022",
+    "section": "2022 - podzim",
+    "text": "2022 - podzim\nUvažme následující funkci. Co vypíše pro volání sos(2, 3)?\nfunction sos($tecka, $carka): void\n{\n    for ($i = 0; $i &lt; $tecka; $i++) {\n        echo '.';\n    }\n    for ($i = 0; $i &lt; $carka; $i++) {\n        echo $carka;\n    }\n}\nUvažme následující funkci. Co vypíše pro volání zobraz(3)?\nfunction zobraz($cislo): void\n{\n    $vysledek = 3;\n    while ($vysledek &gt; 0) {\n       for ($i = 0; $i &lt; $vysledek; $i++) {\n            echo $cislo;\n        }\n        $vysledek = $vysledek - 1;\n        $cislo = $cislo + 1;\n        echo \"\\n\";\n    }\n}",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "maturita/m2022.html#jaro",
+    "href": "maturita/m2022.html#jaro",
+    "title": "rok 2022",
+    "section": "2022 - jaro",
+    "text": "2022 - jaro\nUvažme následující funkci. Co vypíše pro volání sequence(2, 3, 4)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(7)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}\nUvažme následující funkci. Co vypíše pro volání sequence(5, 2, 3)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(6)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "maturita/m2024.html",
+    "href": "maturita/m2024.html",
+    "title": "rok 2024",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:",
+    "crumbs": [
+      "rok 2024"
+    ]
+  },
+  {
+    "objectID": "maturita/m2024.html#podzim",
+    "href": "maturita/m2024.html#podzim",
+    "title": "rok 2024",
+    "section": "2024 - podzim",
+    "text": "2024 - podzim\nUvažme následující funkci. Co vypíše pro volání ff(2, 2, 3, 3)?\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &gt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání gg(2, 2, 3, 3):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $a;\n            echo $a;\n        }\n    }\n}",
+    "crumbs": [
+      "rok 2024"
+    ]
+  },
+  {
+    "objectID": "maturita/m2024.html#jaro",
+    "href": "maturita/m2024.html#jaro",
+    "title": "rok 2024",
+    "section": "2024 - jaro",
+    "text": "2024 - jaro\nUvažme následující funkci. Co vypíše pro volání ff(1, 2, 3, 4):\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &gt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání gg(1, 2, 3, 4):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $a;\n            echo $a;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání f(1, 2, 3, 4):\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &lt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání g(1, 2, 3, 4):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $d;\n            echo $b + $a;\n        }\n    }\n}",
+    "crumbs": [
+      "rok 2024"
+    ]
   },
   {
     "objectID": "web_algo/02diag.html",
@@ -563,313 +785,101 @@
     ]
   },
   {
-    "objectID": "maturita/m2024.html",
-    "href": "maturita/m2024.html",
-    "title": "rok 2024",
+    "objectID": "web_algo/04ibobr.html",
+    "href": "web_algo/04ibobr.html",
+    "title": "Soutěž iBobr",
     "section": "",
-    "text": "U všech úloh jsou navíc možnosti:",
-    "crumbs": [
-      "rok 2024"
-    ]
+    "text": "Vyřešte zadání junior rok 2024 (2. skupina) 2023 (1. skupina)\nSdílejte skóre do Teams."
   },
   {
-    "objectID": "maturita/m2024.html#podzim",
-    "href": "maturita/m2024.html#podzim",
-    "title": "rok 2024",
-    "section": "2024 - podzim",
-    "text": "2024 - podzim\nUvažme následující funkci. Co vypíše pro volání ff(2, 2, 3, 3)?\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &gt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání gg(2, 2, 3, 3):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $a;\n            echo $a;\n        }\n    }\n}",
-    "crumbs": [
-      "rok 2024"
-    ]
-  },
-  {
-    "objectID": "maturita/m2024.html#jaro",
-    "href": "maturita/m2024.html#jaro",
-    "title": "rok 2024",
-    "section": "2024 - jaro",
-    "text": "2024 - jaro\nUvažme následující funkci. Co vypíše pro volání ff(1, 2, 3, 4):\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &gt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání gg(1, 2, 3, 4):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $a;\n            echo $a;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání f(1, 2, 3, 4):\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &lt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání g(1, 2, 3, 4):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $d;\n            echo $b + $a;\n        }\n    }\n}",
-    "crumbs": [
-      "rok 2024"
-    ]
-  },
-  {
-    "objectID": "maturita/m2022.html",
-    "href": "maturita/m2022.html",
-    "title": "rok 2022",
+    "objectID": "web_algo/index.html",
+    "href": "web_algo/index.html",
+    "title": "Základy Algoritmizace",
     "section": "",
-    "text": "U všech úloh jsou navíc možnosti:",
-    "crumbs": [
-      "rok 2022"
-    ]
-  },
-  {
-    "objectID": "maturita/m2022.html#podzim",
-    "href": "maturita/m2022.html#podzim",
-    "title": "rok 2022",
-    "section": "2022 - podzim",
-    "text": "2022 - podzim\nUvažme následující funkci. Co vypíše pro volání sos(2, 3)?\nfunction sos($tecka, $carka): void\n{\n    for ($i = 0; $i &lt; $tecka; $i++) {\n        echo '.';\n    }\n    for ($i = 0; $i &lt; $carka; $i++) {\n        echo $carka;\n    }\n}\nUvažme následující funkci. Co vypíše pro volání zobraz(3)?\nfunction zobraz($cislo): void\n{\n    $vysledek = 3;\n    while ($vysledek &gt; 0) {\n       for ($i = 0; $i &lt; $vysledek; $i++) {\n            echo $cislo;\n        }\n        $vysledek = $vysledek - 1;\n        $cislo = $cislo + 1;\n        echo \"\\n\";\n    }\n}",
-    "crumbs": [
-      "rok 2022"
-    ]
-  },
-  {
-    "objectID": "maturita/m2022.html#jaro",
-    "href": "maturita/m2022.html#jaro",
-    "title": "rok 2022",
-    "section": "2022 - jaro",
-    "text": "2022 - jaro\nUvažme následující funkci. Co vypíše pro volání sequence(2, 3, 4)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(7)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}\nUvažme následující funkci. Co vypíše pro volání sequence(5, 2, 3)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(6)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}",
-    "crumbs": [
-      "rok 2022"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programování a vývoj aplikací",
-    "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud naleznete chybu, dejte mi vědět.\n👨‍🦲 Pavel Martínek"
-  },
-  {
-    "objectID": "202526-3d.html",
-    "href": "202526-3d.html",
-    "title": "3.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\nodpadá\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
-  },
-  {
-    "objectID": "202526-3d.html#výuka",
-    "href": "202526-3d.html#výuka",
-    "title": "3.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\n\n\n\n23. 4. 2026\n\n\n\n30. 4. 2026\nodpadá\n\n\n7. 5. 2026\n\n\n\n14. 5. 2026\n\n\n\n21. 5. 2026\n\n\n\n28. 5. 2026\n\n\n\n4. 6. 2026\n\n\n\n11. 6. 2026\n\n\n\n18. 6. 2026\n\n\n\n25. 6. 2026"
-  },
-  {
-    "objectID": "202526-1d.html",
-    "href": "202526-1d.html",
-    "title": "1.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
-  },
-  {
-    "objectID": "202526-1d.html#výuka",
-    "href": "202526-1d.html#výuka",
-    "title": "1.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "O webu",
-    "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "about.html#užitečné-odkazy",
-    "href": "about.html#užitečné-odkazy",
-    "title": "O webu",
-    "section": "Užitečné odkazy",
-    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\nProxmox\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\nLinuxové příkazy, co pořád zapomínám\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu sbarveným\n\n\n\nA tohle pořád hledám ve VSC, default terminal\n\"terminal.integrated.defaultProfile.windows\": \"Command Prompt\",\n======= - alias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu &gt;&gt;&gt;&gt;&gt;&gt;&gt; bd477aef86826c855fb80a5cf814e197e11dab9b"
-  },
-  {
-    "objectID": "maturita/index.html",
-    "href": "maturita/index.html",
-    "title": "Maturitní úlohy z PVA",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:\n\nprogram nevypíše nic\nprogram se zacyklí\n\nZ menu vlevo vyberte konkrétní rok.",
-    "crumbs": [
-      "Maturitní úlohy z PVA"
-    ]
-  },
-  {
-    "objectID": "maturita/m2023.html",
-    "href": "maturita/m2023.html",
-    "title": "rok 2023",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:",
-    "crumbs": [
-      "rok 2023"
-    ]
-  },
-  {
-    "objectID": "maturita/m2023.html#podzim",
-    "href": "maturita/m2023.html#podzim",
-    "title": "rok 2023",
-    "section": "2023 - podzim",
-    "text": "2023 - podzim\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání e(3,3). Co vypíše pro volání e(2, 4):\nfunction e($b, $c): void\n{\n    for ($i = $b; $i &lt; $c; $i++) {\n        if ($i == $c) {\n            echo $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(3):\nfunction d2b($n): void\n{\n    $vysledek = 0;\n    while ($n &gt;= 1) {\n        $b = $n + 2;\n        $n = $n - 1;\n        $vysledek = $vysledek + $b;\n    }\n    echo $vysledek;\n}",
-    "crumbs": [
-      "rok 2023"
-    ]
-  },
-  {
-    "objectID": "maturita/m2023.html#jaro",
-    "href": "maturita/m2023.html#jaro",
-    "title": "rok 2023",
-    "section": "2023 - jaro",
-    "text": "2023 - jaro\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání a(0, 2, 4). Co vypíše pro volání a(1, 3, 0):\nfunction a($b, $c, $d): void\n{\n    for ($i = $b; $i &lt; $c; $i++) {\n        if ($i &gt; $d) {\n            echo $d, $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(2):\nfunction d2b($n): void\n{\n    $vysledek = '';\n    while ($n &gt;= 1) {\n        $b = $n % 2;\n        (int) $n = (int) $n / 2;\n        $vysledek = $b . $vysledek; // spojování řetězců\n    }\n    echo $vysledek;\n}\nUvažme následující funkci. Kolikrát proběhne cyklus for pro volání e(1, 3). Co vypíše pro volání e(2, 4):\nfunction e($b, $c): void\n{\n    for ($i = $b; $i &lt;= $c; $i++) {\n        if ($i == $c) {\n            echo $c;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání d2b(3):\nfunction d2b($n): void\n{\n    $vysledek = '';\n    while ($n &gt;= 1) {\n        $b = $n % 2;\n        (int) $n = (int) $n / 2;\n        $vysledek = $b . $vysledek; // spojování řetězců\n    }\n    echo $vysledek;\n}",
-    "crumbs": [
-      "rok 2023"
-    ]
-  },
-  {
-    "objectID": "maturita/m2025.html",
-    "href": "maturita/m2025.html",
-    "title": "rok 2025",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:",
-    "crumbs": [
-      "rok 2025"
-    ]
-  },
-  {
-    "objectID": "maturita/m2025.html#podzim",
-    "href": "maturita/m2025.html#podzim",
-    "title": "rok 2025",
-    "section": "2025 - podzim",
-    "text": "2025 - podzim\nUvažme následující funkci. Co se vypíše pro volání fun(2, 3, 4)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = $a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(2, 5, 1).",
-    "crumbs": [
-      "rok 2025"
-    ]
-  },
-  {
-    "objectID": "maturita/m2025.html#jaro",
-    "href": "maturita/m2025.html#jaro",
-    "title": "rok 2025",
-    "section": "2025 - jaro",
-    "text": "2025 - jaro\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(1, 2, 3).\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 2, 3)?:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání fun(1, 5, 2)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 5, 2).\nfunction nuf($a, $b, $c): void\n{\n    while ($a &gt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}",
-    "crumbs": [
-      "rok 2025"
-    ]
-  },
-  {
-    "objectID": "web_algo/03diag.html",
-    "href": "web_algo/03diag.html",
-    "title": "Diagramy 2",
-    "section": "",
-    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
+    "text": "Co je to algoritmus?\nPřesný návod nebo postup pro vyřešení konkrétní úlohy.\nAlgoritmy - NEzkreslená věda - Youtube\nNa algoritmus se můžeme dívat jako na sled příkazů, které od někoho přijímáme (když algoritmus vykonáváme) nebo jej vymýšlíme a sdělujeme (tomu, kdo jej vykoná). Algoritmus má vždy vést k řešení nějakého problému a musí se sestávat z příkazů, kterým ten, kdo je vykonává, dobře rozumí, nemůže si je vyložit různým způsobem a může tak algoritmus bezmyšlenkovitě vykonat. Algoritmy umožňují automatické vykonávání pokynů, vedoucí k řešení problémů.\nAlgoritmické úlohy a vzdělávací cíle. Online. Informatika s bobříkem. 2024. Dostupné z: https://wakelet.com/wake/3GJF18eCVEDcx8kyYTaPg. [cit. 2025-12-01].\n\nVlastnosti algoritmů\n\nmusí mít začátek a konec - po konečném počtu kroků musí dojít od počátku do konce\nmusí být věcně správný - pokud chci obvod kruhu, musím mít správný vzoreček\nmusí být jednoznačný - v každém jeho kroku musí být jasné, jaký bude jeho následující krok\nmusí být obecný - schopný řešit co nějvětší množství podobných problémů\nmusí být opakovatelný - za stejných podmínek vracet stejné výsledky\nmusí být srozumitelný - osobě, pro kterou je určen\n\n\n\nZpůsob zápisů algoritmů\n\nslovní vyjádření\n\ni pro lajky, nejméně přesné, kuchařky, návody\n\nmatematický zápis\n\njednoznačný, pro určité úkoly, mohou chybět podmínky, vzorečky pro výpočty\n\nrozhodovací tabulky\n\njednoznačnost, přehlednost, nehodí se pro každý typ úloh, rozvrh\n\nvývojové diagramy\n\nsymbolický jazyk pro názorné zobrazení algoritmu, používá se při vývoji softwaru\n\npočítačové programy\n\npro programátory a počítače, mohou být nepřehledné\n\n\n\n\nVývojové diagramy\n\n\n\n\n\nflowchart TB\n    A([\"Začátek\"]) --&gt; E[/\"Vstupy a výstupy\"/]\n    E --&gt; B{\"Rozhodovací blok\"}\n    B -- Pravda --&gt; H[\"Cyklus\"]\n    B -- Nepravda --&gt; D[\"Podprogram 2\"]\n    D --&gt; G\n    H --&gt; F[\"Příkazy\"]\n    F --&gt; I[\"Konec cyklu\"]\n    I .-&gt; H\n    I --&gt; G([\"Konec\"])\n\n    D@{ shape: subproc}\n    H@{ shape: hex}\n    I@{ shape: hex}",
     "crumbs": [
       "Algoritmy",
-      "Diagramy 2"
+      "Základy Algoritmizace"
     ]
   },
   {
-    "objectID": "web_algo/03diag.html#opakování",
-    "href": "web_algo/03diag.html#opakování",
-    "title": "Diagramy 2",
+    "objectID": "web_django/02apps.html",
+    "href": "web_django/02apps.html",
+    "title": "Hello str",
     "section": "",
-    "text": "https://www.umimeinformatiku.cz/cviceni-vyvoj-programu\nhttps://www.umimeinformatiku.cz/presouvani-vyvojove-diagramy-promenne-2?source=explicitKC&topic=cviceni-vyvoj-programu",
+    "text": "Doplníme soubor pro aplikaci hello\\views.py.\ndef brian(request):\n    return HttpResponse(\"Hello, Brian!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"brian\", views.brian, name=\"brian\")\na můžeme to otestovat, případně přidat další jména.\n\nCesta s řetězcem\nDoplníme soubor pro aplikaci hello\\views.py.\ndef great(request,name):\n    return HttpResponse(f\"Hello, {name.capitalize()}!\")  \nDoplníme seznam urlpatterns v souboru s cestami pro aplikaci hello\\urls.py\n    path(\"&lt;str:name&gt;\", views.great, name=\"great\")\na můžeme to otestovat, zadáním různých slov do správné url\nhttps://localhost:8000/hello/retezec",
     "crumbs": [
-      "Algoritmy",
-      "Diagramy 2"
+      "Hello str"
     ]
   },
   {
-    "objectID": "web_algo/03diag.html#želví-grafika",
-    "href": "web_algo/03diag.html#želví-grafika",
-    "title": "Diagramy 2",
-    "section": "Želví grafika",
-    "text": "Želví grafika\n\nhttps://www.umimeinformatiku.cz/zelvi-grafika\n\nPoužíváme software Flowgorithm.",
-    "crumbs": [
-      "Algoritmy",
-      "Diagramy 2"
-    ]
-  },
-  {
-    "objectID": "web_algo/03diag.html#tvorba-algoritmu",
-    "href": "web_algo/03diag.html#tvorba-algoritmu",
-    "title": "Diagramy 2",
-    "section": "Tvorba algoritmu",
-    "text": "Tvorba algoritmu\n\nVytvořte vývojový diagram s algoritmem, který porovná dvě zadaná čísla. Tato čísla vypíše v tomto pořadí: nejprve větší a poté menší číslo.\nVytvořte vývojový diagram s algoritmem, který vypíše největší číslo ze tří zadaných čísel.\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4.",
-    "crumbs": [
-      "Algoritmy",
-      "Diagramy 2"
-    ]
-  },
-  {
-    "objectID": "web_algo/05diag.html",
-    "href": "web_algo/05diag.html",
-    "title": "Diagramy",
+    "objectID": "web_django/04newyear.html",
+    "href": "web_django/04newyear.html",
+    "title": "NewYear",
     "section": "",
-    "text": "viz zadání v Teams\n\nKontrolní systém ve skladu jablek zaznamenává každou hodinu teplotu. Jablka musí být uskladněna v intervalu teplot 1st Celsia do 5st Celsia. Vytvořte algoritmus, který 24x načte teplotu. Na knoci dne. tj. po zadání všech 24 hodnot, vypíše, kolikrát teplota klesla pod 1st a dále kolikrát teplota stoupla nad 5st Celsia.\n\nNAVRÁTIL, Pavel. Informatika pro střední školy. Prostějov: Computer Media, 2025. ISBN 978-80-7402-517-4."
-  },
-  {
-    "objectID": "web_django/01hello.html",
-    "href": "web_django/01hello.html",
-    "title": "Hello App",
-    "section": "",
-    "text": "prereq: instalace python\n\nInstalace Djanga\npip install django\na jste připraveni vytvořit svůj projekt (webovou aplikaci).\n\n\n\n\n\n\nVarování\n\n\n\nZda je všechno OK lze vyzkoušet ihned příkazem django-admin. Pokud dostanete chybu, je třeba najít django na disku /(dělám to tak, že zkouším znovu instalovat) a danou složku vložit jako další záznam do proměnné PATH.\n\n\n\n\nNový projekt\ndjango-admin startproject PROJECT_NAME\nPříkaz nám vytvoří novou složku s novým projektem a jeho soubory.\n\n\n\n\n\n\nVarování\n\n\n\nPokud budete chtít někdy tvořit projekt v již vytvořené složce, pak za tento příkaz dáte tečku!\ndjango-admin startproject PROJECT_NAME .\n\n\n\n\nNová aplikace\npython manage.py startapp hello\nV souboru PROJECT_NAME\\settings.py\nINSTALLED_APPS = [\n    'hello', # doplníme název aplikace a nezapomeneme na čárku!\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nDoplníte soubor pro aplikaci hello\\views.py (logika aplikace, soubor funkcí, které renderují výstupy)\nfrom django.http import HttpResponse\n\ndef index(request):\n    return HttpResponse(\"Hello, world\")  \nVytvoříte soubor s cestami pro aplikaci hello\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nV souboru PROJECT_NAME\\urls.py doplníme cesty.\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('hello/', include('hello.urls')),\n]\n\n\nSpuštění dev web serveru\npython manage.py runserver\na nejspíše máte server na adrese:\nhttp://localhost:8000\n\n\n\n\n\n\nVarování\n\n\n\nNelekejte se varovných hlášení, protože nemáte cestu pro / adresu, musíte za lomítko zadat ještě název aplikace hello a pak by vše mělo fungovat.",
+    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace newyear\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
     "crumbs": [
-      "Hello App"
+      "NewYear"
     ]
   },
   {
-    "objectID": "web_django/03template.html",
-    "href": "web_django/03template.html",
-    "title": "Šablony",
-    "section": "",
-    "text": "Vytvořím složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace např. hello\nNíže uvedený postup je již modernější, než první seznámení s šablonami ve video lekci. Věřím ale, že níže uvedený kód rozluštíte. Pokud ne, ozvěte se na Teams.\nVytvořím soubory layout.html a index.html\nObsah souboru layout.html\nObsah souboru index.html",
-    "crumbs": [
-      "Šablony"
-    ]
-  },
-  {
-    "objectID": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
-    "href": "web_django/03template.html#použití-if-else-v-šabloně-využijete-u-aplikace-newyear",
-    "title": "Šablony",
-    "section": "Použití if else v šabloně (využijete u aplikace newyear)",
-    "text": "Použití if else v šabloně (využijete u aplikace newyear)\n  {% if newyear %}\n            &lt;h1&gt;YES&lt;/h1&gt;\n  {% else %}\n            &lt;h1&gt;NO&lt;/h1&gt;\n  {% endif %}",
-    "crumbs": [
-      "Šablony"
-    ]
-  },
-  {
-    "objectID": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
-    "href": "web_django/03template.html#použití-cyklu-v-šabloně-využijete-později",
-    "title": "Šablony",
-    "section": "Použití cyklu v šabloně (využijete později!)",
-    "text": "Použití cyklu v šabloně (využijete později!)\n    &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"{% url 'flight' flight.id %}\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;",
-    "crumbs": [
-      "Šablony"
-    ]
-  },
-  {
-    "objectID": "web_django/05tasks.html",
-    "href": "web_django/05tasks.html",
-    "title": "Tasks",
-    "section": "",
-    "text": "Nyní vytvoříme novou aplikaci v rámci daného projektu.\nUdělám změny v souborech:\nVytvoříme složku templates v aplikaci. Ve složce templates vytvořím složku s názvem aplikace tasks\nVytvořím soubory layout.html a index.html. Viz předchozí lekce.\nSpustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.",
-    "crumbs": [
-      "Tasks"
-    ]
-  },
-  {
-    "objectID": "web_django/05tasks.html#kód",
-    "href": "web_django/05tasks.html#kód",
-    "title": "Tasks",
+    "objectID": "web_django/04newyear.html#kód",
+    "href": "web_django/04newyear.html#kód",
+    "title": "NewYear",
     "section": "Kód",
-    "text": "Kód\ntasks\\views.py\ntasks = [\"foo\",\"bar\",\"baz\"]\n\ndef index(request):\n  return render(request, \"tasks/index.html\", {\n    \"tasks\": tasks\n  })\ntemplates\\tasks\\index.html\n    &lt;ul&gt;\n        {% for task in tasks %}\n            &lt;li&gt;{{ task }}\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\ntasks\\views.py\ndef add(request):\n  return render(request, \"tasks/add.html\")\nPřidáme cestu pro přidávání úkolů do tasks\\urls.py. Kód zde není uveden.\n\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form&gt;\n        &lt;input type=\"text\" name=\"task\"&gt;\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\nOdkazy\ntemplates\\tasks\\index.html\n&lt;!-- &lt;a href=\"/tasks/add\"&gt;Add a New Task&lt;/a&gt; --&gt;\n&lt;a href=\"{% url 'add' %}\"&gt;Add a New Task&lt;/a&gt;\ntemplates\\tasks\\add.html\n&lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\nVideo čas 1:10:09\nŘešení problému s odkazy: namespaces\nDoplníme tasks\\urls.py\napp_name = \"tasks\"\na upravíme odkazy:\n&lt;a href=\"{% url 'tasks:index' %}\"&gt;View All Tasks&lt;/a&gt;\n&lt;a href=\"{% url 'tasks:add' %}\"&gt;Add a New Task&lt;/a&gt;\n\n\nZpracování formuláře\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form action=\"{% url 'add' %}\" method=\"post\"&gt;\n        {% csrf_token %} &lt;!-- ochrana proti CSRF útokům  --&gt;\n        &lt;input type=\"text\" name=\"task\"&gt;\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n    &lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\n{% endblock %}\nVýklad video čas 1:13:27\n\n\nFormuláře v Django\ntasks\\views.py\nfrom django import forms\n\nclass NewTaskForm(forms.Form):\n    task = forms.CharField(label=\"New Task\", max_length=100)\n\n\ndef add(request):\n  return render(request, \"tasks/add.html\", {\n    \"form\": NewTaskForm()\n  })\nPoslední úprava v add.html\ntemplates\\tasks\\add.html\n{% block body %}\n    &lt;h1&gt;Add Task&lt;/h1&gt;\n    &lt;form action=\"{% url 'add' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        {{ form }}\n        &lt;input type=\"submit\"&gt;\n    &lt;/form&gt;\n    &lt;a href=\"{% url 'index' %}\"&gt;View All Tasks&lt;/a&gt;\n{% endblock %}\n\nVýklad video čas 1:21:05 (úprava formuláře, kontrola v prohlížeči a druhá na serveru)\n\nFinální verze tasks\\views.py\nfrom django import forms\nfrom django.http import HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\nclass NewTaskForm(forms.Form):\n    task = forms.CharField(label=\"New Task\")\n    # priority = forms.IntegerField(label=\"Priority\", min_value=1, max_value=5)\n\n# Create your views here.\ndef index(request):\n    if \"tasks\" not in request.session:\n        request.session[\"tasks\"] = []\n    return render(request, \"tasks/index.html\", {\n        \"tasks\": request.session[\"tasks\"]\n    })\n\ndef add(request):\n    if request.method == \"POST\":\n        form = NewTaskForm(request.POST)\n        if form.is_valid():\n            task = form.cleaned_data[\"task\"]\n            request.session[\"tasks\"] += [task]\n            return HttpResponseRedirect(reverse(\"index\"))\n        else:\n            return render(request, \"tasks/add.html\", {\n                \"form\": form\n            })\n    else:\n        return render(request, \"tasks/add.html\", {\n            \"form\": NewTaskForm()\n        })\nNakonec je třeba provést migrace kvůli session.\npython manage.py migrate\n\nV tuto chvíli bystě měli umět naprogramovat např. aplikaci, která zobrazuje náhodné vtipy pomocí knihovny pyjokes. Nebo aplikaci, která zobrazuje náhodné citáty pomocí knihovny quoters.\n\nJedničkáři si zkusí vyřešit Projekt 1 - Wiki",
+    "text": "Kód\nKód souboru newyear\\views.py:\nimport datetime\n\nfrom django.shortcuts import render\n\n# Create your views here.\ndef index(request):\n    now = datetime.datetime.now()\n    return render(request, \"newyear/index.html\", {\n        \"newyear\": now.month == 1 and now.day == 1\n    })\nKód souboru newyear\\urls.py:\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]",
     "crumbs": [
-      "Tasks"
+      "NewYear"
     ]
   },
   {
-    "objectID": "web_django/07sql.html",
-    "href": "web_django/07sql.html",
-    "title": "SQL a Django",
+    "objectID": "web_django/06projekt1.html",
+    "href": "web_django/06projekt1.html",
+    "title": "Projekt Wiki",
     "section": "",
-    "text": "V tomto projektu se naučíte, jak používat SQL v Django pro práci s databází. Django používá ORM (Object-Relational Mapping), což umožňuje pracovat s databází pomocí Python kódu místo psaní SQL dotazů.\nPodklady pro výuku (videa, kódy, transkript, prezentace):\n\nhttps://cs50.harvard.edu/web/weeks/4/\n\nYouTube lekce:\n\nhttps://youtu.be/YzP164YANAU?si=RfZXo22trNGsWM46\n\nZdrojové soubory:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/src4.zip\n\nPdf prezentace:\n\nhttps://cdn.cs50.net/web/2020/spring/lectures/4/lecture4.pdf",
+    "text": "V tomto projektu vytvoříte jednoduchou wiki, která umožní uživatelům prohlížet, vytvářet a upravovat stránky. Každá stránka bude mít svůj vlastní URL, který bude odpovídat názvu stránky.\nZpracujte projekt dle zadání https://cs50.harvard.edu/web/projects/1/wiki/.\nNejlepší free hosting pro Django projekty je https://eu.pythonanywhere.com/. Můžete se tam zdarma zaregistrovat a nasadit svůj projekt.\nNíže uvedené odkazy ukazují jak vytvořit tuto jednoduchou aplikace v Djangu: https://gluingeal.eu.pythonanywhere.com/.\n\nregistrace a djangohttps://youtu.be/BqVrt-6yfy8\naplikace vtip https://youtu.be/GEKjrunSIvg",
     "crumbs": [
-      "SQL a Django"
+      "Projekt Wiki"
     ]
   },
   {
-    "objectID": "web_django/09flights.html",
-    "href": "web_django/09flights.html",
-    "title": "Airline 2",
+    "objectID": "web_django/08flights.html",
+    "href": "web_django/08flights.html",
+    "title": "Airline",
     "section": "",
-    "text": "Django - projekt Airline\nMohou se hodit moje poznámky ke gitu\n\nGit\n\n\nTvorba odkazu na konkrétní let\nDoplníme do šablony odkaz na konkrétní let:\n&lt;li&gt;\n    &lt;a href=\"{% url 'flight' flight.id %}\"&gt; \n        Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n    &lt;/a&gt;\n&lt;/li&gt;\nA protože url 'flight' ještě nemáme, vytvoříme ji v flights\\urls.py:\npath(\"&lt;int:flight_id&gt;\", views.flight, name=\"flight\"),\nDo souboru flights\\views.py doplníme funkci pro zobrazení konkrétního letu:\ndef flight(request, flight_id):\n    flight = Flight.objects.get(pk=flight_id)\n    return render(request, \"flights/flight.html\", {\n          \"flight\": flight\n    })\n\n\nChci zobrazit pasažéry na webu\nDo souboru flights\\views.py do funkce flight, do dat pro šablonu přidám:\n\"passengers\": flight.passengers.all()\na do šablony doplním:\n &lt;h2&gt;Passengers&lt;/h2&gt;\n    {% for p in passengers %}\n        &lt;li&gt;{{p.first}} {{p.last}}&lt;/li&gt;\n    {% empty %}\n        No passengers.\n    {% endfor %}\nVytvořím odkaz na seznam letů\n&lt;a href=\"{% url 'index' %}\"&gt;Back to Flight List&lt;/a&gt;\n\n\nChci mít možnost přidat pasažéry k letu\nMěli byste vědět, kam doplníte tento řádek\npath(\"&lt;int:flight_id&gt;/book\", views.book, name=\"book\"),\nVe správném souboru uděláme následující změny:\nfrom django.http import HttpResponseRedirect\nfrom django.urls import reverse\n\ndef book(request, flight_id):\n    if request.method == \"POST\":\n        flight = Flight.objects.get(pk=flight_id)\n        passenger = Passenger.objects.get(pk=int(request.POST[\"passenger\"]))\n        passenger.flights.add(flight)\n        return HttpResponseRedirect(reverse(\"flight\", args=(flight.id,)))\nUpravím šablonu daného letu tak, abych tam měl formulář pro přidání pasažéra\n&lt;h2&gt;Add Passenger&lt;/h2&gt;\n    &lt;form action=\"{% url 'book' flight.id %}\" method=\"POST\"&gt;\n        {% csrf_token %}\n        &lt;select name=\"passenger\" id=\"passenger\"&gt;\n            {% for passanger in non_passengers  %}\n            &lt;option value=\"{{ passanger.id }}\"&gt;{{ passanger }}&lt;/option&gt;\n            {% endfor %}\n        &lt;/select&gt;\n        &lt;input type=\"submit\" value=\"Add Passenger\"&gt;\n    &lt;/form&gt;\nDo funkce flight doplním proměnou, která do šablony odešle data těch pasažérů, kteří na daném letu nejsou:\n    \"non_passengers\": Passenger.objects.exclude(flights=flight).all()\n\n\nMohu si upravit zobrazení v admin rozhraní\nV souboru admin.py provedu úpravy\nclass FlightAdmin(admin.ModelAdmin):\n    list_display = (\"id\", \"origin\", \"destination\", \"duration\")\n\nclass PassengerAdmin(admin.ModelAdmin):\n    filter_horizontal = (\"flights\",)\n\nadmin.site.register(Flight, FlightAdmin)\nadmin.site.register(Passenger, PassengerAdmin)\na aplikace je hotova.",
+    "text": "Django - projekt Airline\n\nTvorba projektu\ndjango-admin startproject airline\n\n\nPrvní aplikace (Flights) v projektu\npython manage.py startapp flights\nV souboru airline\\settings.py\nINSTALLED_APPS = [\n    'flights', # doplníme název aplikace\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nV souboru airline\\urls.py\nfrom django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('flights/', include('flights.urls')),\n]\nVytvoříme strukturu tabulek v databázi. V souboru aplikace flights\\models.py\nclass Airport(models.Model):\n    code = models.CharField(max_length=3)\n    city = models.CharField(max_length=64)\n\n    def __str__(self):\n        return f\"{self.city} ({self.code})\"\n    \nclass Flight(models.Model):\n    origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"departures\")\n    destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name=\"arrivals\")\n    duration = models.IntegerField()\n\n    def __str__(self):\n        return f\"{self.id}: {self.origin} -&gt; {self.destination} ({self.duration})\"\n\nclass Passenger(models.Model):\n    first = models.CharField(max_length=64)\n    last = models.CharField(max_length=64)\n    flights = models.ManyToManyField(Flight, blank=True, related_name=\"passengers\")\n\n    def __str__(self):\n        return f\"{self.first} {self.last}\"    \nDalší typy modelů (datových typu jednotlivých polí v tabulce) naleznete v dokumentaci Djanga.\nVytvoříte soubor pro aplikaci flights\\urls.py\nfrom django.urls import path \n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.index, name=\"index\")\n]\nNyní vytvoříte správné šablony (layout.html a index.html) např. podle django-templates.\nDo bloku {% block body %} vložíte kód:\n  &lt;ul&gt;\n        {% for flight in flights %}\n            &lt;li&gt;&lt;a href=\"#\"&gt;\n                Flight {{ flight.id }}: {{ flight.origin }} to {{ flight.destination }}\n            &lt;/a&gt;\n            &lt;/li&gt;\n        {% endfor %}\n    &lt;/ul&gt;\nUpravíte soubor pro aplikaci flights\\views.py (logika aplikace, soubor funkcí, které renderují výstupy pro šablony)\nfrom .models import Flight\n\ndef index(request):\n    return render(request, \"flights/index.html\", {\n        \"flights\": Flight.objects.all()\n    })\nPřipravíme a vytvoříme databázi (v cmd.exe)\npython manage.py makemigrations\npython manage.py migrate\nVytvoříte superuživatele (zvolíte uživatelské jméno a heslo) pomocí příkazu:\npython manage.py createsuperuser\nVýstup může vypadat takto:\n(virtual-django) C:\\airline&gt;python manage.py createsuperuser\nUsername (leave blank to use 'martinek.p'): admin\nEmail address:\nPassword:\nPassword (again):\nSuperuser created successfully.\nUpravíme soubor admin.py v aplikaci:\nfrom .models import Airport, Flight, Passenger\n\nadmin.site.register(Airport)\nadmin.site.register(Flight)\nadmin.site.register(Passenger)\nA nyní můžeme přímo editovat databázi v admin rozhraní aplikace.",
     "crumbs": [
-      "Airline 2"
+      "Airline"
+    ]
+  },
+  {
+    "objectID": "web_django/10users.html",
+    "href": "web_django/10users.html",
+    "title": "Uživatelé",
+    "section": "",
+    "text": "Vytvoříme novou aplikaci users:\npython manage.py startapp users\nDo souboru settings.py doplním:\nINSTALLED_APPS = [\n    'flights',\n    'users', # doplníme název aplikace\n    'django.contrib.admin',\n    ...\n]\nDo souboru airline\\urls.py doplním:\n    path('users/', include('users.urls')),\nVytvoříme soubor pro aplikaci users\\urls.py\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.user, name=\"user\"),\n    path(\"login\", views.login_view, name=\"login\"),\n    path(\"logout\", views.logout_view, name=\"logout\")\n]\nUpravíme soubor users\\views.py:\nfrom django.contrib.auth import authenticate, login, logout\nfrom django.http import HttpResponse, HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\n# Create your views here.\ndef user(request):\n    if not request.user.is_authenticated:\n        return HttpResponseRedirect(reverse(\"login\"))\n    return render(request, \"users/user.html\")\n\ndef login_view(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return HttpResponseRedirect(reverse(\"user\"))\n        else:\n            return render(request, \"users/login.html\", {\n                \"message\": \"Invalid credentials.\"\n            })\n    else:\n        return render(request, \"users/login.html\")\n\ndef logout_view(request):\n    logout(request)\n    return render(request, \"users/login.html\", {\n        \"message\": \"Logged out.\"\n    })\nVytvoříme šablony users\\templates\\users\\layout.html, users\\templates\\users\\login.html, users\\templates\\users\\user.html.\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Log In&lt;/h1&gt;\n\n    {% if message %}\n        &lt;div&gt;{{ message }}&lt;/div&gt;\n    {% endif %}\n\n    &lt;form action=\"{% url 'login' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        &lt;input type=\"text\" name=\"username\" placeholder=\"Username\"&gt;\n        &lt;input type=\"password\" name=\"password\" placeholder=\"Password\"&gt;\n        &lt;input type=\"submit\" value=\"Login\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Welcome, {{ request.user.first_name }}&lt;/h1&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;Username: {{ request.user.username }}&lt;/li&gt;\n        &lt;li&gt;Email: {{ request.user.email }}&lt;/li&gt;\n    &lt;/ul&gt;\n\n    &lt;a href=\"{% url 'logout' %}\"&gt;Log Out&lt;/a&gt;\n{% endblock %}",
+    "crumbs": [
+      "Uživatelé"
+    ]
+  },
+  {
+    "objectID": "web_django/10users.html#ověřování-uživatelů",
+    "href": "web_django/10users.html#ověřování-uživatelů",
+    "title": "Uživatelé",
+    "section": "",
+    "text": "Vytvoříme novou aplikaci users:\npython manage.py startapp users\nDo souboru settings.py doplním:\nINSTALLED_APPS = [\n    'flights',\n    'users', # doplníme název aplikace\n    'django.contrib.admin',\n    ...\n]\nDo souboru airline\\urls.py doplním:\n    path('users/', include('users.urls')),\nVytvoříme soubor pro aplikaci users\\urls.py\nfrom django.urls import path\n\nfrom . import views\n\nurlpatterns = [\n    path(\"\", views.user, name=\"user\"),\n    path(\"login\", views.login_view, name=\"login\"),\n    path(\"logout\", views.logout_view, name=\"logout\")\n]\nUpravíme soubor users\\views.py:\nfrom django.contrib.auth import authenticate, login, logout\nfrom django.http import HttpResponse, HttpResponseRedirect\nfrom django.shortcuts import render\nfrom django.urls import reverse\n\n# Create your views here.\ndef user(request):\n    if not request.user.is_authenticated:\n        return HttpResponseRedirect(reverse(\"login\"))\n    return render(request, \"users/user.html\")\n\ndef login_view(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return HttpResponseRedirect(reverse(\"user\"))\n        else:\n            return render(request, \"users/login.html\", {\n                \"message\": \"Invalid credentials.\"\n            })\n    else:\n        return render(request, \"users/login.html\")\n\ndef logout_view(request):\n    logout(request)\n    return render(request, \"users/login.html\", {\n        \"message\": \"Logged out.\"\n    })\nVytvoříme šablony users\\templates\\users\\layout.html, users\\templates\\users\\login.html, users\\templates\\users\\user.html.\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Log In&lt;/h1&gt;\n\n    {% if message %}\n        &lt;div&gt;{{ message }}&lt;/div&gt;\n    {% endif %}\n\n    &lt;form action=\"{% url 'login' %}\" method=\"post\"&gt;\n        {% csrf_token %}\n        &lt;input type=\"text\" name=\"username\" placeholder=\"Username\"&gt;\n        &lt;input type=\"password\" name=\"password\" placeholder=\"Password\"&gt;\n        &lt;input type=\"submit\" value=\"Login\"&gt;\n    &lt;/form&gt;\n{% endblock %}\n\n\n\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n    &lt;h1&gt;Welcome, {{ request.user.first_name }}&lt;/h1&gt;\n\n    &lt;ul&gt;\n        &lt;li&gt;Username: {{ request.user.username }}&lt;/li&gt;\n        &lt;li&gt;Email: {{ request.user.email }}&lt;/li&gt;\n    &lt;/ul&gt;\n\n    &lt;a href=\"{% url 'logout' %}\"&gt;Log Out&lt;/a&gt;\n{% endblock %}",
+    "crumbs": [
+      "Uživatelé"
+    ]
+  },
+  {
+    "objectID": "web_django/10users.html#registrace-uživatele",
+    "href": "web_django/10users.html#registrace-uživatele",
+    "title": "Uživatelé",
+    "section": "Registrace uživatele",
+    "text": "Registrace uživatele\nZdroj: https://dev.to/donesrom/how-to-set-up-django-built-in-registration-in-2023-41hg\nVytvoříme soubor s formulářem v rámci naší aplikace: formular.py\nfrom django import forms \nfrom django.contrib.auth.forms import UserCreationForm\nfrom django.contrib.auth.models import User\n\nclass RegistrationForm(UserCreationForm):\n    email = forms.EmailField(required=True)\n\n    class Meta:\n        model = User\n        fields = [\"username\", \"first_name\", \"last_name\",\"email\", \"password1\", \"password2\"]\nV souboru aplikace upravíme views.py\nfrom . formular import *\nfrom django.shortcuts import render, redirect # přidáme redirect\nfrom django.contrib.auth.forms import *\n\ndef sign_up(request):\n    if request.method == \"POST\":\n        form = RegistrationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request,user)\n            return redirect(\"/\")\n    else:\n        form = RegistrationForm()\n    \n    return render(request, \"users\\sign_up.html\", {\n        \"form\":form\n        })\nUpravíme urls.py aplikace:\npath(\"sign_up\", views.sign_up, name=\"sign_up\")\nVytvoříme šablonu: .\\templates\\aplikace\\sign_up.html\n{% extends \"users/layout.html\" %}\n\n{% block body %}\n\n&lt;h3&gt;Registrace uživatele&lt;/h3&gt;\n&lt;form method=\"post\"&gt;\n    {% csrf_token %}\n    {{ form.as_p }}\n    &lt;button type=\"submit\"&gt;Sign up&lt;/button&gt;\n&lt;/form&gt;\n\n{% endblock %}\nKromě .as_p nabízí Django další vestavěné formáty:\n\n\n\nMetoda\nHTML obal (Wrapper)\nPoznámka\n\n\n\n\n{ form.as_div }\n&lt;div&gt;\nNejmodernější přístup.\n\n\n{ form.as_table }\n&lt;tr&gt;\nV šabloně přidejte tag &lt;table&gt;.\n\n\n{ form.as_ul }\n&lt;li&gt;\nV šabloně přidejte tag &lt;ul&gt;.\n\n\n\nChceme-li ve formuláři češtinu upravíme settings.py\n# LANGUAGE_CODE = 'en-us'\nLANGUAGE_CODE = 'cs'\nNakonec můžete přidat bootstrap pro lepší vzhled webové aplikace. Buď klasicky nebo pomocí django-bootstrap5",
+    "crumbs": [
+      "Uživatelé"
     ]
   },
   {

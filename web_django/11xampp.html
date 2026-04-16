@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NewYear – PVA</title>
+<title>XAMPP MySQL db – PVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../web_django/05tasks.html" rel="next">
-<link href="../web_django/03template.html" rel="prev">
+<link href="../web_django/10users.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -350,7 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/04newyear.html">NewYear</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../web_django/11xampp.html">XAMPP MySQL db</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Přepnout postranní panel" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -392,7 +391,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_django/04newyear.html" class="sidebar-item-text sidebar-link active">
+  <a href="../web_django/04newyear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NewYear</span></a>
   </div>
 </li>
@@ -434,7 +433,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../web_django/11xampp.html" class="sidebar-item-text sidebar-link">
+  <a href="../web_django/11xampp.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">XAMPP MySQL db</span></a>
   </div>
 </li>
@@ -443,14 +442,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Na této stránce</h2>
-   
-  <ul>
-  <li><a href="#kód" id="toc-kód" class="nav-link active" data-scroll-target="#kód">Kód</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/04newyear.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/04newyear.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -458,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">NewYear</h1>
+<h1 class="title">XAMPP MySQL db</h1>
 </div>
 
 
@@ -475,43 +468,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Nyní vytvoříme novou aplikaci v rámci daného projektu.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python manage.py startapp newyear</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Udělám změny v souborech:</p>
-<ol type="1">
-<li><code>PROJECT_NAME\settings.py</code></li>
-<li><code>PROJECT_NAME\urls.py</code></li>
-<li><code>newyear\views.py</code></li>
-<li><code>newyear\urls.py # tento soubor musíme vytvořit</code></li>
-</ol>
-<p>Vytvoříme složku <code>templates</code> v aplikaci. Ve složce templates vytvořím složku s názvem aplikace <code>newyear</code></p>
-<p>Vytvořím soubory <code>layout.html</code> a <code>index.html</code>. Viz předchozí lekce.</p>
-<p>Spustíme webový server a zjistíme, zda máme všechno v pořádku nastaveno.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>python manage.py runserver</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="kód" class="level2">
-<h2 class="anchored" data-anchor-id="kód">Kód</h2>
-<p>Kód souboru <code>newyear\views.py</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.shortcuts <span class="im">import</span> render</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create your views here.</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> index(request):</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    now <span class="op">=</span> datetime.datetime.now()</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> render(request, <span class="st">"newyear/index.html"</span>, {</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"newyear"</span>: now.month <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> now.day <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    })</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Kód souboru <code>newyear\urls.py</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.urls <span class="im">import</span> path</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> . <span class="im">import</span> views</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>urlpatterns <span class="op">=</span> [</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">""</span>, views.index, name<span class="op">=</span><span class="st">"index"</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Vypneme MySQL server v XAMPP Control Panelu.</p>
+<p>Stáhneme novou verzi. Složku mysql přejmenujeme na mysql_old a rozbalíme novou verzi do složky mysql.</p>
+<p>Nevím, zda to má význam ale kopíruji 2 složky a 3 soubory z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.</p>
+<p>V XAMPP Control Panelu klikneme na <code>Shell</code> a zadáme:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mysql_install_db</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Zadejte tento příkaz vytvoří úplně novou systémovou strukturu přímo pro novou verzi MariaDB.</p>
+<p>V prohlížeči v phpMyAdmin jděte do záložky Import. Najděte soubor v: <code>C:\xampp\phpMyAdmin\sql\create_tables.sql</code>. Importujte tento soubor do phpMyAdmin, aby se vytvořily potřebné tabulky pro správu uživatelů a oprávnění.</p>
+<p>Otevřete <code>C:\xampp\phpMyAdmin\config.inc.php</code>.</p>
+<p>Najděte řádek:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">$cfg</span>[<span class="st">'Servers'</span>][<span class="va">$i</span>][<span class="st">'auth_type'</span>] <span class="op">=</span> <span class="st">'config'</span><span class="ot">;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Zkuste ho změnit na:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">$cfg</span>[<span class="st">'Servers'</span>][<span class="va">$i</span>][<span class="st">'auth_type'</span>] <span class="op">=</span> <span class="st">'cookie'</span><span class="ot">;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Zadejte heslo pro uživatele <code>root</code> (pokud jste ho nastavili dříve) a potvrďte. Po dokončení restartujte MySQL server v XAMPP Control Panelu.</p>
+<p>Nainstalujeme klienta mysql pro Python:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pip install mysqlclient </span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>V souboru <code>settings.py</code> upravíme nastavení pro připojení k databázi:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>DATABASES <span class="op">=</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'default'</span>: {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">'ENGINE'</span>: <span class="st">'django.db.backends.mysql'</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">'NAME'</span>: <span class="st">'blabla'</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">'USER'</span>: <span class="st">'root'</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">'PASSWORD'</span>: <span class="st">''</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'HOST'</span>: <span class="st">''</span>, <span class="co">#Emptyforlocalhostthroughdomainsocketsor'127.0.0.1' for  through TCP.</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'PORT'</span>: <span class="st">''</span>, <span class="co"># Set to empty string for default.</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"OPTIONS"</span>: {</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"init_command"</span>: <span class="st">"SET sql_mode='STRICT_TRANS_TABLES'"</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nyní můžeme spustit příkazy pro vytvoření databáze a migrace:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>python manage.py makemigrations</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>python manage.py migrate</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>python manage.py createsuperuser</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Po úspěšném vytvoření superuživatele můžeme spustit vývojový server:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>python manage.py runserver</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A přistoupit k administraci na adrese <code>http://localhost:8000/admin/</code> a přihlásit se pomocí vytvořeného superuživatele. Nyní můžete spravovat databázi přes admin rozhraní Django.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -929,14 +923,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../web_django/03template.html" class="pagination-link" aria-label="Šablony">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Šablony</span>
+      <a href="../web_django/10users.html" class="pagination-link" aria-label="Uživatelé">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Uživatelé</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../web_django/05tasks.html" class="pagination-link" aria-label="Tasks">
-        <span class="nav-page-text">Tasks</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -947,7 +938,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/04newyear.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/04newyear.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/11xampp.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/11xampp.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a> ❤️</p>
 </div>
