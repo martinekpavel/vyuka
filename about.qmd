@@ -22,3 +22,10 @@ Pokud chcete vytvářet podobné weby, tak mrkněte sem <https://quarto.org/docs
 - `df -h` - zjistí využití disků
 - `free -h` - zjistí využití RAM
 - `alias ll='ls -la --color=auto'` - vytvoří alias pro zobrazení detailního seznamu sbarveným
+
+
+### A tohle pořád hledám ve VSC, default terminal
+
+```bash
+"terminal.integrated.defaultProfile.windows": "Command Prompt",
+```
