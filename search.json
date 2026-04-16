@@ -621,7 +621,7 @@
     "href": "about.html#užitečné-odkazy",
     "title": "O webu",
     "section": "Užitečné odkazy",
-    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\nProxmox\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\nLinuxové příkazy, co pořád zapomínám\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu sbarveným\n\n\n\nA tohle pořád hledám ve VSC, default terminal\n\"terminal.integrated.defaultProfile.windows\": \"Command Prompt\",\n======= - alias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu &gt;&gt;&gt;&gt;&gt;&gt;&gt; bd477aef86826c855fb80a5cf814e197e11dab9b"
+    "text": "Užitečné odkazy\n\nhttps://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\nProxmox\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\nLinuxové příkazy, co pořád zapomínám\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního seznamu sbarveným\n\n\n\nDefault cmd terminal\n\"terminal.integrated.defaultProfile.windows\": \"Command Prompt\","
   },
   {
     "objectID": "202526-1d.html",
