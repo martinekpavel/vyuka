@@ -84,7 +84,7 @@ urlpatterns = [
 ]
 ```
 
-Nyní vytvoříte správné šablony (layout.html a index.html) např. podle [django-templates](django-templates.md).
+Nyní vytvoříte správné šablony (layout.html a index.html) např. podle [django-templates](https://github.com/martinekpavel/PVA-23-24-3D/blob/main/django-templates.md).
 
 Do bloku `{% block body %}` vložíte kód:
 
