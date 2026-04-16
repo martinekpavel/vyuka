@@ -14,7 +14,7 @@ Uvažme následující funkci. Co se vypíše pro volání `fun(2, 3, 4)`?
 ```php
 function fun($a, $b, $c): void
 {
-    for ($i = a; $i < $b; $i++) {
+    for ($i = $a; $i < $b; $i++) {
         if ($a == 0)
             echo $c + $i;
         else
