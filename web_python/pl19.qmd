@@ -1,0 +1,14 @@
+---
+title: "Pracovní list č. 19"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL19podprogram_s_parametrem.pdf" target="_blank">PracL19 - podprogram s parametrem</a>.
+
+Pracovní soubor `pl19.py`
+
+```python
+# Pracovní list č. 19
+
+## 01+02+03+04
+
+```

@@ -1,0 +1,14 @@
+---
+title: "Pracovní list č. 20"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL20kresleni_mysi.pdf" target="_blank">PracL20 - kreslení myší</a>.
+
+Pracovní soubor `pl20.py`
+
+```python
+# Pracovní list č. 20
+
+## 01+02+03+04
+
+```

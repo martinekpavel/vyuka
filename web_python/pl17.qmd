@@ -1,0 +1,14 @@
+---
+title: "Pracovní list č. 17"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL17vetveni_a_konstrukce.pdf" target="_blank">PracL17 - větvení a konstrukce</a>.
+
+Pracovní soubor `pl17.py`
+
+```python
+# Pracovní list č. 17
+
+## 01+02+03+04
+
+```

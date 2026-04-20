@@ -1,0 +1,14 @@
+---
+title: "Pracovní list č. 18"
+---
+
+Pracujte podle pracovního listu <a href="./pl/PracL18vnorene_vetveni.pdf" target="_blank">PracL18 - vnořené větvení</a>.
+
+Pracovní soubor `pl18.py`
+
+```python
+# Pracovní list č. 18
+
+## 01+02+03+04
+
+```
