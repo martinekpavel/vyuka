@@ -1267,7 +1267,7 @@
     "href": "web_python/pl17.html",
     "title": "Pracovní list č. 17",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL17 - větvení a konstrukce.\nPracovní soubor pl17.py\n# Pracovní list č. 17\n\n##",
+    "text": "Pracujte podle pracovního listu PracL17 - větvení a konstrukce.\nPracovní soubor pl17.py\n# Pracovní list č. 17\n\n## \nMějte složku PythonPL, ve složce mějte 20 složek s nazvy pl01, pl02, …, pl20. Do každé složky uložte pracovní soubor s odpovídajícím názvem (pl01.py, pl02.py, …, pl20.py), nebo dané jednotlivé soubory. Pokud se cvičení provádí v interpreteru a žádný uložený kód nevzniká, můžete si zapsat poznámku.\nVytvořte si na githubu veřejný repozitář s názvem PythonPL a do něj nahrajte obsah složky PythonPL se všemi pracovními soubory. Odkaz na repozitář pošlete prostřednictvím Teamsu.",
     "crumbs": [
       "Python",
       "Pracovní list č. 17"
