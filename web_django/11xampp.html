@@ -73,14 +73,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed576ce243f35bf3f83c58f608c88421.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-89d1b5ebbe6d97325e00d898af54e24f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed576ce243f35bf3f83c58f608c88421.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e56759e0c3e9c5b79410647fdd4ebbc6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-700db516d7b06980125e619fb1ae2ac9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-e56759e0c3e9c5b79410647fdd4ebbc6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a6d2b1bd102ada0610d1b28632c433fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b7d7e4963d0d63b27f52642e5120691d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a6d2b1bd102ada0610d1b28632c433fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -442,14 +442,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Na této stránce</h2>
-   
-  <ul>
-  <li><a href="#připojení-djanga" id="toc-připojení-djanga" class="nav-link active" data-scroll-target="#připojení-djanga">Připojení djanga</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/11xampp.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/11xampp.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -474,29 +468,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<ol type="1">
-<li><p>Nainstalujeme XAMPP a spustíme a mrkneme do phpmyadmin</p></li>
-<li><p>Vypneme jen MySQL server v XAMPP Control Panelu.</p></li>
-<li><p>Stáhneme novou verzi. Složku <code>c:\xampp\mysql</code> přejmenujeme na <code>mysql_old</code> a rozbalíme novou verzi mariadb do složky <code>mysql</code>.</p></li>
-<li><p>Nakopíruji 2 složky (backup, scripts) a 3 soubory (*.bat) z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.</p></li>
-<li><p>V XAMPP Control Panelu klikneme na <code>Shell</code> a zadáme:</p></li>
-</ol>
+<p>Vypneme MySQL server v XAMPP Control Panelu.</p>
+<p>Stáhneme novou verzi. Složku mysql přejmenujeme na mysql_old a rozbalíme novou verzi do složky mysql.</p>
+<p>Nevím, zda to má význam ale kopíruji 2 složky a 3 soubory z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.</p>
+<p>V XAMPP Control Panelu klikneme na <code>Shell</code> a zadáme:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mysql_install_db</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="6" type="1">
-<li><p>Spustíme databázi v Xampp control panelu</p></li>
-<li><p>V prohlížeči v phpMyAdmin jděte do záložky Import. Najděte soubor v: <code>C:\xampp\phpMyAdmin\sql\create_tables.sql</code>. Importujte tento soubor do phpMyAdmin, aby se vytvořily potřebné tabulky pro správu uživatelů a oprávnění.</p></li>
-<li><p>Otevřete <code>C:\xampp\phpMyAdmin\config.inc.php</code>.</p></li>
-</ol>
+<p>Zadejte tento příkaz vytvoří úplně novou systémovou strukturu přímo pro novou verzi MariaDB.</p>
+<p>V prohlížeči v phpMyAdmin jděte do záložky Import. Najděte soubor v: <code>C:\xampp\phpMyAdmin\sql\create_tables.sql</code>. Importujte tento soubor do phpMyAdmin, aby se vytvořily potřebné tabulky pro správu uživatelů a oprávnění.</p>
+<p>Otevřete <code>C:\xampp\phpMyAdmin\config.inc.php</code>.</p>
 <p>Najděte řádek:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">$cfg</span>[<span class="st">'Servers'</span>][<span class="va">$i</span>][<span class="st">'auth_type'</span>] <span class="op">=</span> <span class="st">'config'</span><span class="ot">;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Zkuste ho změnit na:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode php code-with-copy"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">$cfg</span>[<span class="st">'Servers'</span>][<span class="va">$i</span>][<span class="st">'auth_type'</span>] <span class="op">=</span> <span class="st">'cookie'</span><span class="ot">;</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="9" type="1">
-<li><p>Ve stejném souboru zakomentujte 2 řádky (User for advanced features)</p></li>
-<li><p>Přihlášení do phpmyadmin je root bez hesla.</p></li>
-</ol>
-<section id="připojení-djanga" class="level2">
-<h2 class="anchored" data-anchor-id="připojení-djanga">Připojení djanga</h2>
+<p>Zadejte heslo pro uživatele <code>root</code> (pokud jste ho nastavili dříve) a potvrďte. Po dokončení restartujte MySQL server v XAMPP Control Panelu.</p>
 <p>Nainstalujeme klienta mysql pro Python:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pip install mysqlclient </span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>V souboru <code>settings.py</code> upravíme nastavení pro připojení k databázi:</p>
@@ -522,7 +506,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A přistoupit k administraci na adrese <code>http://localhost:8000/admin/</code> a přihlásit se pomocí vytvořeného superuživatele. Nyní můžete spravovat databázi přes admin rozhraní Django.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -955,7 +938,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/11xampp.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/11xampp.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_django/11xampp.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_django/11xampp.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a> ❤️</p>
 </div>
