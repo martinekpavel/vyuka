@@ -2,24 +2,27 @@
 title: "XAMPP MySQL db"
 ---
 
-Vypneme MySQL server v XAMPP Control Panelu.
+1. Nainstalujeme XAMPP a spustíme a mrkneme do phpmyadmin
 
-Stáhneme novou verzi. Složku mysql přejmenujeme na mysql_old a rozbalíme novou verzi do složky mysql.
+2. Vypneme jen MySQL server v XAMPP Control Panelu.
 
-Nevím, zda to má význam ale kopíruji 2 složky a 3 soubory z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.
+3. Stáhneme novou verzi. Složku `c:\xampp\mysql` přejmenujeme na `mysql_old` a rozbalíme novou verzi mariadb do složky `mysql`.
 
-V XAMPP Control Panelu klikneme na `Shell` a zadáme:
+4. Nakopíruji 2 složky (backup, scripts) a 3 soubory (*.bat) z mysql_old do mysql a také my.ini z xampp/mysql_old/bin do xampp/mysql/bin.
+
+5. V XAMPP Control Panelu klikneme na `Shell` a zadáme:
 
 ```cmd
 mysql_install_db
 ```
-Zadejte tento příkaz vytvoří úplně novou systémovou strukturu přímo pro novou verzi MariaDB.
 
-V prohlížeči v phpMyAdmin jděte do záložky Import.
+6. Spustíme databázi v Xampp control panelu
+
+7. V prohlížeči v phpMyAdmin jděte do záložky Import.
 Najděte soubor v: `C:\xampp\phpMyAdmin\sql\create_tables.sql`.
 Importujte tento soubor do phpMyAdmin, aby se vytvořily potřebné tabulky pro správu uživatelů a oprávnění.
 
-Otevřete `C:\xampp\phpMyAdmin\config.inc.php`.
+8. Otevřete `C:\xampp\phpMyAdmin\config.inc.php`.
 
 Najděte řádek:
 
@@ -32,8 +35,11 @@ Zkuste ho změnit na:
 ```php
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
 ```
-Zadejte heslo pro uživatele `root` (pokud jste ho nastavili
-dříve) a potvrďte. Po dokončení restartujte MySQL server v XAMPP Control Panelu.
+9. Ve stejném souboru zakomentujte 2 řádky (User for advanced features)
+
+10. Přihlášení do phpmyadmin je root bez hesla. 
+
+## Připojení djanga
 
 Nainstalujeme klienta mysql pro Python:
 ```cmd
