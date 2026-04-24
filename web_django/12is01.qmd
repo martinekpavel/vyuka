@@ -1,0 +1,25 @@
+---
+title: "Informační systém"
+---
+
+Do Teams odevzdejte pdf dokument, který bude obsahovat tyto údaje:
+
+Informační systém
+- definice
+- příklady
+
+Váš informační systém (webovky propojené s databází)
+
+- Název
+- Téma podrobněji
+- Data (struktura tabulek, příklady dat, datové typy v tabulkách)
+- Uživatelé (všechny skupiny)
+- Jednotlivé procesy
+- Struktura menu webu
+
+Dokument bude strukturovaný (nadpisy, podnadpisy).
+Bude obsahovat citace. Pokud použijete AI, uvedete promt + technologii.
+
+
+Necháte si navrhnout (AI) potřebné modely pro Django. A zkusíte zprovoznit prototyp aplikace.
+

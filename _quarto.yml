@@ -107,6 +107,8 @@ website:
         - web_django/09flights.qmd
         - web_django/10users.qmd
         - web_django/11xampp.qmd
+        - web_django/12is01.qmd
+        
 
     - title: "Maturita"
       style: "docked"

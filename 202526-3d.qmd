@@ -53,7 +53,7 @@ title: "3.D šk. rok 2025/2026"
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
 `16. 4. 2026` | [XAMPP MySQL db](web_django/11xampp.qmd) (54,55/55,56)
-`23. 4. 2026` |
+`23. 4. 2026` | [Informační systém](web_django/12is01.qmd) (56,57/57,58)
 `30. 4. 2026` | odpadá
  `7. 5. 2026` |
 `14. 5. 2026` |
