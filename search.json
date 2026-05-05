@@ -80,7 +80,11 @@
     "href": "web_python/pl18.html",
     "title": "Pracovní list č. 18",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL18 - vnořené větvení.\nPracovní soubor pl18.py\n# Pracovní list č. 18\n\n## 01+02+03+04"
+    "text": "Pracujte podle pracovního listu PracL18 - vnořené větvení.\nPracovní soubor pl18.py\n# Pracovní list č. 18\n\n## 01+02+03+04",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 18"
+    ]
   },
   {
     "objectID": "web_python/01install.html",
@@ -109,7 +113,11 @@
     "href": "web_python/pl17.html",
     "title": "Pracovní list č. 17",
     "section": "",
-    "text": "Pracujte podle pracovního listu PracL17 - větvení a konstrukce.\nPracovní soubor pl17.py\n# Pracovní list č. 17\n\n## 01+02+03+04"
+    "text": "Pracujte podle pracovního listu PracL17 - větvení a konstrukce.\nPracovní soubor pl17.py\n# Pracovní list č. 17\n\n## 01+02+03+04",
+    "crumbs": [
+      "Python",
+      "Pracovní list č. 17"
+    ]
   },
   {
     "objectID": "web_python/pl16.html",
@@ -1089,14 +1097,14 @@
     "href": "202526-1d.html",
     "title": "1.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (54,55/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (56,57/54,55)\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
   },
   {
     "objectID": "202526-1d.html#výuka",
     "href": "202526-1d.html#výuka",
     "title": "1.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\n\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\n\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50,51/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (52,53/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (54,55/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (56,57/54,55)\n\n\n12. 5. 2026\n\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
   },
   {
     "objectID": "web_python/pl10.html",
