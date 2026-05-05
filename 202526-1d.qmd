@@ -44,16 +44,16 @@ title: "1.D šk. rok 2025/2026"
 `17. 3. 2026` | [Pracovní list 10](web_python/pl10.qmd) [+ 11](web_python/pl11.qmd) (44,45/42,43)
 `24. 3. 2026` | [Pracovní list 12](web_python/pl12.qmd) (46,47/44,45)
 `31. 3. 2026` | [Pracovní list 13](web_python/pl13.qmd) (48,49/46,47)
- `7. 4. 2026` | [Pracovní list 14](web_python/pl14.qmd) [+ 15](web_python/pl15.qmd) (50,51/48,49)
+ `7. 4. 2026` | [Pracovní list 14](web_python/pl14.qmd) [+ 15](web_python/pl15.qmd) (50/48,49)
 
 ### 4. čtvrtetí
 
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
-`14. 4. 2026` | [Pracovní list 16](web_python/pl16.qmd) (52,53/50,51)
-`21. 4. 2026` | [Pracovní list 17](web_python/pl17.qmd) (54,55/52,53)
+`14. 4. 2026` | [Pracovní list 16](web_python/pl16.qmd) (51,52/50,51)
+`21. 4. 2026` | [Pracovní list 17](web_python/pl17.qmd) (53,54/52,53)
 `28. 4. 2026` | odpadá
- `5. 5. 2026` | [Pracovní list 18](web_python/pl18.qmd) (56,57/54,55)
+ `5. 5. 2026` | [Pracovní list 18](web_python/pl18.qmd) (55,56/54)
 `12. 5. 2026` |
 `19. 5. 2026` |
 `26. 5. 2026` |
