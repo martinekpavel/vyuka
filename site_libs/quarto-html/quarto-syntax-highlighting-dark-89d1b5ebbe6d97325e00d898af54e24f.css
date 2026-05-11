@@ -87,11 +87,6 @@ code span.cf {
   color: #ffa07a;
 }
 
-/* Char */
-code span.ch {
-  color: #abe338;
-}
-
 /* Constant */
 code span.cn {
   color: #ffd700;
@@ -143,6 +138,11 @@ code span.fl {
 /* Function */
 code span.fu {
   color: #ffa07a;
+}
+
+/* Char */
+code span.ch {
+  color: #abe338;
 }
 
 /* Import */
@@ -216,4 +216,4 @@ code span.wa {
   content: "</";
 }
 
-/*# sourceMappingURL=f5ab3bb6f5ded8da9f12dd3a91d3da26.css.map */
+/*# sourceMappingURL=4df45e3fedf2ca69f6b3c996aeb9e487.css.map */
