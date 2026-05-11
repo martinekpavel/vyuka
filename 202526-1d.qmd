@@ -54,7 +54,7 @@ title: "1.D šk. rok 2025/2026"
 `21. 4. 2026` | [Pracovní list 17](web_python/pl17.qmd) (53,54/52,53)
 `28. 4. 2026` | odpadá
  `5. 5. 2026` | [Pracovní list 18](web_python/pl18.qmd) (55,56/54)
-`12. 5. 2026` |
+`12. 5. 2026` | [Pracovní list 19](web_python/pl19.qmd) (57,58/55,56)
 `19. 5. 2026` |
 `26. 5. 2026` |
  `2. 6. 2026` |
