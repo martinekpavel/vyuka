@@ -10,6 +10,7 @@ Vytvoříte si novou webovou aplikaci ze šablony Django. <a href="https://youtu
 Svůj projekt nahrajete na GitHub a z něj ho stáhnete do PythonAnywhere. 
 
 Použijte `.gitignore` pro python (najdete na webu), aby se vám tam nenahrávaly zbytečné soubory. Nicméně si odkomentujte `db.sqlite3`, aby se vám nahrála i databáze.
+Bohužel pokud nenajdete free databázi pro PythonAnywhere, musíte vymyslet způsob, jak do ní dostat data. Můžete to udělat pomocí admin rozhraní, ale pokud máte hodně dat, je to nepraktické. Můžete také vytvořit skript, který data do databáze vloží a ten spustit na PythonAnywhere.
 
 - <a href="https://youtu.be/GEKjrunSIvg?si=Ihs3xdcPtx7rQV67" target="_blank">Pokračování návodu</a>
 
