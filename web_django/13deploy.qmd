@@ -1,0 +1,25 @@
+---
+title: "Deploy"
+---
+
+Pokud nemáte, vytvořte si účet na <a href="https://eu.pythonanywhere.com/" target="_blank">https://eu.pythonanywhere.com/</a>
+
+
+Vytvoříte si novou webovou aplikaci ze šablony Django. <a href="https://youtu.be/BqVrt-6yfy8?si=zUJpPfo38MlVcZtM&t=480" target="_blank">návod</a>
+
+Svůj projekt nahrajete na GitHub a z něj ho stáhnete do PythonAnywhere. 
+
+Použijte `.gitignore` pro python (najdete na webu), aby se vám tam nenahrávaly zbytečné soubory. Nicméně si odkomentujte `db.sqlite3`, aby se vám nahrála i databáze.
+
+- <a href="https://youtu.be/GEKjrunSIvg?si=Ihs3xdcPtx7rQV67" target="_blank">Pokračování návodu</a>
+
+Statické soubory se většinou nahrávají pomocí `collectstatic` do složky `staticfiles`. Tu pak připojíte v nastavení webu na PythonAnywhere.
+
+![Nicméně pokud soubory budete ukládat přímo do složky `static`, bude to fungovat.](./img/static.jpg)
+
+###  Hodí se
+
+- <a href="https://www.youtube.com/watch?v=zFZrkCIc2Oc&t=5106s" target="_blank">CS50W - Lecture 0 - HTML and CSS  - Responsive Design</a>
+- <a href="https://www.youtube.com/watch?v=zFZrkCIc2Oc&t=5901s" target="_blank">CS50W - Lecture 0 - HTML and CSS  - Bootstrap</a>
+
+
