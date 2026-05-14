@@ -423,11 +423,11 @@
   {
     "objectID": "web_django/13deploy.html",
     "href": "web_django/13deploy.html",
-    "title": "Deploy na PythonAnywhere",
+    "title": "Deploy",
     "section": "",
-    "text": "Pokud nemáte, vytvořte si účet na EU!PythonAnywhere.\nVytvoříte si novou webovou aplikaci ze šablony Django. (návod)\nSvůj projekt nahrajete na GitHub a z něj ho stáhnete do PythonAnywhere.\nPoužijte .gitignore pro python, aby se vám tam nenahrávaly zbytečné soubory. Nicméně si odkomentujte db.sqlite3, aby se vám nahrála i databáze.\n\nPokračování návodu.\n\nStatické soubory se většinou nahrávají pomocí collectstatic do složky staticfiles. Tu pak připojíte v nastavení webu na PythonAnywhere.\n\n\n\nNicméně pokud soubory budete ukládat přímo do složky static, bude to fungovat.\n\n\n\nHodí se\n\nCS50W - Lecture 0 - HTML and CSS - Responsive Design\nCS50W - Lecture 0 - HTML and CSS - Bootstrap",
+    "text": "Pokud nemáte, vytvořte si účet na https://eu.pythonanywhere.com/\nVytvoříte si novou webovou aplikaci ze šablony Django. návod\nSvůj projekt nahrajete na GitHub a z něj ho stáhnete do PythonAnywhere.\nPoužijte .gitignore pro python (najdete na webu), aby se vám tam nenahrávaly zbytečné soubory. Nicméně si odkomentujte db.sqlite3, aby se vám nahrála i databáze. Bohužel pokud nenajdete free databázi pro PythonAnywhere, musíte vymyslet způsob, jak do ní dostat data. Můžete to udělat pomocí admin rozhraní, ale pokud máte hodně dat, je to nepraktické. Můžete také vytvořit skript, který data do databáze vloží a ten spustit na PythonAnywhere.\n\nPokračování návodu\n\nStatické soubory se většinou nahrávají pomocí collectstatic do složky staticfiles. Tu pak připojíte v nastavení webu na PythonAnywhere.\n\n\n\nNicméně pokud soubory budete ukládat přímo do složky static, bude to fungovat.\n\n\n\nHodí se\n\nCS50W - Lecture 0 - HTML and CSS - Responsive Design\nCS50W - Lecture 0 - HTML and CSS - Bootstrap",
     "crumbs": [
-      "Deploy na PythonAnywhere"
+      "Deploy"
     ]
   },
   {
