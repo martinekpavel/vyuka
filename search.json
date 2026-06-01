@@ -1,5 +1,258 @@
 [
   {
+    "objectID": "web_python/tk02apka.html",
+    "href": "web_python/tk02apka.html",
+    "title": "Kámen, nůžky, papír",
+    "section": "",
+    "text": "Student:\n\nvytvoří grafickou aplikaci pomocí Tkinteru\nnaučí se reagovat na kliknutí tlačítek\nvyužije podmínky if\npoužije knihovnu random\nvytvoří jednoduchou hru proti počítači",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#co-budeme-vytvářet",
+    "href": "web_python/tk02apka.html#co-budeme-vytvářet",
+    "title": "Kámen, nůžky, papír",
+    "section": "Co budeme vytvářet?",
+    "text": "Co budeme vytvářet?\nHru proti počítači.\nPravidla:\n\nKámen porazí nůžky\nNůžky porazí papír\nPapír porazí kámen\n\nPočítač bude losovat svůj tah náhodně.",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#ukázka-aplikace",
+    "href": "web_python/tk02apka.html#ukázka-aplikace",
+    "title": "Kámen, nůžky, papír",
+    "section": "Ukázka aplikace",
+    "text": "Ukázka aplikace\nKÁMEN NŮŽKY PAPÍR\n\nPočítač zvolil: kámen\n\n[Vyber kámen]\n[Vyber nůžky]\n[Vyber papír]\n\nVýsledek: Vyhrál jsi!",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#základ-aplikace",
+    "href": "web_python/tk02apka.html#základ-aplikace",
+    "title": "Kámen, nůžky, papír",
+    "section": "Základ aplikace",
+    "text": "Základ aplikace\nimport tkinter as tk\n\nokno = tk.Tk()\n\nokno.title(\"Kámen, nůžky, papír\")\nokno.geometry(\"500x400\")\n\nokno.mainloop()\n\n\nÚkol\nZměň:\n\nvelikost okna\nnázev aplikace",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#vysvětlení",
+    "href": "web_python/tk02apka.html#vysvětlení",
+    "title": "Kámen, nůžky, papír",
+    "section": "Vysvětlení",
+    "text": "Vysvětlení\nfont=(\"Arial\", 20)\nnastavuje velikost písma.\npady=20\npřidá mezeru kolem widgetu.",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#import-knihovny",
+    "href": "web_python/tk02apka.html#import-knihovny",
+    "title": "Kámen, nůžky, papír",
+    "section": "Import knihovny",
+    "text": "Import knihovny\nimport random",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#možné-tahy",
+    "href": "web_python/tk02apka.html#možné-tahy",
+    "title": "Kámen, nůžky, papír",
+    "section": "Možné tahy",
+    "text": "Možné tahy\nmoznosti = [\n    \"kámen\",\n    \"nůžky\",\n    \"papír\"\n]",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#test",
+    "href": "web_python/tk02apka.html#test",
+    "title": "Kámen, nůžky, papír",
+    "section": "Test",
+    "text": "Test\nprint(random.choice(moznosti))\nPo každém spuštění dostaneme náhodný výsledek.",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#první-verze",
+    "href": "web_python/tk02apka.html#první-verze",
+    "title": "Kámen, nůžky, papír",
+    "section": "První verze",
+    "text": "První verze\ndef hraj(tah_hrace):\n\n    tah_pocitace = random.choice(moznosti)\n\n    tah_pc.config(\n        text=f\"Počítač zvolil: {tah_pocitace}\"\n    )\n\n\nVysvětlení\nFunkce dostane jako parametr:\nhraj(\"kámen\")\nnebo\nhraj(\"papír\")\nnebo\nhraj(\"nůžky\")",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#remíza",
+    "href": "web_python/tk02apka.html#remíza",
+    "title": "Kámen, nůžky, papír",
+    "section": "Remíza",
+    "text": "Remíza\nPřidáme první podmínku.\nif tah_hrace == tah_pocitace:\n    vysledek.config(text=\"Remíza\")",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#výhra-hráče",
+    "href": "web_python/tk02apka.html#výhra-hráče",
+    "title": "Kámen, nůžky, papír",
+    "section": "Výhra hráče",
+    "text": "Výhra hráče\nelif (\n    (tah_hrace == \"kámen\" and tah_pocitace == \"nůžky\")\n    or\n    (tah_hrace == \"nůžky\" and tah_pocitace == \"papír\")\n    or\n    (tah_hrace == \"papír\" and tah_pocitace == \"kámen\")\n):\n    vysledek.config(text=\"Vyhrál jsi!\")",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#výhra-počítače",
+    "href": "web_python/tk02apka.html#výhra-počítače",
+    "title": "Kámen, nůžky, papír",
+    "section": "Výhra počítače",
+    "text": "Výhra počítače\nelse:\n    vysledek.config(text=\"Vyhrál počítač!\")",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#kompletní-funkce",
+    "href": "web_python/tk02apka.html#kompletní-funkce",
+    "title": "Kámen, nůžky, papír",
+    "section": "Kompletní funkce",
+    "text": "Kompletní funkce\ndef hraj(tah_hrace):\n\n    tah_pocitace = random.choice(moznosti)\n\n    tah_pc.config(\n        text=f\"Počítač zvolil: {tah_pocitace}\"\n    )\n\n    if tah_hrace == tah_pocitace:\n        vysledek.config(text=\"Remíza\")\n\n    elif (\n        (tah_hrace == \"kámen\" and tah_pocitace == \"nůžky\")\n        or\n        (tah_hrace == \"nůžky\" and tah_pocitace == \"papír\")\n        or\n        (tah_hrace == \"papír\" and tah_pocitace == \"kámen\")\n    ):\n        vysledek.config(text=\"Vyhrál jsi!\")\n\n    else:\n        vysledek.config(text=\"Vyhrál počítač!\")",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#kámen",
+    "href": "web_python/tk02apka.html#kámen",
+    "title": "Kámen, nůžky, papír",
+    "section": "Kámen",
+    "text": "Kámen\nbtn_kamen = tk.Button(\n    okno,\n    text=\"Kámen\",\n    command=lambda: hraj(\"kámen\")\n)\n\nbtn_kamen.pack()",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#nůžky",
+    "href": "web_python/tk02apka.html#nůžky",
+    "title": "Kámen, nůžky, papír",
+    "section": "Nůžky",
+    "text": "Nůžky\nbtn_nuzky = tk.Button(\n    okno,\n    text=\"Nůžky\",\n    command=lambda: hraj(\"nůžky\")\n)\n\nbtn_nuzky.pack()",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#papír",
+    "href": "web_python/tk02apka.html#papír",
+    "title": "Kámen, nůžky, papír",
+    "section": "Papír",
+    "text": "Papír\nbtn_papir = tk.Button(\n    okno,\n    text=\"Papír\",\n    command=lambda: hraj(\"papír\")\n)\n\nbtn_papir.pack()",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#novinka-lambda",
+    "href": "web_python/tk02apka.html#novinka-lambda",
+    "title": "Kámen, nůžky, papír",
+    "section": "Novinka – lambda",
+    "text": "Novinka – lambda\nPotřebujeme předat funkci parametr.\ncommand=lambda: hraj(\"kámen\")\nznamená:\n\nPo kliknutí zavolej funkci hraj() a pošli jí hodnotu \"kámen\".",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#úroveň-1",
+    "href": "web_python/tk02apka.html#úroveň-1",
+    "title": "Kámen, nůžky, papír",
+    "section": "Úroveň 1",
+    "text": "Úroveň 1\nZměň vzhled tlačítek.\nbg=\"lightblue\"",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#úroveň-2",
+    "href": "web_python/tk02apka.html#úroveň-2",
+    "title": "Kámen, nůžky, papír",
+    "section": "Úroveň 2",
+    "text": "Úroveň 2\nPřidej tlačítko Konec.\nokno.destroy()",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#úroveň-3",
+    "href": "web_python/tk02apka.html#úroveň-3",
+    "title": "Kámen, nůžky, papír",
+    "section": "Úroveň 3",
+    "text": "Úroveň 3\nPočítej skóre.\nNapříklad:\nbody_hrace = 0\nbody_pc = 0\na po každé hře aktualizuj skóre.",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#úroveň-4",
+    "href": "web_python/tk02apka.html#úroveň-4",
+    "title": "Kámen, nůžky, papír",
+    "section": "Úroveň 4",
+    "text": "Úroveň 4\nHraj na 5 vítězství.\nPo dosažení 5 bodů:\n\"Hra skončila!\"",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#úroveň-5",
+    "href": "web_python/tk02apka.html#úroveň-5",
+    "title": "Kámen, nůžky, papír",
+    "section": "Úroveň 5",
+    "text": "Úroveň 5\nPřidej variantu:\n\nkámen\nnůžky\npapír\nještěrka\nSpock\n\n(Studenti si sami rozšíří podmínky.)",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
+    "objectID": "web_python/tk02apka.html#jméno-______________________",
+    "href": "web_python/tk02apka.html#jméno-______________________",
+    "title": "Kámen, nůžky, papír",
+    "section": "Jméno: ______________________",
+    "text": "Jméno: ______________________\n\n1. Která knihovna byla použita pro vytvoření grafického rozhraní?\n\npygame\ntkinter\nnumpy\nflask\n\n\n\n\n2. K čemu slouží random.choice()?\n\n\n\n\n3. Co znamená remíza ve hře?\n\n\n\n\n4. Jaký výsledek bude?\ntah_hrace = \"kámen\"\ntah_pc = \"nůžky\"\n\nRemíza\nVyhrál počítač\nVyhrál hráč\n\n\n\n\n5. Jaký widget slouží pro tlačítko?\n\nLabel\nButton\nFrame\nEntry\n\n\n\n\n6. Doplň:\nokno = tk.____()\n\n\n\n7. Co dělá metoda config()?\n\n\n\n\n8. Jak předáme parametr funkci po kliknutí na tlačítko?\ncommand=____________\n\n\n\n9. Napiš jednu podmínku, kdy hráč vyhraje.\nif ______________________________:\n\n\n\n10. Jak ukončíme aplikaci?\n____________________",
+    "crumbs": [
+      "Python",
+      "Kámen, nůžky, papír"
+    ]
+  },
+  {
     "objectID": "web_python/pl20.html",
     "href": "web_python/pl20.html",
     "title": "Pracovní list č. 20",
@@ -670,14 +923,14 @@
     "href": "202526-1d.html",
     "title": "1.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
   },
   {
     "objectID": "202526-1d.html#výuka",
     "href": "202526-1d.html#výuka",
     "title": "1.D šk. rok 2025/2026",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\n\n\n\n26. 5. 2026\n\n\n\n2. 6. 2026\n\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\n\n\n\n16. 6. 2026\n\n\n\n23. 6. 2026"
   },
   {
     "objectID": "202526-3d.html",
@@ -1312,6 +1565,237 @@
     "crumbs": [
       "Python",
       "Pracovní list č. 19"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html",
+    "href": "web_python/tk01apka.html",
+    "title": "Výzvy",
+    "section": "",
+    "text": "import tkinter as tk\n\nokno = tk.Tk()\n\nokno.title(\"Moje první aplikace\")\nokno.geometry(\"400x300\")\n\nokno.mainloop()\n\n\n\n\ntk.Tk()\nvytvoří okno.\ntitle()\nnastaví název.\ngeometry()\nnastaví velikost.\nmainloop()\nspustí aplikaci.\n\n\n\nZměňte:\n\nnázev okna\nvelikost okna",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#vytvoření-aplikace",
+    "href": "web_python/tk01apka.html#vytvoření-aplikace",
+    "title": "Výzvy",
+    "section": "",
+    "text": "import tkinter as tk\n\nokno = tk.Tk()\n\nokno.title(\"Moje první aplikace\")\nokno.geometry(\"400x300\")\n\nokno.mainloop()",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#vysvětlení",
+    "href": "web_python/tk01apka.html#vysvětlení",
+    "title": "Výzvy",
+    "section": "",
+    "text": "tk.Tk()\nvytvoří okno.\ntitle()\nnastaví název.\ngeometry()\nnastaví velikost.\nmainloop()\nspustí aplikaci.\n\n\n\nZměňte:\n\nnázev okna\nvelikost okna",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#widget-label",
+    "href": "web_python/tk01apka.html#widget-label",
+    "title": "Výzvy",
+    "section": "Widget Label",
+    "text": "Widget Label\nimport tkinter as tk\n\nokno = tk.Tk()\n\nnadpis = tk.Label(\n    okno,\n    text=\"Vítej v aplikaci!\",\n    font=(\"Arial\", 20)\n)\n\nnadpis.pack()\n\nokno.mainloop()",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#co-dělá-pack",
+    "href": "web_python/tk01apka.html#co-dělá-pack",
+    "title": "Výzvy",
+    "section": "Co dělá pack()?",
+    "text": "Co dělá pack()?\nUmístí prvek do okna.\nnadpis.pack()\nbez něj nebude widget vidět.\n\n\nÚkol\nZměňte text na vlastní uvítání.",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#první-tlačítko",
+    "href": "web_python/tk01apka.html#první-tlačítko",
+    "title": "Výzvy",
+    "section": "První tlačítko",
+    "text": "První tlačítko\nimport tkinter as tk\n\nokno = tk.Tk()\n\ndef pozdrav():\n    print(\"Ahoj!\")\n\ntlacitko = tk.Button(\n    okno,\n    text=\"Klikni\"\n)\n\ntlacitko.pack()\n\nokno.mainloop()\n\nTlačítko zatím nic nedělá.",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#přidání-funkce",
+    "href": "web_python/tk01apka.html#přidání-funkce",
+    "title": "Výzvy",
+    "section": "Přidání funkce",
+    "text": "Přidání funkce\ntlacitko = tk.Button(\n    okno,\n    text=\"Klikni\",\n    command=pozdrav\n)\n\n\nÚkol\nPo kliknutí vypište:\nprint(\"Funguje to!\")",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#kód",
+    "href": "web_python/tk01apka.html#kód",
+    "title": "Výzvy",
+    "section": "Kód",
+    "text": "Kód\nimport tkinter as tk\n\nokno = tk.Tk()\n\ntext = tk.Label(\n    okno,\n    text=\"Stiskni tlačítko\"\n)\n\ntext.pack()\n\ndef zmena():\n    text.config(text=\"Ahoj světe!\")\n\ntlacitko = tk.Button(\n    okno,\n    text=\"Klikni\",\n    command=zmena\n)\n\ntlacitko.pack()\n\nokno.mainloop()",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#novinka",
+    "href": "web_python/tk01apka.html#novinka",
+    "title": "Výzvy",
+    "section": "Novinka",
+    "text": "Novinka\nconfig()\numožňuje měnit vlastnosti widgetu.",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#zadání",
+    "href": "web_python/tk01apka.html#zadání",
+    "title": "Výzvy",
+    "section": "Zadání",
+    "text": "Zadání\nVytvoříme aplikaci, která po kliknutí zobrazí náhodný úkol.\nNapříklad:\n\nUdělej 5 dřepů\nUsměj se\nŘekni vtip\nNapij se vody\nPozdrav spolužáka",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#krok-1-import-random",
+    "href": "web_python/tk01apka.html#krok-1-import-random",
+    "title": "Výzvy",
+    "section": "Krok 1 – import random",
+    "text": "Krok 1 – import random\nimport random",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#krok-2-seznam-výzev",
+    "href": "web_python/tk01apka.html#krok-2-seznam-výzev",
+    "title": "Výzvy",
+    "section": "Krok 2 – seznam výzev",
+    "text": "Krok 2 – seznam výzev\nvyzvy = [\n    \"Udělej 5 dřepů\",\n    \"Usměj se\",\n    \"Řekni vtip\",\n    \"Napij se vody\",\n    \"Pozdrav spolužáka\",\n    \"Protáhni se\",\n    \"Zatleskej\"\n]",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#krok-3-vytvoření-popisku",
+    "href": "web_python/tk01apka.html#krok-3-vytvoření-popisku",
+    "title": "Výzvy",
+    "section": "Krok 3 – vytvoření popisku",
+    "text": "Krok 3 – vytvoření popisku\nvysledek = tk.Label(\n    okno,\n    text=\"Klikni na tlačítko\",\n    font=(\"Arial\", 16)\n)\n\nvysledek.pack(pady=20)",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#krok-4-funkce-pro-výběr",
+    "href": "web_python/tk01apka.html#krok-4-funkce-pro-výběr",
+    "title": "Výzvy",
+    "section": "Krok 4 – funkce pro výběr",
+    "text": "Krok 4 – funkce pro výběr\ndef nova_vyzva():\n    vyzva = random.choice(vyzvy)\n    vysledek.config(text=vyzva)",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#krok-5-tlačítko",
+    "href": "web_python/tk01apka.html#krok-5-tlačítko",
+    "title": "Výzvy",
+    "section": "Krok 5 – tlačítko",
+    "text": "Krok 5 – tlačítko\ntlacitko = tk.Button(\n    okno,\n    text=\"Losuj výzvu\",\n    command=nova_vyzva\n)\n\ntlacitko.pack()",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#úroveň-1",
+    "href": "web_python/tk01apka.html#úroveň-1",
+    "title": "Výzvy",
+    "section": "Úroveň 1",
+    "text": "Úroveň 1\nPřidej 5 vlastních výzev.",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#úroveň-2",
+    "href": "web_python/tk01apka.html#úroveň-2",
+    "title": "Výzvy",
+    "section": "Úroveň 2",
+    "text": "Úroveň 2\nZměň velikost písma.\nfont=(\"Arial\", 24)",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#úroveň-3",
+    "href": "web_python/tk01apka.html#úroveň-3",
+    "title": "Výzvy",
+    "section": "Úroveň 3",
+    "text": "Úroveň 3\nZměň barvu textu.\nfg=\"blue\"",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#úroveň-4",
+    "href": "web_python/tk01apka.html#úroveň-4",
+    "title": "Výzvy",
+    "section": "Úroveň 4",
+    "text": "Úroveň 4\nZměň barvu tlačítka.\nbg=\"lightgreen\"",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#úroveň-5",
+    "href": "web_python/tk01apka.html#úroveň-5",
+    "title": "Výzvy",
+    "section": "Úroveň 5",
+    "text": "Úroveň 5\nPřidej druhé tlačítko:\n\"Konec\"\nkteré aplikaci ukončí.\nNápověda:\nokno.destroy()",
+    "crumbs": [
+      "Python",
+      "Výzvy"
+    ]
+  },
+  {
+    "objectID": "web_python/tk01apka.html#jméno-__________________",
+    "href": "web_python/tk01apka.html#jméno-__________________",
+    "title": "Výzvy",
+    "section": "Jméno: __________________",
+    "text": "Jméno: __________________\n\n1. Jak se jmenuje standardní knihovna Pythonu pro tvorbu GUI?\n\npygame\ntkinter\npandas\nnumpy\n\n\n\n\n2. Který příkaz vytvoří hlavní okno?\n\n\n\ntk.Window()\n\n\n\ntk.Create()\n\n\n\ntk.Tk()\n\n\n\ntk.Main()\n\n\n\n3. K čemu slouží metoda mainloop()?\n\n\n\n\n\n4. Jaký widget slouží pro zobrazení textu?\n\nLabel\nButton\nEntry\nWindow\n\n\n\n\n5. Jaký widget slouží jako tlačítko?\n\nLabel\nButton\nText\nFrame\n\n\n\n\n6. Co udělá tento kód?\nrandom.choice(seznam)\n\nSeřadí seznam\nVymaže seznam\nVybere náhodnou položku\nPřidá položku\n\n\n\n\n7. Doplň chybějící část\ntlacitko = tk.Button(\n    okno,\n    text=\"Klikni\",\n    __________=pozdrav\n)\n\n\n\n8. Jak ukončíme aplikaci?\n\n\n\nokno.stop()\n\n\n\nokno.destroy()\n\n\n\nokno.end()\n\n\n\nokno.close()\n\n\n\n9. Napiš jeden příklad widgetu použitelný v Tkinteru.\n\n\n\n\n10. Vytvoř krátkou funkci, která vypíše text:\nAhoj studenti",
+    "crumbs": [
+      "Python",
+      "Výzvy"
     ]
   }
 ]
