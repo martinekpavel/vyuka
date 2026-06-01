@@ -1,0 +1,561 @@
+---
+title: "Výzvy"
+---
+
+# 1. První okno (10 minut)
+
+## Vytvoření aplikace
+
+```python
+import tkinter as tk
+
+okno = tk.Tk()
+
+okno.title("Moje první aplikace")
+okno.geometry("400x300")
+
+okno.mainloop()
+```
+
+---
+
+## Vysvětlení
+
+```python
+tk.Tk()
+```
+
+vytvoří okno.
+
+```python
+title()
+```
+
+nastaví název.
+
+```python
+geometry()
+```
+
+nastaví velikost.
+
+```python
+mainloop()
+```
+
+spustí aplikaci.
+
+---
+
+### Úkol
+
+Změňte:
+
+* název okna
+* velikost okna
+
+---
+
+# 2. Přidání textu (10 minut)
+
+## Widget Label
+
+```python
+import tkinter as tk
+
+okno = tk.Tk()
+
+nadpis = tk.Label(
+    okno,
+    text="Vítej v aplikaci!",
+    font=("Arial", 20)
+)
+
+nadpis.pack()
+
+okno.mainloop()
+```
+
+---
+
+## Co dělá pack()?
+
+Umístí prvek do okna.
+
+```python
+nadpis.pack()
+```
+
+bez něj nebude widget vidět.
+
+---
+
+### Úkol
+
+Změňte text na vlastní uvítání.
+
+---
+
+# 3. Přidání tlačítka (15 minut)
+
+## První tlačítko
+
+```python
+import tkinter as tk
+
+okno = tk.Tk()
+
+def pozdrav():
+    print("Ahoj!")
+
+tlacitko = tk.Button(
+    okno,
+    text="Klikni"
+)
+
+tlacitko.pack()
+
+okno.mainloop()
+```
+
+---
+
+Tlačítko zatím nic nedělá.
+
+---
+
+## Přidání funkce
+
+```python
+tlacitko = tk.Button(
+    okno,
+    text="Klikni",
+    command=pozdrav
+)
+```
+
+---
+
+### Úkol
+
+Po kliknutí vypište:
+
+```python
+print("Funguje to!")
+```
+
+---
+
+# 4. Zobrazování textu v okně (10 minut)
+
+Místo výpisu do konzole budeme měnit text v aplikaci.
+
+---
+
+## Kód
+
+```python
+import tkinter as tk
+
+okno = tk.Tk()
+
+text = tk.Label(
+    okno,
+    text="Stiskni tlačítko"
+)
+
+text.pack()
+
+def zmena():
+    text.config(text="Ahoj světe!")
+
+tlacitko = tk.Button(
+    okno,
+    text="Klikni",
+    command=zmena
+)
+
+tlacitko.pack()
+
+okno.mainloop()
+```
+
+---
+
+## Novinka
+
+```python
+config()
+```
+
+umožňuje měnit vlastnosti widgetu.
+
+---
+
+# 5. Hlavní projekt – Generátor výzev (25 minut)
+
+## Zadání
+
+Vytvoříme aplikaci, která po kliknutí zobrazí náhodný úkol.
+
+Například:
+
+* Udělej 5 dřepů
+* Usměj se
+* Řekni vtip
+* Napij se vody
+* Pozdrav spolužáka
+
+---
+
+## Krok 1 – import random
+
+```python
+import random
+```
+
+---
+
+## Krok 2 – seznam výzev
+
+```python
+vyzvy = [
+    "Udělej 5 dřepů",
+    "Usměj se",
+    "Řekni vtip",
+    "Napij se vody",
+    "Pozdrav spolužáka",
+    "Protáhni se",
+    "Zatleskej"
+]
+```
+
+---
+
+## Krok 3 – vytvoření popisku
+
+```python
+vysledek = tk.Label(
+    okno,
+    text="Klikni na tlačítko",
+    font=("Arial", 16)
+)
+
+vysledek.pack(pady=20)
+```
+
+---
+
+## Krok 4 – funkce pro výběr
+
+```python
+def nova_vyzva():
+    vyzva = random.choice(vyzvy)
+    vysledek.config(text=vyzva)
+```
+
+---
+
+## Krok 5 – tlačítko
+
+```python
+tlacitko = tk.Button(
+    okno,
+    text="Losuj výzvu",
+    command=nova_vyzva
+)
+
+tlacitko.pack()
+```
+
+---
+
+# Kompletní řešení
+
+```python
+import tkinter as tk
+import random
+
+okno = tk.Tk()
+
+okno.title("Generátor výzev")
+okno.geometry("500x300")
+
+vyzvy = [
+    "Udělej 5 dřepů",
+    "Usměj se",
+    "Řekni vtip",
+    "Napij se vody",
+    "Pozdrav spolužáka",
+    "Protáhni se",
+    "Zatleskej"
+]
+
+vysledek = tk.Label(
+    okno,
+    text="Klikni na tlačítko",
+    font=("Arial", 16)
+)
+
+vysledek.pack(pady=20)
+
+def nova_vyzva():
+    vyzva = random.choice(vyzvy)
+    vysledek.config(text=vyzva)
+
+tlacitko = tk.Button(
+    okno,
+    text="Losuj výzvu",
+    command=nova_vyzva
+)
+
+tlacitko.pack()
+
+okno.mainloop()
+```
+
+---
+
+# 7. Rozšiřující úkoly (5 minut)
+
+## Úroveň 1
+
+Přidej 5 vlastních výzev.
+
+---
+
+## Úroveň 2
+
+Změň velikost písma.
+
+```python
+font=("Arial", 24)
+```
+
+---
+
+## Úroveň 3
+
+Změň barvu textu.
+
+```python
+fg="blue"
+```
+
+---
+
+## Úroveň 4
+
+Změň barvu tlačítka.
+
+```python
+bg="lightgreen"
+```
+
+---
+
+## Úroveň 5
+
+Přidej druhé tlačítko:
+
+```python
+"Konec"
+```
+
+které aplikaci ukončí.
+
+Nápověda:
+
+```python
+okno.destroy()
+```
+
+---
+
+# Shrnutí hodiny (5 minut)
+
+Dnes jsme se naučili:
+
+✅ vytvořit okno
+
+✅ používat widget `Label`
+
+✅ používat widget `Button`
+
+✅ reagovat na kliknutí
+
+✅ vytvářet vlastní funkce
+
+✅ měnit obsah widgetů
+
+✅ použít knihovnu `random`
+
+---
+
+# Závěrečný test (10 minut)
+
+## Jméno: __________________
+
+### 1. Jak se jmenuje standardní knihovna Pythonu pro tvorbu GUI?
+
+a) pygame
+
+b) tkinter
+
+c) pandas
+
+d) numpy
+
+---
+
+### 2. Který příkaz vytvoří hlavní okno?
+
+a)
+
+```python
+tk.Window()
+```
+
+b)
+
+```python
+tk.Create()
+```
+
+c)
+
+```python
+tk.Tk()
+```
+
+d)
+
+```python
+tk.Main()
+```
+
+---
+
+### 3. K čemu slouží metoda `mainloop()`?
+
+---
+
+---
+
+---
+
+### 4. Jaký widget slouží pro zobrazení textu?
+
+a) Label
+
+b) Button
+
+c) Entry
+
+d) Window
+
+---
+
+### 5. Jaký widget slouží jako tlačítko?
+
+a) Label
+
+b) Button
+
+c) Text
+
+d) Frame
+
+---
+
+### 6. Co udělá tento kód?
+
+```python
+random.choice(seznam)
+```
+
+a) Seřadí seznam
+
+b) Vymaže seznam
+
+c) Vybere náhodnou položku
+
+d) Přidá položku
+
+---
+
+### 7. Doplň chybějící část
+
+```python
+tlacitko = tk.Button(
+    okno,
+    text="Klikni",
+    __________=pozdrav
+)
+```
+
+---
+
+### 8. Jak ukončíme aplikaci?
+
+a)
+
+```python
+okno.stop()
+```
+
+b)
+
+```python
+okno.destroy()
+```
+
+c)
+
+```python
+okno.end()
+```
+
+d)
+
+```python
+okno.close()
+```
+
+---
+
+### 9. Napiš jeden příklad widgetu použitelný v Tkinteru.
+
+---
+
+---
+
+### 10. Vytvoř krátkou funkci, která vypíše text:
+
+```python
+Ahoj studenti
+```
+
+```python
+```
+
+---
+
+# Klíč správných odpovědí
+
+1. b
+2. c
+3. Spustí hlavní smyčku aplikace a čeká na události.
+4. a
+5. b
+6. c
+7. `command`
+8. b
+9. Např. Label, Button, Entry, Frame, Text
+10.
+
+```python
+def pozdrav():
+    print("Ahoj studenti")
+```
+

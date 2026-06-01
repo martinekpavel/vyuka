@@ -94,6 +94,8 @@ website:
         - web_python/pl18.qmd
         - web_python/pl19.qmd
         - web_python/pl20.qmd
+        - web_python\tk01apka.qmd
+        - web_python\tk02apka.qmd
 
     - title: "Django"
       style: "docked"

@@ -1,0 +1,623 @@
+---
+title: "Kámen, nůžky, papír"
+---
+
+### Cíle hodiny
+
+Student:
+
+* vytvoří grafickou aplikaci pomocí Tkinteru
+* naučí se reagovat na kliknutí tlačítek
+* využije podmínky `if`
+* použije knihovnu `random`
+* vytvoří jednoduchou hru proti počítači
+
+### Výstup
+
+Na konci hodiny bude mít každý student funkční hru **Kámen, nůžky, papír**.
+
+---
+
+# 1. Úvod (10 minut)
+
+## Co budeme vytvářet?
+
+Hru proti počítači.
+
+Pravidla:
+
+* Kámen porazí nůžky
+* Nůžky porazí papír
+* Papír porazí kámen
+
+Počítač bude losovat svůj tah náhodně.
+
+---
+
+## Ukázka aplikace
+
+```
+KÁMEN NŮŽKY PAPÍR
+
+Počítač zvolil: kámen
+
+[Vyber kámen]
+[Vyber nůžky]
+[Vyber papír]
+
+Výsledek: Vyhrál jsi!
+```
+
+---
+
+# 2. Vytvoření okna (10 minut)
+
+## Základ aplikace
+
+```python
+import tkinter as tk
+
+okno = tk.Tk()
+
+okno.title("Kámen, nůžky, papír")
+okno.geometry("500x400")
+
+okno.mainloop()
+```
+
+---
+
+### Úkol
+
+Změň:
+
+* velikost okna
+* název aplikace
+
+---
+
+# 3. Přidání nadpisu (5 minut)
+
+```python
+nadpis = tk.Label(
+    okno,
+    text="KÁMEN, NŮŽKY, PAPÍR",
+    font=("Arial", 20)
+)
+
+nadpis.pack(pady=20)
+```
+
+---
+
+## Vysvětlení
+
+```python
+font=("Arial", 20)
+```
+
+nastavuje velikost písma.
+
+```python
+pady=20
+```
+
+přidá mezeru kolem widgetu.
+
+---
+
+# 4. Zobrazení výsledků (10 minut)
+
+Připravíme místo pro zobrazení tahu počítače.
+
+```python
+tah_pc = tk.Label(
+    okno,
+    text="Počítač ještě nehrál",
+    font=("Arial", 14)
+)
+
+tah_pc.pack()
+```
+
+---
+
+A také výsledek hry.
+
+```python
+vysledek = tk.Label(
+    okno,
+    text="Vyber svůj tah",
+    font=("Arial", 16)
+)
+
+vysledek.pack(pady=20)
+```
+
+---
+
+# 5. Náhodný tah počítače (10 minut)
+
+## Import knihovny
+
+```python
+import random
+```
+
+---
+
+## Možné tahy
+
+```python
+moznosti = [
+    "kámen",
+    "nůžky",
+    "papír"
+]
+```
+
+---
+
+## Test
+
+```python
+print(random.choice(moznosti))
+```
+
+Po každém spuštění dostaneme náhodný výsledek.
+
+---
+
+# 6. Funkce pro hru (20 minut)
+
+## První verze
+
+```python
+def hraj(tah_hrace):
+
+    tah_pocitace = random.choice(moznosti)
+
+    tah_pc.config(
+        text=f"Počítač zvolil: {tah_pocitace}"
+    )
+```
+
+---
+
+### Vysvětlení
+
+Funkce dostane jako parametr:
+
+```python
+hraj("kámen")
+```
+
+nebo
+
+```python
+hraj("papír")
+```
+
+nebo
+
+```python
+hraj("nůžky")
+```
+
+---
+
+## Remíza
+
+Přidáme první podmínku.
+
+```python
+if tah_hrace == tah_pocitace:
+    vysledek.config(text="Remíza")
+```
+
+---
+
+## Výhra hráče
+
+```python
+elif (
+    (tah_hrace == "kámen" and tah_pocitace == "nůžky")
+    or
+    (tah_hrace == "nůžky" and tah_pocitace == "papír")
+    or
+    (tah_hrace == "papír" and tah_pocitace == "kámen")
+):
+    vysledek.config(text="Vyhrál jsi!")
+```
+
+---
+
+## Výhra počítače
+
+```python
+else:
+    vysledek.config(text="Vyhrál počítač!")
+```
+
+---
+
+## Kompletní funkce
+
+```python
+def hraj(tah_hrace):
+
+    tah_pocitace = random.choice(moznosti)
+
+    tah_pc.config(
+        text=f"Počítač zvolil: {tah_pocitace}"
+    )
+
+    if tah_hrace == tah_pocitace:
+        vysledek.config(text="Remíza")
+
+    elif (
+        (tah_hrace == "kámen" and tah_pocitace == "nůžky")
+        or
+        (tah_hrace == "nůžky" and tah_pocitace == "papír")
+        or
+        (tah_hrace == "papír" and tah_pocitace == "kámen")
+    ):
+        vysledek.config(text="Vyhrál jsi!")
+
+    else:
+        vysledek.config(text="Vyhrál počítač!")
+```
+
+---
+
+# 7. Tlačítka hráče (10 minut)
+
+## Kámen
+
+```python
+btn_kamen = tk.Button(
+    okno,
+    text="Kámen",
+    command=lambda: hraj("kámen")
+)
+
+btn_kamen.pack()
+```
+
+---
+
+## Nůžky
+
+```python
+btn_nuzky = tk.Button(
+    okno,
+    text="Nůžky",
+    command=lambda: hraj("nůžky")
+)
+
+btn_nuzky.pack()
+```
+
+---
+
+## Papír
+
+```python
+btn_papir = tk.Button(
+    okno,
+    text="Papír",
+    command=lambda: hraj("papír")
+)
+
+btn_papir.pack()
+```
+
+---
+
+## Novinka – lambda
+
+Potřebujeme předat funkci parametr.
+
+```python
+command=lambda: hraj("kámen")
+```
+
+znamená:
+
+> Po kliknutí zavolej funkci `hraj()` a pošli jí hodnotu `"kámen"`.
+
+---
+
+# 8. Kompletní řešení
+
+```python
+import tkinter as tk
+import random
+
+okno = tk.Tk()
+
+okno.title("Kámen, nůžky, papír")
+okno.geometry("500x400")
+
+moznosti = [
+    "kámen",
+    "nůžky",
+    "papír"
+]
+
+nadpis = tk.Label(
+    okno,
+    text="KÁMEN, NŮŽKY, PAPÍR",
+    font=("Arial", 20)
+)
+
+nadpis.pack(pady=20)
+
+tah_pc = tk.Label(
+    okno,
+    text="Počítač ještě nehrál",
+    font=("Arial", 14)
+)
+
+tah_pc.pack()
+
+vysledek = tk.Label(
+    okno,
+    text="Vyber svůj tah",
+    font=("Arial", 16)
+)
+
+vysledek.pack(pady=20)
+
+def hraj(tah_hrace):
+
+    tah_pocitace = random.choice(moznosti)
+
+    tah_pc.config(
+        text=f"Počítač zvolil: {tah_pocitace}"
+    )
+
+    if tah_hrace == tah_pocitace:
+        vysledek.config(text="Remíza")
+
+    elif (
+        (tah_hrace == "kámen" and tah_pocitace == "nůžky")
+        or
+        (tah_hrace == "nůžky" and tah_pocitace == "papír")
+        or
+        (tah_hrace == "papír" and tah_pocitace == "kámen")
+    ):
+        vysledek.config(text="Vyhrál jsi!")
+
+    else:
+        vysledek.config(text="Vyhrál počítač!")
+
+btn_kamen = tk.Button(
+    okno,
+    text="Kámen",
+    command=lambda: hraj("kámen")
+)
+
+btn_kamen.pack()
+
+btn_nuzky = tk.Button(
+    okno,
+    text="Nůžky",
+    command=lambda: hraj("nůžky")
+)
+
+btn_nuzky.pack()
+
+btn_papir = tk.Button(
+    okno,
+    text="Papír",
+    command=lambda: hraj("papír")
+)
+
+btn_papir.pack()
+
+okno.mainloop()
+```
+
+---
+
+# Rozšiřující úkoly
+
+## Úroveň 1
+
+Změň vzhled tlačítek.
+
+```python
+bg="lightblue"
+```
+
+---
+
+## Úroveň 2
+
+Přidej tlačítko Konec.
+
+```python
+okno.destroy()
+```
+
+---
+
+## Úroveň 3
+
+Počítej skóre.
+
+Například:
+
+```python
+body_hrace = 0
+body_pc = 0
+```
+
+a po každé hře aktualizuj skóre.
+
+---
+
+## Úroveň 4
+
+Hraj na 5 vítězství.
+
+Po dosažení 5 bodů:
+
+```python
+"Hra skončila!"
+```
+
+---
+
+## Úroveň 5
+
+Přidej variantu:
+
+* kámen
+* nůžky
+* papír
+* ještěrka
+* Spock
+
+(Studenti si sami rozšíří podmínky.)
+
+---
+
+# Shrnutí
+
+Dnes jsme použili:
+
+✅ Tkinter
+
+✅ Label
+
+✅ Button
+
+✅ funkce s parametry
+
+✅ lambda
+
+✅ random.choice()
+
+✅ podmínky if/elif/else
+
+✅ jednoduchou herní logiku
+
+---
+
+# Závěrečný test
+
+## Jméno: ______________________
+
+### 1. Která knihovna byla použita pro vytvoření grafického rozhraní?
+
+a) pygame
+
+b) tkinter
+
+c) numpy
+
+d) flask
+
+---
+
+### 2. K čemu slouží `random.choice()`?
+
+---
+
+---
+
+### 3. Co znamená remíza ve hře?
+
+---
+
+---
+
+### 4. Jaký výsledek bude?
+
+```python
+tah_hrace = "kámen"
+tah_pc = "nůžky"
+```
+
+a) Remíza
+
+b) Vyhrál počítač
+
+c) Vyhrál hráč
+
+---
+
+### 5. Jaký widget slouží pro tlačítko?
+
+a) Label
+
+b) Button
+
+c) Frame
+
+d) Entry
+
+---
+
+### 6. Doplň:
+
+```python
+okno = tk.____()
+```
+
+---
+
+### 7. Co dělá metoda `config()`?
+
+---
+
+---
+
+### 8. Jak předáme parametr funkci po kliknutí na tlačítko?
+
+```python
+command=____________
+```
+
+---
+
+### 9. Napiš jednu podmínku, kdy hráč vyhraje.
+
+```python
+if ______________________________:
+```
+
+---
+
+### 10. Jak ukončíme aplikaci?
+
+```python
+____________________
+```
+
+---
+
+# Řešení testu
+
+1. b
+2. Vybere náhodný prvek ze seznamu
+3. Oba zvolili stejný tah
+4. c
+5. b
+6. `Tk`
+7. Mění vlastnosti widgetu
+8. `lambda: hraj("kámen")`
+9. např.
+
+```python
+tah_hrace == "kámen" and tah_pc == "nůžky"
+```
+
+10.
+
+```python
+okno.destroy()
+```
+
