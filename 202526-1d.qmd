@@ -1,5 +1,10 @@
 ---
 title: "1.D šk. rok 2025/2026"
+include-after-body:
+  text: |
+    <script>
+      window.location.hash='čtvrtletí-3';
+    </script>
 ---
 
 ## Výuka
@@ -32,7 +37,7 @@ title: "1.D šk. rok 2025/2026"
  `20. 1. 2026`| Hodnocení pololetí (32/33,31,32)
  `27. 1. 2026`| [Pracovní list 3](web_python/pl03.qmd) (34,35/33)
 
-### 3. čtvrtetí
+### 3. čtvrtletí
 
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
@@ -46,7 +51,7 @@ title: "1.D šk. rok 2025/2026"
 `31. 3. 2026` | [Pracovní list 13](web_python/pl13.qmd) (48,49/46,47)
  `7. 4. 2026` | [Pracovní list 14](web_python/pl14.qmd) [+ 15](web_python/pl15.qmd) (50/48,49)
 
-### 4. čtvrtetí
+### 4. čtvrtletí
 
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
