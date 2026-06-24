@@ -63,6 +63,6 @@ include-after-body:
 `19. 5. 2026` | [Pracovní list 20](web_python/pl20.qmd) (59,60/57,58)
 `26. 5. 2026` | Algoritmy – rekapitulace (61,62/59,60)
  `2. 6. 2026` | [Tk apka 1](web_python/tk01apka.qmd) + [Tk apka 2](web_python/tk02apka.qmd) (63,64/61,62)
- `9. 6. 2026` |
-`16. 6. 2026` |
-`23. 6. 2026` |
+ `9. 6. 2026` | hodnocení školního roku, opravné zkoušky
+`16. 6. 2026` | hodnocení školního roku, opravné zkoušky
+`23. 6. 2026` | hodnocení školního roku, opravné zkoušky
