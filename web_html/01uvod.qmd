@@ -36,7 +36,7 @@ title: "Úvodní hodina"
 ## Tvorba účtu na Githubu
 
 * <https://github.com/>
-* použijte co nejkratší uživatelské jméno
+* použijte co nejkratší uživatelské jméno! 
 
 ## Instalace Visual Studio Code
 
@@ -44,5 +44,5 @@ title: "Úvodní hodina"
 
 ## Instalace Git
 
-* <https://git-scm.com/>
-* instalovace nejlépe přes VSC
+* instalovat nejlépe přes VSC
+* jinak <https://git-scm.com/>
