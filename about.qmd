@@ -1,10 +1,6 @@
 ---
-title: "O webu"
+title: "Nezařazeno"
 ---
-
-Tento web vznikl jako podpora výuky předmětu **Programování a vývoj aplikací**
-
-Pokud chcete vytvářet podobné weby, tak mrkněte sem <https://quarto.org/docs/websites>.
 
 ## Užitečné odkazy
 

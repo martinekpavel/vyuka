@@ -5,16 +5,16 @@ title: "Úvodní hodina"
 ## Pravidla pro hodnocení
 
 * průběžné hodnocení (zadání) po každé hodině
-* pokud žák chybí, je v jeho zájmu získat informace o probrané látce a doučit se ji, případně kontaktovat vyučujícího s dostatečným předstihem pro individuální konzultaci. Může se stát, že žák v případě zameškané hodiny nebude schopen v další hodině pracovat.
+* pokud v hodině chybíte, je ve vašem zájmu získat informace o probrané látce a doučit se ji, případně kontaktovat vyučujícího s dostatečným předstihem pro individuální konzultaci. Může se stát, že v případě zameškané hodiny nebudete schopni v další hodině pracovat.
 * několik větších projektů na dané téma, hodnocení má větší váhu
 * není tolerováno kopírování kódů, hraní her
 * komunikujte!
 
 ## Poučení o bezpečnosti a ochraně zdraví
 
-* **slušnost a ohled na druhé**, žáci se mají chovat tak, aby neohrozili zdraví své, ani druhých
-* netolerovat projevy nevhodného chování (ubližování, šikana), pokud si žák myslí, že on, nebo některý jiný žák je obětí šikany měl by o tom informovat jakéhokoliv pracovníka školy
-* nevyklánět se z oken, nevystupovat na židle, stoly, parapety, neběhat, neskákat a předcházet úrazům
+* **slušnost a ohled na druhé**, chovejte se tak, abyste neohrozili zdraví své, ani druhých
+* netolerujte projevy nevhodného chování (ubližování, šikana), pokud si myslíte, že on, nebo některý jiný student je obětí šikany měl by se o tom informovat jakýkoliv pracovník školy
+* nevyklánějte se z oken, nevystupujte na židle, stoly, parapety, neběhejte, neskákejte a předcházejte úrazům
 * nepožívat žádné psychotropní látky (alkohol, cigarety, omamné látky ...)
 * nenosit do školy nebezpečné a cenné předměty
 * oznámit pedagogickému dozoru nedostatky a závady, které by mohly ohrozit zdraví
@@ -22,8 +22,24 @@ title: "Úvodní hodina"
 
 ### Školní řád
 
-- <https://www.oa-opava.cz/index.php/skola/dulezite-terminy>
-- <https://www.oa-opava.cz/images/soubory/ke_stazeni/skolni-rad-25-26.pdf>
+- <a href="https://www.oa-opava.cz/index.php/skola/dulezite-terminy" target="_blank">Důležité termíny</a>
+- <a href="https://www.oa-opava.cz/images/soubory/ke_stazeni/skolni-rad-26-27.pdf" target="_blank">Školní řád 2026/2027</a>
+
+## Soubory a složky
+
+* bez diakritiky
+* bez prázdných míst
+* bez teček a čárek v názvech (pouze tečka pro určení typu souboru)
+* pouze malými písmeny
+* můžete používat: `_` a `-`
+
+## Soubory a složky
+
+* bez diakritiky
+* bez prázdných míst
+* bez teček a čárek v názvech (pouze tečka pro určení typu souboru)
+* pouze malými písmeny
+* můžete používat: `_` a `-`
 
 ## Soubory a složky
 
@@ -35,14 +51,14 @@ title: "Úvodní hodina"
 
 ## Tvorba účtu na Githubu
 
-* <https://github.com/>
+* <a href="https://github.com/" target="_blank">Github</a>
 * použijte co nejkratší uživatelské jméno! 
 
 ## Instalace Visual Studio Code
 
-* <https://code.visualstudio.com>
+* <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>
 
 ## Instalace Git
 
 * instalovat nejlépe přes VSC
-* jinak <https://git-scm.com/>
+* jinak <a href="https://git-scm.com/" target="_blank">Git</a>

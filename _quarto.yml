@@ -15,10 +15,10 @@ website:
     left:
       #  - href: index.qmd
       #    text: Úvod
-      - href: 202526-1d.qmd
-        text: "1.D 2025/26"
-      - href: 202526-3d.qmd
-        text: "3.D 2025/26"
+      - href: 202627-1d.qmd
+        text: "1.D 2026/27"
+      - href: 202627-3d.qmd
+        text: "3.D 2026/27"
       - href: web_html/index.qmd
         text: "HTML"
       - text: "Algoritmy"
@@ -32,9 +32,11 @@ website:
       - text: Ostatní
         menu:
           - href: about.qmd
-            text: "O webu"
+            text: "Nezařazeno"
           - text: "Maturita"
-            href: maturita/index.qmd
+            href: maturita/
+          - text: "Archiv"
+            href: archiv/
 
   sidebar:
     - title: "HTML"
@@ -128,6 +130,14 @@ website:
         - maturita/m2023.qmd
         - maturita/m2022.qmd
 
+    - title: "Archiv"
+      style: "docked"
+          # background: light
+      contents:
+        - archiv/index.qmd
+        - archiv/202526-1d.qmd
+        - archiv/202526-3d.qmd
+        
 format:
   html:
     mermaid:

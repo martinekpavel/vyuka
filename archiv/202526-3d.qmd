@@ -1,0 +1,71 @@
+---
+title: "3.D šk. rok 2025/2026"
+include-after-body:
+  text: |
+    <script>
+      window.location.hash='čtvrtletí';
+    </script>
+---
+
+## Výuka
+
+### 1. čtvrtletí
+
+  Datum       | Téma (odkaz na materiály) 
+:------------:|---------------------------
+  `4. 9. 2025`|[Poučení o bezpečnosti, ogr. šk. roku](web_html/01uvod.qmd) (1,2)
+ `11. 9. 2025`|[Úvod do HTML](web_html/03html.qmd) (3,4)
+ `18. 9. 2025`|[Úvod do CSS](web_html/04publish.qmd) (5,6)
+ `25. 9. 2025`|[CSS 2](web_html/05css.qmd) (7,8)
+ `2. 10. 2025`|[Tvorba menu (9,10)](web_html/06menu.qmd)
+ `9. 10. 2025`|[Responzivnost webu](web_html/07mediaq.qmd) (11,12)
+`16. 10. 2025`|[Portfolio](web_html/08portfolio.qmd) (13,14)
+`23. 10. 2025`|[Google Search](web_html/09search.qmd) (15,16)
+`30. 10. 2025`|[Rekapitulace 1.čtvrtletí](web_html/10rekap.qmd) (17,18)
+ `6. 11. 2025`|Hodnocení 1.čtvrtletí (19,20)
+
+### 2. čtvrtletí
+
+  Datum       | Téma (odkaz na materiály) 
+:------------:|---------------------------
+`13. 11. 2025`| [Tvorba webu pomocí AI](web_html/13webai.qmd) (21,22)
+`20. 11. 2025`| [Úvod do JavaScriptu](web_js/01lekcejs.qmd) (23,24)
+`27. 11. 2025`| [JavaScript 2](web_js/02lekcejs.qmd) (25,26)
+ `4. 12. 2025`| [JavaScript 3](web_js/03lekcejs.qmd) (26,27/27,28)
+`11. 12. 2025`| [JavaScript 4](web_js/04lekcejs.qmd) (28,29/29,30)
+`18. 12. 2025`| [JS Hra života](web_js/gol.qmd) (30,31/31,32)
+  `8. 1. 2026`| [JS kámen nůžky papír](web_js/knp.qmd) (32,33/33,34)
+ `15. 1. 2026`| [JS chat app](web_js/chat.qmd) (34,35/35,36) 
+ `22. 1. 2026`| [JS test](web_js/gol.qmd) (36,37/37,38)
+
+### 3. čtvrtletí
+
+  Datum       | Téma (odkaz na materiály) 
+:------------:|---------------------------
+`29. 1. 2026` | [JavaScript API](web_js/api.qmd) (38/39,40)
+`12. 2. 2026` | hodina odpadla a supl (39/)
+`19. 2. 2026` | [Django - hello](web_django/01hello.qmd) (40,41/41,42)
+`26. 2. 2026` | [Django - apps](web_django/02apps.qmd) až [4](web_django/04newyear.qmd) (42,43/43,44)
+ `5. 3. 2026` | [Tasks](web_django/05tasks.qmd) (44,45/45,46)
+`12. 3. 2026` | [Wiki](web_django/06projekt1.qmd) (46,47/47,48)
+`19. 3. 2026` | [SQL](web_django/07sql.qmd) + [Airline](web_django/08flights.qmd) (48,49/49,50)
+`26. 3. 2026` | [Airline 2](web_django/09flights.qmd) (50,51/51,52)
+ `2. 4. 2026` | prázdniny
+ `9. 4. 2026` | [Uživatelé](web_django/10users.qmd) (52,53/53,54)
+
+### 4. čtvrtletí
+
+  Datum       | Téma (odkaz na materiály) 
+:------------:|---------------------------
+`16. 4. 2026` | [XAMPP MySQL db](web_django/11xampp.qmd) (54,55/55,56)
+`23. 4. 2026` | [Informační systém](web_django/12is01.qmd) (56,57/57,58)
+`30. 4. 2026` | odpadá (/59)
+ `7. 5. 2026` | Kontrola a publikace (58,59/60,61)
+`14. 5. 2026` | [Deploy eu.pythonanywhere.com](web_django/13deploy.qmd) (60,61/62,63)
+`21. 5. 2026` | Praxe
+`28. 5. 2026` | Praxe
+ `4. 6. 2026` | Updating portfolio page (62,63/64,65)
+`11. 6. 2026` | [User Interfaces](web_django/14ui.qmd) (64,65/66,67)
+`18. 6. 2026` | hodnocení školního roku, opravné zkoušky
+`25. 6. 2026` | hodnocení školního roku, opravné zkoušky
+

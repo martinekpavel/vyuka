@@ -8,6 +8,14 @@ Najdete tu přehled výuky v průběhu školního roku, témata, zadání i čí
 
 Průběžně doplňuji materiály a požadavky pro klasifikaci.
 
-Pokud naleznete chybu, dejte mi vědět. 
+Pokud chcete vytvářet podobné weby, tak mrkněte sem <a href="https://quarto.org/docs/websites" target="_blank">https://quarto.org/docs/websites</a>.
+
+A jesliže naleznete chybu, dejte mi, prosím, vědět. 
 
 👨‍🦲 [Pavel Martínek](mailto:martinek.pavel@oa-opava.cz)
+
+### Oblíbené materiály
+
+- <a href="https://cs50.harvard.edu/x/" target="_blank">https://cs50.harvard.edu/x/</a>
+- <a href="https://cs50.harvard.edu/web/" target="_blank">https://cs50.harvard.edu/web/</a>
+
