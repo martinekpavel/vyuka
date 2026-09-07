@@ -2,7 +2,7 @@
 title: "Základy HTML"
 ---
 
-Bylo by skvělé, kdybyste zvládli zhlédnout 36 minut níže uvedeného videa.
+Bylo by skvělé, kdybyste zvládli zhlédnout 36 minut níže uvedeného videa. Můžete si zapnout i automatické české titulky.
 
 Poté mrkněte níže, na první odkaz pod nadpisem `Může se hodit` a vytvořte vlastní `index.html` soubor, který si zatím můžete uložit kdekoliv na svůj disk.
 Osobně bych doporučoval si vytvořit složku s názvem `github` a pod ní složku s názvem `html` nebo `01html` a podobně.
