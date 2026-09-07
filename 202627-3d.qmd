@@ -13,8 +13,8 @@ include-after-body:
 
   Datum       | Téma (odkaz na materiály) 
 :------------:|---------------------------
-  `3. 9. 2026`|[Poučení o bezpečnosti, ogr. šk. roku](web_html/01uvod.qmd) (1,2)
- `11. 9. 2026`|[Úvod do HTML](web_html/03html.qmd) (3,4)
+  `3. 9. 2026`|[Poučení o bezpečnosti, ogr. šk. roku](web_html/01uvod.qmd) 
+  `8. 9. 2026`|[Úvod do HTML](web_html/03html.qmd) 
  `18. 9. 2026`|[Úvod do CSS](web_html/04publish.qmd) (5,6)
  `25. 9. 2026`|[CSS 2](web_html/05css.qmd) (7,8)
  `2. 10. 2026`|[Tvorba menu (9,10)](web_html/06menu.qmd)

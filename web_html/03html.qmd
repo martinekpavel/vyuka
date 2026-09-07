@@ -2,8 +2,23 @@
 title: "Základy HTML"
 ---
 
-<https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html>
+Bylo by skvělé, kdybyste zvládli zhlédnout 36 minut níže uvedeného videa.
 
+Poté mrkněte níže, na první odkaz pod nadpisem `Může se hodit` a vytvořte vlastní `index.html` soubor, který si zatím můžete uložit kdekoliv na svůj disk.
+Osobně bych doporučoval si vytvořit složku s názvem `github` a pod ní složku s názvem `html` nebo `01html` a podobně.
+Splňte níže uvedený úkol. Do validátoru můžete zkopírovat kód stránky případně vložit celý soubor.
+
+Příští hodinu se podíváme na publikaci webu na GitHub Pages, kaskádové styly a můžeme se inspirovat AI.
+
+## Materiály
+
+- <a href="https://www.youtube.com/watch?v=zFZrkCIc2Oc&t=3s" target="_blank">Video přednáška (prvních 36 minut 30 sekund)</a>
+- <a href="https://cdn.cs50.net/web/2020/spring/lectures/0/src0.zip" target="_blank">Zdrojové soubory ke stažení</a>
+
+## Může se hodit (mrkněte)
+
+- <a href="https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html" target="_blank">HTML/CSS cheat sheet</a>
+- <a href="https://validator.w3.org/" target="_blank">W3C Validator webových stránek</a>
 
 
 ::: {.callout-caution icon=false}
