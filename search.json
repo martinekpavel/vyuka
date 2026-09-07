@@ -741,7 +741,7 @@
     "href": "web_html/03html.html",
     "title": "Základy HTML",
     "section": "",
-    "text": "Bylo by skvělé, kdybyste zvládli zhlédnout 36 minut níže uvedeného videa.\nPoté mrkněte níže, na první odkaz pod nadpisem Může se hodit a vytvořte vlastní index.html soubor, který si zatím můžete uložit kdekoliv na svůj disk. Osobně bych doporučoval si vytvořit složku s názvem github a pod ní složku s názvem html nebo 01html a podobně. Splňte níže uvedený úkol. Do validátoru můžete zkopírovat kód stránky případně vložit celý soubor.\nPříští hodinu se podíváme na publikaci webu na GitHub Pages, kaskádové styly a můžeme se inspirovat AI.",
+    "text": "Bylo by skvělé, kdybyste zvládli zhlédnout 36 minut níže uvedeného videa. Můžete si zapnout i automatické české titulky.\nPoté mrkněte níže, na první odkaz pod nadpisem Může se hodit a vytvořte vlastní index.html soubor, který si zatím můžete uložit kdekoliv na svůj disk. Osobně bych doporučoval si vytvořit složku s názvem github a pod ní složku s názvem html nebo 01html a podobně. Splňte níže uvedený úkol. Do validátoru můžete zkopírovat kód stránky případně vložit celý soubor.\nPříští hodinu se podíváme na publikaci webu na GitHub Pages, kaskádové styly a můžeme se inspirovat AI.",
     "crumbs": [
       "HTML",
       "Základy HTML"
