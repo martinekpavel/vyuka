@@ -25,6 +25,12 @@ google: cdn font awesome
 <i class="fa-solid fa-camera"></i>
 ```
 
+## Google Fonts
+
+- googlete
+- vyberte font ideálně pokud souhlasí `příliš žluťoučký kůň úpěl ďábelské ódy`
+- nalinkujte do hlavičky 
+
 ## Menu (html)
 
 ```html
