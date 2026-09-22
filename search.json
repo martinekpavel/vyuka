@@ -1367,22 +1367,11 @@
     ]
   },
   {
-    "objectID": "web_html/06menu.html",
-    "href": "web_html/06menu.html",
-    "title": "Menu webu",
-    "section": "",
-    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
-    "crumbs": [
-      "HTML",
-      "Menu webu"
-    ]
-  },
-  {
     "objectID": "web_html/06menu.html#font-awesome",
     "href": "web_html/06menu.html#font-awesome",
     "title": "Menu webu",
-    "section": "",
-    "text": "google: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
+    "section": "Font Awesome",
+    "text": "Font Awesome\ngoogle: cdn font awesome\nhttps://cdnjs.com/libraries/font-awesome -&gt; click to copy\n&lt;link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css\" ... /&gt;\n\nhttps://fontawesome.com/search?ip=classic&ic=free&o=r -&gt; click to copy\n&lt;i class=\"fa-solid fa-camera\"&gt;&lt;/i&gt;",
     "crumbs": [
       "HTML",
       "Menu webu"
