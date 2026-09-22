@@ -2,6 +2,10 @@
 title: "Menu webu"
 ---
 
+## Významové tagy
+
+![](img/semantic_tags.jpg)
+
 ## Font Awesome
 
 google: cdn font awesome

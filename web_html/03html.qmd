@@ -19,6 +19,7 @@ Příští hodinu se podíváme na publikaci webu na GitHub Pages, kaskádové s
 
 - <a href="https://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html" target="_blank">HTML/CSS cheat sheet</a>
 - <a href="https://validator.w3.org/" target="_blank">W3C Validator webových stránek</a>
+- <a href="https://youtu.be/6tQ6MS8cHMk" target="_blank">Úvod do VSC</a>
 
 
 ::: {.callout-caution icon=false}
