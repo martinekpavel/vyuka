@@ -72,14 +72,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed576ce243f35bf3f83c58f608c88421.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-89d1b5ebbe6d97325e00d898af54e24f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed576ce243f35bf3f83c58f608c88421.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e56759e0c3e9c5b79410647fdd4ebbc6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-700db516d7b06980125e619fb1ae2ac9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-e56759e0c3e9c5b79410647fdd4ebbc6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a6d2b1bd102ada0610d1b28632c433fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b7d7e4963d0d63b27f52642e5120691d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a6d2b1bd102ada0610d1b28632c433fc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -361,6 +361,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#proxmox" id="toc-proxmox" class="nav-link" data-scroll-target="#proxmox">Proxmox</a></li>
   <li><a href="#linuxové-příkazy-co-pořád-zapomínám" id="toc-linuxové-příkazy-co-pořád-zapomínám" class="nav-link" data-scroll-target="#linuxové-příkazy-co-pořád-zapomínám">Linuxové příkazy, co pořád zapomínám</a></li>
+  </ul></li>
+  <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code">Visual Studio Code</a>
+  <ul class="collapse">
   <li><a href="#default-cmd-terminal" id="toc-default-cmd-terminal" class="nav-link" data-scroll-target="#default-cmd-terminal">Default cmd terminal</a></li>
   </ul></li>
   </ul>
@@ -410,9 +413,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>du -sh .*/</code> - zjistí velikost složek a souborů v aktuálním adresáři</li>
 <li><code>df -h</code> - zjistí využití disků</li>
 <li><code>free -h</code> - zjistí využití RAM</li>
-<li><code>alias ll='ls -la --color=auto'</code> - vytvoří alias pro zobrazení detailního seznamu sbarveným</li>
+<li><code>alias ll='ls -la --color=auto'</code> - vytvoří alias pro zobrazení detailního barevného seznamu</li>
 </ul>
 </section>
+</section>
+<section id="visual-studio-code" class="level2">
+<h2 class="anchored" data-anchor-id="visual-studio-code">Visual Studio Code</h2>
+<p><code>Ctrl + ,</code> nastavení <code>Alt + Shift + P</code> otevře příkazovou paletu <code>Alt + Shift + F</code> naformátuje kód <code>Alt + Z</code> zapíná a vypíná zalamování řádků <code>Alt + šipka nahoru / dolů</code> přesune řádek nahoru / dolů <code>Alt + Shift + šipka nahoru / dolů</code> zkopíruje blok kódu nahoru / dolů</p>
+<p>Pokud máte kurzor v řádku, nemusíte ho označovat, operace kopírování, přesunu a mazání se provádí s celým řádkem.</p>
+<p><code>Alt + kliknutí myší</code> - umožní vložit více kurzorů a provést operaci na všech najednou</p>
 <section id="default-cmd-terminal" class="level3">
 <h3 class="anchored" data-anchor-id="default-cmd-terminal">Default cmd terminal</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="st">"terminal.integrated.defaultProfile.windows"</span><span class="ex">:</span> <span class="st">"Command Prompt"</span>,</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
