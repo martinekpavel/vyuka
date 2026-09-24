@@ -81,14 +81,21 @@ google: cdn font awesome
     background-color: #93cb52;
     border-radius: 5px;
 }
+
+.text-primary {
+    color: #93cb52;
+}
 ```
 
 ## Úkol
 
-Upravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).
+Vytvořte nový repozitář na githubu a udělejte z něj webovou stránku. Vytvořte web na libovolné téma, který bude obsahovat všechny prvky z předchozích zadání. 
+Do Teams sdílejte adresu nového webu.
 
-Úpravy budou minimálně zahrnovat:
+::: {.callout-note}
 
-- [ ] vše z minulých zadání
-- [ ] menu v záhlaví stránky
-- [ ] další html stránka (odkaz v menu)
+- web může mít více stránek
+- web obsahuje menu, které může odkazovat na sekce na stejné stránce, nebo na jiné stránky
+- zkontrolujte validitu webu na <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a>
+
+:::
