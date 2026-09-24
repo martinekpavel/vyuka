@@ -17,12 +17,27 @@ title: "Nezařazeno"
 - `du -sh .*/` - zjistí velikost složek a souborů v aktuálním adresáři
 - `df -h` - zjistí využití disků
 - `free -h` - zjistí využití RAM
-- `alias ll='ls -la --color=auto'` - vytvoří alias pro zobrazení detailního seznamu sbarveným
+- `alias ll='ls -la --color=auto'` - vytvoří alias pro zobrazení detailního barevného seznamu
 
+
+## Visual Studio Code
+
+`Ctrl + ,` nastavení
+`Alt + Shift + P` otevře příkazovou paletu
+`Alt + Shift + F` naformátuje kód
+`Alt + Z` zapíná a vypíná zalamování řádků
+`Alt + šipka nahoru / dolů` přesune řádek nahoru / dolů
+`Alt + Shift + šipka nahoru / dolů` zkopíruje blok kódu nahoru / dolů
+
+Pokud máte kurzor v řádku, nemusíte ho označovat, operace kopírování, přesunu a mazání se provádí s celým řádkem.
+
+`Alt + kliknutí myší` - umožní vložit více kurzorů a provést operaci na všech najednou
 
 ### Default cmd terminal 
 
 ```bash
 "terminal.integrated.defaultProfile.windows": "Command Prompt",
 ```
+
+
 
