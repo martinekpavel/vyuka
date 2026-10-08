@@ -15,10 +15,16 @@ website:
     left:
       #  - href: index.qmd
       #    text: Úvod
-      - href: 202627-1d.qmd
-        text: "1.D 2026/27"
-      - href: 202627-3d.qmd
-        text: "3.D 2026/27"
+      - text: "Třídnice"
+        menu:
+          - href: 202627-1d1.qmd
+            text: "1.D 1.sk 2026/27 (úterý)"
+          - href: 202627-1d2.qmd
+            text: "1.D 2.sk 2026/27 (čtvrtek)"
+          - href: 202627-3d1.qmd
+            text: "3.D 1.sk 2026/27 (čtvrtek)"
+          - href: 202627-3d2.qmd
+            text: "3.D 2.sk 2026/27 (úterý)"
       - href: web_html/index.qmd
         text: "HTML"
       - text: "Algoritmy"
