@@ -1323,7 +1323,18 @@
     "href": "web_html/02git.html",
     "title": "Git",
     "section": "",
-    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
+    "text": "git config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com",
+    "crumbs": [
+      "HTML",
+      "Git"
+    ]
+  },
+  {
+    "objectID": "web_html/02git.html#nastavení",
+    "href": "web_html/02git.html#nastavení",
+    "title": "Git",
+    "section": "",
+    "text": "git config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com",
     "crumbs": [
       "HTML",
       "Git"
@@ -1333,8 +1344,19 @@
     "objectID": "web_html/02git.html#odkazy-k-samostudiu",
     "href": "web_html/02git.html#odkazy-k-samostudiu",
     "title": "Git",
-    "section": "",
-    "text": "Pro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
+    "section": "Odkazy k samostudiu",
+    "text": "Odkazy k samostudiu\n\nPro Git, Scott Chacon 2009\n\nodkaz pro stažení\n\nCS50 - Git",
+    "crumbs": [
+      "HTML",
+      "Git"
+    ]
+  },
+  {
+    "objectID": "web_html/02git.html#learn-github-within-github",
+    "href": "web_html/02git.html#learn-github-within-github",
+    "title": "Git",
+    "section": "Learn GitHub within GitHub",
+    "text": "Learn GitHub within GitHub\n\nhttps://learn.github.com/skills\nhttps://github.com/skills/getting-started-with-github-copilot\nhttps://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/\nhttps://learn.microsoft.com/cs-cz/shows/visual-studio-code/get-to-know-github-copilot-in-vs-code-and-be-productive-immediately\nhttps://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-on-github-com",
     "crumbs": [
       "HTML",
       "Git"
@@ -1345,7 +1367,7 @@
     "href": "web_html/02git.html#moje-poznámky-ke-gitu",
     "title": "Git",
     "section": "Moje poznámky ke gitu",
-    "text": "Moje poznámky ke gitu\n\nNejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.\nVlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám:\n\ngit config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nNa linuxovém serveru postupuji podle tohoto návodu. https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53\nls -al ~/.ssh\nssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github -C \"ssh key for github\"\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_github\nnano ~/.ssh/config\nObsah souboru\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  AddKeysToAgent yes\ncat ~/.ssh/id_ed25519_github.pub\nNow, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.\n\nA potom nakonfiguruji repozitář\n\ngit init\ngit add *\ngit commit -m \"first commit\"\ngit remote add origin git@github.com:martinekpavel/oahosting.git\ngit push -u origin main\na hotovo!",
+    "text": "Moje poznámky ke gitu\n\nNejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.\nVlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám jednotlivě viz níže:\n\ngit config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nNa linuxovém serveru postupuji podle tohoto návodu. https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53\nls -al ~/.ssh\nssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github -C \"ssh key for github\"\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_github\nnano ~/.ssh/config\nObsah souboru\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  AddKeysToAgent yes\ncat ~/.ssh/id_ed25519_github.pub\nNow, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.\n\nA potom nakonfiguruji repozitář\n\ngit init\ngit add *\ngit commit -m \"first commit\"\ngit remote add origin git@github.com:martinekpavel/oahosting.git\ngit push -u origin main\na hotovo!",
     "crumbs": [
       "HTML",
       "Git"

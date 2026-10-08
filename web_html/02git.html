@@ -464,7 +464,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Na této stránce</h2>
    
   <ul>
-  <li><a href="#odkazy-k-samostudiu" id="toc-odkazy-k-samostudiu" class="nav-link active" data-scroll-target="#odkazy-k-samostudiu">Odkazy k samostudiu</a></li>
+  <li><a href="#nastavení" id="toc-nastavení" class="nav-link active" data-scroll-target="#nastavení">Nastavení</a></li>
+  <li><a href="#odkazy-k-samostudiu" id="toc-odkazy-k-samostudiu" class="nav-link" data-scroll-target="#odkazy-k-samostudiu">Odkazy k samostudiu</a></li>
+  <li><a href="#learn-github-within-github" id="toc-learn-github-within-github" class="nav-link" data-scroll-target="#learn-github-within-github">Learn GitHub within GitHub</a></li>
   <li><a href="#moje-poznámky-ke-gitu" id="toc-moje-poznámky-ke-gitu" class="nav-link" data-scroll-target="#moje-poznámky-ke-gitu">Moje poznámky ke gitu</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/martinekpavel/vyuka/edit/main/web_html/02git.qmd" class="toc-action"><i class="bi bi-github"></i>Upravit stránku</a></li><li><a href="https://github.com/martinekpavel/vyuka/blob/main/web_html/02git.qmd" class="toc-action"><i class="bi empty"></i>Zobrazit zdrojový kód</a></li><li><a href="https://github.com/martinekpavel/vyuka/issues/new" class="toc-action"><i class="bi empty"></i>Nahlásit problém</a></li></ul></div></nav>
@@ -492,6 +494,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="nastavení" class="level2">
+<h2 class="anchored" data-anchor-id="nastavení">Nastavení</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> init.defaultBranch main</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> user.name <span class="st">"John Doe"</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> user.email johndoe@example.com</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 <section id="odkazy-k-samostudiu" class="level2">
 <h2 class="anchored" data-anchor-id="odkazy-k-samostudiu">Odkazy k samostudiu</h2>
 <ul>
@@ -502,35 +510,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://cs50.harvard.edu/web/weeks/1/">CS50 - Git</a></li>
 </ul>
 </section>
+<section id="learn-github-within-github" class="level2">
+<h2 class="anchored" data-anchor-id="learn-github-within-github">Learn GitHub within GitHub</h2>
+<ul>
+<li><a href="https://learn.github.com/skills">https://learn.github.com/skills</a></li>
+<li><a href="https://github.com/skills/getting-started-with-github-copilot">https://github.com/skills/getting-started-with-github-copilot</a></li>
+<li>https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/</li>
+<li>https://learn.microsoft.com/cs-cz/shows/visual-studio-code/get-to-know-github-copilot-in-vs-code-and-be-productive-immediately</li>
+<li>https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-on-github-com</li>
+</ul>
+</section>
 <section id="moje-poznámky-ke-gitu" class="level2">
 <h2 class="anchored" data-anchor-id="moje-poznámky-ke-gitu">Moje poznámky ke gitu</h2>
 <ol type="1">
 <li><p>Nejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.</p></li>
-<li><p>Vlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám:</p></li>
+<li><p>Vlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám jednotlivě viz níže:</p></li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> init.defaultBranch main</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> user.name <span class="st">"John Doe"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> user.email johndoe@example.com</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> init.defaultBranch main</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> user.name <span class="st">"John Doe"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>git config -<span class="at">-global</span> user.email johndoe@example.com</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Na linuxovém serveru postupuji podle tohoto návodu. <a href="https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53">https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53</a></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ls <span class="at">-al</span> ~/.ssh</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ssh-keygen <span class="at">-o</span> <span class="at">-a</span> 100 <span class="at">-t</span> ed25519 <span class="at">-f</span> ~/.ssh<span class="at">/id_ed25519_github</span> <span class="at">-C</span> <span class="st">"ssh key for github"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>eval <span class="st">"$(ssh-agent -s)"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ssh-add ~/.ssh<span class="at">/id_ed25519_github</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>nano ~/.ssh<span class="at">/config</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ls <span class="at">-al</span> ~/.ssh</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ssh-keygen <span class="at">-o</span> <span class="at">-a</span> 100 <span class="at">-t</span> ed25519 <span class="at">-f</span> ~/.ssh<span class="at">/id_ed25519_github</span> <span class="at">-C</span> <span class="st">"ssh key for github"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>eval <span class="st">"$(ssh-agent -s)"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>ssh-add ~/.ssh<span class="at">/id_ed25519_github</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>nano ~/.ssh<span class="at">/config</span></span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Obsah souboru</p>
 <pre><code>Host github.com
   IdentityFile ~/.ssh/id_ed25519_github
   AddKeysToAgent yes</code></pre>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>cat ~/.ssh<span class="at">/id_ed25519_github</span>.pub</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cat ~/.ssh<span class="at">/id_ed25519_github</span>.pub</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.</p>
 <ol start="3" type="1">
 <li>A potom nakonfiguruji repozitář</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git init</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>git add *</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>git commit <span class="at">-m</span> <span class="st">"first commit"</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>git remote add origin git@github.com:martinekpavel<span class="at">/oahosting</span>.git</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>git push <span class="at">-u</span> origin main</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>git init</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>git add *</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>git commit <span class="at">-m</span> <span class="st">"first commit"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>git remote add origin git@github.com:martinekpavel<span class="at">/oahosting</span>.git</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>git push <span class="at">-u</span> origin main</span></code></pre></div><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></div>
 <p>a hotovo!</p>
 
 
