@@ -2,6 +2,21 @@
 title: "Git"
 ---
 
+## Nastavení
+
+```cmd
+git config --global init.defaultBranch main
+```
+  
+```cmd
+git config --global user.name "John Doe"
+```
+
+```cmd
+git config --global user.email johndoe@example.com
+```
+
+
 ## Odkazy k samostudiu
 
 - [Pro Git, Scott Chacon 2009](https://knihy.nic.cz/cs/detail/2/)
@@ -9,11 +24,21 @@ title: "Git"
 - [CS50 - Git](https://cs50.harvard.edu/web/weeks/1/)
 
 
+
+## Learn GitHub within GitHub
+
+- [https://learn.github.com/skills](https://learn.github.com/skills)
+- [https://github.com/skills/getting-started-with-github-copilot](https://github.com/skills/getting-started-with-github-copilot)
+- https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/
+- https://learn.microsoft.com/cs-cz/shows/visual-studio-code/get-to-know-github-copilot-in-vs-code-and-be-productive-immediately
+- https://docs.github.com/en/copilot/get-started/quickstart-for-using-github-copilot-on-github-com
+
+
 ## Moje poznámky ke gitu
 
 1. Nejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.
 
-2. Vlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám:
+2. Vlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám jednotlivě viz níže:
 
 ```cmd
 git config --global init.defaultBranch main
