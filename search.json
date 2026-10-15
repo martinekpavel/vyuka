@@ -469,7 +469,7 @@
     "href": "web_html/13webai.html",
     "title": "Tvorba webu pomocí AI",
     "section": "",
-    "text": "Vyberté si téma\nZaložte nový repozitář na Githubu\nOtevřete jej jako nový projekt ve Visual Studio\nPomocí AI nástroje vytvořte web (český), který má minimálně 3 stránky\nDokumentujte a zveřejněte postup (prompty, nástroj) například v readme.md\nNa týmsech je dotazník ohledně AI (máte-li čas, vyplňte)\nV rámci toho projektu popište i technologie, které AI použila\nNa úvodní stránku webu uveďte informaci, že se jedná o web vytvořený AI a školní projekt",
+    "text": "Zastaralé, bude upraveno.",
     "crumbs": [
       "HTML",
       "Tvorba webu pomocí AI"
@@ -491,7 +491,7 @@
     "href": "web_html/11projekt.html",
     "title": "Tvorba webu na téma",
     "section": "",
-    "text": "V hlavní složce projektu si vytvoříme soubor index.html a vytvoříme složky img a css.\nVe složce css vytvoříme soubor style.css.\nHTML šablonu za nás zvládne emmet: !. Jen změníme lang a title.\nV hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.\n&lt;meta name=\"description\" content=\"Vítejte na webovce knihovny na Kvapice\"&gt;\n&lt;meta name=\"keywords\" content=\"knihovna,obchodka,opava\"&gt;\n&lt;link rel=\"stylesheet\" href=\"css/style.css\"&gt;\nBudeme chtít také používat ikonky Font Awesome, proto nalinkujeme do hlavičky potřebný soubor.\nhttps://cdnjs.com/libraries/font-awesome",
+    "text": "Mnohé níže zvládne Github Copilot.\nV hlavní složce projektu si vytvoříme soubor index.html a vytvoříme složky img a css.\nVe složce css vytvoříme soubor style.css.\nHTML šablonu za nás zvládne emmet: !. Jen změníme lang a title.\nV hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.\n&lt;meta name=\"description\" content=\"Vítejte na webovce knihovny na Kvapice\"&gt;\n&lt;meta name=\"keywords\" content=\"knihovna,obchodka,opava\"&gt;\n&lt;link rel=\"stylesheet\" href=\"css/style.css\"&gt;\nBudeme chtít také používat ikonky Font Awesome, proto nalinkujeme do hlavičky potřebný soubor.\nhttps://cdnjs.com/libraries/font-awesome",
     "crumbs": [
       "HTML",
       "Tvorba webu na téma"
@@ -502,7 +502,7 @@
     "href": "web_html/11projekt.html#příprava-struktury-složek-a-souborů",
     "title": "Tvorba webu na téma",
     "section": "",
-    "text": "V hlavní složce projektu si vytvoříme soubor index.html a vytvoříme složky img a css.\nVe složce css vytvoříme soubor style.css.\nHTML šablonu za nás zvládne emmet: !. Jen změníme lang a title.\nV hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.\n&lt;meta name=\"description\" content=\"Vítejte na webovce knihovny na Kvapice\"&gt;\n&lt;meta name=\"keywords\" content=\"knihovna,obchodka,opava\"&gt;\n&lt;link rel=\"stylesheet\" href=\"css/style.css\"&gt;\nBudeme chtít také používat ikonky Font Awesome, proto nalinkujeme do hlavičky potřebný soubor.\nhttps://cdnjs.com/libraries/font-awesome",
+    "text": "Mnohé níže zvládne Github Copilot.\nV hlavní složce projektu si vytvoříme soubor index.html a vytvoříme složky img a css.\nVe složce css vytvoříme soubor style.css.\nHTML šablonu za nás zvládne emmet: !. Jen změníme lang a title.\nV hlavičce dokumentu (head) dále můžeme doplnit description a keywords. Také musíme správně nalinkovat soubor kaskádových stylů.\n&lt;meta name=\"description\" content=\"Vítejte na webovce knihovny na Kvapice\"&gt;\n&lt;meta name=\"keywords\" content=\"knihovna,obchodka,opava\"&gt;\n&lt;link rel=\"stylesheet\" href=\"css/style.css\"&gt;\nBudeme chtít také používat ikonky Font Awesome, proto nalinkujeme do hlavičky potřebný soubor.\nhttps://cdnjs.com/libraries/font-awesome",
     "crumbs": [
       "HTML",
       "Tvorba webu na téma"
@@ -546,7 +546,7 @@
     "href": "web_html/07mediaq.html",
     "title": "Responzivnost",
     "section": "",
-    "text": "Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech\n\nResponzivní web\n\nnastavení viewport https://www.w3schools.com/css/css_rwd_viewport.asp\npoužití proměnlivých width oproti pevným\nmedia queries - různé styly pro různá rozlišení\nrem místo px\nmetoda mobile first\n\n.big {\n    font-size: 3rem;\n    font-weight: bold;\n}\n&lt;div id=\"widescreen\" class=\"big\"&gt;widescreen&lt;/div&gt;\n&lt;div id=\"normal\" class=\"big\"&gt;normal&lt;/div&gt;\n&lt;div id=\"tablet\" class=\"big\"&gt;tablet&lt;/div&gt;\n&lt;div id=\"smartphone\" class=\"big\"&gt;smartphone&lt;/div&gt;\n&lt;div id=\"landscape\" class=\"big\"&gt;landscape&lt;/div&gt;\nbody {\n    background-color: grey;\n    color: white;\n    text-align: center;\n    padding-top: 100px;\n}\n\n.big { /* doplníme */\n    display: none;\n    text-transform: capitalize;\n}\n@media(max-width:500px) {\n    body {\n        background-color: red;\n    }\n\n    #smartphone {\n        display: block;\n    }\n}\n@media(min-width: 501px) and (max-width:768px) {\n    body {\n        background-color: green;\n    }\n\n    #tablet {\n        display: block;\n    }\n}\n@media(min-width: 769px) and (max-width:1200px) {\n    body {\n        background-color: cyan;\n    }\n\n    #normal {\n        display: block;\n    }\n}\n@media(min-width: 1201px) {\n    body {\n        background-color: black;\n    }\n\n    #widescreen {\n        display: block;\n    }\n}\n@media(max-height: 500px) {\n    body {\n        background-color: orange;\n    }\n\n    #landscape {\n        display: block;\n    }\n}\n\n\nRelativní jednotky em vs rem\nhttps://www.w3schools.com/cssref/css_units.php\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nDoplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.\nPoužijte ve svém projektu sekce &lt;header&gt;, &lt;main&gt; a &lt;footer&gt;.\nhttps://www.w3schools.com/html/html5_semantic_elements.asp\nPoužijte v zápatí svého webu ikony pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.",
+    "text": "Cíl hodiny: Upravit menu webu pro rozlišení na mobilních telefonech\n\nResponzivní web\n\nnastavení viewport https://www.w3schools.com/css/css_rwd_viewport.asp\npoužití proměnlivých width oproti pevným\nmedia queries - různé styly pro různá rozlišení\nrem místo px\nmetoda mobile first\n\n.big {\n    font-size: 3rem;\n    font-weight: bold;\n}\n&lt;div id=\"widescreen\" class=\"big\"&gt;widescreen&lt;/div&gt;\n&lt;div id=\"normal\" class=\"big\"&gt;normal&lt;/div&gt;\n&lt;div id=\"tablet\" class=\"big\"&gt;tablet&lt;/div&gt;\n&lt;div id=\"smartphone\" class=\"big\"&gt;smartphone&lt;/div&gt;\n&lt;div id=\"landscape\" class=\"big\"&gt;landscape&lt;/div&gt;\nbody {\n    background-color: grey;\n    color: white;\n    text-align: center;\n    padding-top: 100px;\n}\n\n.big { /* doplníme */\n    display: none;\n    text-transform: capitalize;\n}\n@media(max-width:500px) {\n    body {\n        background-color: red;\n    }\n\n    #smartphone {\n        display: block;\n    }\n}\n@media(min-width: 501px) and (max-width:768px) {\n    body {\n        background-color: green;\n    }\n\n    #tablet {\n        display: block;\n    }\n}\n\n@media(min-width: 769px) and (max-width:1200px) {\n    body {\n        background-color: cyan;\n    }\n\n    #normal {\n        display: block;\n    }\n}\n\n@media(min-width: 1201px) {\n    body {\n        background-color: black;\n    }\n\n    #widescreen {\n        display: block;\n    }\n}\n\n@media(max-height: 500px) {\n    body {\n        background-color: orange;\n    }\n\n    #landscape {\n        display: block;\n    }\n}\n\n\nRelativní jednotky em vs rem\nhttps://www.w3schools.com/cssref/css_units.php\n\n\nÚkol\nUpravte svou webovou stránku ve svém repozitáři a do Teams sdílejte adresu (stejně jako v minulém zadání).\nDoplňte ikony do svého menu a zajistěte, že v mobilním zobrazní ikony zůstanou a názvy v menu zmizí.\nPoužijte ve svém projektu sekce &lt;header&gt;, &lt;main&gt; a &lt;footer&gt;.\nhttps://www.w3schools.com/html/html5_semantic_elements.asp\nPoužijte v zápatí svého webu ikony pro validaci html stránky a css souboru, po kliknutí uvidím výsledky validace.",
     "crumbs": [
       "HTML",
       "Responzivnost"
@@ -674,17 +674,6 @@
     ]
   },
   {
-    "objectID": "web_html/01uvod.html#soubory-a-složky-2",
-    "href": "web_html/01uvod.html#soubory-a-složky-2",
-    "title": "Úvodní hodina",
-    "section": "Soubory a složky",
-    "text": "Soubory a složky\n\nbez diakritiky\nbez prázdných míst\nbez teček a čárek v názvech (pouze tečka pro určení typu souboru)\npouze malými písmeny\nmůžete používat: _ a -",
-    "crumbs": [
-      "HTML",
-      "Úvodní hodina"
-    ]
-  },
-  {
     "objectID": "web_html/01uvod.html#tvorba-účtu-na-githubu",
     "href": "web_html/01uvod.html#tvorba-účtu-na-githubu",
     "title": "Úvodní hodina",
@@ -711,7 +700,7 @@
     "href": "web_html/01uvod.html#instalace-git",
     "title": "Úvodní hodina",
     "section": "Instalace Git",
-    "text": "Instalace Git\n\ninstalovat nejlépe přes VSC\njinak Git",
+    "text": "Instalace Git\n\ninstalovat nejlépe přes VSC\nweb Git",
     "crumbs": [
       "HTML",
       "Úvodní hodina"
@@ -1024,14 +1013,14 @@
     "href": "202627-3d1.html",
     "title": "3.D šk. rok 2026/2027",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/1)\n\n\n8. 9. 2026\nÚvod do HTML ( /2,3)\n\n\n10. 9. 2026\nÚvod do HTML (3/)\n\n\n15. 9. 2026\nPublikace repo + kaskádové styly (/4,5)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5/)\n\n\n22. 9. 2026\nikony,fonty,menu (/6,7)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7/8)\n\n\n29. 9. 2026\nResponzivnost webu (/9,10)\n\n\n1. 10. 2026\nResponzivnost webu (8,9/)\n\n\nplynutí času\n\n\n\n16. 10. 2026\nPortfolio (13,14)\n\n\n23. 10. 2026\nGoogle Search (15,16)\n\n\n30. 10. 2026\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n10. 9. 2026\nÚvod do HTML (3)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7)\n\n\n1. 10. 2026\nResponzivnost webu (8,9)\n\n\n8. 10. 2026\nGithub Copilot úvod(10) + Portfolio (10,11)\n\n\n13. 10. 2026\nProjekt na téma (1) (12)\n\n\n15. 10. 2026\nProjekt na téma (2) + Google Search (13,14)\n\n\nplynutí času\n\n\n\n22. 10. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n29. 10. 2026\nProjekt (17,18)\n\n\n5. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
   },
   {
     "objectID": "202627-3d1.html#výuka",
     "href": "202627-3d1.html#výuka",
     "title": "3.D šk. rok 2026/2027",
     "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/1)\n\n\n8. 9. 2026\nÚvod do HTML ( /2,3)\n\n\n10. 9. 2026\nÚvod do HTML (3/)\n\n\n15. 9. 2026\nPublikace repo + kaskádové styly (/4,5)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5/)\n\n\n22. 9. 2026\nikony,fonty,menu (/6,7)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7/8)\n\n\n29. 9. 2026\nResponzivnost webu (/9,10)\n\n\n1. 10. 2026\nResponzivnost webu (8,9/)\n\n\nplynutí času\n\n\n\n16. 10. 2026\nPortfolio (13,14)\n\n\n23. 10. 2026\nGoogle Search (15,16)\n\n\n30. 10. 2026\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n10. 9. 2026\nÚvod do HTML (3)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7)\n\n\n1. 10. 2026\nResponzivnost webu (8,9)\n\n\n8. 10. 2026\nGithub Copilot úvod(10) + Portfolio (10,11)\n\n\n13. 10. 2026\nProjekt na téma (1) (12)\n\n\n15. 10. 2026\nProjekt na téma (2) + Google Search (13,14)\n\n\nplynutí času\n\n\n\n22. 10. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n29. 10. 2026\nProjekt (17,18)\n\n\n5. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
   },
   {
     "objectID": "202627-1d1.html",
@@ -1358,8 +1347,8 @@
     ]
   },
   {
-    "objectID": "web_html/02git.html#nastavení",
-    "href": "web_html/02git.html#nastavení",
+    "objectID": "web_html/02git.html#nastavení-po-instalaci",
+    "href": "web_html/02git.html#nastavení-po-instalaci",
     "title": "Git",
     "section": "",
     "text": "git config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com",
@@ -1395,7 +1384,7 @@
     "href": "web_html/02git.html#moje-poznámky-ke-gitu",
     "title": "Git",
     "section": "Moje poznámky ke gitu",
-    "text": "Moje poznámky ke gitu\n\nNejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.\nVlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám jednotlivě viz níže:\n\ngit config --global init.defaultBranch main\ngit config --global user.name \"John Doe\"\ngit config --global user.email johndoe@example.com\nNa linuxovém serveru postupuji podle tohoto návodu. https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53\nls -al ~/.ssh\nssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github -C \"ssh key for github\"\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_github\nnano ~/.ssh/config\nObsah souboru\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  AddKeysToAgent yes\ncat ~/.ssh/id_ed25519_github.pub\nNow, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.\n\nA potom nakonfiguruji repozitář\n\ngit init\ngit add *\ngit commit -m \"first commit\"\ngit remote add origin git@github.com:martinekpavel/oahosting.git\ngit push -u origin main\na hotovo!",
+    "text": "Moje poznámky ke gitu\nNa linuxovém serveru postupuji podle tohoto návodu. https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53\nls -al ~/.ssh\nssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_github -C \"ssh key for github\"\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519_github\nnano ~/.ssh/config\nObsah souboru\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  AddKeysToAgent yes\ncat ~/.ssh/id_ed25519_github.pub\nNow, go to GitHub &gt; Settings &gt; SSH and GPG Keys and click New SSH Key. Paste the copied key and save it.\n\nA potom nakonfiguruji repozitář\n\ngit init\ngit add *\ngit commit -m \"first commit\"\ngit remote add origin git@github.com:martinekpavel/oahosting.git\ngit push -u origin main\na hotovo!",
     "crumbs": [
       "HTML",
       "Git"
@@ -1494,7 +1483,7 @@
     "href": "web_html/08portfolio.html#portfolio",
     "title": "Portfolio",
     "section": "Portfolio",
-    "text": "Portfolio\n\nsvůj stávající projekt přesuňte do nové složky -&gt; např. html\ndo Teams sdílejte odkaz na svůj (nyní) starý projekt:\n\nváš_účet_na_githubu.github.io/html\n\nUpravte odkazy na validaci!\nVytvořte portfolio např. podle:\n\nhttps://personal-portfolio.freecodecamp.rocks/\n\npoužijte jen to, co dokážete vysvětlit\nvšechny zdroje ocitujte\ndoplňte ikony na validaci html a css",
+    "text": "Portfolio\n\nVytvořte portfolio např. podle:\n\nhttps://personal-portfolio.freecodecamp.rocks/\n\npoužijte jen to, co dokážete vysvětlit\nvšechny zdroje ocitujte, AI citace pro vás může vytvořit AI, ale musíte je zkontrolovat a případně upravit\ndoplňte ikony na validaci html a css",
     "crumbs": [
       "HTML",
       "Portfolio"
@@ -1516,7 +1505,7 @@
     "href": "web_html/08portfolio.html#rekap-1.-čtvrtletí",
     "title": "Portfolio",
     "section": "Rekap 1. čtvrtletí",
-    "text": "Rekap 1. čtvrtletí\n\nPožadavky web\n\nnadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "text": "Rekap 1. čtvrtletí\n\nPožadavky web\n\nnadpisy (nadpis úrovně 1 pouze 1x na stránce)\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzměna barvy písma + kontrola kontrastu\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\nvytvoření portfolio page pod účet.github.io\nprojekt Google Search\nvalidace html + css portfolia\nvalidace html + css projektu na téma (SPA = Single Page Application, one-page)\npodmínky a validace google search",
     "crumbs": [
       "HTML",
       "Portfolio"
@@ -1527,7 +1516,7 @@
     "href": "web_html/10rekap.html",
     "title": "Rekapitulace 1. čtvrtetí",
     "section": "",
-    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "text": "nadpisy (nadpis úrovně 1 pouze 1x na stránce)\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzměna barvy písma + kontrola kontrastu\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\nvytvoření portfolio page pod účet.github.io\nprojekt Google Search\nvalidace html + css portfolia\nvalidace html + css projektu na téma (SPA = Single Page Application, one-page)\npodmínky a validace google search",
     "crumbs": [
       "HTML",
       "Rekapitulace 1. čtvrtetí"
@@ -1538,7 +1527,7 @@
     "href": "web_html/10rekap.html#rekap-1.-čtvrtletí",
     "title": "Rekapitulace 1. čtvrtetí",
     "section": "",
-    "text": "nadpisy\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzarovnání webu na střed\nzměna barvy písma + kontrast\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\npřesun stávajícího webu do extra složky\nvytvoření portfolio page pod účet.github.io\nodkaz na původní web jako projekt\nprojekt Google Search\nportfolio page\nodkaz na první web\n\npodmínky a validace prvního webu\n\nodkaz na google Search\n\npodmínky a validace google search",
+    "text": "nadpisy (nadpis úrovně 1 pouze 1x na stránce)\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzměna barvy písma + kontrola kontrastu\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\nvytvoření portfolio page pod účet.github.io\nprojekt Google Search\nvalidace html + css portfolia\nvalidace html + css projektu na téma (SPA = Single Page Application, one-page)\npodmínky a validace google search",
     "crumbs": [
       "HTML",
       "Rekapitulace 1. čtvrtetí"
