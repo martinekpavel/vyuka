@@ -4,6 +4,8 @@ title: "Tvorba webu na téma"
 
 ## Příprava struktury složek a souborů
 
+Mnohé níže zvládne Github Copilot.
+
 V hlavní složce projektu si vytvoříme soubor `index.html` a vytvoříme složky `img` a `css`.
 
 Ve složce `css` vytvoříme soubor `style.css`.

@@ -2,6 +2,8 @@
 title: "Tvorba webu pomocí AI"
 ---
 
+Zastaralé, bude upraveno.
+
 1. Vyberté si téma
 2. Založte nový repozitář na Githubu
 3. Otevřete jej jako nový projekt ve Visual Studio

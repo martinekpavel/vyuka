@@ -2,7 +2,7 @@
 title: "Git"
 ---
 
-## Nastavení
+## Nastavení po instalaci
 
 ```cmd
 git config --global init.defaultBranch main
@@ -35,16 +35,6 @@ git config --global user.email johndoe@example.com
 
 
 ## Moje poznámky ke gitu
-
-1. Nejdříve vytvořím repozitář na github.com, nechci se chlubit kódem, takže soukromý, nebudu přidávat žádné soubory, nic. Objeví se obrázek níže a kliknu si na ssh.
-
-2. Vlezu si do složky na serveru, počítači, kdekoliv potřebuji a zadám jednotlivě viz níže:
-
-```cmd
-git config --global init.defaultBranch main
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
-```
 
 Na linuxovém serveru postupuji podle tohoto návodu.
 [https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53](https://dev.to/jajera/how-to-configure-ssh-for-github-authentication-2b53)

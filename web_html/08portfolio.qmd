@@ -7,34 +7,27 @@ Cíl hodiny: Vytvořit portfolio page
 
 ## Portfolio
 
-- svůj stávající projekt přesuňte do nové složky -> např. `html`
-- do Teams sdílejte odkaz na svůj (nyní) starý projekt:
-
-`váš_účet_na_githubu.github.io/html`
-
-- Upravte odkazy na validaci!
 - Vytvořte portfolio např. podle:
 
-<https://personal-portfolio.freecodecamp.rocks/>
+<a href="https://personal-portfolio.freecodecamp.rocks/" target="_blank">https://personal-portfolio.freecodecamp.rocks/</a>
 
 - použijte jen to, co dokážete vysvětlit
-- všechny zdroje ocitujte
+- všechny zdroje ocitujte, AI citace pro vás může vytvořit AI, ale musíte je zkontrolovat a případně upravit
 - doplňte ikony na validaci html a css
 
 
 ## Další zdroje
 
-- https://picsum.photos/
-- https://unsplash.com/
-- https://www.color-hex.com/color-palettes/popular.php
-
+- <a href="https://picsum.photos/" target="_blank">https://picsum.photos/</a>
+- <a href="https://unsplash.com/" target="_blank">https://unsplash.com/</a>
+- <a href="https://www.color-hex.com/color-palettes/popular.php" target="_blank">https://www.color-hex.com/color-palettes/popular.php</a>
 
 
 ## Rekap 1. čtvrtletí
 
 ### Požadavky web
 
-- [ ] nadpisy
+- [ ] nadpisy (nadpis úrovně 1 pouze 1x na stránce)
 - [ ] odkazy
 - [ ] obrázky
 - [ ] seznam položek
@@ -44,19 +37,14 @@ Cíl hodiny: Vytvořit portfolio page
 - [ ] změna pozadí body
 - [ ] zaoblení rohů obrázků
 - [ ] změna odsazení
-- [ ] zarovnání webu na střed
-- [ ] změna barvy písma + kontrast
+- [ ] změna barvy písma + kontrola kontrastu
 - [ ] menu v záhlaví stránky
 - [ ] nová html stránka (s odkazem v menu)
 - [ ] header, main, footer
 - [ ] responzivnost menu
 - [ ] validace
-- [ ] přesun stávajícího webu do extra složky
 - [ ] vytvoření portfolio page pod účet.github.io 
-- [ ] odkaz na původní web jako projekt
 - [ ] projekt Google Search
-- [ ] portfolio page
-- [ ] odkaz na první web
-  + [ ] podmínky a validace prvního webu
-- [ ] odkaz na google Search
-  + [ ] podmínky a validace google search
+- [ ] validace html + css portfolia
+- [ ] validace html + css projektu na téma (SPA = Single Page Application, one-page)
+- [ ] podmínky a validace google search

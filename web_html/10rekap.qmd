@@ -6,7 +6,7 @@ title: "Rekapitulace 1. čtvrtetí"
 
 ### Požadavky web
 
-- [ ] nadpisy
+- [ ] nadpisy (nadpis úrovně 1 pouze 1x na stránce)
 - [ ] odkazy
 - [ ] obrázky
 - [ ] seznam položek
@@ -16,19 +16,16 @@ title: "Rekapitulace 1. čtvrtetí"
 - [ ] změna pozadí body
 - [ ] zaoblení rohů obrázků
 - [ ] změna odsazení
-- [ ] zarovnání webu na střed
-- [ ] změna barvy písma + kontrast
+- [ ] změna barvy písma + kontrola kontrastu
 - [ ] menu v záhlaví stránky
 - [ ] nová html stránka (s odkazem v menu)
 - [ ] header, main, footer
 - [ ] responzivnost menu
 - [ ] validace
-- [ ] přesun stávajícího webu do extra složky
 - [ ] vytvoření portfolio page pod účet.github.io 
-- [ ] odkaz na původní web jako projekt
 - [ ] projekt Google Search
-- [ ] portfolio page
-- [ ] odkaz na první web
-  + [ ] podmínky a validace prvního webu
-- [ ] odkaz na google Search
-  + [ ] podmínky a validace google search
+- [ ] validace html + css portfolia
+- [ ] validace html + css projektu na téma (SPA = Single Page Application, one-page)
+- [ ] podmínky a validace google search
+
+

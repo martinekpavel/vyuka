@@ -41,14 +41,6 @@ title: "Úvodní hodina"
 * pouze malými písmeny
 * můžete používat: `_` a `-`
 
-## Soubory a složky
-
-* bez diakritiky
-* bez prázdných míst
-* bez teček a čárek v názvech (pouze tečka pro určení typu souboru)
-* pouze malými písmeny
-* můžete používat: `_` a `-`
-
 ## Tvorba účtu na Githubu
 
 * <a href="https://github.com/" target="_blank">Github</a>
@@ -61,4 +53,4 @@ title: "Úvodní hodina"
 ## Instalace Git
 
 * instalovat nejlépe přes VSC
-* jinak <a href="https://git-scm.com/" target="_blank">Git</a>
+* web <a href="https://git-scm.com/" target="_blank">Git</a>
