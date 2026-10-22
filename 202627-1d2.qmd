@@ -18,10 +18,10 @@ include-after-body:
  `1. 10. 2026`|[Úvod do CSS](web_html/05css.qmd) + [Publikování webu](web_html/04publish.qmd)(5,6)
  `8. 10. 2026`|[Github Copilot](#) + [Portfolio](web_html/08portfolio.qmd) (7,8)
 `15. 10. 2026`|[Portfolio](web_html/08portfolio.qmd) (9,10)
+`22. 10. 2026`|Písemný test + [Google Projekt](web_html/09search.qmd) (11,12)
                | [plynutí času]{style="color:gray"}
-`21. 10. 2026`|[Google Projekt](web_html/09search.qmd) (14,15/13,14)
-`29. 10. 2026`|[Google Projekt](web_html/09search.qmd) (16,17/15,16)
- `5. 11. 2026`|[Rekapitulace 1.čtvrtletí](web_html/10rekap.qmd) (16,17/15,16)
+`29. 10. 2026`|[Google Projekt](web_html/09search.qmd) (13,14)
+ `5. 11. 2026`|[Rekapitulace 1.čtvrtletí](web_html/10rekap.qmd) (15,16)
 
 ### 2. čtvrtletí
 

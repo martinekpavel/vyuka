@@ -2,6 +2,8 @@
 title: "Projekt Google Search"
 ---
 
+** Cíl hodiny: práce s formuláři**
+
 1. Vytvořte na GitHubu nový repozitář `googlesearch`
 2. Otevřete (naklonujte) repozitář ve VS Code jako nový projekt
 3. Vytvořte web dle zadání: <https://cs50.harvard.edu/web/projects/0/search/>
