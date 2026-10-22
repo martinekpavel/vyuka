@@ -2,7 +2,36 @@
 title: "Projekt Google Search"
 ---
 
-1. Vytvořte nový repozitář `googlesearch`
-2. Otevřete ve VS Code jako nový projekt
+1. Vytvořte na GitHubu nový repozitář `googlesearch`
+2. Otevřete (naklonujte) repozitář ve VS Code jako nový projekt
 3. Vytvořte web dle zadání: <https://cs50.harvard.edu/web/projects/0/search/>
 4. Commit & Push a pomocí Github Pages sdílejte řešení (sdílejte link)
+
+## Navíc k zadání
+
+1. Vytvořte další stránku v rámci výše uvedeného projektu, která bude obsahovat co největší množství formulářových prvků (input, select, checkbox, radio, textarea, button, ...). Formulářové prvky nemusí být funkční. Cílem je ukázat, že umíte vytvořit různé typy formulářů.
+
+2. Na všech stránkách projektu budou 2 odkazy na validaci HTML a CSS. Odkazy budou směřovat na validátory: <https://validator.w3.org/> a <https://jigsaw.w3.org/css-validator/> nastavené tak, aby validovaly kód dané stránky.
+
+3. Na všech stránkách projektu bude odkaz na soubor obsahující citace a zdroje, které jste použili při tvorbě projektu. Cílem je ukázat, že umíte správně citovat a uvádět zdroje. Odkaz bude na github.com/vášúčet/googlesearch/citace.md. Citace obsahují použité prompty (nechte to generovat AI, co vám generuje kód).
+
+4. V rámci google search projektu budete mít i odkaz na své portfolio.
+
+5. Vytvořte video (např. 🪟 + g), ve kterém ukážete, že jste splnili všechny body zadání. Ukazujte web i kód, který se jednotlivých bodů týká. Video sdílejte v rámci zadání v Teams. Pro sdílení videa můžete použít i nástroje ve vašem účtu Microsoft365.
+
+
+## V rámci čtvrtletní práce zkontrolujte
+
+- portfolio
+- stránku na téma (1)
+- google search + forms
+
+1. všechny stránky obsahují odkazy na validaci html a css.
+2. všechny stránky obsahují odkaz na soubor s citacemi a zdroji.
+3. všechny odkazy fungují a vedou na správné místo.
+4. formuláře, které nefungují označte jako nefunkční (např. šedivě, nebo poznámkou, že nefunguje) nebo vymažte.
+
+## Inspirace z jiného soudku
+
+- <a href="https://codepen.io/spark/529" target="_blank">https://codepen.io/spark/529</a>
+
