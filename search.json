@@ -856,33 +856,207 @@
     ]
   },
   {
-    "objectID": "maturita/m2025.html",
-    "href": "maturita/m2025.html",
-    "title": "rok 2025",
+    "objectID": "maturita/m2024.html",
+    "href": "maturita/m2024.html",
+    "title": "rok 2024",
     "section": "",
     "text": "U všech úloh jsou navíc možnosti:",
     "crumbs": [
-      "rok 2025"
+      "rok 2024"
     ]
   },
   {
-    "objectID": "maturita/m2025.html#podzim",
-    "href": "maturita/m2025.html#podzim",
-    "title": "rok 2025",
-    "section": "2025 - podzim",
-    "text": "2025 - podzim\nUvažme následující funkci. Co se vypíše pro volání fun(2, 3, 4)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = $a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(2, 5, 1).",
+    "objectID": "maturita/m2024.html#podzim",
+    "href": "maturita/m2024.html#podzim",
+    "title": "rok 2024",
+    "section": "2024 - podzim",
+    "text": "2024 - podzim\nUvažme následující funkci. Co vypíše pro volání ff(2, 2, 3, 3)?\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &gt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání gg(2, 2, 3, 3):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $a;\n            echo $a;\n        }\n    }\n}",
     "crumbs": [
-      "rok 2025"
+      "rok 2024"
     ]
   },
   {
-    "objectID": "maturita/m2025.html#jaro",
-    "href": "maturita/m2025.html#jaro",
-    "title": "rok 2025",
-    "section": "2025 - jaro",
-    "text": "2025 - jaro\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(1, 2, 3).\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 2, 3)?:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání fun(1, 5, 2)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 5, 2).\nfunction nuf($a, $b, $c): void\n{\n    while ($a &gt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}",
+    "objectID": "maturita/m2024.html#jaro",
+    "href": "maturita/m2024.html#jaro",
+    "title": "rok 2024",
+    "section": "2024 - jaro",
+    "text": "2024 - jaro\nUvažme následující funkci. Co vypíše pro volání ff(1, 2, 3, 4):\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &gt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání gg(1, 2, 3, 4):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $a;\n            echo $a;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání f(1, 2, 3, 4):\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &lt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání g(1, 2, 3, 4):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $d;\n            echo $b + $a;\n        }\n    }\n}",
     "crumbs": [
-      "rok 2025"
+      "rok 2024"
+    ]
+  },
+  {
+    "objectID": "maturita/m2022.html",
+    "href": "maturita/m2022.html",
+    "title": "rok 2022",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "maturita/m2022.html#podzim",
+    "href": "maturita/m2022.html#podzim",
+    "title": "rok 2022",
+    "section": "2022 - podzim",
+    "text": "2022 - podzim\nUvažme následující funkci. Co vypíše pro volání sos(2, 3)?\nfunction sos($tecka, $carka): void\n{\n    for ($i = 0; $i &lt; $tecka; $i++) {\n        echo '.';\n    }\n    for ($i = 0; $i &lt; $carka; $i++) {\n        echo $carka;\n    }\n}\nUvažme následující funkci. Co vypíše pro volání zobraz(3)?\nfunction zobraz($cislo): void\n{\n    $vysledek = 3;\n    while ($vysledek &gt; 0) {\n       for ($i = 0; $i &lt; $vysledek; $i++) {\n            echo $cislo;\n        }\n        $vysledek = $vysledek - 1;\n        $cislo = $cislo + 1;\n        echo \"\\n\";\n    }\n}",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "maturita/m2022.html#jaro",
+    "href": "maturita/m2022.html#jaro",
+    "title": "rok 2022",
+    "section": "2022 - jaro",
+    "text": "2022 - jaro\nUvažme následující funkci. Co vypíše pro volání sequence(2, 3, 4)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(7)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}\nUvažme následující funkci. Co vypíše pro volání sequence(5, 2, 3)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(6)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}",
+    "crumbs": [
+      "rok 2022"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programování a vývoj aplikací",
+    "section": "",
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites.\nA jesliže naleznete chybu, dejte mi, prosím, vědět.\n👨‍🦲 Pavel Martínek\n\nOblíbené materiály\n\nhttps://cs50.harvard.edu/x/\nhttps://cs50.harvard.edu/web/"
+  },
+  {
+    "objectID": "archiv/202526-3d.html",
+    "href": "archiv/202526-3d.html",
+    "title": "3.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky",
+    "crumbs": [
+      "3.D šk. rok 2025/2026"
+    ]
+  },
+  {
+    "objectID": "archiv/202526-3d.html#výuka",
+    "href": "archiv/202526-3d.html#výuka",
+    "title": "3.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky",
+    "crumbs": [
+      "3.D šk. rok 2025/2026"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Nezařazeno",
+    "section": "",
+    "text": "https://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\n\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\n\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního barevného seznamu\ngrep -v -E '^([[:space:]]*#|$)' nazev souboru - vyfiltruje komentáře a prázdné řádky"
+  },
+  {
+    "objectID": "about.html#užitečné-odkazy",
+    "href": "about.html#užitečné-odkazy",
+    "title": "Nezařazeno",
+    "section": "",
+    "text": "https://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\n\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\n\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního barevného seznamu\ngrep -v -E '^([[:space:]]*#|$)' nazev souboru - vyfiltruje komentáře a prázdné řádky"
+  },
+  {
+    "objectID": "about.html#visual-studio-code",
+    "href": "about.html#visual-studio-code",
+    "title": "Nezařazeno",
+    "section": "Visual Studio Code",
+    "text": "Visual Studio Code\nCtrl + , nastavení Alt + Shift + P otevře příkazovou paletu Alt + Shift + F naformátuje kód Alt + Z zapíná a vypíná zalamování řádků Alt + šipka nahoru / dolů přesune řádek nahoru / dolů Alt + Shift + šipka nahoru / dolů zkopíruje blok kódu nahoru / dolů\nPokud máte kurzor v řádku, nemusíte ho označovat, operace kopírování, přesunu a mazání se provádí s celým řádkem.\nAlt + kliknutí myší - umožní vložit více kurzorů a provést operaci na všech najednou\n\nDefault cmd terminal\n\"terminal.integrated.defaultProfile.windows\": \"Command Prompt\","
+  },
+  {
+    "objectID": "202627-3d1.html",
+    "href": "202627-3d1.html",
+    "title": "3.D šk. rok 2026/2027",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n10. 9. 2026\nÚvod do HTML (3)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7)\n\n\n1. 10. 2026\nResponzivnost webu (8,9)\n\n\n8. 10. 2026\nGithub Copilot úvod(10) + Portfolio (10,11)\n\n\n13. 10. 2026\nProjekt na téma (1) (12)\n\n\n15. 10. 2026\nProjekt na téma (2) + Google Search (13,14)\n\n\n22. 10. 2026\nGoogle Search (15,16)\n\n\nplynutí času\n\n\n\n29. 10. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n5. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+  },
+  {
+    "objectID": "202627-3d1.html#výuka",
+    "href": "202627-3d1.html#výuka",
+    "title": "3.D šk. rok 2026/2027",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n10. 9. 2026\nÚvod do HTML (3)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7)\n\n\n1. 10. 2026\nResponzivnost webu (8,9)\n\n\n8. 10. 2026\nGithub Copilot úvod(10) + Portfolio (10,11)\n\n\n13. 10. 2026\nProjekt na téma (1) (12)\n\n\n15. 10. 2026\nProjekt na téma (2) + Google Search (13,14)\n\n\n22. 10. 2026\nGoogle Search (15,16)\n\n\nplynutí času\n\n\n\n29. 10. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n5. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+  },
+  {
+    "objectID": "202627-1d1.html",
+    "href": "202627-1d1.html",
+    "title": "1.D šk. rok 2026/2027",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n15. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/)\n\n\n22. 9. 2026\nÚvod do HTML (3,4/)\n\n\n29. 9. 2026\nÚvod do CSS + Publikování webu(5,6/)\n\n\n6. 10. 2026\nPublikování webu(7,8/)\n\n\n13. 10. 2026\nGitHub Copilot + Portfolio (9,10/)\n\n\n20. 10. 2026\nPísemný test + Google Projekt (11,12)\n\n\nplynutí času\n\n\n\n27. 10. 2026\nRekapitulace 1.čtvrtletí (13,14)\n\n\n11. 11. 2026\nHodnocení 1. čtvrtletí (15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2026\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2026\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2026\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2026\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2026\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+  },
+  {
+    "objectID": "202627-1d1.html#výuka",
+    "href": "202627-1d1.html#výuka",
+    "title": "1.D šk. rok 2026/2027",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n15. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/)\n\n\n22. 9. 2026\nÚvod do HTML (3,4/)\n\n\n29. 9. 2026\nÚvod do CSS + Publikování webu(5,6/)\n\n\n6. 10. 2026\nPublikování webu(7,8/)\n\n\n13. 10. 2026\nGitHub Copilot + Portfolio (9,10/)\n\n\n20. 10. 2026\nPísemný test + Google Projekt (11,12)\n\n\nplynutí času\n\n\n\n27. 10. 2026\nRekapitulace 1.čtvrtletí (13,14)\n\n\n11. 11. 2026\nHodnocení 1. čtvrtletí (15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2026\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2026\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2026\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2026\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2026\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+  },
+  {
+    "objectID": "202627-1d2.html",
+    "href": "202627-1d2.html",
+    "title": "1.D šk. rok 2026/2027",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n17. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n24. 9. 2026\nÚvod do HTML (3,4)\n\n\n1. 10. 2026\nÚvod do CSS + Publikování webu(5,6)\n\n\n8. 10. 2026\nGithub Copilot + Portfolio (7,8)\n\n\n15. 10. 2026\nPortfolio (9,10)\n\n\n22. 10. 2026\nPísemný test + Google Projekt (11,12)\n\n\nplynutí času\n\n\n\n29. 10. 2026\nGoogle Projekt (13,14)\n\n\n5. 11. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2026\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2026\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2026\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2026\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2026\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+  },
+  {
+    "objectID": "202627-1d2.html#výuka",
+    "href": "202627-1d2.html#výuka",
+    "title": "1.D šk. rok 2026/2027",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n17. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n24. 9. 2026\nÚvod do HTML (3,4)\n\n\n1. 10. 2026\nÚvod do CSS + Publikování webu(5,6)\n\n\n8. 10. 2026\nGithub Copilot + Portfolio (7,8)\n\n\n15. 10. 2026\nPortfolio (9,10)\n\n\n22. 10. 2026\nPísemný test + Google Projekt (11,12)\n\n\nplynutí času\n\n\n\n29. 10. 2026\nGoogle Projekt (13,14)\n\n\n5. 11. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2026\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2026\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2026\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2026\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2026\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+  },
+  {
+    "objectID": "202627-3d2.html",
+    "href": "202627-3d2.html",
+    "title": "3.D šk. rok 2026/2027",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/1)\n\n\n8. 9. 2026\nÚvod do HTML ( /2,3)\n\n\n10. 9. 2026\nÚvod do HTML (3/)\n\n\n15. 9. 2026\nPublikace repo + kaskádové styly (/4,5)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5/)\n\n\n22. 9. 2026\nikony,fonty,menu (/6,7)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7/8)\n\n\n29. 9. 2026\nResponzivnost webu (/9,10)\n\n\n1. 10. 2026\nResponzivnost webu (8,9/)\n\n\nplynutí času\n\n\n\n16. 10. 2026\nPortfolio (13,14)\n\n\n23. 10. 2026\nGoogle Search (15,16)\n\n\n30. 10. 2026\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+  },
+  {
+    "objectID": "202627-3d2.html#výuka",
+    "href": "202627-3d2.html#výuka",
+    "title": "3.D šk. rok 2026/2027",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/1)\n\n\n8. 9. 2026\nÚvod do HTML ( /2,3)\n\n\n10. 9. 2026\nÚvod do HTML (3/)\n\n\n15. 9. 2026\nPublikace repo + kaskádové styly (/4,5)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5/)\n\n\n22. 9. 2026\nikony,fonty,menu (/6,7)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7/8)\n\n\n29. 9. 2026\nResponzivnost webu (/9,10)\n\n\n1. 10. 2026\nResponzivnost webu (8,9/)\n\n\nplynutí času\n\n\n\n16. 10. 2026\nPortfolio (13,14)\n\n\n23. 10. 2026\nGoogle Search (15,16)\n\n\n30. 10. 2026\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
+  },
+  {
+    "objectID": "archiv/202526-1d.html",
+    "href": "archiv/202526-1d.html",
+    "title": "1.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky",
+    "crumbs": [
+      "1.D šk. rok 2025/2026"
+    ]
+  },
+  {
+    "objectID": "archiv/202526-1d.html#výuka",
+    "href": "archiv/202526-1d.html#výuka",
+    "title": "1.D šk. rok 2025/2026",
+    "section": "",
+    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky",
+    "crumbs": [
+      "1.D šk. rok 2025/2026"
+    ]
+  },
+  {
+    "objectID": "archiv/index.html",
+    "href": "archiv/index.html",
+    "title": "Archiv výuky",
+    "section": "",
+    "text": "Z menu vlevo vyberte konkrétní rok.",
+    "crumbs": [
+      "Archiv výuky"
+    ]
+  },
+  {
+    "objectID": "maturita/index.html",
+    "href": "maturita/index.html",
+    "title": "Maturitní úlohy z PVA",
+    "section": "",
+    "text": "U všech úloh jsou navíc možnosti:\n\nprogram nevypíše nic\nprogram se zacyklí\n\nZ menu vlevo vyberte konkrétní rok.",
+    "crumbs": [
+      "Maturitní úlohy z PVA"
     ]
   },
   {
@@ -916,207 +1090,33 @@
     ]
   },
   {
-    "objectID": "maturita/index.html",
-    "href": "maturita/index.html",
-    "title": "Maturitní úlohy z PVA",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:\n\nprogram nevypíše nic\nprogram se zacyklí\n\nZ menu vlevo vyberte konkrétní rok.",
-    "crumbs": [
-      "Maturitní úlohy z PVA"
-    ]
-  },
-  {
-    "objectID": "archiv/index.html",
-    "href": "archiv/index.html",
-    "title": "Archiv výuky",
-    "section": "",
-    "text": "Z menu vlevo vyberte konkrétní rok.",
-    "crumbs": [
-      "Archiv výuky"
-    ]
-  },
-  {
-    "objectID": "archiv/202526-1d.html",
-    "href": "archiv/202526-1d.html",
-    "title": "1.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky",
-    "crumbs": [
-      "1.D šk. rok 2025/2026"
-    ]
-  },
-  {
-    "objectID": "archiv/202526-1d.html#výuka",
-    "href": "archiv/202526-1d.html#výuka",
-    "title": "1.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n9. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n16. 9. 2025\nÚvod do HTML (3,4,5/3,4)\n\n\n23. 9. 2025\nPublikování webu (6,7/5,6)\n\n\n23. 9. 2025\nÚvod do CSS (6,7/5,6)\n\n\n30. 9. 2025\nTvorba menu (8,9/7,8)\n\n\n14. 10. 2025\nResponzivnost webu (10,11/9,10)\n\n\n21. 10. 2025\nPortfolio (12,13/11,12)\n\n\n4. 11. 2025\nRekapitulace 1.čtvrtletí (14,15/13,14)\n\n\n11. 11. 2025\nGoogle Projekt (16,17/15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2025\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2025\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2025\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2025\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2025\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky",
-    "crumbs": [
-      "1.D šk. rok 2025/2026"
-    ]
-  },
-  {
-    "objectID": "202627-3d2.html",
-    "href": "202627-3d2.html",
-    "title": "3.D šk. rok 2026/2027",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/1)\n\n\n8. 9. 2026\nÚvod do HTML ( /2,3)\n\n\n10. 9. 2026\nÚvod do HTML (3/)\n\n\n15. 9. 2026\nPublikace repo + kaskádové styly (/4,5)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5/)\n\n\n22. 9. 2026\nikony,fonty,menu (/6,7)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7/8)\n\n\n29. 9. 2026\nResponzivnost webu (/9,10)\n\n\n1. 10. 2026\nResponzivnost webu (8,9/)\n\n\nplynutí času\n\n\n\n16. 10. 2026\nPortfolio (13,14)\n\n\n23. 10. 2026\nGoogle Search (15,16)\n\n\n30. 10. 2026\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
-  },
-  {
-    "objectID": "202627-3d2.html#výuka",
-    "href": "202627-3d2.html#výuka",
-    "title": "3.D šk. rok 2026/2027",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/1)\n\n\n8. 9. 2026\nÚvod do HTML ( /2,3)\n\n\n10. 9. 2026\nÚvod do HTML (3/)\n\n\n15. 9. 2026\nPublikace repo + kaskádové styly (/4,5)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5/)\n\n\n22. 9. 2026\nikony,fonty,menu (/6,7)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7/8)\n\n\n29. 9. 2026\nResponzivnost webu (/9,10)\n\n\n1. 10. 2026\nResponzivnost webu (8,9/)\n\n\nplynutí času\n\n\n\n16. 10. 2026\nPortfolio (13,14)\n\n\n23. 10. 2026\nGoogle Search (15,16)\n\n\n30. 10. 2026\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
-  },
-  {
-    "objectID": "202627-1d2.html",
-    "href": "202627-1d2.html",
-    "title": "1.D šk. rok 2026/2027",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n17. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n24. 9. 2026\nÚvod do HTML (3,4)\n\n\n1. 10. 2026\nÚvod do CSS + Publikování webu(5,6)\n\n\n8. 10. 2026\nGithub Copilot + Portfolio (7,8)\n\n\n15. 10. 2026\nPortfolio (9,10)\n\n\n22. 10. 2026\nPísemný test + Google Projekt (11,12)\n\n\nplynutí času\n\n\n\n29. 10. 2026\nGoogle Projekt (13,14)\n\n\n5. 11. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2026\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2026\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2026\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2026\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2026\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky"
-  },
-  {
-    "objectID": "202627-1d2.html#výuka",
-    "href": "202627-1d2.html#výuka",
-    "title": "1.D šk. rok 2026/2027",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n17. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n24. 9. 2026\nÚvod do HTML (3,4)\n\n\n1. 10. 2026\nÚvod do CSS + Publikování webu(5,6)\n\n\n8. 10. 2026\nGithub Copilot + Portfolio (7,8)\n\n\n15. 10. 2026\nPortfolio (9,10)\n\n\n22. 10. 2026\nPísemný test + Google Projekt (11,12)\n\n\nplynutí času\n\n\n\n29. 10. 2026\nGoogle Projekt (13,14)\n\n\n5. 11. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2026\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2026\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2026\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2026\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2026\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky"
-  },
-  {
-    "objectID": "202627-1d1.html",
-    "href": "202627-1d1.html",
-    "title": "1.D šk. rok 2026/2027",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n15. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/)\n\n\n22. 9. 2026\nÚvod do HTML (3,4/)\n\n\n29. 9. 2026\nÚvod do CSS + Publikování webu(5,6/)\n\n\n6. 10. 2026\nPublikování webu(7,8/)\n\n\n13. 10. 2026\nGitHub Copilot + Portfolio (9,10/)\n\n\n20. 10. 2026\nPísemný test + Google Projekt (11,12)\n\n\nplynutí času\n\n\n\n27. 10. 2026\nRekapitulace 1.čtvrtletí (13,14)\n\n\n11. 11. 2026\nHodnocení 1. čtvrtletí (15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2026\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2026\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2026\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2026\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2026\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky"
-  },
-  {
-    "objectID": "202627-1d1.html#výuka",
-    "href": "202627-1d1.html#výuka",
-    "title": "1.D šk. rok 2026/2027",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n15. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2/)\n\n\n22. 9. 2026\nÚvod do HTML (3,4/)\n\n\n29. 9. 2026\nÚvod do CSS + Publikování webu(5,6/)\n\n\n6. 10. 2026\nPublikování webu(7,8/)\n\n\n13. 10. 2026\nGitHub Copilot + Portfolio (9,10/)\n\n\n20. 10. 2026\nPísemný test + Google Projekt (11,12)\n\n\nplynutí času\n\n\n\n27. 10. 2026\nRekapitulace 1.čtvrtletí (13,14)\n\n\n11. 11. 2026\nHodnocení 1. čtvrtletí (15,16)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n18. 11. 2026\nTvorba webu pomocí AI (18,19/17,18)\n\n\n25. 11. 2026\nAlgoritmy - úvod (20,21/19,20)\n\n\n2. 12. 2026\nVývojové diagramy (22,23/21,22)\n\n\n9. 12. 2026\nŽelví grafika (24,25/23,24)\n\n\n16. 12. 2026\niBobr (26,27/25,26)\n\n\n6. 1. 2026\nVývojové diagramy (28,29/27,28)\n\n\n13. 1. 2026\nPython instalace + pracovní list (30,31/29,30)\n\n\n20. 1. 2026\nHodnocení pololetí (32/33,31,32)\n\n\n27. 1. 2026\nPracovní list 3 (34,35/33)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n10. 2. 2026\nhodiny odpadly\n\n\n17. 2. 2026\nPracovní list 4 (36,37/34,35)\n\n\n24. 2. 2026\nPracovní list 5 + 6 (38,39/36,37)\n\n\n3. 3. 2026\nPracovní list 7 (40,41/38,39)\n\n\n10. 3. 2026\nPracovní list 8 + 9 (42,43/40,41)\n\n\n17. 3. 2026\nPracovní list 10 + 11 (44,45/42,43)\n\n\n24. 3. 2026\nPracovní list 12 (46,47/44,45)\n\n\n31. 3. 2026\nPracovní list 13 (48,49/46,47)\n\n\n7. 4. 2026\nPracovní list 14 + 15 (50/48,49)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n14. 4. 2026\nPracovní list 16 (51,52/50,51)\n\n\n21. 4. 2026\nPracovní list 17 (53,54/52,53)\n\n\n28. 4. 2026\nodpadá\n\n\n5. 5. 2026\nPracovní list 18 (55,56/54)\n\n\n12. 5. 2026\nPracovní list 19 (57,58/55,56)\n\n\n19. 5. 2026\nPracovní list 20 (59,60/57,58)\n\n\n26. 5. 2026\nAlgoritmy – rekapitulace (61,62/59,60)\n\n\n2. 6. 2026\nTk apka 1 + Tk apka 2 (63,64/61,62)\n\n\n9. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n16. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n23. 6. 2026\nhodnocení školního roku, opravné zkoušky"
-  },
-  {
-    "objectID": "202627-3d1.html",
-    "href": "202627-3d1.html",
-    "title": "3.D šk. rok 2026/2027",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n10. 9. 2026\nÚvod do HTML (3)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7)\n\n\n1. 10. 2026\nResponzivnost webu (8,9)\n\n\n8. 10. 2026\nGithub Copilot úvod(10) + Portfolio (10,11)\n\n\n13. 10. 2026\nProjekt na téma (1) (12)\n\n\n15. 10. 2026\nProjekt na téma (2) + Google Search (13,14)\n\n\n22. 10. 2026\nGoogle Search (15,16)\n\n\nplynutí času\n\n\n\n29. 10. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n5. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
-  },
-  {
-    "objectID": "202627-3d1.html#výuka",
-    "href": "202627-3d1.html#výuka",
-    "title": "3.D šk. rok 2026/2027",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n3. 9. 2026\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n10. 9. 2026\nÚvod do HTML (3)\n\n\n17. 9. 2026\nPublikace repo + kaskádové styly (4,5)\n\n\n24. 9. 2026\nikony,fonty,menu (6,7)\n\n\n1. 10. 2026\nResponzivnost webu (8,9)\n\n\n8. 10. 2026\nGithub Copilot úvod(10) + Portfolio (10,11)\n\n\n13. 10. 2026\nProjekt na téma (1) (12)\n\n\n15. 10. 2026\nProjekt na téma (2) + Google Search (13,14)\n\n\n22. 10. 2026\nGoogle Search (15,16)\n\n\nplynutí času\n\n\n\n29. 10. 2026\nRekapitulace 1.čtvrtletí (15,16)\n\n\n5. 11. 2026\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2026\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2026\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2026\nJavaScript 2 (25,26)\n\n\n4. 12. 2026\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2026\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2026\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Nezařazeno",
-    "section": "",
-    "text": "https://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\n\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\n\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního barevného seznamu"
-  },
-  {
-    "objectID": "about.html#užitečné-odkazy",
-    "href": "about.html#užitečné-odkazy",
-    "title": "Nezařazeno",
-    "section": "",
-    "text": "https://quarto.org/docs/authoring/markdown-basics.html\nhttps://marvin-schmitt.com/blog/website-tutorial-quarto/\nhttps://quarto.org/docs/authoring/callouts.html\n\n\n\n\n5 things I ALWAYS do after Proxmox installation\n\n\n\n\n\nlsb_release -a - zjistí verzi Linuxu\n\ndu -sh .*/ - zjistí velikost složek a souborů v aktuálním adresáři\ndf -h - zjistí využití disků\nfree -h - zjistí využití RAM\nalias ll='ls -la --color=auto' - vytvoří alias pro zobrazení detailního barevného seznamu"
-  },
-  {
-    "objectID": "about.html#visual-studio-code",
-    "href": "about.html#visual-studio-code",
-    "title": "Nezařazeno",
-    "section": "Visual Studio Code",
-    "text": "Visual Studio Code\nCtrl + , nastavení Alt + Shift + P otevře příkazovou paletu Alt + Shift + F naformátuje kód Alt + Z zapíná a vypíná zalamování řádků Alt + šipka nahoru / dolů přesune řádek nahoru / dolů Alt + Shift + šipka nahoru / dolů zkopíruje blok kódu nahoru / dolů\nPokud máte kurzor v řádku, nemusíte ho označovat, operace kopírování, přesunu a mazání se provádí s celým řádkem.\nAlt + kliknutí myší - umožní vložit více kurzorů a provést operaci na všech najednou\n\nDefault cmd terminal\n\"terminal.integrated.defaultProfile.windows\": \"Command Prompt\","
-  },
-  {
-    "objectID": "archiv/202526-3d.html",
-    "href": "archiv/202526-3d.html",
-    "title": "3.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky",
-    "crumbs": [
-      "3.D šk. rok 2025/2026"
-    ]
-  },
-  {
-    "objectID": "archiv/202526-3d.html#výuka",
-    "href": "archiv/202526-3d.html#výuka",
-    "title": "3.D šk. rok 2025/2026",
-    "section": "",
-    "text": "Datum\nTéma (odkaz na materiály)\n\n\n\n\n4. 9. 2025\nPoučení o bezpečnosti, ogr. šk. roku (1,2)\n\n\n11. 9. 2025\nÚvod do HTML (3,4)\n\n\n18. 9. 2025\nÚvod do CSS (5,6)\n\n\n25. 9. 2025\nCSS 2 (7,8)\n\n\n2. 10. 2025\nTvorba menu (9,10)\n\n\n9. 10. 2025\nResponzivnost webu (11,12)\n\n\n16. 10. 2025\nPortfolio (13,14)\n\n\n23. 10. 2025\nGoogle Search (15,16)\n\n\n30. 10. 2025\nRekapitulace 1.čtvrtletí (17,18)\n\n\n6. 11. 2025\nHodnocení 1.čtvrtletí (19,20)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n13. 11. 2025\nTvorba webu pomocí AI (21,22)\n\n\n20. 11. 2025\nÚvod do JavaScriptu (23,24)\n\n\n27. 11. 2025\nJavaScript 2 (25,26)\n\n\n4. 12. 2025\nJavaScript 3 (26,27/27,28)\n\n\n11. 12. 2025\nJavaScript 4 (28,29/29,30)\n\n\n18. 12. 2025\nJS Hra života (30,31/31,32)\n\n\n8. 1. 2026\nJS kámen nůžky papír (32,33/33,34)\n\n\n15. 1. 2026\nJS chat app (34,35/35,36)\n\n\n22. 1. 2026\nJS test (36,37/37,38)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n29. 1. 2026\nJavaScript API (38/39,40)\n\n\n12. 2. 2026\nhodina odpadla a supl (39/)\n\n\n19. 2. 2026\nDjango - hello (40,41/41,42)\n\n\n26. 2. 2026\nDjango - apps až 4 (42,43/43,44)\n\n\n5. 3. 2026\nTasks (44,45/45,46)\n\n\n12. 3. 2026\nWiki (46,47/47,48)\n\n\n19. 3. 2026\nSQL + Airline (48,49/49,50)\n\n\n26. 3. 2026\nAirline 2 (50,51/51,52)\n\n\n2. 4. 2026\nprázdniny\n\n\n9. 4. 2026\nUživatelé (52,53/53,54)\n\n\n\n\n\n\n\n\n\nDatum\nTéma (odkaz na materiály)\n\n\n\n\n16. 4. 2026\nXAMPP MySQL db (54,55/55,56)\n\n\n23. 4. 2026\nInformační systém (56,57/57,58)\n\n\n30. 4. 2026\nodpadá (/59)\n\n\n7. 5. 2026\nKontrola a publikace (58,59/60,61)\n\n\n14. 5. 2026\nDeploy eu.pythonanywhere.com (60,61/62,63)\n\n\n21. 5. 2026\nPraxe\n\n\n28. 5. 2026\nPraxe\n\n\n4. 6. 2026\nUpdating portfolio page (62,63/64,65)\n\n\n11. 6. 2026\nUser Interfaces (64,65/66,67)\n\n\n18. 6. 2026\nhodnocení školního roku, opravné zkoušky\n\n\n25. 6. 2026\nhodnocení školního roku, opravné zkoušky",
-    "crumbs": [
-      "3.D šk. rok 2025/2026"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programování a vývoj aplikací",
-    "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites.\nA jesliže naleznete chybu, dejte mi, prosím, vědět.\n👨‍🦲 Pavel Martínek\n\nOblíbené materiály\n\nhttps://cs50.harvard.edu/x/\nhttps://cs50.harvard.edu/web/"
-  },
-  {
-    "objectID": "maturita/m2022.html",
-    "href": "maturita/m2022.html",
-    "title": "rok 2022",
+    "objectID": "maturita/m2025.html",
+    "href": "maturita/m2025.html",
+    "title": "rok 2025",
     "section": "",
     "text": "U všech úloh jsou navíc možnosti:",
     "crumbs": [
-      "rok 2022"
+      "rok 2025"
     ]
   },
   {
-    "objectID": "maturita/m2022.html#podzim",
-    "href": "maturita/m2022.html#podzim",
-    "title": "rok 2022",
-    "section": "2022 - podzim",
-    "text": "2022 - podzim\nUvažme následující funkci. Co vypíše pro volání sos(2, 3)?\nfunction sos($tecka, $carka): void\n{\n    for ($i = 0; $i &lt; $tecka; $i++) {\n        echo '.';\n    }\n    for ($i = 0; $i &lt; $carka; $i++) {\n        echo $carka;\n    }\n}\nUvažme následující funkci. Co vypíše pro volání zobraz(3)?\nfunction zobraz($cislo): void\n{\n    $vysledek = 3;\n    while ($vysledek &gt; 0) {\n       for ($i = 0; $i &lt; $vysledek; $i++) {\n            echo $cislo;\n        }\n        $vysledek = $vysledek - 1;\n        $cislo = $cislo + 1;\n        echo \"\\n\";\n    }\n}",
+    "objectID": "maturita/m2025.html#podzim",
+    "href": "maturita/m2025.html#podzim",
+    "title": "rok 2025",
+    "section": "2025 - podzim",
+    "text": "2025 - podzim\nUvažme následující funkci. Co se vypíše pro volání fun(2, 3, 4)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = $a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(2, 5, 1).",
     "crumbs": [
-      "rok 2022"
+      "rok 2025"
     ]
   },
   {
-    "objectID": "maturita/m2022.html#jaro",
-    "href": "maturita/m2022.html#jaro",
-    "title": "rok 2022",
-    "section": "2022 - jaro",
-    "text": "2022 - jaro\nUvažme následující funkci. Co vypíše pro volání sequence(2, 3, 4)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(7)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}\nUvažme následující funkci. Co vypíše pro volání sequence(5, 2, 3)?\nfunction sequence($init, $step, $n): void\n{\n    $x = $init;\n    for ($i = 0; $i &lt; $n; $i++) {\n        echo $x, ' ';\n        $x = $x + $step;\n    }\n}\nUvažme následující funkci. Jaký poslední řádek vypíše pro volání roll_dice_until(6)?\nfunction roll_dice_until($stop_value): void \n{\n while ($outcome != $stop_value) {\n    $outcome = rand(1, 6);\n    for ($i = 0; $i &lt; $outcome; $i++) {\n        echo '.';\n    }\n    echo \"\\n\";\n    }\n}",
+    "objectID": "maturita/m2025.html#jaro",
+    "href": "maturita/m2025.html#jaro",
+    "title": "rok 2025",
+    "section": "2025 - jaro",
+    "text": "2025 - jaro\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUrčete, co se vypíše pro volání nuf(1, 2, 3).\nUvažme následující funkci:\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUrčete, co se vypíše pro volání fun(1, 2, 3).\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 2, 3)?:\nfunction nuf($a, $b, $c): void\n{\n    while ($a &lt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání fun(1, 5, 2)?\nfunction fun($a, $b, $c): void\n{\n    for ($i = a; $i &lt; $b; $i++) {\n        if ($a == 0)\n            echo $c + $i;\n        else\n            echo $a + $c;\n    }\n}\nUvažme následující funkci. Co se vypíše pro volání nuf(1, 5, 2).\nfunction nuf($a, $b, $c): void\n{\n    while ($a &gt; $b) {\n        if ($a % 2 == 0)\n            echo $a;\n        else\n            echo $c;\n    }\n}",
     "crumbs": [
-      "rok 2022"
-    ]
-  },
-  {
-    "objectID": "maturita/m2024.html",
-    "href": "maturita/m2024.html",
-    "title": "rok 2024",
-    "section": "",
-    "text": "U všech úloh jsou navíc možnosti:",
-    "crumbs": [
-      "rok 2024"
-    ]
-  },
-  {
-    "objectID": "maturita/m2024.html#podzim",
-    "href": "maturita/m2024.html#podzim",
-    "title": "rok 2024",
-    "section": "2024 - podzim",
-    "text": "2024 - podzim\nUvažme následující funkci. Co vypíše pro volání ff(2, 2, 3, 3)?\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &gt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání gg(2, 2, 3, 3):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $a;\n            echo $a;\n        }\n    }\n}",
-    "crumbs": [
-      "rok 2024"
-    ]
-  },
-  {
-    "objectID": "maturita/m2024.html#jaro",
-    "href": "maturita/m2024.html#jaro",
-    "title": "rok 2024",
-    "section": "2024 - jaro",
-    "text": "2024 - jaro\nUvažme následující funkci. Co vypíše pro volání ff(1, 2, 3, 4):\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &gt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání gg(1, 2, 3, 4):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $a;\n            echo $a;\n        }\n    }\n}\nUvažme následující funkci. Co vypíše pro volání f(1, 2, 3, 4):\nfunction ff($a, $b, $c, $d): void\n{\n    for ($i = a; $i &lt;= $b; $i++) {\n        if ($i &lt; $c) {\n            echo $d + $i;\n        }\n    }\n}   \nUvažme následující funkci. Co vypíše pro volání g(1, 2, 3, 4):\nfunction gg($a, $b, $c, $d): void\n{\n    while ($a &lt; $d) {\n        if ($c &lt; $d) {\n            $a = $a + $d;\n            echo $b + $a;\n        }\n    }\n}",
-    "crumbs": [
-      "rok 2024"
+      "rok 2025"
     ]
   },
   {
@@ -1583,6 +1583,17 @@
     "title": "Základy HTML",
     "section": "Zajímavé odkazy",
     "text": "Zajímavé odkazy\n\nhttps://acchou.github.io/html-css-cheat-sheet/html-css-cheat-sheet.html\n\nrepo: https://github.com/acchou/html-css-cheat-sheet/\n\nhttps://bit.ly/HtmlCssUcebnice\nhttps://cs50.harvard.edu/web/",
+    "crumbs": [
+      "HTML",
+      "Základy HTML"
+    ]
+  },
+  {
+    "objectID": "web_html/index.html#klasifikační-stupnice",
+    "href": "web_html/index.html#klasifikační-stupnice",
+    "title": "Základy HTML",
+    "section": "Klasifikační stupnice",
+    "text": "Klasifikační stupnice\n• 1 (Výborně): 12 – 11 bodů (100 % – 91 %) • 2 (Chvalitebně): 10 – 9 bodů (90 % – 75 %) • 3 (Dobře): 8 – 7 bodů (74 % – 58 %) • 4 (Dostatečně): 6 – 5 bodů (57 % – 41 %) • 5 (Nedostatečně): 4 – 0 bodů (40 % a méně)",
     "crumbs": [
       "HTML",
       "Základy HTML"
