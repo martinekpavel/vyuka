@@ -18,6 +18,7 @@ title: "Nezařazeno"
 - `df -h` - zjistí využití disků
 - `free -h` - zjistí využití RAM
 - `alias ll='ls -la --color=auto'` - vytvoří alias pro zobrazení detailního barevného seznamu
+- `grep -v -E '^([[:space:]]*#|$)' nazev souboru` - vyfiltruje komentáře a prázdné řádky
 
 
 ## Visual Studio Code

@@ -2,13 +2,13 @@
 title: "Tvorba webu pomocí AI"
 ---
 
-Zastaralé, bude upraveno.
+**Zastaralé, bude upraveno.**
 
 1. Vyberté si téma
 2. Založte nový repozitář na Githubu
 3. Otevřete jej jako nový projekt ve Visual Studio
-4. Pomocí AI nástroje vytvořte web (český), který má minimálně 3 stránky
-5. Dokumentujte a zveřejněte postup (prompty, nástroj) například v readme.md
+4. Pomocí AI nástroje Github Copilotvytvořte web (český), který má minimálně 3 stránky
+5. Dokumentujte a zveřejněte postup (prompty, nástroj) například v citace.md
 6. Na týmsech je dotazník ohledně AI (máte-li čas, vyplňte)
 7. V rámci toho projektu popište i technologie, které AI použila
 8. Na úvodní stránku webu uveďte informaci, že se jedná o web vytvořený AI a školní projekt
@@ -21,7 +21,8 @@ Do MS Teams sdílejte odkaz na repozitář a odkaz na stránky.
 
 * Microsoft Copilot <https://office.com>
 * ChatGPT
-* <https://DeepSite.io>
+* Github Copilot
+* Google Gemini
 
 :::{.callout-note}
 Nezapomeňte kód validovat a zahrnout do portfolia.

@@ -19,9 +19,9 @@ include-after-body:
  `6. 10. 2026`|[Publikování webu](web_html/04publish.qmd)(7,8/)
 `13. 10. 2026`|[GitHub Copilot](#) + [Portfolio](web_html/08portfolio.qmd) (9,10/)
 `20. 10. 2026`|Písemný test + [Google Projekt](web_html/09search.qmd) (11,12)
-               | [plynutí času]{style="color:gray"}
 `27. 10. 2026`|[Rekapitulace 1.čtvrtletí](web_html/10rekap.qmd) (13,14)
-`11. 11. 2026`|[Hodnocení 1. čtvrtletí](#) (15,16)
+               | [plynutí času]{style="color:gray"}
+`3. 11. 2026`|[Hodnocení 1. čtvrtletí](#) (15,16)
 
 ### 2. čtvrtletí
 

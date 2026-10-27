@@ -12,3 +12,13 @@ Následující kapitoly vás provedou základy HTML kódování.
 - <https://bit.ly/HtmlCssUcebnice>
 - <https://cs50.harvard.edu/web/>
 
+## Klasifikační stupnice
+
+- 1 (Výborně): 12 – 11 bodů (100 % – 91 %)
+- 2 (Chvalitebně): 10 – 9 bodů (90 % – 75 %)
+- 3 (Dobře): 8 – 7 bodů (74 % – 58 %)
+- 4 (Dostatečně): 6 – 5 bodů (57 % – 41 %)
+- 5 (Nedostatečně): 4 – 0 bodů (40 % a méně)
+
+
+
