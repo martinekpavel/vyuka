@@ -10,7 +10,7 @@ Průběžně doplňuji materiály a požadavky pro klasifikaci.
 
 Pokud chcete vytvářet podobné weby, tak mrkněte sem <a href="https://quarto.org/docs/websites" target="_blank">https://quarto.org/docs/websites</a>.
 
-A jesliže naleznete chybu, dejte mi, prosím, vědět. 
+A jestliže naleznete chybu, dejte mi, prosím, vědět. 
 
 👨‍🦲 [Pavel Martínek](mailto:martinek.pavel@oa-opava.cz)
 
