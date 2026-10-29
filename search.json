@@ -356,7 +356,7 @@
     "href": "web_python/index.html",
     "title": "Základy Python",
     "section": "",
-    "text": "Následující kapitoly vás provedou základy programování v Pythonu.\nV první lekce budeme Python instalovat a posléze si projdeme 20 připravených (na Teams) pracovních listů.\nPokud by došlo k tomu, že si pracovní listy projdete doma všechny dříve, mohu doporučit materiál:\n\nhttps://naucse.python.cz/course/pyladies/",
+    "text": "Následující kapitoly vás provedou základy programování v Pythonu.\nV první lekci budeme Python instalovat a posléze si projdeme 20 připravených (na Teams) pracovních listů.\nPokud by došlo k tomu, že si pracovní listy projdete doma všechny dříve, mohu doporučit materiál:\n\nhttps://naucse.python.cz/course/pyladies/",
     "crumbs": [
       "Python",
       "Základy Python"
@@ -489,23 +489,23 @@
   {
     "objectID": "web_html/10rekap.html",
     "href": "web_html/10rekap.html",
-    "title": "Rekapitulace 1. čtvrtetí",
+    "title": "Rekapitulace 1. čtvrtletí",
     "section": "",
     "text": "nadpisy (nadpis úrovně 1 pouze 1x na stránce)\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzměna barvy písma + kontrola kontrastu\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\nvytvoření portfolio page pod účet.github.io\nprojekt Google Search\nvalidace html + css portfolia\nvalidace html + css projektu na téma (SPA = Single Page Application, one-page)\npodmínky a validace google search",
     "crumbs": [
       "HTML",
-      "Rekapitulace 1. čtvrtetí"
+      "Rekapitulace 1. čtvrtletí"
     ]
   },
   {
     "objectID": "web_html/10rekap.html#rekap-1.-čtvrtletí",
     "href": "web_html/10rekap.html#rekap-1.-čtvrtletí",
-    "title": "Rekapitulace 1. čtvrtetí",
+    "title": "Rekapitulace 1. čtvrtletí",
     "section": "",
     "text": "nadpisy (nadpis úrovně 1 pouze 1x na stránce)\nodkazy\nobrázky\nseznam položek\nvalidní web\nzarovnání webu na střed\ngithub pages\nzměna pozadí body\nzaoblení rohů obrázků\nzměna odsazení\nzměna barvy písma + kontrola kontrastu\nmenu v záhlaví stránky\nnová html stránka (s odkazem v menu)\nheader, main, footer\nresponzivnost menu\nvalidace\nvytvoření portfolio page pod účet.github.io\nprojekt Google Search\nvalidace html + css portfolia\nvalidace html + css projektu na téma (SPA = Single Page Application, one-page)\npodmínky a validace google search",
     "crumbs": [
       "HTML",
-      "Rekapitulace 1. čtvrtetí"
+      "Rekapitulace 1. čtvrtletí"
     ]
   },
   {
@@ -920,7 +920,7 @@
     "href": "index.html",
     "title": "Programování a vývoj aplikací",
     "section": "",
-    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites.\nA jesliže naleznete chybu, dejte mi, prosím, vědět.\n👨‍🦲 Pavel Martínek\n\nOblíbené materiály\n\nhttps://cs50.harvard.edu/x/\nhttps://cs50.harvard.edu/web/"
+    "text": "Tento web vznikl jako podpora výuky předmětu Programování a vývoj aplikací\nNajdete tu přehled výuky v průběhu školního roku, témata, zadání i čísla odučených hodin.\nPrůběžně doplňuji materiály a požadavky pro klasifikaci.\nPokud chcete vytvářet podobné weby, tak mrkněte sem https://quarto.org/docs/websites.\nA jestliže naleznete chybu, dejte mi, prosím, vědět.\n👨‍🦲 Pavel Martínek\n\nOblíbené materiály\n\nhttps://cs50.harvard.edu/x/\nhttps://cs50.harvard.edu/web/"
   },
   {
     "objectID": "archiv/202526-3d.html",
